@@ -3922,9 +3922,9 @@ This is program for AV2 (not in AV1)
 
 [22] Google. (s. f.). [_Google JavaScript Style Guide_](https://google.github.io/styleguide/jsguide.html). Recuperado el 16 de septiembre de 2026.
 
-[23] Microsoft. (s. f.). [_Convenciones y reglas de nomenclatura de identificadores de C#_](https://learn.microsoft.com/es-es/dotnet/csharp/fundamentals/coding-style/identifier-names). Recuperado el 16 de septiembre de 2026.
+[23] Oracle. (s. f.). [_Code Conventions for the Java Programming Language: Naming Conventions_](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html). Recuperado el 16 de septiembre de 2026.
 
-[24] Microsoft. (s. f.). [_ASP.NET Core fundamentals overview_](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-9.0). Recuperado el 16 de septiembre de 2026.
+[24] Spring. (s. f.). [_Spring Boot Reference Documentation_](https://docs.spring.io/spring-boot/reference/). Recuperado el 16 de septiembre de 2026.
 
 <div style="page-break-before: always;"></div>
 
