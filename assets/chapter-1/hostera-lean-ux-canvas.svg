@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Lean UX Canvas de Hostera</title>
+  <desc id="desc">Canvas Lean UX para la coordinación de la operación hotelera.</desc>
+  <rect width="1440" height="1100" fill="#F3F6F4"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#0D1613">
+    <text x="44" y="62" font-family="monospace" font-size="12" font-weight="700" letter-spacing="1.4" fill="#14523E">HOSTERA / SOLUTION PROFILE</text>
+    <rect x="276" y="56" width="72" height="2" rx="1" fill="#9EF2CC"/>
+    <text x="44" y="112" font-size="42" font-weight="700">Lean UX Canvas</text>
+    <text x="44" y="142" font-size="16" fill="#5B6862">Coordinación de la operación hotelera · 1.2.2.4</text>
+
+    <g transform="translate(1190,44)">
+      <rect width="206" height="36" rx="8" fill="#FFFFFF" stroke="#C6CFCA"/>
+      <text x="12" y="23" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#5B6862">DATE</text>
+      <text x="130" y="23" font-family="monospace" font-size="13" font-weight="700">03.09.26</text>
+      <rect y="44" width="206" height="36" rx="8" fill="#FFFFFF" stroke="#C6CFCA"/>
+      <text x="12" y="67" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#5B6862">ITERATION</text>
+      <text x="174" y="67" font-family="monospace" font-size="13" font-weight="700" fill="#14523E">01</text>
+    </g>
+
+    <rect x="40" y="196" width="1360" height="820" rx="12" fill="#FFFFFF" stroke="#0D1613" stroke-width="2"/>
+    <rect x="42" y="198" width="408" height="258" fill="#FFFFFF"/>
+    <rect x="42" y="458" width="408" height="298" fill="#FFFFFF"/>
+    <rect x="42" y="758" width="408" height="256" fill="#FFFFFF"/>
+    <rect x="452" y="198" width="298" height="558" fill="#E6F0E9"/>
+    <rect x="452" y="758" width="298" height="256" fill="#FFFFFF"/>
+    <rect x="752" y="198" width="646" height="258" fill="#FFFFFF"/>
+    <rect x="752" y="458" width="646" height="298" fill="#F9FBFA"/>
+    <rect x="752" y="758" width="646" height="256" fill="#FFFFFF"/>
+
+    <path d="M450 198V1014 M750 198V1014 M42 456H450 M42 756H450 M452 756H750 M752 456H1398 M752 756H1398" fill="none" stroke="#0D1613" stroke-width="1.5"/>
+
+    <g fill="#9BA59F" opacity="0.35" font-size="100" font-weight="700">
+      <text x="360" y="430">1</text><text x="1300" y="430">2</text><text x="360" y="710">3</text><text x="1300" y="710">4</text>
+      <text x="680" y="650">5</text><text x="360" y="980">6</text><text x="690" y="980">7</text><text x="1320" y="980">8</text>
+    </g>
+
+    <g font-family="monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#14523E">
+      <text x="62" y="224">01 / PROBLEM</text><circle cx="188" cy="220" r="3" fill="#E5B94C"/>
+      <text x="62" y="484">03 / PEOPLE</text><circle cx="190" cy="480" r="3" fill="#3F7D5A"/>
+      <text x="62" y="784" fill="#0D1613">06 / TEST</text><circle cx="164" cy="780" r="3" fill="#E5B94C"/>
+      <text x="472" y="224">05 / MAKE</text><circle cx="570" cy="220" r="3" fill="#3F7D5A"/>
+      <text x="472" y="784">07 / LEARN FIRST</text><circle cx="650" cy="780" r="3" fill="#E5B94C"/>
+      <text x="772" y="224">02 / OUTCOME</text><circle cx="898" cy="220" r="3" fill="#3F7D5A"/>
+      <text x="772" y="484">04 / BENEFIT</text><circle cx="882" cy="480" r="3" fill="#E5B94C"/>
+      <text x="772" y="784">08 / TEST LEAN</text><circle cx="916" cy="780" r="3" fill="#3F7D5A"/>
+    </g>
+
+    <g font-size="23" font-weight="700">
+      <text x="62" y="254">Business Problem</text>
+      <text x="62" y="514">Users</text>
+      <text x="62" y="814">Hypotheses</text>
+      <text x="472" y="254">Solutions</text>
+      <text x="472" y="814" font-size="21">What’s the most important</text>
+      <text x="472" y="839" font-size="21">thing we need to learn first?</text>
+      <text x="772" y="254">Business Outcomes</text>
+      <text x="772" y="514">User Outcomes &amp; Benefits</text>
+      <text x="772" y="814">What’s the least amount of work we need</text>
+      <text x="772" y="839">to do to learn next?</text>
+    </g>
+
+    <g font-size="14" fill="#33423B">
+      <text x="62" y="288"><tspan x="62" dy="0">La información de reservas, habitaciones,</tspan><tspan x="62" dy="20">inventario y accesos puede estar distribuida</tspan><tspan x="62" dy="20">entre registros y herramientas independientes.</tspan></text>
+      <text x="62" y="372" fill="#14523E" font-weight="700"><tspan x="62" dy="0">Esto dificulta conocer el estado actualizado,</tspan><tspan x="62" dy="20">conciliar datos y mantener la trazabilidad</tspan><tspan x="62" dy="20">de los eventos.</tspan></text>
+
+      <text x="62" y="548"><tspan font-weight="700" fill="#14523E">Primary</tspan><tspan x="128">· Administradores y responsables</tspan><tspan x="128" dy="18">de la operación.</tspan></text>
+      <text x="62" y="596"><tspan font-weight="700" fill="#14523E">Operativos</tspan><tspan x="150">· Recepción y almacén.</tspan></text>
+      <text x="62" y="624"><tspan font-weight="700" fill="#14523E">Autorizados</tspan><tspan x="158">· Gestión y supervisión de accesos.</tspan></text>
+      <text x="62" y="652"><tspan font-weight="700" fill="#14523E">Indirectos</tspan><tspan x="146">· Huéspedes beneficiados.</tspan></text>
+
+      <text x="62" y="850" font-size="9" fill="#0D1613"><tspan x="62" dy="0">1. Creemos que un panel centralizado reducirá registros independientes.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más tareas de supervisión.</tspan><tspan x="62" dy="15">2. Creemos que reservas y disponibilidad actualizadas reducirán inconsistencias.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% menos inconsistencias.</tspan><tspan x="62" dy="15">3. Creemos que registrar movimientos mejorará la visibilidad del inventario.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más movimientos consultables.</tspan><tspan x="62" dy="15">4. Creemos que integrar RFID mejorará la trazabilidad de accesos.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más accesos RFID vinculados.</tspan><tspan x="62" dy="15">5. Creemos que gestionar una o varias sedes mantendrá el contexto operativo.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más tareas correctas multi-sede.</tspan></text>
+
+      <text x="472" y="288"><tspan x="472" dy="0">Plataforma web administrativa</tspan><tspan x="472" dy="20">para coordinar la operación</tspan><tspan x="472" dy="20">entre áreas y sedes.</tspan></text>
+      <g fill="#0D1613">
+        <circle cx="480" cy="372" r="9" fill="#14523E"/><text x="476" y="376" font-family="monospace" font-size="10" fill="#FFFFFF">A</text><text x="498" y="376">Panel centralizado para reservas.</text><text x="498" y="394">Habitaciones, inventario y accesos.</text>
+        <circle cx="480" cy="430" r="9" fill="#14523E"/><text x="476" y="434" font-family="monospace" font-size="10" fill="#FFFFFF">B</text><text x="498" y="434">Registro y consulta de reservas.</text><text x="498" y="452">Disponibilidad actualizada.</text>
+        <circle cx="480" cy="486" r="9" fill="#14523E"/><text x="476" y="490" font-family="monospace" font-size="10" fill="#FFFFFF">C</text><text x="498" y="490">Movimientos y existencias.</text>
+        <circle cx="480" cy="524" r="9" fill="#14523E"/><text x="476" y="528" font-family="monospace" font-size="10" fill="#FFFFFF">D</text><text x="498" y="528">Tarjetas RFID y habitaciones.</text><text x="498" y="546">Usuarios y eventos relacionados.</text>
+        <circle cx="480" cy="584" r="9" fill="#14523E"/><text x="476" y="588" font-family="monospace" font-size="10" fill="#FFFFFF">E</text><text x="498" y="588">Administración multi-sede.</text>
+      </g>
+
+      <text x="472" y="880" font-size="11"><tspan x="472" dy="0">• Si los hoteles están dispuestos a utilizar</tspan><tspan x="472" dy="15">  la plataforma centralizada.</tspan><tspan x="472" dy="15">• Si los responsables aceptarían adaptar</tspan><tspan x="472" dy="15">  sus flujos de trabajo.</tspan><tspan x="472" dy="15">• Si centralizar reduce la conciliación</tspan><tspan x="472" dy="15">  manual entre áreas.</tspan><tspan x="472" dy="15">• Cuáles son las métricas críticas</tspan><tspan x="472" dy="15">  de la operación.</tspan></text>
+
+      <text x="772" y="288"><tspan x="772" dy="0">• Centralizar la supervisión de la operación.</tspan><tspan x="772" dy="24">• Reducir la conciliación entre registros.</tspan><tspan x="772" dy="24">• Mejorar la visibilidad de reservas e inventario.</tspan><tspan x="772" dy="24">• Mantener la trazabilidad de accesos y eventos.</tspan><tspan x="772" dy="24">• Escalar a una o varias sedes.</tspan></text>
+
+      <text x="772" y="548"><tspan x="772" dy="0">• Supervisar con información actualizada.</tspan><tspan x="772" dy="24">• Consultar rápidamente reservas y disponibilidad.</tspan><tspan x="772" dy="24">• Revisar existencias y movimientos del almacén.</tspan><tspan x="772" dy="24">• Rastrear accesos vinculados a tarjetas RFID.</tspan><tspan x="772" dy="24">• Coordinar con menos conciliación manual.</tspan></text>
+
+      <text x="772" y="880"><tspan x="772" dy="0">• Entrevistas con responsables de hoteles.</tspan><tspan x="772" dy="20">• Reencuadre de supuestos con la información obtenida.</tspan><tspan x="772" dy="20">• Validación de los flujos de reservas, inventario y accesos.</tspan></text>
+      <text x="772" y="952" fill="#33423B"><tspan x="772" dy="0">• Prototipo de baja fidelidad para introducir datos,</tspan><tspan x="772" dy="18">sin tarjetas RFID.</tspan></text>
+    </g>
+
+  </g>
+</svg>
