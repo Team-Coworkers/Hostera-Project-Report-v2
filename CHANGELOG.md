@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-09-19
+
+### Changed
+
+- Updated the course identity to Diseño de aplicaciones Open Source (`1ASI0729`), NRC `7737`, taught by Ivan Robles Fernández.
+- Aligned the documented technology stack and conventions with Angular and TypeScript for the frontend and Spring Boot and Java for the Web Services.
+- Replaced the Vue, Vite, C# and ASP.NET Core bibliography entries with official sources for the required stack.
+
 ## [0.6.0] - 2026-09-19
 
 ### Changed
