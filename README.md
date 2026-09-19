@@ -3902,11 +3902,11 @@ This is program for AV2 (not in AV1)
 
 [15] Google. (s. f.). [_Google HTML/CSS Style Guide_](https://google.github.io/styleguide/htmlcssguide.html). Recuperado el 16 de septiembre de 2026.
 
-[16] Vue.js. (s. f.). [_Style Guide_](https://vuejs.org/style-guide/). Recuperado el 16 de septiembre de 2026.
+[16] Angular. (s. f.). [_Angular coding style guide_](https://angular.dev/style-guide). Recuperado el 16 de septiembre de 2026.
 
-[17] Vue.js. (s. f.). [_Composition API FAQ_](https://vuejs.org/guide/extras/composition-api-faq). Recuperado el 16 de septiembre de 2026.
+[17] Microsoft. (s. f.). [_The TypeScript Handbook_](https://www.typescriptlang.org/docs/handbook/intro.html). Recuperado el 16 de septiembre de 2026.
 
-[18] Vite. (s. f.). [_Getting Started_](https://vite.dev/guide/). Recuperado el 16 de septiembre de 2026.
+[18] Angular. (s. f.). [_Angular CLI_](https://angular.dev/tools/cli). Recuperado el 16 de septiembre de 2026.
 
 [19] JSDoc. (s. f.). [_JSDoc Documentation_](https://jsdoc.app/). Recuperado el 16 de septiembre de 2026.
 
