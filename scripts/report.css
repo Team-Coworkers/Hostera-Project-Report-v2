@@ -1,0 +1,206 @@
+@page {
+  size: A4;
+  margin: 2cm;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11pt;
+  line-height: 1.35;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cover {
+  text-align: center;
+  page-break-after: always;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  line-height: 1.25;
+}
+
+.cover-logo {
+  display: block;
+  width: 60px;
+  max-width: none;
+  height: auto;
+  margin: 0 auto 1.1em;
+  border: 0;
+}
+
+table img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.cover-institution,
+.cover-career {
+  font-size: 12pt;
+  line-height: 1.4;
+}
+
+.cover-course-block {
+  margin-top: 3.4em;
+}
+
+.cover-code {
+  margin-bottom: 0.65em;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.cover-course {
+  margin-bottom: 1.15em;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.cover-label {
+  margin-bottom: 0.45em;
+  font-size: 11pt;
+}
+
+.cover-nrc {
+  margin-bottom: 1.35em;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.cover-title {
+  margin-bottom: 1.1em;
+  font-size: 16pt;
+  font-weight: 700;
+}
+
+.cover-value {
+  margin-bottom: 1.2em;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.cover-members-title {
+  margin-top: 2.15em;
+  margin-bottom: 0.35em;
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.cover table,
+.version-history table {
+  width: 100%;
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #888;
+}
+
+table tbody {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+table th,
+table td {
+  padding: 0.35em 0.5em;
+  border: 1px solid #888;
+}
+
+.competitive-landscape {
+  table-layout: fixed;
+  font-size: 7.2pt;
+  line-height: 1.15;
+  page-break-inside: auto;
+}
+
+.competitive-landscape th,
+.competitive-landscape td {
+  padding: 0.28em 0.35em;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.competitive-landscape tr {
+  page-break-inside: avoid;
+}
+
+.competitive-landscape .group-label {
+  width: 7%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.competitive-landscape .vertical-label {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+}
+
+.competitive-landscape tr > td:nth-child(2),
+.competitive-landscape tr > th:nth-child(2) {
+  width: 14%;
+}
+
+.competitive-landscape tr > td:nth-child(n + 3),
+.competitive-landscape tr > th:nth-child(n + 3) {
+  width: 19.75%;
+}
+
+.competitive-landscape th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cover th,
+.cover td,
+.version-history th,
+.version-history td {
+  padding: 0.25em 0.45em;
+}
+
+.cover-members {
+  width: 330px !important;
+  margin: 0 auto;
+  border: 0;
+  border-collapse: collapse;
+  font-size: 11pt;
+  text-align: left;
+}
+
+.cover-members th,
+.cover-members td {
+  padding: 0.2em 0;
+  border: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cover-members th:first-child,
+.cover-members td:first-child {
+  width: 100px;
+  padding-right: 1em;
+}
+
+.cover-period {
+  margin-top: 2.3em;
+  font-size: 13pt;
+  font-weight: 700;
+}
+
+.cover-date {
+  margin-top: 2.25em;
+  font-size: 13pt;
+  font-weight: 700;
+}
+
+.version-history {
+  page-break-after: always;
+}
