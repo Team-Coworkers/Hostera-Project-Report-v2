@@ -3437,35 +3437,41 @@ observables podrán utilizar el sufijo `$`. Los componentes se enfocarán en la
 presentación, mientras que la lógica reutilizable y el acceso a datos se mantendrán en
 servicios. Se evitará colocar lógica de negocio extensa directamente en las plantillas.
 
-#### Backend: ASP.NET Core y C#
+#### Web Services: Spring Boot y Java
 
-El backend se desarrollará con ASP.NET Core utilizando C#. En este contexto, el
-nombre correcto de la tecnología es **ASP.NET Core**. Se aplicarán las convenciones
-de nomenclatura de Microsoft para C#:
+Los Web Services se desarrollarán con Spring Boot y Java. El código seguirá las
+convenciones de nomenclatura de Java y organizará los paquetes por dominio y área
+funcional:
 
-| Elemento de C# | Convención | Ejemplo |
+| Elemento de Java y Spring Boot | Convención | Ejemplo |
 | --- | --- | --- |
-| Namespaces, clases, records, enums y miembros públicos | `PascalCase`. | `ReservationService`, `GetReservation()` |
-| Interfaces | `PascalCase` con prefijo `I`. | `IReservationRepository` |
-| Parámetros y variables locales | `camelCase`. | `reservationId`, `totalAmount` |
-| Campos privados de instancia | `_camelCase`. | `_reservationRepository` |
-| Métodos asíncronos | `PascalCase` con sufijo `Async`. | `GetReservationAsync()` |
-| Archivos de configuración y clases de inicio | Nombres establecidos por ASP.NET Core. | `Program.cs`, `appsettings.json` |
+| Paquetes | Minúsculas y jerarquía basada en el dominio invertido. | `com.hostera.reservations` |
+| Clases, interfaces y enums | `PascalCase`. | `ReservationService`, `ReservationRepository` |
+| Métodos, parámetros y variables | `camelCase`. | `getReservation()`, `reservationId` |
+| Constantes | `UPPER_SNAKE_CASE`. | `MAX_RETRY_COUNT` |
+| Controladores REST | Nombre del recurso en singular con el sufijo `Controller`. | `ReservationController` |
+| Servicios y repositorios | Nombre del dominio con los sufijos `Service` y `Repository`. | `ReservationService`, `ReservationRepository` |
+| Objetos de transferencia | Nombre descriptivo con el propósito de la solicitud o respuesta. | `CreateReservationRequest`, `ReservationResponse` |
+| Archivos de configuración | Nombres establecidos por Spring Boot. | `application.yml`, `application.properties` |
 
-Los endpoints, DTOs, servicios, repositorios y entidades utilizarán nombres en
-inglés y mantendrán una responsabilidad única. Las configuraciones específicas de
-ASP.NET Core, como el registro de servicios y el pipeline de middleware, se
-mantendrán en los archivos correspondientes del proyecto y no se mezclarán con
-secretos o valores propios de un entorno.
+Los controladores expondrán recursos plurales bajo `/api/v1/` y delegarán la lógica
+de negocio a los servicios. Los DTOs, servicios, repositorios y entidades utilizarán
+nombres en inglés y mantendrán una responsabilidad clara. La configuración propia de
+cada entorno se gestionará mediante perfiles y variables externas; los secretos no
+se registrarán en el repositorio.
 
 Las referencias principales para estas convenciones son la [guía de estilo HTML/CSS
 de Google](https://google.github.io/styleguide/htmlcssguide.html), la [guía de estilo
-de Vue.js](https://vuejs.org/style-guide/), la [documentación de Composition
-API](https://vuejs.org/guide/extras/composition-api-faq), la [guía oficial de
-Vite](https://vite.dev/guide/), la [documentación de JSDoc](https://jsdoc.app/), la
-[guía de módulos JavaScript de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules),
-la [guía de estilo de JavaScript de Google](https://google.github.io/styleguide/jsguide.html)
-y las [convenciones de nomenclatura de C# de Microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names) y de [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-9.0).
+de Angular](https://angular.dev/style-guide), el [manual de
+TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html), la
+[documentación de Angular CLI](https://angular.dev/tools/cli), la [documentación de
+JSDoc](https://jsdoc.app/), la [guía de módulos JavaScript de
+MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), la [guía
+de estilo de JavaScript de Google](https://google.github.io/styleguide/jsguide.html),
+las [convenciones de nomenclatura de
+Java](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html)
+y la [documentación de referencia de Spring
+Boot](https://docs.spring.io/spring-boot/reference/).
 
 ### 5.1.4. Software Deployment Configuration
 
@@ -3916,9 +3922,9 @@ This is program for AV2 (not in AV1)
 
 [22] Google. (s. f.). [_Google JavaScript Style Guide_](https://google.github.io/styleguide/jsguide.html). Recuperado el 16 de septiembre de 2026.
 
-[23] Microsoft. (s. f.). [_Convenciones y reglas de nomenclatura de identificadores de C#_](https://learn.microsoft.com/es-es/dotnet/csharp/fundamentals/coding-style/identifier-names). Recuperado el 16 de septiembre de 2026.
+[23] Oracle. (s. f.). [_Code Conventions for the Java Programming Language: Naming Conventions_](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html). Recuperado el 16 de septiembre de 2026.
 
-[24] Microsoft. (s. f.). [_ASP.NET Core fundamentals overview_](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-9.0). Recuperado el 16 de septiembre de 2026.
+[24] Spring. (s. f.). [_Spring Boot Reference Documentation_](https://docs.spring.io/spring-boot/reference/). Recuperado el 16 de septiembre de 2026.
 
 <div style="page-break-before: always;"></div>
 
