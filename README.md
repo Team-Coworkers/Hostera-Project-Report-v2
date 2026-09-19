@@ -3462,12 +3462,16 @@ se registrarán en el repositorio.
 
 Las referencias principales para estas convenciones son la [guía de estilo HTML/CSS
 de Google](https://google.github.io/styleguide/htmlcssguide.html), la [guía de estilo
-de Vue.js](https://vuejs.org/style-guide/), la [documentación de Composition
-API](https://vuejs.org/guide/extras/composition-api-faq), la [guía oficial de
-Vite](https://vite.dev/guide/), la [documentación de JSDoc](https://jsdoc.app/), la
-[guía de módulos JavaScript de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules),
-la [guía de estilo de JavaScript de Google](https://google.github.io/styleguide/jsguide.html)
-y las [convenciones de nomenclatura de C# de Microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names) y de [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-9.0).
+de Angular](https://angular.dev/style-guide), el [manual de
+TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html), la
+[documentación de Angular CLI](https://angular.dev/tools/cli), la [documentación de
+JSDoc](https://jsdoc.app/), la [guía de módulos JavaScript de
+MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), la [guía
+de estilo de JavaScript de Google](https://google.github.io/styleguide/jsguide.html),
+las [convenciones de nomenclatura de
+Java](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html)
+y la [documentación de referencia de Spring
+Boot](https://docs.spring.io/spring-boot/reference/).
 
 ### 5.1.4. Software Deployment Configuration
 
