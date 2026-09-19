@@ -3381,14 +3381,14 @@ ampliamente conocidas. La elección del formato depende del tipo de elemento:
 
 | Elemento | Convención adoptada | Ejemplo |
 | --- | --- | --- |
-| Archivos y carpetas | Minúsculas; se utiliza `kebab-case` cuando el nombre contiene varias palabras. | `reservation-card.vue`, `user-stories.md` |
-| Variables y funciones de JavaScript | `camelCase`. | `reservationCount`, `calculateTotal()` |
-| Clases y componentes | `PascalCase` cuando representan una clase o un componente de Vue. | `ReservationCard`, `BookingSummary` |
+| Archivos y carpetas | Minúsculas; se utiliza `kebab-case` cuando el nombre contiene varias palabras. | `reservation-card.component.ts`, `user-stories.md` |
+| Variables y funciones de TypeScript | `camelCase`. | `reservationCount`, `calculateTotal()` |
+| Clases y componentes | `PascalCase` cuando representan una clase o un componente de Angular. | `ReservationCardComponent`, `BookingSummaryComponent` |
 | Constantes | `UPPER_SNAKE_CASE` cuando son valores globales inmutables. | `MAX_RETRY_COUNT` |
 | Clases CSS, atributos `data-*` e identificadores HTML | Minúsculas en `kebab-case`; las clases CSS siguen el patrón BEM cuando representan bloques, elementos y modificadores. | `site-header__nav`, `plan--professional` |
 | Variables CSS personalizadas | Prefijo `--` seguido de un nombre en `kebab-case`. | `--color-primary`, `--spacing-md` |
 | Rutas y recursos de API | Recursos plurales en minúsculas y versionados bajo `/api/v1/`. | `/api/v1/reservations` |
-| Variables de entorno | Mayúsculas en `SCREAMING_SNAKE_CASE`; los valores secretos nunca se registran. | `DATABASE_CONNECTION_STRING` |
+| Variables de entorno | Mayúsculas en `SCREAMING_SNAKE_CASE`; los valores secretos nunca se registran. | `SPRING_DATASOURCE_URL` |
 
 #### Landing Page: HTML, CSS y JavaScript
 
