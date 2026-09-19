@@ -3421,20 +3421,21 @@ export function calculateReservationTotal(nightlyRate, nights) {
 }
 ```
 
-#### Frontend Web Application: Vue.js y Vite
+#### Frontend Web Application: Angular y TypeScript
 
-La Frontend Web Application se desarrollará con Vue.js y Vite. Vite se utilizará
-como herramienta de desarrollo y build, manteniendo sus scripts y configuración en
-el manifiesto del proyecto. Los componentes se implementarán como Single-File
-Components (`.vue`) y utilizarán Composition API. Se preferirá la sintaxis
-`<script setup>` para declarar imports, estado reactivo, funciones y hooks de ciclo de
-vida de forma concisa.
+La Frontend Web Application se desarrollará con Angular y TypeScript. Angular CLI se
+utilizará para crear, ejecutar, probar y compilar el proyecto, manteniendo sus scripts
+y configuración en el workspace. El código de interfaz se organizará por áreas
+funcionales dentro de `src` y utilizará las opciones de tipado estricto de TypeScript.
 
-La lógica reutilizable y con estado se extraerá a composables con nombres que
-comiencen por `use`, por ejemplo `useReservationSearch`. Los componentes utilizarán
-nombres en `PascalCase` y los nombres de props, eventos y variables respetarán las
-convenciones de JavaScript. Cada componente tendrá una responsabilidad clara y se
-evitará colocar lógica de negocio extensa directamente en la plantilla.
+Cada componente agrupará archivos con el mismo nombre base, por ejemplo
+`reservation-card.component.ts`, `reservation-card.component.html` y
+`reservation-card.component.css`. Los componentes, servicios y directivas utilizarán
+los sufijos `.component`, `.service` y `.directive`, respectivamente. Las clases se
+nombrarán en `PascalCase`; las propiedades y los métodos, en `camelCase`; y los flujos
+observables podrán utilizar el sufijo `$`. Los componentes se enfocarán en la
+presentación, mientras que la lógica reutilizable y el acceso a datos se mantendrán en
+servicios. Se evitará colocar lógica de negocio extensa directamente en las plantillas.
 
 #### Backend: ASP.NET Core y C#
 
