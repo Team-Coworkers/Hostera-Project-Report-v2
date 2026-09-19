@@ -6,13 +6,13 @@
 <div class="cover-career">Carrera de Ingeniería de Software</div>
 
 <div class="cover-course-block">
-  <div class="cover-code">1ASI0730</div>
-  <div class="cover-course">Aplicaciones Web</div>
+  <div class="cover-code">1ASI0729</div>
+  <div class="cover-course">Diseño de aplicaciones Open Source</div>
   <div class="cover-label">NRC</div>
-  <div class="cover-nrc">8150</div>
+  <div class="cover-nrc">7737</div>
   <div class="cover-title">Informe del Trabajo Final</div>
   <div class="cover-label">Docente</div>
-  <div class="cover-value">Velásquez Núñez, Ángel Augusto</div>
+  <div class="cover-value">Ivan Robles Fernández</div>
   <div class="cover-label">Equipo</div>
   <div class="cover-value">Team Coworkers</div>
   <div class="cover-label">Proyecto</div>
