@@ -5,7 +5,7 @@ workspace "Hostera" "Plataforma web administrativa para gestión hotelera - Team
 
         hostera = softwareSystem "HOSTERA" "Plataforma web administrativa que centraliza la gestión de reservas, disponibilidad de habitaciones, inventario y control de accesos físicos mediante RFID, con panel de monitoreo en tiempo real." {
 
-            webapp = container "Aplicación Web" "Interfaz web (SPA) para gestionar reservas, habitaciones, inventario, accesos y visualizar el dashboard en tiempo real." "React / TypeScript" {
+            webapp = container "Aplicación Web" "Interfaz web (SPA) para gestionar reservas, habitaciones, inventario, accesos y visualizar el dashboard en tiempo real." "Angular / TypeScript" {
                 authUI = component "Autenticación UI" "Pantallas de inicio de sesión y gestión de sesión."
                 reservasUI = component "Reservas UI" "Creación y seguimiento de reservas."
                 habitacionesUI = component "Habitaciones UI" "Visualización y gestión del estado de habitaciones."
