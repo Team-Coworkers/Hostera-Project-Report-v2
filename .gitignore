@@ -1,0 +1,14 @@
+# MacOS
+.DS_Store
+
+# Common Windows junk files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.idea
+.crossnote
+
+# Build files
+report.pdf
