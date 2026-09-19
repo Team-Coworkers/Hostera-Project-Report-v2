@@ -3381,14 +3381,14 @@ ampliamente conocidas. La elección del formato depende del tipo de elemento:
 
 | Elemento | Convención adoptada | Ejemplo |
 | --- | --- | --- |
-| Archivos y carpetas | Minúsculas; se utiliza `kebab-case` cuando el nombre contiene varias palabras. | `reservation-card.vue`, `user-stories.md` |
-| Variables y funciones de JavaScript | `camelCase`. | `reservationCount`, `calculateTotal()` |
-| Clases y componentes | `PascalCase` cuando representan una clase o un componente de Vue. | `ReservationCard`, `BookingSummary` |
+| Archivos y carpetas | Minúsculas; se utiliza `kebab-case` cuando el nombre contiene varias palabras. | `reservation-card.component.ts`, `user-stories.md` |
+| Variables y funciones de TypeScript | `camelCase`. | `reservationCount`, `calculateTotal()` |
+| Clases y componentes | `PascalCase` cuando representan una clase o un componente de Angular. | `ReservationCardComponent`, `BookingSummaryComponent` |
 | Constantes | `UPPER_SNAKE_CASE` cuando son valores globales inmutables. | `MAX_RETRY_COUNT` |
 | Clases CSS, atributos `data-*` e identificadores HTML | Minúsculas en `kebab-case`; las clases CSS siguen el patrón BEM cuando representan bloques, elementos y modificadores. | `site-header__nav`, `plan--professional` |
 | Variables CSS personalizadas | Prefijo `--` seguido de un nombre en `kebab-case`. | `--color-primary`, `--spacing-md` |
 | Rutas y recursos de API | Recursos plurales en minúsculas y versionados bajo `/api/v1/`. | `/api/v1/reservations` |
-| Variables de entorno | Mayúsculas en `SCREAMING_SNAKE_CASE`; los valores secretos nunca se registran. | `DATABASE_CONNECTION_STRING` |
+| Variables de entorno | Mayúsculas en `SCREAMING_SNAKE_CASE`; los valores secretos nunca se registran. | `SPRING_DATASOURCE_URL` |
 
 #### Landing Page: HTML, CSS y JavaScript
 
@@ -3421,20 +3421,21 @@ export function calculateReservationTotal(nightlyRate, nights) {
 }
 ```
 
-#### Frontend Web Application: Vue.js y Vite
+#### Frontend Web Application: Angular y TypeScript
 
-La Frontend Web Application se desarrollará con Vue.js y Vite. Vite se utilizará
-como herramienta de desarrollo y build, manteniendo sus scripts y configuración en
-el manifiesto del proyecto. Los componentes se implementarán como Single-File
-Components (`.vue`) y utilizarán Composition API. Se preferirá la sintaxis
-`<script setup>` para declarar imports, estado reactivo, funciones y hooks de ciclo de
-vida de forma concisa.
+La Frontend Web Application se desarrollará con Angular y TypeScript. Angular CLI se
+utilizará para crear, ejecutar, probar y compilar el proyecto, manteniendo sus scripts
+y configuración en el workspace. El código de interfaz se organizará por áreas
+funcionales dentro de `src` y utilizará las opciones de tipado estricto de TypeScript.
 
-La lógica reutilizable y con estado se extraerá a composables con nombres que
-comiencen por `use`, por ejemplo `useReservationSearch`. Los componentes utilizarán
-nombres en `PascalCase` y los nombres de props, eventos y variables respetarán las
-convenciones de JavaScript. Cada componente tendrá una responsabilidad clara y se
-evitará colocar lógica de negocio extensa directamente en la plantilla.
+Cada componente agrupará archivos con el mismo nombre base, por ejemplo
+`reservation-card.component.ts`, `reservation-card.component.html` y
+`reservation-card.component.css`. Los componentes, servicios y directivas utilizarán
+los sufijos `.component`, `.service` y `.directive`, respectivamente. Las clases se
+nombrarán en `PascalCase`; las propiedades y los métodos, en `camelCase`; y los flujos
+observables podrán utilizar el sufijo `$`. Los componentes se enfocarán en la
+presentación, mientras que la lógica reutilizable y el acceso a datos se mantendrán en
+servicios. Se evitará colocar lógica de negocio extensa directamente en las plantillas.
 
 #### Backend: ASP.NET Core y C#
 
@@ -3901,11 +3902,11 @@ This is program for AV2 (not in AV1)
 
 [15] Google. (s. f.). [_Google HTML/CSS Style Guide_](https://google.github.io/styleguide/htmlcssguide.html). Recuperado el 16 de septiembre de 2026.
 
-[16] Vue.js. (s. f.). [_Style Guide_](https://vuejs.org/style-guide/). Recuperado el 16 de septiembre de 2026.
+[16] Angular. (s. f.). [_Angular coding style guide_](https://angular.dev/style-guide). Recuperado el 16 de septiembre de 2026.
 
-[17] Vue.js. (s. f.). [_Composition API FAQ_](https://vuejs.org/guide/extras/composition-api-faq). Recuperado el 16 de septiembre de 2026.
+[17] Microsoft. (s. f.). [_The TypeScript Handbook_](https://www.typescriptlang.org/docs/handbook/intro.html). Recuperado el 16 de septiembre de 2026.
 
-[18] Vite. (s. f.). [_Getting Started_](https://vite.dev/guide/). Recuperado el 16 de septiembre de 2026.
+[18] Angular. (s. f.). [_Angular CLI_](https://angular.dev/tools/cli). Recuperado el 16 de septiembre de 2026.
 
 [19] JSDoc. (s. f.). [_JSDoc Documentation_](https://jsdoc.app/). Recuperado el 16 de septiembre de 2026.
 
