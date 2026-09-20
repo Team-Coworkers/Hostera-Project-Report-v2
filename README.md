@@ -3491,7 +3491,7 @@ de compilación sí están versionados.
 La Landing Page está desplegada mediante GitHub Pages utilizando el repositorio de
 Landing Page registrado en la sección 5.1.2. La configuración de publicación utiliza
 la rama `main` y la carpeta `/ (root)`. La aplicación está disponible en la
-[URL pública de la Landing Page](https://1asi0730-2620-8150-grafoverde.github.io/landing-page/).
+[URL pública de la Landing Page](https://team-coworkers.github.io/landing-page-main/).
 
 <img src="assets/chapter-5/github-pages-deployment.png" alt="Configuración de GitHub Pages de la Landing Page, publicada desde main y la carpeta raíz" style="width:100%; height:auto;"/>
 
@@ -3557,7 +3557,7 @@ corresponden a la estimación registrada en el Product Backlog de Hostera.
 
 Al cierre del Sprint 1, el objetivo se considera cumplido: las ocho User Stories de
 `EP001` fueron implementadas y la Landing Page se encuentra publicada en
-[GitHub Pages](https://1asi0730-2620-8150-grafoverde.github.io/landing-page/).
+[GitHub Pages](https://team-coworkers.github.io/landing-page-main/).
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
@@ -3692,7 +3692,7 @@ documentan estos cambios.
 
 Durante el Sprint 1 se completó la experiencia principal de la Landing Page para
 las ocho User Stories de `EP001`. La versión ejecutable está disponible en
-[https://1asi0730-2620-8150-grafoverde.github.io/landing-page/](https://1asi0730-2620-8150-grafoverde.github.io/landing-page/).
+[https://team-coworkers.github.io/landing-page-main/](https://team-coworkers.github.io/landing-page-main/).
 La navegación permite recorrer la propuesta de valor, los caminos según la
 escala del hotel, los beneficios operativos, el flujo de trabajo, los planes,
 la información del producto y del equipo, las preguntas frecuentes y el
@@ -3745,7 +3745,7 @@ y publicó el sitio en el entorno `github-pages`.
 
 | Product | Repository | Deployment Platform | Source | Public URL | Sprint Status |
 |---|---|---|---|---|---|
-| Landing Page | [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | GitHub Pages | `main` / `/ (root)` | [Open Landing Page](https://1asi0730-2620-8150-grafoverde.github.io/landing-page/) | Deployed |
+| Landing Page | [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | GitHub Pages | `main` / `/ (root)` | [Open Landing Page](https://team-coworkers.github.io/landing-page-main/) | Deployed |
 | Web Services | — | — | — | — | Not in Sprint 1 scope |
 | Frontend Web Applications | — | — | — | — | Not in Sprint 1 scope |
 
@@ -3942,6 +3942,6 @@ This is program for AV2 (not in AV1)
 - **Final Project Keynote.** Archivo independiente de la presentación de la entrega.
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
-- **Landing Page desplegada.** [Abrir Landing Page](https://1asi0730-2620-8150-grafoverde.github.io/landing-page/)
+- **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
 - **Board de seguimiento.** [Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5)
 - **Prototipo de Web Application.** [Hostera · Web Application Prototypes en Figma](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes)
