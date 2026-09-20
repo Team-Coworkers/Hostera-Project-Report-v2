@@ -1048,21 +1048,28 @@ información y el control de las diferencias entre establecimientos.
 
 Entrevista 1:
 
-<img src="assets/chapter-2/interview-01-roy-rios.png" alt="Entrevista 1 de Roy Ríos" style="width:100%; height:auto;"/>
-*Figura 2.1. Entrevista a Roy Ríos, subgerente de un hotel de la cadena Accor.*
+<img src="assets/chapter-2/interview-01-wilson.png" alt="Entrevista 1 de Wilson" style="width:100%; height:auto;"/>
+*Figura 2.1. Entrevista a Wilson, ingeniero y administrador de hotel.*
 
-Entrevistado: Roy Ríos
-<br>Edad: 38 años
+Entrevistado: Wilson
+<br>Edad: 46 años
 
-Enlace de entrevista: `Entrevista hotel IBIS - 2026_09_18 12_00 GMT-05_00 - Recording.mp4`
-<br>Ocupación: Subgerente de un hotel de la cadena Accor
-<br>Ubicación: Trujillo, La Libertad
-<br>Inicio de la entrevista: 00:01:56
-<br>Duración: 16:26
+Enlace de entrevista: [https://drive.google.com/file/d/1CLCIVG5evrr4Z0-OdklAttTeY6RAlvJK/view?usp=sharing](https://drive.google.com/file/d/1CLCIVG5evrr4Z0-OdklAttTeY6RAlvJK/view?usp=sharing)
+<br>Ocupación: Ingeniero y administrador de hotel
+<br>Ubicación: Puno, Puno
 
 Resumen:
-Roy Ríos, de 38 años, es subgerente de un hotel de la cadena Accor ubicado en Trujillo. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Debido a que cada hotel opera bajo una razón social diferente, no se realizan movimientos internos de inventario entre sedes y los responsables de cada establecimiento no tienen acceso directo a la información financiera de los demás hoteles, lo que limita la comparación de ingresos y desempeño. Las reservas derivadas a otros hoteles se coordinan mediante correo electrónico y a través de ResaWeb, utilizando códigos internos de identificación. Para la gestión operativa emplean Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El hotel utiliza laptops, terminales táctiles y tablets. En materia de seguridad, los huéspedes deben registrarse previamente y se emplean tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años. Finalmente, señala que el crecimiento de la cadena depende del desempeño de cada hotel, las condiciones políticas, sociales y de seguridad, así como de las decisiones de los inversionistas. Para adoptar nuevas soluciones, considera importantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad.
+Wilson, ingeniero y administrador de un hotel independiente en Puno, comenta sobre los principales desafíos que enfrenta al gestionar las reservas, accesos, disponibilidad e inventario de dos sedes. Actualmente, administra una sede principal de aproximadamente 30 habitaciones y otra de alrededor de 15 habitaciones, que además cuenta con un espacio para eventos. Señala que una de las principales dificultades es centralizar la información de ambas sedes, ya que debe coordinar constantemente con el administrador de la segunda sede para conocer las habitaciones disponibles.
 
+Para gestionar las reservas, recibe información principalmente mediante WhatsApp, correo electrónico, TikTok y aplicaciones de reservas, pero posteriormente debe trasladarla manualmente a un archivo de Excel, que utiliza como herramienta principal para controlar la disponibilidad y las reservas. Para los accesos utiliza tarjetas de identificación, aunque actualmente estas solo permiten controlar la entrada y salida de las habitaciones. También emplea una computadora para administrar el sistema de tarjetas.
+
+Respecto a la seguridad, considera necesario que cada trabajador de limpieza tenga su propia tarjeta de acceso, ya que anteriormente una misma tarjeta podía ser utilizada por diferentes personas, dificultando identificar quién ingresó a una habitación en caso de pérdida de algún objeto. Por ello, considera importante registrar quién entra, a qué hora y si el acceso corresponde con su turno de trabajo. En caso de pérdida de una tarjeta, actualmente esta debe ser anulada y reemplazada por una nueva.
+
+Otro aspecto importante es el control de los diferentes servicios ofrecidos por el hotel. Además de las habitaciones, administra desayunos, almuerzos, productos del minibar, piscina, sauna y gimnasio. Propone que estos servicios puedan registrarse directamente mediante la tarjeta del huésped, utilizando lectores de tarjetas, para evitar que el personal tenga que registrar manualmente quién utiliza cada servicio y facilitar el cobro al finalizar la estadía.
+
+En la segunda sede también se encuentra una sala de eventos, cuyos servicios dependen del tipo de evento contratado, como catering, DJ, iluminación o proyector. Por ello, considera necesario que el sistema pueda registrar diferentes paquetes y servicios adicionales. Asimismo, menciona que próximamente planea incorporar bungalows como una nueva modalidad de alojamiento, con características similares a Airbnb y costos diferentes.
+
+Finalmente, considera que una mejora importante para la administración del hotel sería contar con un sistema centralizado de seguridad y control que permita gestionar los accesos de huéspedes y trabajadores, registrar el uso de los diferentes servicios y administrar la información de ambas sedes. Esto le permitiría reducir el trabajo manual, mejorar la seguridad y tener un mayor control sobre las actividades y servicios que se realizan en el hotel.
 **Entrevista 2:**
 
 **<img src="assets/chapter-2/interview-03-rafael-prieto.png" alt="Entrevista 2 de Rafael Prieto" style="width:100%; height:auto;"/>**
@@ -1161,6 +1168,25 @@ Como solución para mejorar la coordinación y acompañar el crecimiento del neg
 
 Finalmente, respecto a las condiciones para adoptar la propuesta, menciona que están evaluando financiar la implementación mediante una entidad bancaria, con el objetivo de concretar el proyecto para la nueva temporada del año 2027. De esta manera, buscan avanzar desde una gestión principalmente manual hacia una administración más automatizada de las reservas y con mayor presencia digital.
 
+**Entrevista 3:**
+
+**<img src="assets/chapter-2/interview-06-roy-rios.png" alt="Entrevista 3 de Roy Ríos" style="width:100%; height:auto;"/>**
+*Figura 2.6. Entrevista a Roy Ríos, subgerente de un hotel de la cadena Accor.*
+
+Entrevistado: Roy Ríos
+
+<br>Edad: 38 años
+
+Enlace de entrevista: `Entrevista hotel IBIS - 2026_09_18 12_00 GMT-05_00 - Recording.mp4`
+<br>Ocupación: Subgerente de un hotel de la cadena Accor
+<br>Ubicación: Trujillo, La Libertad
+<br>Inicio de la entrevista: 00:01:56
+<br>Duración: 16:26
+
+Resumen:
+Roy Ríos, de 38 años, es subgerente de un hotel de la cadena Accor ubicado en Trujillo. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Debido a que cada hotel opera bajo una razón social diferente, no se realizan movimientos internos de inventario entre sedes y los responsables de cada establecimiento no tienen acceso directo a la información financiera de los demás hoteles, lo que limita la comparación de ingresos y desempeño. Las reservas derivadas a otros hoteles se coordinan mediante correo electrónico y a través de ResaWeb, utilizando códigos internos de identificación. Para la gestión operativa emplean Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El hotel utiliza laptops, terminales táctiles y tablets. En materia de seguridad, los huéspedes deben registrarse previamente y se emplean tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años. Finalmente, señala que el crecimiento de la cadena depende del desempeño de cada hotel, las condiciones políticas, sociales y de seguridad, así como de las decisiones de los inversionistas. Para adoptar nuevas soluciones, considera importantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad.
+
+
 ### 2.2.3. Análisis de entrevistas
 
 **Segmento 1: Primer segmento objetivo: administradores y propietarios de hoteles independientes**
@@ -1168,35 +1194,35 @@ Finalmente, respecto a las condiciones para adoptar la propuesta, menciona que e
 
 
 **Perfil del entrevistado:**
-Subgerente de un hotel de la cadena Accor en Trujillo, 38 años. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Cada hotel de la cadena opera bajo una razón social independiente, condición que determina cómo se comparten el inventario y la información entre sedes.
+Ingeniero de profesión, 46 años, propietario y administrador de un hotel en la ciudad de Puno desde hace 2 años (previamente trabajó 5 años como empleado en otro hotel). Actualmente gestiona dos sedes: la principal (~30 habitaciones) y una secundaria (~15 habitaciones más un ambiente para eventos).
 
 * **Motivación para participar:**
-  La conversación se desarrolla desde su rol de subgerente y con foco en la operación diaria del establecimiento. Su disposición a detallar los sistemas en uso, los criterios con los que la cadena evalúa una inversión y las restricciones de información entre sedes sugiere interés en soluciones que permitan comparar el desempeño entre hoteles, que es justamente la limitación que describe a lo largo de la entrevista.
+  El entrevistado accede a colaborar principalmente porque el proyecto le ofrece acceso anticipado a un producto de gestión de acceso físico a habitaciones, aplicable a una o varias sedes hoteleras — es decir, una motivación directamente ligada a resolver un problema operativo propio, no solo altruista.
 * **Dificultades actuales:**
   Se identifican varias barreras recurrentes:
-  * Separación jurídica entre sedes: cada hotel opera bajo una razón social distinta, por lo que no se realizan movimientos internos de inventario entre establecimientos de la misma cadena.
-  * Visibilidad financiera limitada: los responsables de cada hotel no tienen acceso directo a la información financiera de las demás sedes, lo que impide comparar ingresos y desempeño dentro de la cadena.
-  * Derivación manual de reservas: los traslados de reservas hacia otros hoteles se coordinan por correo electrónico y mediante ResaWeb, apoyándose en códigos internos de identificación.
-  * Dispersión de sistemas: la operación diaria se reparte entre tres plataformas distintas para alojamiento, facturación y restaurante, sin un punto único de consulta.
+  * Fragmentación de la información: las reservas llegan por WhatsApp, TikTok, correo y aplicativos de reserva, y todo debe consolidarse manualmente en Excel.
+  * Falta de trazabilidad en los accesos: el sistema de tarjetas actual solo registra entrada/salida de habitaciones, sin identificar con certeza qué persona específica ingresó, lo que ha generado casos de objetos perdidos sin poder atribuir responsabilidad.
+  * Coordinación entre sedes: debe recibir reportes diarios del administrador de la segunda sede para poder redistribuir disponibilidad (por ejemplo, ante grupos grandes o promociones).
+  * Gestión de servicios adicionales dispersos: desayuno, almuerzo, frigobar, eventos (catering, DJ, proyector) se registran de forma manual y descentralizada.
 * **Procesos y herramientas actuales:**
-  La gestión operativa se apoya en Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El equipamiento incluye laptops, terminales táctiles y tablets. El control de acceso combina el registro previo del huésped con tarjetas magnéticas que restringen el ascensor y la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años.
+  Uso intensivo de Excel como herramienta central de control de reservas y disponibilidad, complementado con un sistema de tarjetas tipo PID (solo para apertura de puertas y ascensor por piso). No usa un PMS formal ni navegador específico; la coordinación con clientes es mayormente vía WhatsApp.
 * **Funcionalidades deseadas (mejoras):**
-  De las dificultades señaladas se desprenden las siguientes necesidades:
-  * Vista consolidada de ocupación y desempeño comparable entre sedes, compatible con que cada hotel mantenga su propia razón social.
-  * Derivación de reservas entre hoteles dentro del sistema, en reemplazo de la coordinación por correo electrónico y códigos internos.
-  * Punto único de consulta que reúna la información hoy repartida entre el PMS, la facturación y el restaurante.
-  * Perfiles y permisos que respeten la separación jurídica entre establecimientos, de modo que cada responsable acceda a lo que le corresponde sin exponer la información financiera de las demás sedes.
+  * Tarjetas de acceso individualizadas por empleado (no compartidas), para poder identificar quién ingresó a cada habitación y en qué turno.
+  * Extensión del control de acceso a otras zonas: piscina, sauna, gimnasio en la sede principal.
+  * Registro automático de consumo de servicios (desayuno, almuerzo) mediante lectores de tarjeta, para evitar que el personal deba anotar manualmente quién usa cada servicio.
+  * Manejo diferenciado de tarjetas para el nuevo local de eventos (paquetes por tipo de evento: fiesta, reunión, conferencia).
+  * A futuro, incorporar bungalows tipo "experiencia vivencial" (modelo Airbnb) como una nueva línea de servicio con su propio esquema de costos.
 * **Factores para la adopción (costo, seguridad, soporte):**
-  Para incorporar nuevas soluciones considera determinantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad. A ello suma que el crecimiento de la cadena —y con él la capacidad de invertir en nuevas herramientas— depende del desempeño de cada hotel, de las condiciones políticas, sociales y de seguridad del entorno, y de las decisiones de los inversionistas.
+  Valora que el sistema permita centralizar el cobro de servicios adicionales bajo el ID de la tarjeta/habitación, reduciendo la necesidad de personal dedicado a registrar manualmente cada consumo. La seguridad y la trazabilidad de accesos (saber quién entra y cuándo) aparecen como el criterio más importante para justificar la inversión.
 * **Impacto percibido:**
-  Según lo descrito, una solución de este tipo incidiría sobre todo en el tiempo que hoy se destina a coordinar derivaciones por correo y a consultar por separado tres plataformas distintas. También daría al subgerente una base comparable para situar el desempeño de su hotel dentro de la cadena, algo que la estructura actual de razones sociales independientes no permite.
+  El entrevistado reconoce que un mejor control de accesos y servicios simplificaría significativamente su carga operativa como propietario único, permitiéndole manejar de forma más eficiente el inventario de servicios (habitación, alimentación, eventos) tanto para el personal de limpieza como para los huéspedes en ambas sedes.
 * **Propuestas de mejora:**
-  * Consolidar en un solo panel los indicadores de ocupación y desempeño de cada sede, con el nivel de detalle que permita su razón social.
-  * Registrar las derivaciones de reservas dentro del sistema, conservando los códigos internos como referencia.
-  * Integrar la información de alojamiento, facturación y restaurante en una vista común para la subgerencia.
-  * Definir roles y permisos por establecimiento, alineados con la separación jurídica de la cadena.
+  * Tarjetas nominativas por trabajador para trazabilidad de responsabilidad.
+  * Ampliación del alcance del sistema de tarjetas a zonas comunes (piscina, sauna, gimnasio).
+  * Registro automatizado de consumo de servicios adicionales vinculado a la tarjeta del huésped.
+  * Gestión diferenciada por tipo de evento en la sede secundaria.
 
-En conjunto, la entrevista muestra que en una cadena cuyos establecimientos operan como razones sociales independientes la restricción principal no es la ausencia de sistemas —el hotel ya opera con un PMS, un sistema de facturación y uno de restaurante— sino la falta de una vista comparable entre sedes y la imposibilidad de mover inventario entre ellas. La adopción de una nueva solución en este segmento se evaluará por su costo, su efecto sobre los márgenes operativos y el soporte y la capacitación que la acompañen, antes que por la incorporación de funciones aisladas.
+En conjunto, la entrevista evidencia que el segmento de administradores hoteleros independientes con múltiples sedes valora sobre todo la trazabilidad de accesos y la automatización del registro de servicios adicionales, por encima de la simple apertura de puertas. Su adopción del producto dependerá de que este permita centralizar el control de ambas sedes, identificar responsables individuales por acceso y reducir la carga manual de registro que hoy recae en Excel y WhatsApp.
 
 
 
@@ -1246,21 +1272,25 @@ En conjunto, la entrevista muestra que en una cadena cuyos establecimientos oper
 
 * Entrevistado 1: 40 años, administrador de negocios turísticos y hoteleros, Gerente General del Hotel Meliá Lima Miraflores, reside en Miraflores, a cargo de dos sedes (Meliá Lima Miraflores y Meliá Lima San Isidro).
 * Entrevistado 2: Room Division Manager de un complejo de dos hoteles (Intercontinental Lima Miraflores, 321 habitaciones, e Índigo Lima Miraflores, 76 habitaciones), a cargo de recepción, SPA, seguridad y housekeeping.
+* Entrevistado 3: 38 años, subgerente de un hotel de la cadena Accor en Trujillo (112 habitaciones), con una ocupación aproximada de 65 % durante el último año frente al 71 % del anterior.
 * **Motivación / rol frente a la gestión:**
   A diferencia del segmento 1 (dueños-administradores independientes), aquí los entrevistados no son propietarios sino gestores profesionales dentro de cadenas hoteleras estructuradas, con responsabilidades divididas por departamentos (reservas, recepción, seguridad, housekeeping, almacén) y bajo sistemas corporativos estandarizados.
 * **Herramientas y sistemas actuales:**
-  Ambos hoteles utilizan **Opera / Opera Cloud** como PMS y CRM principal, el mismo sistema que usan cadenas internacionales (Hilton, Marriott, Intercontinental, Mandarin Oriental). Destacan:
+  Los tres establecimientos utilizan **Opera / Opera Cloud** como PMS y CRM principal, el mismo sistema que usan cadenas internacionales (Hilton, Marriott, Intercontinental, Mandarin Oriental). Destacan:
   * Informes diarios consolidados (Flash Manager, History and Forecast) para visión general de ocupación y proyecciones.
   * Usuario y contraseña individual por empleado para trazabilidad de cambios en reservas (por seguridad, no transferible).
   * Cada sede tiene un código/centro de costos propio (ej. 58.50 y 52.20) que segrega la información entre propiedades, incluso dentro de la misma cadena.
   * Uso de una plataforma adicional (Easy) para housekeeping y mantenimiento, con seguimiento en tiempo real del estado de habitaciones — costo aprox. USD 1,500 anuales por propiedad, con soporte 24/7 desde España.
   * Acceso remoto vía VPN + laptop/celular corporativo para supervisión fuera del hotel (solo personal autorizado según nivel jerárquico).
+  * En el hotel de la cadena Accor, Opera Cloud se complementa con Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante, sobre laptops, terminales táctiles y tablets.
 * **Dificultades identificadas:**
   * Gestión de overbooking/sobreventa: se resuelve derivando huéspedes a otra propiedad de la misma cadena, trasladando el valor de la tarifa.
   * Circunstancias operativas variables (personal, percepción del huésped, descuidos puntuales) más que "problemas" fijos — se percibe como parte normal de la operación, no como una dificultad estructural.
   * Separación estricta de responsabilidades: el Room Division Manager no controla directamente accesos ni almacén, sino que aprueba/supervisa procesos que ejecutan otros departamentos (seguridad, recepción, almacén).
+  * Separación por razón social: en la cadena Accor cada hotel opera como una razón social independiente, por lo que no se realizan movimientos internos de inventario entre sedes y los responsables no acceden a la información financiera de las demás propiedades, lo que impide comparar ingresos y desempeño dentro de la cadena.
+  * Derivación de reservas fuera del sistema: los traslados hacia otros hoteles de la cadena se coordinan por correo electrónico y mediante ResaWeb, apoyándose en códigos internos de identificación.
 * **Procesos de control de accesos:**
-  A diferencia del segmento 1, el acceso de huéspedes y personal no depende de un solo responsable, sino de la coordinación entre **seguridad** (detecta anomalías) y **recepción** (verifica reserva en sistema). La supervisión es "macro": el gerente confía en que el proceso ya se cumplió antes de intervenir directamente.
+  A diferencia del segmento 1, el acceso de huéspedes y personal no depende de un solo responsable, sino de la coordinación entre **seguridad** (detecta anomalías) y **recepción** (verifica reserva en sistema). La supervisión es "macro": el gerente confía en que el proceso ya se cumplió antes de intervenir directamente. En el hotel de la cadena Accor el control se apoya en el registro previo del huésped y en tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada.
 * **Reuniones y toma de decisiones (revenue management):**
   Reuniones semanales de revenue (todos los martes) donde participan gerente general, revenue manager, ventas y reservas para ajustar tarifas según comportamiento del set competitivo, eventos en la zona y disponibilidad de la competencia.
 * **Factores de adopción (costo, soporte, seguridad):**
@@ -1268,6 +1298,8 @@ En conjunto, la entrevista muestra que en una cadena cuyos establecimientos oper
   * Soporte internacional 24/7 y capacitaciones continuas, incluidas en la inducción de nuevo personal.
   * Seguridad enmarcada en cumplimiento normativo (Ley de Protección de Datos Personales) y en accesos individualizados por usuario.
   * Fuerte énfasis en que la información de cada propiedad/cadena esté "blindada" — aislamiento total entre marcas competidoras dentro del mismo sistema (Opera).
+  * Costos, impacto en los márgenes operativos, capacitación, soporte y seguridad como criterios explícitos de evaluación; la capacidad de invertir depende además del desempeño de cada hotel, de las condiciones políticas, sociales y de seguridad del entorno, y de las decisiones de los inversionistas.
+  * Conservación independiente de la documentación administrativa y operativa durante cinco años por establecimiento.
 * **Cambios/mejoras propuestas:**
   * Mejora continua y reconocimiento del personal como eje central (filosofía "el trabajador es más importante que el huésped, porque cuida al huésped").
   * Mayor visibilidad y valoración del departamento de housekeeping, más allá de la limpieza: identificación de preferencias de huéspedes, estándares de detalle, iniciativas como el "housekeeping week".
@@ -1285,11 +1317,11 @@ Para ello seleccionamos los siguientes perfiles:
 
 User Persona 1
 ![Steven Huarcaya](assets/chapter-2/Steven%20Huarcaya%20(1).png)
-*Figura 2.6. User Persona de Steven Huarcaya.*
+*Figura 2.7. User Persona de Steven Huarcaya.*
 ---
 User Persona 2
 ![Anyeli Cardenas](assets/chapter-2/Anyeli%20C%C3%A1rdenas.png)
-*Figura 2.7. User Persona de Anyeli Cárdenas.*
+*Figura 2.8. User Persona de Anyeli Cárdenas.*
 ### 2.3.2. User Task Matrix
 En esta sección se presenta el User Task Matrix correspondiente al **Segmento 1: Propietarios o administradores de hoteles independientes de una sola sede**, representado por el User Persona **Steven Huarcaya**.
 
@@ -1347,7 +1379,7 @@ En esta sección se presentan los User Journey Maps en su versión **As-Is** (si
 El *journey* actual de Steven abarca desde la recepción de solicitudes de reserva por canales dispersos hasta la revisión del inventario y la entrega física de llaves en el hotel. El proceso se caracteriza por una alta dependencia de registros manuales y una constante interrupción operativa para resolver incidencias.
 
 ![As-Is User Journey Map - Steven Huarcaya](assets/chapter-2/StevenHuarcaya_journeymap.png)
-*Figura 2.8. As-Is User Journey Map de Steven Huarcaya.*
+*Figura 2.9. As-Is User Journey Map de Steven Huarcaya.*
 
 ---
 
@@ -1356,17 +1388,17 @@ El *journey* actual de Steven abarca desde la recepción de solicitudes de reser
 El *journey* actual de Anyeli contempla el proceso de consolidación y supervisión de la operación de múltiples sedes a la distancia. Las etapas clave incluyen la solicitud de reportes a los administradores locales, la consolidación manual de datos de inventario y la verificación diferida de accesos, lo cual genera retrasos y falta de visibilidad en tiempo real.
 
 ![As-Is User Journey Map - Anyeli Cárdenas](assets/chapter-2/AnyeliCardenas_journeymap.png)
-*Figura 2.9. As-Is User Journey Map de Anyeli Cárdenas.*
+*Figura 2.10. As-Is User Journey Map de Anyeli Cárdenas.*
 
 ### 2.3.4. Empathy Mapping
 
 Empathy Map 1
 ![StevenHuarcaya](assets/chapter-2/Empathy%20map-segmento1.png)
-*Figura 2.10. Empathy Map de Steven Huarcaya.*
+*Figura 2.11. Empathy Map de Steven Huarcaya.*
 ---
 Empathy Map 2
 ![AnyeliCardenas](assets/chapter-2/Empathy%20map-segmento2%20(1).png)
-*Figura 2.11. Empathy Map de Anyeli Cárdenas.*
+*Figura 2.12. Empathy Map de Anyeli Cárdenas.*
 
 
 ## 2.4. Big Picture EventStorming
@@ -1378,7 +1410,7 @@ posibles problemas y oportunidades que orientan la definición de la solución.
 
 <img src="assets/chapter-2/big-picture-event-storming-hostera.svg" alt="Diagrama Big Picture EventStorming del dominio de Hostera" style="width:100%; height:auto;"/>
 
-*Figura 2.12. Big Picture EventStorming del dominio de Hostera.*
+*Figura 2.13. Big Picture EventStorming del dominio de Hostera.*
 
 ## 2.5. Ubiquitous Language
 
