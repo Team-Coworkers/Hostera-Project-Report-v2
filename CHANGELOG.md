@@ -4,16 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.20.0] - 2026-09-19
+
+### Fixed
+
+- Repointed the project repository link in the cover section to `Hostera-Project-Report-v2`. It still pointed to `Team-Coworkers/Hostera-Project-Report`, which no longer exists and returned a 404 from the most visible link in the report.
+
 ## [0.19.0] - 2026-09-19
 
 ### Changed
 
 - Replaced the first interview of the first segment with Dominguez, administrator of an independent hotel in Lima, including his portrait, recording link, timestamps and summary.
 - Rewrote the section 2.2.3 analysis for the first segment from that interview.
-
-### Fixed
-
-- Repointed the project repository link in the cover section to `Hostera-Project-Report-v2`. It still pointed to `Team-Coworkers/Hostera-Project-Report`, which no longer exists and returned a 404 from the most visible link in the report.
 
 ## [0.18.0] - 2026-09-19
 
