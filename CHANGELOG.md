@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-09-19
+
+### Changed
+
+- Pointed every repository reference to the Team Coworkers repositories in use: `landing-page-main` for the Landing Page and `Hostera-Project-Report-v2` for this report.
+- Updated the published Landing Page URL to `https://team-coworkers.github.io/landing-page-main/`.
+- Renamed the shared design source file reference to `Team-Coworkers` in the Wireflows and Web Application mock-up sections.
+- Rebuilt the Sprint 1 development evidence table with the 28 implementation commits that exist in `landing-page-main`, replacing the 20 rows that referenced the retired repository.
+- Recaptured the Sprint 1 execution screenshots from the current deployment.
+
 ## [0.7.0] - 2026-09-19
 
 ### Changed
