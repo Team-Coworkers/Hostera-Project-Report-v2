@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.18.0] - 2026-09-19
+
+### Fixed
+
+- Corrected section 5.2.1.8, which still summarised "the 20 commits" and split them 3/5/3/5/4 per member. The evidence table records 28 commits, and their real distribution, read from the GitHub API, is 6/6/6/5/5. All 28 were verified to be non-merge commits.
+- Replaced the per-member attribution of whole User Stories with the branches each member actually committed to. Every one of the eleven Epic 1 branches carries commits from more than one member, so the previous one-story-per-person split did not match the repository.
+- Corrected section 5.2.1.2, which described the 18-to-24 range out of 106 as Story Points. Those figures are the estimated hours of the 20 Sprint 1 work-items; the eight User Stories of Epic 1 sum 42 Story Points, the committed velocity. The numbers were right, the unit was not.
+
+### Changed
+
+- Recaptured the AV1 collaboration evidence from `Team-Coworkers/Hostera-Project-Report-v2`, so the commit history shows contributions from more than one member and the contributor analytics show the current counts for the five of them.
+
 ## [0.17.0] - 2026-09-19
 
 ### Changed
