@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.13.0] - 2026-09-19
+
+### Changed
+
+- Recaptured the AV1 collaboration evidence from `Team-Coworkers/Hostera-Project-Report-v2`, replacing the analytics and commit history that still showed the retired repository.
+- Described the report releases generically in the AV1 collaboration section, since the recaptured history no longer shows release `v0.3.0`.
+
+### Fixed
+
+- Corrected the `JhosBy2005` username casing in the AV1 collaboration section.
+
 ## [0.12.0] - 2026-09-19
 
 ### Changed
