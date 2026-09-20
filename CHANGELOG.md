@@ -48,6 +48,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Recaptured the GitHub Pages deployment evidence from `Team-Coworkers/landing-page-main`, replacing the screenshot that still showed the retired repository in sections 5.1.4 and 5.2.1.7.
 
+## [0.11.0] - 2026-09-19
+
+### Changed
+
+- Migrated the project tracking from the retired `jqcuba.youtrack.cloud` instance to the team instance at `santanapromaster.youtrack.cloud`, project `HOS`.
+- Rebuilt the tracker from the report itself: 8 epics, 33 user stories, 17 technical stories and the 20 Sprint 1 work-items, with their story points, states, assignees and the epic and story hierarchy. The retired instance held only 9 of these 78 items and assigned four of them to members who left the team.
+- Pointed the Product Backlog reference to the full issue list and the remaining three references to the Sprint 1 agile board.
+- Replaced the two YouTrack screenshots, which until now were the same file used for both figures: figure 3.3 is the issue list of the 78 backlog items and figure 5.2 is the Sprint 1 agile board.
+- Corrected the figure 5.2 note, which described the capture as taken during the sprint although it shows the board at sprint close.
+
 ## [0.10.0] - 2026-09-19
 
 ### Added
