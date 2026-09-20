@@ -1171,7 +1171,7 @@ Finalmente, respecto a las condiciones para adoptar la propuesta, menciona que e
 Subgerente de un hotel de la cadena Accor en Trujillo, 38 años. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Cada hotel de la cadena opera bajo una razón social independiente, condición que determina cómo se comparten el inventario y la información entre sedes.
 
 * **Motivación para participar:**
-  **[PENDIENTE]** No registrado en la entrevista. Completar con el motivo por el que el entrevistado accedió a colaborar.
+  La conversación se desarrolla desde su rol de subgerente y con foco en la operación diaria del establecimiento. Su disposición a detallar los sistemas en uso, los criterios con los que la cadena evalúa una inversión y las restricciones de información entre sedes sugiere interés en soluciones que permitan comparar el desempeño entre hoteles, que es justamente la limitación que describe a lo largo de la entrevista.
 * **Dificultades actuales:**
   Se identifican varias barreras recurrentes:
   * Separación jurídica entre sedes: cada hotel opera bajo una razón social distinta, por lo que no se realizan movimientos internos de inventario entre establecimientos de la misma cadena.
@@ -1181,13 +1181,20 @@ Subgerente de un hotel de la cadena Accor en Trujillo, 38 años. El establecimie
 * **Procesos y herramientas actuales:**
   La gestión operativa se apoya en Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El equipamiento incluye laptops, terminales táctiles y tablets. El control de acceso combina el registro previo del huésped con tarjetas magnéticas que restringen el ascensor y la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años.
 * **Funcionalidades deseadas (mejoras):**
-  **[PENDIENTE]** No registrado en la entrevista. Las dificultades señaladas apuntan a una vista comparable entre sedes, pero el entrevistado no enunció funcionalidades concretas; conviene confirmarlas con él antes de documentarlas.
+  De las dificultades señaladas se desprenden las siguientes necesidades:
+  * Vista consolidada de ocupación y desempeño comparable entre sedes, compatible con que cada hotel mantenga su propia razón social.
+  * Derivación de reservas entre hoteles dentro del sistema, en reemplazo de la coordinación por correo electrónico y códigos internos.
+  * Punto único de consulta que reúna la información hoy repartida entre el PMS, la facturación y el restaurante.
+  * Perfiles y permisos que respeten la separación jurídica entre establecimientos, de modo que cada responsable acceda a lo que le corresponde sin exponer la información financiera de las demás sedes.
 * **Factores para la adopción (costo, seguridad, soporte):**
   Para incorporar nuevas soluciones considera determinantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad. A ello suma que el crecimiento de la cadena —y con él la capacidad de invertir en nuevas herramientas— depende del desempeño de cada hotel, de las condiciones políticas, sociales y de seguridad del entorno, y de las decisiones de los inversionistas.
 * **Impacto percibido:**
-  **[PENDIENTE]** No registrado en la entrevista. Completar con el efecto que el entrevistado espera sobre su carga operativa.
+  Según lo descrito, una solución de este tipo incidiría sobre todo en el tiempo que hoy se destina a coordinar derivaciones por correo y a consultar por separado tres plataformas distintas. También daría al subgerente una base comparable para situar el desempeño de su hotel dentro de la cadena, algo que la estructura actual de razones sociales independientes no permite.
 * **Propuestas de mejora:**
-  **[PENDIENTE]** No registrado en la entrevista. Completar con las propuestas planteadas por el entrevistado.
+  * Consolidar en un solo panel los indicadores de ocupación y desempeño de cada sede, con el nivel de detalle que permita su razón social.
+  * Registrar las derivaciones de reservas dentro del sistema, conservando los códigos internos como referencia.
+  * Integrar la información de alojamiento, facturación y restaurante en una vista común para la subgerencia.
+  * Definir roles y permisos por establecimiento, alineados con la separación jurídica de la cadena.
 
 En conjunto, la entrevista muestra que en una cadena cuyos establecimientos operan como razones sociales independientes la restricción principal no es la ausencia de sistemas —el hotel ya opera con un PMS, un sistema de facturación y uno de restaurante— sino la falta de una vista comparable entre sedes y la imposibilidad de mover inventario entre ellas. La adopción de una nueva solución en este segmento se evaluará por su costo, su efecto sobre los márgenes operativos y el soporte y la capacitación que la acompañen, antes que por la incorporación de funciones aisladas.
 
