@@ -1048,28 +1048,20 @@ información y el control de las diferencias entre establecimientos.
 
 Entrevista 1:
 
-<img src="assets/chapter-2/interview-01-wilson.png" alt="Entrevista 1 de Wilson" style="width:100%; height:auto;"/>
-*Figura 2.1. Entrevista a Wilson, ingeniero y administrador de hotel.*
+<img src="assets/chapter-2/interview-01-roy-rios.png" alt="Entrevista 1 de Roy Ríos" style="width:100%; height:auto;"/>
+*Figura 2.1. Entrevista a Roy Ríos, subgerente de un hotel de la cadena Accor.*
 
-Entrevistado: Wilson
-<br>Edad: 46 años
+Entrevistado: Roy Ríos
+<br>Edad: 38 años
 
-Enlace de entrevista: [https://drive.google.com/file/d/1CLCIVG5evrr4Z0-OdklAttTeY6RAlvJK/view?usp=sharing](https://drive.google.com/file/d/1CLCIVG5evrr4Z0-OdklAttTeY6RAlvJK/view?usp=sharing)
-<br>Ocupación: Ingeniero y administrador de hotel
-<br>Ubicación: Puno, Puno
+Enlace de entrevista: `Entrevista hotel IBIS - 2026_09_18 12_00 GMT-05_00 - Recording.mp4`
+<br>Ocupación: Subgerente de un hotel de la cadena Accor
+<br>Ubicación: Trujillo, La Libertad
+<br>Inicio de la entrevista: 00:01:56
+<br>Duración: 16:26
 
 Resumen:
-Wilson, ingeniero y administrador de un hotel independiente en Puno, comenta sobre los principales desafíos que enfrenta al gestionar las reservas, accesos, disponibilidad e inventario de dos sedes. Actualmente, administra una sede principal de aproximadamente 30 habitaciones y otra de alrededor de 15 habitaciones, que además cuenta con un espacio para eventos. Señala que una de las principales dificultades es centralizar la información de ambas sedes, ya que debe coordinar constantemente con el administrador de la segunda sede para conocer las habitaciones disponibles.
-
-Para gestionar las reservas, recibe información principalmente mediante WhatsApp, correo electrónico, TikTok y aplicaciones de reservas, pero posteriormente debe trasladarla manualmente a un archivo de Excel, que utiliza como herramienta principal para controlar la disponibilidad y las reservas. Para los accesos utiliza tarjetas de identificación, aunque actualmente estas solo permiten controlar la entrada y salida de las habitaciones. También emplea una computadora para administrar el sistema de tarjetas.
-
-Respecto a la seguridad, considera necesario que cada trabajador de limpieza tenga su propia tarjeta de acceso, ya que anteriormente una misma tarjeta podía ser utilizada por diferentes personas, dificultando identificar quién ingresó a una habitación en caso de pérdida de algún objeto. Por ello, considera importante registrar quién entra, a qué hora y si el acceso corresponde con su turno de trabajo. En caso de pérdida de una tarjeta, actualmente esta debe ser anulada y reemplazada por una nueva.
-
-Otro aspecto importante es el control de los diferentes servicios ofrecidos por el hotel. Además de las habitaciones, administra desayunos, almuerzos, productos del minibar, piscina, sauna y gimnasio. Propone que estos servicios puedan registrarse directamente mediante la tarjeta del huésped, utilizando lectores de tarjetas, para evitar que el personal tenga que registrar manualmente quién utiliza cada servicio y facilitar el cobro al finalizar la estadía.
-
-En la segunda sede también se encuentra una sala de eventos, cuyos servicios dependen del tipo de evento contratado, como catering, DJ, iluminación o proyector. Por ello, considera necesario que el sistema pueda registrar diferentes paquetes y servicios adicionales. Asimismo, menciona que próximamente planea incorporar bungalows como una nueva modalidad de alojamiento, con características similares a Airbnb y costos diferentes.
-
-Finalmente, considera que una mejora importante para la administración del hotel sería contar con un sistema centralizado de seguridad y control que permita gestionar los accesos de huéspedes y trabajadores, registrar el uso de los diferentes servicios y administrar la información de ambas sedes. Esto le permitiría reducir el trabajo manual, mejorar la seguridad y tener un mayor control sobre las actividades y servicios que se realizan en el hotel.
+Roy Ríos, de 38 años, es subgerente de un hotel de la cadena Accor ubicado en Trujillo. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Debido a que cada hotel opera bajo una razón social diferente, no se realizan movimientos internos de inventario entre sedes y los responsables de cada establecimiento no tienen acceso directo a la información financiera de los demás hoteles, lo que limita la comparación de ingresos y desempeño. Las reservas derivadas a otros hoteles se coordinan mediante correo electrónico y a través de ResaWeb, utilizando códigos internos de identificación. Para la gestión operativa emplean Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El hotel utiliza laptops, terminales táctiles y tablets. En materia de seguridad, los huéspedes deben registrarse previamente y se emplean tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años. Finalmente, señala que el crecimiento de la cadena depende del desempeño de cada hotel, las condiciones políticas, sociales y de seguridad, así como de las decisiones de los inversionistas. Para adoptar nuevas soluciones, considera importantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad.
 
 **Entrevista 2:**
 
