@@ -1689,7 +1689,7 @@ para su seguimiento, priorización y estimación.
 
 *Figura 3.3. Listado general del Product Backlog de Hostera en YouTrack.*
 
-El Product Backlog puede consultarse en el [Agile Board de Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5).
+El Product Backlog puede consultarse en el [proyecto Hostera en YouTrack](https://santanapromaster.youtrack.cloud/issues?q=project:%20HOS).
 
 # Capítulo IV: Product Design
 
@@ -3347,7 +3347,7 @@ las herramientas locales se instalan desde sus canales oficiales de distribució
 | Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
 | --- | --- | --- | --- |
 | GitHub | Aloja el repositorio del equipo, los repositorios de producto, los issues y el historial de revisiones. | [Repositorio del equipo Team Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
-| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
+| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
 | Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | [Prototipos de las aplicaciones web de Hostera](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes) | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
 | UXPressia | Elabora los artefactos de impact mapping utilizados para relacionar objetivos, actores, impactos e historias de usuario. | — | Los diagramas exportados se versionan junto con el informe cuando se utilizan como evidencia. |
 | Pandoc | Convierte `README.md` y sus recursos locales en el entregable PDF. | Instalación local; la configuración y ejecución están documentadas en `README.md`. | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` permanece sin seguimiento. |
@@ -3641,14 +3641,14 @@ El Sprint Backlog 1 descompone el objetivo de implementar la experiencia complet
 la Landing Page en tareas concretas para las ocho User Stories de `EP001`. El Board
 de YouTrack se utilizó para registrar las historias, sus responsables, los Story
 Points y su pertenencia al Sprint 1. La [vista pública del Board de Hostera en
-YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5) contiene el
+YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) contiene el
 seguimiento de estas User Stories.
 
 <img src="assets/chapter-5/sprint-1-youtrack-board.png" alt="Board de YouTrack con las User Stories de la Epic 1 asignadas al Sprint 1 de la Landing Page" style="width:100%; height:auto;"/>
 
 *Figura 5.2. Board de YouTrack con las User Stories asignadas al Sprint 1 de la Landing Page.*
 
-La captura corresponde al seguimiento del Board durante el sprint. La tabla siguiente
+La captura corresponde al Board al cierre del Sprint 1. La tabla siguiente
 presenta la descomposición de trabajo y el estado al cierre del Sprint 1. Las horas
 indicadas son estimaciones de planificación para cada Work-Item/Task y no sustituyen
 la estimación relativa en Story Points de cada User Story.
@@ -3995,5 +3995,5 @@ This is program for AV2 (not in AV1)
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
-- **Board de seguimiento.** [Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5)
+- **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
 - **Prototipo de Web Application.** [Hostera · Web Application Prototypes en Figma](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes)
