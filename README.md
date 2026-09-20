@@ -47,11 +47,11 @@
 
 | Versión |   Fecha    | Autor(es)                                                                                         | Descripción de cambios                                                                                                                                                                  |
 | :-----: | :--------: | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  0.6.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBY2005`) | Se alineó el informe con la conformación vigente del equipo: se retiraron los integrantes que ya no participan y se redistribuyeron sus aspectos entre los cinco integrantes actuales. La redistribución se equilibró por story points, dejando la carga entre 18 y 24 puntos por integrante sobre un total de 106. Se actualizaron el Registro de Versiones, el Student Outcome, la matriz de liderazgo y colaboración, el Sprint Backlog y las contribuciones del Sprint 1. |
-|  0.5.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBY2005`) | Se completó la identidad de Team Coworkers en el informe, la guía del repositorio, el changelog y el modelo Structurizr. Se estableció `README.md` como archivo principal del informe según el enunciado, se trasladó la guía del repositorio a `docs/repository-guide.md` y se actualizó la relación de colaboradores autorizados con la conformación vigente del equipo. Se completaron las fotografías de los cinco integrantes en la sección 1.1.2, se retiraron las imágenes de integrantes que ya no forman parte del equipo y se optimizaron los retratos para reducir el peso del repositorio. |
+|  0.6.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se alineó el informe con la conformación vigente del equipo: se retiraron los integrantes que ya no participan y se redistribuyeron sus aspectos entre los cinco integrantes actuales. La redistribución se equilibró por story points, dejando la carga entre 18 y 24 puntos por integrante sobre un total de 106. Se actualizaron el Registro de Versiones, el Student Outcome, la matriz de liderazgo y colaboración, el Sprint Backlog y las contribuciones del Sprint 1. |
+|  0.5.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se completó la identidad de Team Coworkers en el informe, la guía del repositorio, el changelog y el modelo Structurizr. Se estableció `README.md` como archivo principal del informe según el enunciado, se trasladó la guía del repositorio a `docs/repository-guide.md` y se actualizó la relación de colaboradores autorizados con la conformación vigente del equipo. Se completaron las fotografías de los cinco integrantes en la sección 1.1.2, se retiraron las imágenes de integrantes que ya no forman parte del equipo y se optimizaron los retratos para reducir el peso del repositorio. |
 |  0.4.0  | 19/09/2026 | Darnell Cuba (`darnell1910`) | Se trasladó el informe al repositorio de Team Coworkers y se actualizaron la portada, los integrantes del equipo, sus perfiles y el Student Outcome con la nueva conformación del equipo. |
 |  0.3.0  | 17/09/2026 | Jose Rudas (`josegabriel1604`)                                                                          | Se incorporó la sección Project Report Collaboration Insights para AV1, con el enlace al repositorio, la explicación del trabajo colaborativo y las capturas de analíticos y commits de GitHub. |
-|  0.2.0  | 17/09/2026 | Darnell Cuba (`darnell1910`)<br>Juan Diego Flores Rios (`YopoFlores`)<br>Jorge Leon (`mateool10`)<br>Jose Rudas (`josegabriel1604`)<br>José Antonio Santana Luna (`JhosBY2005`) | Se amplió el informe con la documentación de descubrimiento, diseño, arquitectura e implementación de Hostera; se incorporó la evidencia del Sprint 1, el despliegue de la Landing Page en GitHub Pages, los Student Outcomes AV1, los perfiles del equipo y los anexos. |
+|  0.2.0  | 17/09/2026 | Darnell Cuba (`darnell1910`)<br>Juan Diego Flores Rios (`YopoFlores`)<br>Jorge Leon (`mateool10`)<br>Jose Rudas (`josegabriel1604`)<br>José Antonio Santana Luna (`JhosBy2005`) | Se amplió el informe con la documentación de descubrimiento, diseño, arquitectura e implementación de Hostera; se incorporó la evidencia del Sprint 1, el despliegue de la Landing Page en GitHub Pages, los Student Outcomes AV1, los perfiles del equipo y los anexos. |
 |  0.1.1  | 03/09/2026 | Jorge Leon (`mateool10`)                                                                          | Se agregó la documentación del repositorio, el script para generar el PDF y la licencia MIT. Se corrigió el diseño de la portada, el tamaño de las imágenes y los bordes de las tablas. |
 |  0.1.0  | 03/09/2026 | Darnell Cuba (`darnell1910`)<br>Juan Diego Flores Rios (`YopoFlores`)<br>Jorge Leon (`mateool10`) | Se creó la estructura inicial del informe del proyecto Hostera, se incorporaron los recursos gráficos y se agregó la descripción de la startup.                                         |
 
@@ -81,10 +81,10 @@ GitHub.
 La captura de analíticos confirma la participación de **Darnell Yadir Cuba Vega**
 (`darnell1910`), **Juan Diego Flores Rios** (`YopoFlores`), **Jorge Mateo Leon
 Naupari** (`mateool10`), **Jose Gabriel Rudas Chavarria** (`josegabriel1604`) y
-**José Antonio Santana Luna** (`JhosBY2005`) durante el periodo mostrado. La captura
+**José Antonio Santana Luna** (`JhosBy2005`) durante el periodo mostrado. La captura
 del historial de commits muestra la evolución de la rama `main`, incluyendo los
-cambios de documentación, la preparación del changelog y la integración de la
-release `v0.3.0`. Esta evidencia es coherente
+cambios de documentación, la preparación del changelog y la integración de las
+releases del informe. Esta evidencia es coherente
 con el Registro de Versiones del Informe y demuestra que la elaboración del reporte
 fue una actividad compartida.
 
@@ -3544,7 +3544,7 @@ publicación en GitHub Pages.
 | Time | 12:00 PM |
 | Location | Virtual |
 | Prepared By | Leon Naupari, Jorge Mateo (`mateool10`) |
-| Attendees (to planning meeting) | Cuba Vega, Darnell Yadir (`darnell1910`); Flores Rios, Juan Diego (`YopoFlores`); Leon Naupari, Jorge Mateo (`mateool10`); Rudas Chavarria, Jose Gabriel (`josegabriel1604`); Santana Luna, José Antonio (`JhosBY2005`). |
+| Attendees (to planning meeting) | Cuba Vega, Darnell Yadir (`darnell1910`); Flores Rios, Juan Diego (`YopoFlores`); Leon Naupari, Jorge Mateo (`mateool10`); Rudas Chavarria, Jose Gabriel (`josegabriel1604`); Santana Luna, José Antonio (`JhosBy2005`). |
 | Sprint 0 Review Summary | No aplica, porque este es el primer sprint del proyecto. |
 | Sprint 0 Retrospective Summary | No aplica, porque este es el primer sprint del proyecto. |
 | Sprint 1 Goal | Nuestro enfoque está en ofrecer a los visitantes una experiencia completa y clara de la Landing Page de Hostera. Creemos que esto les permitirá comprender la propuesta de valor, identificar la alternativa adecuada según la escala de su operación y elegir el siguiente paso. Esto se confirmará cuando las 8 User Stories de `EP001` estén implementadas y la Landing Page se encuentre publicada y accesible en GitHub Pages. |
@@ -3806,7 +3806,7 @@ release:
 | Juan Diego Flores (`YopoFlores`) | US004 y US006: camino de la cadena pequeña, plan Professional, camino del grupo hotelero, plan Enterprise y acciones de cierre. | 5 |
 | Jorge Leon (`mateool10`) | US001: propuesta de valor, vista previa del panel y relato de la operación fragmentada. | 3 |
 | Jose Rudas (`josegabriel1604`) | US003 y US007: camino del hotel independiente, plan Free, contenido de producto y equipo, y sección de soporte. | 5 |
-| José Santana (`JhosBY2005`) | US005 y US008: beneficios de operaciones conectadas, flujo operativo y variantes de idioma. | 4 |
+| José Santana (`JhosBy2005`) | US005 y US008: beneficios de operaciones conectadas, flujo operativo y variantes de idioma. | 4 |
 | **Total** | **Ocho User Stories de `EP001`** | **20** |
 
 La captura del analítico de GitHub muestra la actividad de contribución del
