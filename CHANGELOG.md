@@ -4,6 +4,60 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.16.0] - 2026-09-19
+
+### Changed
+
+- Linked the Roy Rios interview recording, replacing the plain file name with its SharePoint URL.
+
+## [0.15.0] - 2026-09-19
+
+### Changed
+
+- Moved the Roy Rios interview from the first segment to the second, where it belongs: he manages a chain hotel, not an independent one. Registered as the third interview of that segment and added to its analysis.
+- Restored the previous first-segment interview and its analysis, which the earlier replacement had removed.
+- Renumbered the chapter 2 figures from 2.6 onwards so the sequence stays correlative after the new entry.
+
+## [0.14.0] - 2026-09-19
+
+### Changed
+
+- Replaced the first interview of the first segment with Roy Rios, deputy manager of an Accor chain hotel in Trujillo, including his portrait, timestamps and summary.
+- Rewrote the section 2.2.3 analysis for the first segment from the new interview, writing the blocks the recording does not state directly as analysis derived from the difficulties, tools and adoption criteria it does cover.
+
+## [0.13.0] - 2026-09-19
+
+### Changed
+
+- Recaptured the AV1 collaboration evidence from `Team-Coworkers/Hostera-Project-Report-v2`, replacing the analytics and commit history that still showed the retired repository.
+- Described the report releases generically in the AV1 collaboration section, since the recaptured history no longer shows release `v0.3.0`.
+
+### Fixed
+
+- Corrected the `JhosBy2005` username casing in the AV1 collaboration section.
+
+## [0.12.0] - 2026-09-19
+
+### Changed
+
+- Recaptured the Sprint 1 contributors analytic and commit history from `Team-Coworkers/landing-page-main`, replacing the figures 5.6 and 5.7 that still showed the retired repository.
+
+## [0.11.0] - 2026-09-19
+
+### Changed
+
+- Recaptured the GitHub Pages deployment evidence from `Team-Coworkers/landing-page-main`, replacing the screenshot that still showed the retired repository in sections 5.1.4 and 5.2.1.7.
+
+## [0.11.0] - 2026-09-19
+
+### Changed
+
+- Migrated the project tracking from the retired `jqcuba.youtrack.cloud` instance to the team instance at `santanapromaster.youtrack.cloud`, project `HOS`.
+- Rebuilt the tracker from the report itself: 8 epics, 33 user stories, 17 technical stories and the 20 Sprint 1 work-items, with their story points, states, assignees and the epic and story hierarchy. The retired instance held only 9 of these 78 items and assigned four of them to members who left the team.
+- Pointed the Product Backlog reference to the full issue list and the remaining three references to the Sprint 1 agile board.
+- Replaced the two YouTrack screenshots, which until now were the same file used for both figures: figure 3.3 is the issue list of the 78 backlog items and figure 5.2 is the Sprint 1 agile board.
+- Corrected the figure 5.2 note, which described the capture as taken during the sprint although it shows the board at sprint close.
+
 ## [0.10.0] - 2026-09-19
 
 ### Added
@@ -13,6 +67,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Changed
 
 - Renumbered the chapter 2 figures from 2.3 onwards so the sequence stays correlative after the new interview entry.
+- Updated the team roster in the landing page wireframes and mock-ups so the artefacts show the five engineers published on the landing page, replacing Mateo Condori with Mateo Leon and Joaquin Cuba with Jose Rudas.
 
 ## [0.9.0] - 2026-09-19
 

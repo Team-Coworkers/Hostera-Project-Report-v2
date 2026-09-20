@@ -47,11 +47,11 @@
 
 | Versión |   Fecha    | Autor(es)                                                                                         | Descripción de cambios                                                                                                                                                                  |
 | :-----: | :--------: | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  0.6.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBY2005`) | Se alineó el informe con la conformación vigente del equipo: se retiraron los integrantes que ya no participan y se redistribuyeron sus aspectos entre los cinco integrantes actuales. La redistribución se equilibró por story points, dejando la carga entre 18 y 24 puntos por integrante sobre un total de 106. Se actualizaron el Registro de Versiones, el Student Outcome, la matriz de liderazgo y colaboración, el Sprint Backlog y las contribuciones del Sprint 1. |
-|  0.5.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBY2005`) | Se completó la identidad de Team Coworkers en el informe, la guía del repositorio, el changelog y el modelo Structurizr. Se estableció `README.md` como archivo principal del informe según el enunciado, se trasladó la guía del repositorio a `docs/repository-guide.md` y se actualizó la relación de colaboradores autorizados con la conformación vigente del equipo. Se completaron las fotografías de los cinco integrantes en la sección 1.1.2, se retiraron las imágenes de integrantes que ya no forman parte del equipo y se optimizaron los retratos para reducir el peso del repositorio. |
+|  0.6.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se alineó el informe con la conformación vigente del equipo: se retiraron los integrantes que ya no participan y se redistribuyeron sus aspectos entre los cinco integrantes actuales. La redistribución se equilibró por story points, dejando la carga entre 18 y 24 puntos por integrante sobre un total de 106. Se actualizaron el Registro de Versiones, el Student Outcome, la matriz de liderazgo y colaboración, el Sprint Backlog y las contribuciones del Sprint 1. |
+|  0.5.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se completó la identidad de Team Coworkers en el informe, la guía del repositorio, el changelog y el modelo Structurizr. Se estableció `README.md` como archivo principal del informe según el enunciado, se trasladó la guía del repositorio a `docs/repository-guide.md` y se actualizó la relación de colaboradores autorizados con la conformación vigente del equipo. Se completaron las fotografías de los cinco integrantes en la sección 1.1.2, se retiraron las imágenes de integrantes que ya no forman parte del equipo y se optimizaron los retratos para reducir el peso del repositorio. |
 |  0.4.0  | 19/09/2026 | Darnell Cuba (`darnell1910`) | Se trasladó el informe al repositorio de Team Coworkers y se actualizaron la portada, los integrantes del equipo, sus perfiles y el Student Outcome con la nueva conformación del equipo. |
 |  0.3.0  | 17/09/2026 | Jose Rudas (`josegabriel1604`)                                                                          | Se incorporó la sección Project Report Collaboration Insights para AV1, con el enlace al repositorio, la explicación del trabajo colaborativo y las capturas de analíticos y commits de GitHub. |
-|  0.2.0  | 17/09/2026 | Darnell Cuba (`darnell1910`)<br>Juan Diego Flores Rios (`YopoFlores`)<br>Jorge Leon (`mateool10`)<br>Jose Rudas (`josegabriel1604`)<br>José Antonio Santana Luna (`JhosBY2005`) | Se amplió el informe con la documentación de descubrimiento, diseño, arquitectura e implementación de Hostera; se incorporó la evidencia del Sprint 1, el despliegue de la Landing Page en GitHub Pages, los Student Outcomes AV1, los perfiles del equipo y los anexos. |
+|  0.2.0  | 17/09/2026 | Darnell Cuba (`darnell1910`)<br>Juan Diego Flores Rios (`YopoFlores`)<br>Jorge Leon (`mateool10`)<br>Jose Rudas (`josegabriel1604`)<br>José Antonio Santana Luna (`JhosBy2005`) | Se amplió el informe con la documentación de descubrimiento, diseño, arquitectura e implementación de Hostera; se incorporó la evidencia del Sprint 1, el despliegue de la Landing Page en GitHub Pages, los Student Outcomes AV1, los perfiles del equipo y los anexos. |
 |  0.1.1  | 03/09/2026 | Jorge Leon (`mateool10`)                                                                          | Se agregó la documentación del repositorio, el script para generar el PDF y la licencia MIT. Se corrigió el diseño de la portada, el tamaño de las imágenes y los bordes de las tablas. |
 |  0.1.0  | 03/09/2026 | Darnell Cuba (`darnell1910`)<br>Juan Diego Flores Rios (`YopoFlores`)<br>Jorge Leon (`mateool10`) | Se creó la estructura inicial del informe del proyecto Hostera, se incorporaron los recursos gráficos y se agregó la descripción de la startup.                                         |
 
@@ -81,10 +81,10 @@ GitHub.
 La captura de analíticos confirma la participación de **Darnell Yadir Cuba Vega**
 (`darnell1910`), **Juan Diego Flores Rios** (`YopoFlores`), **Jorge Mateo Leon
 Naupari** (`mateool10`), **Jose Gabriel Rudas Chavarria** (`josegabriel1604`) y
-**José Antonio Santana Luna** (`JhosBY2005`) durante el periodo mostrado. La captura
+**José Antonio Santana Luna** (`JhosBy2005`) durante el periodo mostrado. La captura
 del historial de commits muestra la evolución de la rama `main`, incluyendo los
-cambios de documentación, la preparación del changelog y la integración de la
-release `v0.3.0`. Esta evidencia es coherente
+cambios de documentación, la preparación del changelog y la integración de las
+releases del informe. Esta evidencia es coherente
 con el Registro de Versiones del Informe y demuestra que la elaboración del reporte
 fue una actividad compartida.
 
@@ -1070,7 +1070,6 @@ Otro aspecto importante es el control de los diferentes servicios ofrecidos por 
 En la segunda sede también se encuentra una sala de eventos, cuyos servicios dependen del tipo de evento contratado, como catering, DJ, iluminación o proyector. Por ello, considera necesario que el sistema pueda registrar diferentes paquetes y servicios adicionales. Asimismo, menciona que próximamente planea incorporar bungalows como una nueva modalidad de alojamiento, con características similares a Airbnb y costos diferentes.
 
 Finalmente, considera que una mejora importante para la administración del hotel sería contar con un sistema centralizado de seguridad y control que permita gestionar los accesos de huéspedes y trabajadores, registrar el uso de los diferentes servicios y administrar la información de ambas sedes. Esto le permitiría reducir el trabajo manual, mejorar la seguridad y tener un mayor control sobre las actividades y servicios que se realizan en el hotel.
-
 **Entrevista 2:**
 
 **<img src="assets/chapter-2/interview-03-rafael-prieto.png" alt="Entrevista 2 de Rafael Prieto" style="width:100%; height:auto;"/>**
@@ -1169,6 +1168,25 @@ Como solución para mejorar la coordinación y acompañar el crecimiento del neg
 
 Finalmente, respecto a las condiciones para adoptar la propuesta, menciona que están evaluando financiar la implementación mediante una entidad bancaria, con el objetivo de concretar el proyecto para la nueva temporada del año 2027. De esta manera, buscan avanzar desde una gestión principalmente manual hacia una administración más automatizada de las reservas y con mayor presencia digital.
 
+**Entrevista 3:**
+
+**<img src="assets/chapter-2/interview-06-roy-rios.png" alt="Entrevista 3 de Roy Ríos" style="width:100%; height:auto;"/>**
+*Figura 2.6. Entrevista a Roy Ríos, subgerente de un hotel de la cadena Accor.*
+
+Entrevistado: Roy Ríos
+
+<br>Edad: 38 años
+
+Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105\_upc\_edu\_pe/IQBXkmw7\_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb\_yy0aZ0](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQBXkmw7_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb_yy0aZ0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ETZm7N)
+<br>Ocupación: Subgerente de un hotel de la cadena Accor
+<br>Ubicación: Trujillo, La Libertad
+<br>Inicio de la entrevista: 00:01:56
+<br>Duración: 16:26
+
+Resumen:
+Roy Ríos, de 38 años, es subgerente de un hotel de la cadena Accor ubicado en Trujillo. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Debido a que cada hotel opera bajo una razón social diferente, no se realizan movimientos internos de inventario entre sedes y los responsables de cada establecimiento no tienen acceso directo a la información financiera de los demás hoteles, lo que limita la comparación de ingresos y desempeño. Las reservas derivadas a otros hoteles se coordinan mediante correo electrónico y a través de ResaWeb, utilizando códigos internos de identificación. Para la gestión operativa emplean Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El hotel utiliza laptops, terminales táctiles y tablets. En materia de seguridad, los huéspedes deben registrarse previamente y se emplean tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años. Finalmente, señala que el crecimiento de la cadena depende del desempeño de cada hotel, las condiciones políticas, sociales y de seguridad, así como de las decisiones de los inversionistas. Para adoptar nuevas soluciones, considera importantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad.
+
+
 ### 2.2.3. Análisis de entrevistas
 
 **Segmento 1: Primer segmento objetivo: administradores y propietarios de hoteles independientes**
@@ -1254,21 +1272,25 @@ En conjunto, la entrevista evidencia que el segmento de administradores hotelero
 
 * Entrevistado 1: 40 años, administrador de negocios turísticos y hoteleros, Gerente General del Hotel Meliá Lima Miraflores, reside en Miraflores, a cargo de dos sedes (Meliá Lima Miraflores y Meliá Lima San Isidro).
 * Entrevistado 2: Room Division Manager de un complejo de dos hoteles (Intercontinental Lima Miraflores, 321 habitaciones, e Índigo Lima Miraflores, 76 habitaciones), a cargo de recepción, SPA, seguridad y housekeeping.
+* Entrevistado 3: 38 años, subgerente de un hotel de la cadena Accor en Trujillo (112 habitaciones), con una ocupación aproximada de 65 % durante el último año frente al 71 % del anterior.
 * **Motivación / rol frente a la gestión:**
   A diferencia del segmento 1 (dueños-administradores independientes), aquí los entrevistados no son propietarios sino gestores profesionales dentro de cadenas hoteleras estructuradas, con responsabilidades divididas por departamentos (reservas, recepción, seguridad, housekeeping, almacén) y bajo sistemas corporativos estandarizados.
 * **Herramientas y sistemas actuales:**
-  Ambos hoteles utilizan **Opera / Opera Cloud** como PMS y CRM principal, el mismo sistema que usan cadenas internacionales (Hilton, Marriott, Intercontinental, Mandarin Oriental). Destacan:
+  Los tres establecimientos utilizan **Opera / Opera Cloud** como PMS y CRM principal, el mismo sistema que usan cadenas internacionales (Hilton, Marriott, Intercontinental, Mandarin Oriental). Destacan:
   * Informes diarios consolidados (Flash Manager, History and Forecast) para visión general de ocupación y proyecciones.
   * Usuario y contraseña individual por empleado para trazabilidad de cambios en reservas (por seguridad, no transferible).
   * Cada sede tiene un código/centro de costos propio (ej. 58.50 y 52.20) que segrega la información entre propiedades, incluso dentro de la misma cadena.
   * Uso de una plataforma adicional (Easy) para housekeeping y mantenimiento, con seguimiento en tiempo real del estado de habitaciones — costo aprox. USD 1,500 anuales por propiedad, con soporte 24/7 desde España.
   * Acceso remoto vía VPN + laptop/celular corporativo para supervisión fuera del hotel (solo personal autorizado según nivel jerárquico).
+  * En el hotel de la cadena Accor, Opera Cloud se complementa con Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante, sobre laptops, terminales táctiles y tablets.
 * **Dificultades identificadas:**
   * Gestión de overbooking/sobreventa: se resuelve derivando huéspedes a otra propiedad de la misma cadena, trasladando el valor de la tarifa.
   * Circunstancias operativas variables (personal, percepción del huésped, descuidos puntuales) más que "problemas" fijos — se percibe como parte normal de la operación, no como una dificultad estructural.
   * Separación estricta de responsabilidades: el Room Division Manager no controla directamente accesos ni almacén, sino que aprueba/supervisa procesos que ejecutan otros departamentos (seguridad, recepción, almacén).
+  * Separación por razón social: en la cadena Accor cada hotel opera como una razón social independiente, por lo que no se realizan movimientos internos de inventario entre sedes y los responsables no acceden a la información financiera de las demás propiedades, lo que impide comparar ingresos y desempeño dentro de la cadena.
+  * Derivación de reservas fuera del sistema: los traslados hacia otros hoteles de la cadena se coordinan por correo electrónico y mediante ResaWeb, apoyándose en códigos internos de identificación.
 * **Procesos de control de accesos:**
-  A diferencia del segmento 1, el acceso de huéspedes y personal no depende de un solo responsable, sino de la coordinación entre **seguridad** (detecta anomalías) y **recepción** (verifica reserva en sistema). La supervisión es "macro": el gerente confía en que el proceso ya se cumplió antes de intervenir directamente.
+  A diferencia del segmento 1, el acceso de huéspedes y personal no depende de un solo responsable, sino de la coordinación entre **seguridad** (detecta anomalías) y **recepción** (verifica reserva en sistema). La supervisión es "macro": el gerente confía en que el proceso ya se cumplió antes de intervenir directamente. En el hotel de la cadena Accor el control se apoya en el registro previo del huésped y en tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada.
 * **Reuniones y toma de decisiones (revenue management):**
   Reuniones semanales de revenue (todos los martes) donde participan gerente general, revenue manager, ventas y reservas para ajustar tarifas según comportamiento del set competitivo, eventos en la zona y disponibilidad de la competencia.
 * **Factores de adopción (costo, soporte, seguridad):**
@@ -1276,6 +1298,8 @@ En conjunto, la entrevista evidencia que el segmento de administradores hotelero
   * Soporte internacional 24/7 y capacitaciones continuas, incluidas en la inducción de nuevo personal.
   * Seguridad enmarcada en cumplimiento normativo (Ley de Protección de Datos Personales) y en accesos individualizados por usuario.
   * Fuerte énfasis en que la información de cada propiedad/cadena esté "blindada" — aislamiento total entre marcas competidoras dentro del mismo sistema (Opera).
+  * Costos, impacto en los márgenes operativos, capacitación, soporte y seguridad como criterios explícitos de evaluación; la capacidad de invertir depende además del desempeño de cada hotel, de las condiciones políticas, sociales y de seguridad del entorno, y de las decisiones de los inversionistas.
+  * Conservación independiente de la documentación administrativa y operativa durante cinco años por establecimiento.
 * **Cambios/mejoras propuestas:**
   * Mejora continua y reconocimiento del personal como eje central (filosofía "el trabajador es más importante que el huésped, porque cuida al huésped").
   * Mayor visibilidad y valoración del departamento de housekeeping, más allá de la limpieza: identificación de preferencias de huéspedes, estándares de detalle, iniciativas como el "housekeeping week".
@@ -1293,11 +1317,11 @@ Para ello seleccionamos los siguientes perfiles:
 
 User Persona 1
 ![Steven Huarcaya](assets/chapter-2/Steven%20Huarcaya%20(1).png)
-*Figura 2.6. User Persona de Steven Huarcaya.*
+*Figura 2.7. User Persona de Steven Huarcaya.*
 ---
 User Persona 2
 ![Anyeli Cardenas](assets/chapter-2/Anyeli%20C%C3%A1rdenas.png)
-*Figura 2.7. User Persona de Anyeli Cárdenas.*
+*Figura 2.8. User Persona de Anyeli Cárdenas.*
 ### 2.3.2. User Task Matrix
 En esta sección se presenta el User Task Matrix correspondiente al **Segmento 1: Propietarios o administradores de hoteles independientes de una sola sede**, representado por el User Persona **Steven Huarcaya**.
 
@@ -1355,7 +1379,7 @@ En esta sección se presentan los User Journey Maps en su versión **As-Is** (si
 El *journey* actual de Steven abarca desde la recepción de solicitudes de reserva por canales dispersos hasta la revisión del inventario y la entrega física de llaves en el hotel. El proceso se caracteriza por una alta dependencia de registros manuales y una constante interrupción operativa para resolver incidencias.
 
 ![As-Is User Journey Map - Steven Huarcaya](assets/chapter-2/StevenHuarcaya_journeymap.png)
-*Figura 2.8. As-Is User Journey Map de Steven Huarcaya.*
+*Figura 2.9. As-Is User Journey Map de Steven Huarcaya.*
 
 ---
 
@@ -1364,17 +1388,17 @@ El *journey* actual de Steven abarca desde la recepción de solicitudes de reser
 El *journey* actual de Anyeli contempla el proceso de consolidación y supervisión de la operación de múltiples sedes a la distancia. Las etapas clave incluyen la solicitud de reportes a los administradores locales, la consolidación manual de datos de inventario y la verificación diferida de accesos, lo cual genera retrasos y falta de visibilidad en tiempo real.
 
 ![As-Is User Journey Map - Anyeli Cárdenas](assets/chapter-2/AnyeliCardenas_journeymap.png)
-*Figura 2.9. As-Is User Journey Map de Anyeli Cárdenas.*
+*Figura 2.10. As-Is User Journey Map de Anyeli Cárdenas.*
 
 ### 2.3.4. Empathy Mapping
 
 Empathy Map 1
 ![StevenHuarcaya](assets/chapter-2/Empathy%20map-segmento1.png)
-*Figura 2.10. Empathy Map de Steven Huarcaya.*
+*Figura 2.11. Empathy Map de Steven Huarcaya.*
 ---
 Empathy Map 2
 ![AnyeliCardenas](assets/chapter-2/Empathy%20map-segmento2%20(1).png)
-*Figura 2.11. Empathy Map de Anyeli Cárdenas.*
+*Figura 2.12. Empathy Map de Anyeli Cárdenas.*
 
 
 ## 2.4. Big Picture EventStorming
@@ -1386,7 +1410,7 @@ posibles problemas y oportunidades que orientan la definición de la solución.
 
 <img src="assets/chapter-2/big-picture-event-storming-hostera.svg" alt="Diagrama Big Picture EventStorming del dominio de Hostera" style="width:100%; height:auto;"/>
 
-*Figura 2.12. Big Picture EventStorming del dominio de Hostera.*
+*Figura 2.13. Big Picture EventStorming del dominio de Hostera.*
 
 ## 2.5. Ubiquitous Language
 
@@ -1665,7 +1689,7 @@ para su seguimiento, priorización y estimación.
 
 *Figura 3.3. Listado general del Product Backlog de Hostera en YouTrack.*
 
-El Product Backlog puede consultarse en el [Agile Board de Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5).
+El Product Backlog puede consultarse en el [proyecto Hostera en YouTrack](https://santanapromaster.youtrack.cloud/issues?q=project:%20HOS).
 
 # Capítulo IV: Product Design
 
@@ -3323,7 +3347,7 @@ las herramientas locales se instalan desde sus canales oficiales de distribució
 | Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
 | --- | --- | --- | --- |
 | GitHub | Aloja el repositorio del equipo, los repositorios de producto, los issues y el historial de revisiones. | [Repositorio del equipo Team Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
-| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
+| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
 | Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | [Prototipos de las aplicaciones web de Hostera](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes) | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
 | UXPressia | Elabora los artefactos de impact mapping utilizados para relacionar objetivos, actores, impactos e historias de usuario. | — | Los diagramas exportados se versionan junto con el informe cuando se utilizan como evidencia. |
 | Pandoc | Convierte `README.md` y sus recursos locales en el entregable PDF. | Instalación local; la configuración y ejecución están documentadas en `README.md`. | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` permanece sin seguimiento. |
@@ -3544,7 +3568,7 @@ publicación en GitHub Pages.
 | Time | 12:00 PM |
 | Location | Virtual |
 | Prepared By | Leon Naupari, Jorge Mateo (`mateool10`) |
-| Attendees (to planning meeting) | Cuba Vega, Darnell Yadir (`darnell1910`); Flores Rios, Juan Diego (`YopoFlores`); Leon Naupari, Jorge Mateo (`mateool10`); Rudas Chavarria, Jose Gabriel (`josegabriel1604`); Santana Luna, José Antonio (`JhosBY2005`). |
+| Attendees (to planning meeting) | Cuba Vega, Darnell Yadir (`darnell1910`); Flores Rios, Juan Diego (`YopoFlores`); Leon Naupari, Jorge Mateo (`mateool10`); Rudas Chavarria, Jose Gabriel (`josegabriel1604`); Santana Luna, José Antonio (`JhosBy2005`). |
 | Sprint 0 Review Summary | No aplica, porque este es el primer sprint del proyecto. |
 | Sprint 0 Retrospective Summary | No aplica, porque este es el primer sprint del proyecto. |
 | Sprint 1 Goal | Nuestro enfoque está en ofrecer a los visitantes una experiencia completa y clara de la Landing Page de Hostera. Creemos que esto les permitirá comprender la propuesta de valor, identificar la alternativa adecuada según la escala de su operación y elegir el siguiente paso. Esto se confirmará cuando las 8 User Stories de `EP001` estén implementadas y la Landing Page se encuentre publicada y accesible en GitHub Pages. |
@@ -3617,14 +3641,14 @@ El Sprint Backlog 1 descompone el objetivo de implementar la experiencia complet
 la Landing Page en tareas concretas para las ocho User Stories de `EP001`. El Board
 de YouTrack se utilizó para registrar las historias, sus responsables, los Story
 Points y su pertenencia al Sprint 1. La [vista pública del Board de Hostera en
-YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5) contiene el
+YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) contiene el
 seguimiento de estas User Stories.
 
 <img src="assets/chapter-5/sprint-1-youtrack-board.png" alt="Board de YouTrack con las User Stories de la Epic 1 asignadas al Sprint 1 de la Landing Page" style="width:100%; height:auto;"/>
 
 *Figura 5.2. Board de YouTrack con las User Stories asignadas al Sprint 1 de la Landing Page.*
 
-La captura corresponde al seguimiento del Board durante el sprint. La tabla siguiente
+La captura corresponde al Board al cierre del Sprint 1. La tabla siguiente
 presenta la descomposición de trabajo y el estado al cierre del Sprint 1. Las horas
 indicadas son estimaciones de planificación para cada Work-Item/Task y no sustituyen
 la estimación relativa en Story Points de cada User Story.
@@ -3806,7 +3830,7 @@ release:
 | Juan Diego Flores (`YopoFlores`) | US004 y US006: camino de la cadena pequeña, plan Professional, camino del grupo hotelero, plan Enterprise y acciones de cierre. | 5 |
 | Jorge Leon (`mateool10`) | US001: propuesta de valor, vista previa del panel y relato de la operación fragmentada. | 3 |
 | Jose Rudas (`josegabriel1604`) | US003 y US007: camino del hotel independiente, plan Free, contenido de producto y equipo, y sección de soporte. | 5 |
-| José Santana (`JhosBY2005`) | US005 y US008: beneficios de operaciones conectadas, flujo operativo y variantes de idioma. | 4 |
+| José Santana (`JhosBy2005`) | US005 y US008: beneficios de operaciones conectadas, flujo operativo y variantes de idioma. | 4 |
 | **Total** | **Ocho User Stories de `EP001`** | **20** |
 
 La captura del analítico de GitHub muestra la actividad de contribución del
@@ -3971,5 +3995,5 @@ This is program for AV2 (not in AV1)
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
-- **Board de seguimiento.** [Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5)
+- **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
 - **Prototipo de Web Application.** [Hostera · Web Application Prototypes en Figma](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes)
