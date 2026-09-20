@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.0] - 2026-09-19
+
+### Changed
+
+- Moved the Roy Rios interview from the first segment to the second, where it belongs: he manages a chain hotel, not an independent one. Registered as the third interview of that segment and added to its analysis.
+- Restored the previous first-segment interview and its analysis, which the earlier replacement had removed.
+- Renumbered the chapter 2 figures from 2.6 onwards so the sequence stays correlative after the new entry.
+
 ## [0.14.0] - 2026-09-19
 
 ### Changed
