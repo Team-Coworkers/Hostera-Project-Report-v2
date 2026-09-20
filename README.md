@@ -1048,28 +1048,21 @@ información y el control de las diferencias entre establecimientos.
 
 Entrevista 1:
 
-<img src="assets/chapter-2/interview-01-wilson.png" alt="Entrevista 1 de Wilson" style="width:100%; height:auto;"/>
-*Figura 2.1. Entrevista a Wilson, ingeniero y administrador de hotel.*
+<img src="assets/chapter-2/interview-07-dominguez.png" alt="Entrevista 1 de Domínguez" style="width:40%; height:auto;"/>
+*Figura 2.1. Entrevista a Domínguez, administrador de un hotel independiente.*
 
-Entrevistado: Wilson
-<br>Edad: 46 años
+Entrevistado: Domínguez
+<br>Edad: 38 años
 
-Enlace de entrevista: [https://drive.google.com/file/d/1CLCIVG5evrr4Z0-OdklAttTeY6RAlvJK/view?usp=sharing](https://drive.google.com/file/d/1CLCIVG5evrr4Z0-OdklAttTeY6RAlvJK/view?usp=sharing)
-<br>Ocupación: Ingeniero y administrador de hotel
-<br>Ubicación: Puno, Puno
+Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410062\_upc\_edu\_pe/IQAg\_8vb6HA\_SYhbV8IV9rdJASYjqJk4BTlfvZw6UZM194I](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410062_upc_edu_pe/IQAg_8vb6HA_SYhbV8IV9rdJASYjqJk4BTlfvZw6UZM194I?e=tKSihE)
+<br>Ocupación: Administrador de un hotel independiente
+<br>Ubicación: Lima
+<br>Inicio de la entrevista: 00:00:00
+<br>Duración: 06:40
 
 Resumen:
-Wilson, ingeniero y administrador de un hotel independiente en Puno, comenta sobre los principales desafíos que enfrenta al gestionar las reservas, accesos, disponibilidad e inventario de dos sedes. Actualmente, administra una sede principal de aproximadamente 30 habitaciones y otra de alrededor de 15 habitaciones, que además cuenta con un espacio para eventos. Señala que una de las principales dificultades es centralizar la información de ambas sedes, ya que debe coordinar constantemente con el administrador de la segunda sede para conocer las habitaciones disponibles.
+Domínguez, de 38 años, es administrador de un hotel independiente en Lima. Trabaja en el sector hotelero desde hace aproximadamente diez años y cumple el rol de administrador desde hace cinco. Su jornada comienza revisando las reservas y las habitaciones disponibles, para luego coordinar con el personal de limpieza y recepción y verificar el almacén junto con cualquier incidencia de accesos; prioriza las reservas y las llegadas porque afectan directamente la disponibilidad y la atención del día. El registro de reservas se apoya en un sistema de reservas complementado con hojas de Excel para controles adicionales, y ante una diferencia o una reserva duplicada revisa ambas fuentes, se comunica con recepción y corrige la distribución de forma manual. En el almacén, el personal registra los ingresos y salidas de productos y se realizan inventarios periódicos; el encargado actualiza la información y los faltantes se detectan en esos inventarios o cuando un trabajador avisa que un producto está por agotarse. Los accesos de los huéspedes se entregan al momento del registro y los del personal se asignan según sus funciones, revisando los registros de entrada y salida cuando es necesario; si se pierde una tarjeta, se bloquea la anterior y se emite una nueva, y para reconstruir un evento se consultan los registros del sistema o se pregunta al encargado. Para supervisar el hotel a distancia necesita conocer reservas, ocupación, habitaciones disponibles, incidencias, estado del almacén y cualquier problema de seguridad o accesos, información que recibe por llamadas, mensajes y sistemas y que le toma varios minutos consolidar. Opera con computadora, teléfonos celulares, Excel, un sistema de reservas, cámaras y control de acceso. Señala como dificultad principal que la información está repartida entre distintas herramientas y personas, lo que lo obliga a consultar varias fuentes y genera retrasos, errores en reservas, problemas de coordinación y mayor carga para el personal. Como mejora plantea una plataforma centralizada que permita consultar reservas, habitaciones, almacén y accesos desde un mismo lugar y en tiempo real, con un costo accesible, facilidad de uso, capacitación inicial, seguridad y respaldo de la información. Finalmente, subraya que las áreas están relacionadas entre sí y que un problema en reservas, almacén o accesos termina afectando la experiencia del huésped.
 
-Para gestionar las reservas, recibe información principalmente mediante WhatsApp, correo electrónico, TikTok y aplicaciones de reservas, pero posteriormente debe trasladarla manualmente a un archivo de Excel, que utiliza como herramienta principal para controlar la disponibilidad y las reservas. Para los accesos utiliza tarjetas de identificación, aunque actualmente estas solo permiten controlar la entrada y salida de las habitaciones. También emplea una computadora para administrar el sistema de tarjetas.
-
-Respecto a la seguridad, considera necesario que cada trabajador de limpieza tenga su propia tarjeta de acceso, ya que anteriormente una misma tarjeta podía ser utilizada por diferentes personas, dificultando identificar quién ingresó a una habitación en caso de pérdida de algún objeto. Por ello, considera importante registrar quién entra, a qué hora y si el acceso corresponde con su turno de trabajo. En caso de pérdida de una tarjeta, actualmente esta debe ser anulada y reemplazada por una nueva.
-
-Otro aspecto importante es el control de los diferentes servicios ofrecidos por el hotel. Además de las habitaciones, administra desayunos, almuerzos, productos del minibar, piscina, sauna y gimnasio. Propone que estos servicios puedan registrarse directamente mediante la tarjeta del huésped, utilizando lectores de tarjetas, para evitar que el personal tenga que registrar manualmente quién utiliza cada servicio y facilitar el cobro al finalizar la estadía.
-
-En la segunda sede también se encuentra una sala de eventos, cuyos servicios dependen del tipo de evento contratado, como catering, DJ, iluminación o proyector. Por ello, considera necesario que el sistema pueda registrar diferentes paquetes y servicios adicionales. Asimismo, menciona que próximamente planea incorporar bungalows como una nueva modalidad de alojamiento, con características similares a Airbnb y costos diferentes.
-
-Finalmente, considera que una mejora importante para la administración del hotel sería contar con un sistema centralizado de seguridad y control que permita gestionar los accesos de huéspedes y trabajadores, registrar el uso de los diferentes servicios y administrar la información de ambas sedes. Esto le permitiría reducir el trabajo manual, mejorar la seguridad y tener un mayor control sobre las actividades y servicios que se realizan en el hotel.
 **Entrevista 2:**
 
 **<img src="assets/chapter-2/interview-03-rafael-prieto.png" alt="Entrevista 2 de Rafael Prieto" style="width:100%; height:auto;"/>**
@@ -1194,35 +1187,37 @@ Roy Ríos, de 38 años, es subgerente de un hotel de la cadena Accor ubicado en 
 
 
 **Perfil del entrevistado:**
-Ingeniero de profesión, 46 años, propietario y administrador de un hotel en la ciudad de Puno desde hace 2 años (previamente trabajó 5 años como empleado en otro hotel). Actualmente gestiona dos sedes: la principal (~30 habitaciones) y una secundaria (~15 habitaciones más un ambiente para eventos).
+Administrador de un hotel independiente en Lima, 38 años. Cuenta con alrededor de diez años de experiencia en el sector hotelero y cinco en el rol de administrador, con responsabilidad directa sobre reservas, habitaciones, almacén y accesos de una sola sede.
 
 * **Motivación para participar:**
-  El entrevistado accede a colaborar principalmente porque el proyecto le ofrece acceso anticipado a un producto de gestión de acceso físico a habitaciones, aplicable a una o varias sedes hoteleras — es decir, una motivación directamente ligada a resolver un problema operativo propio, no solo altruista.
+  Participa desde su rol de administrador único de la operación y autoriza expresamente el uso de sus respuestas y de la grabación. Su interés se orienta a resolver un problema propio y concreto: reunir en un solo lugar información que hoy debe reconstruir consultando varias fuentes.
 * **Dificultades actuales:**
   Se identifican varias barreras recurrentes:
-  * Fragmentación de la información: las reservas llegan por WhatsApp, TikTok, correo y aplicativos de reserva, y todo debe consolidarse manualmente en Excel.
-  * Falta de trazabilidad en los accesos: el sistema de tarjetas actual solo registra entrada/salida de habitaciones, sin identificar con certeza qué persona específica ingresó, lo que ha generado casos de objetos perdidos sin poder atribuir responsabilidad.
-  * Coordinación entre sedes: debe recibir reportes diarios del administrador de la segunda sede para poder redistribuir disponibilidad (por ejemplo, ante grupos grandes o promociones).
-  * Gestión de servicios adicionales dispersos: desayuno, almuerzo, frigobar, eventos (catering, DJ, proyector) se registran de forma manual y descentralizada.
+  * Información repartida entre herramientas y personas: para saber qué está ocurriendo debe consultar el sistema de reservas, las hojas de Excel y al personal de recepción o almacén.
+  * Conciliación manual de reservas: ante una diferencia o una reserva duplicada contrasta el sistema con el Excel, coordina con recepción y corrige la distribución a mano.
+  * Detección tardía de faltantes: las existencias se verifican mediante inventarios periódicos o cuando un trabajador avisa que un producto está por agotarse, sin alerta anticipada.
+  * Supervisión remota lenta: fuera del hotel recibe la información por llamadas, mensajes y sistemas distintos, y necesita varios minutos para formarse una visión completa de la operación.
+  * Trazabilidad de accesos limitada: reconstruir un evento exige consultar los registros del sistema o preguntar al encargado, en lugar de disponer de un historial consolidado.
 * **Procesos y herramientas actuales:**
-  Uso intensivo de Excel como herramienta central de control de reservas y disponibilidad, complementado con un sistema de tarjetas tipo PID (solo para apertura de puertas y ascensor por piso). No usa un PMS formal ni navegador específico; la coordinación con clientes es mayormente vía WhatsApp.
+  La operación diaria comienza revisando reservas y habitaciones disponibles, continúa con la coordinación con limpieza y recepción y cierra con la revisión del almacén y de las incidencias de acceso. El registro de reservas se apoya en un sistema propio complementado con Excel para controles adicionales; el almacén se controla con registro de ingresos y salidas más inventarios periódicos a cargo de un encargado. Los accesos se entregan al huésped en el registro y al personal según sus funciones, con bloqueo y reemisión de tarjeta en caso de pérdida. El equipamiento incluye computadora, teléfonos celulares, cámaras y sistemas de control de acceso.
 * **Funcionalidades deseadas (mejoras):**
-  * Tarjetas de acceso individualizadas por empleado (no compartidas), para poder identificar quién ingresó a cada habitación y en qué turno.
-  * Extensión del control de acceso a otras zonas: piscina, sauna, gimnasio en la sede principal.
-  * Registro automático de consumo de servicios (desayuno, almuerzo) mediante lectores de tarjeta, para evitar que el personal deba anotar manualmente quién usa cada servicio.
-  * Manejo diferenciado de tarjetas para el nuevo local de eventos (paquetes por tipo de evento: fiesta, reunión, conferencia).
-  * A futuro, incorporar bungalows tipo "experiencia vivencial" (modelo Airbnb) como una nueva línea de servicio con su propio esquema de costos.
+  * Plataforma centralizada que permita consultar reservas, habitaciones, almacén y accesos desde un mismo lugar y en tiempo real.
+  * Acceso remoto a esa vista, de modo que la supervisión fuera del hotel no dependa de llamadas ni mensajes.
+  * Alertas de reposición que anticipen los faltantes en lugar de detectarlos en el inventario periódico.
+  * Historial consultable de accesos que evite reconstruir los eventos preguntando al personal.
 * **Factores para la adopción (costo, seguridad, soporte):**
-  Valora que el sistema permita centralizar el cobro de servicios adicionales bajo el ID de la tarjeta/habitación, reduciendo la necesidad de personal dedicado a registrar manualmente cada consumo. La seguridad y la trazabilidad de accesos (saber quién entra y cuándo) aparecen como el criterio más importante para justificar la inversión.
+  Requiere un costo accesible, facilidad de uso y capacitación inicial para el personal. La seguridad y el respaldo de la información aparecen como condiciones explícitas para confiar la operación a una sola herramienta.
 * **Impacto percibido:**
-  El entrevistado reconoce que un mejor control de accesos y servicios simplificaría significativamente su carga operativa como propietario único, permitiéndole manejar de forma más eficiente el inventario de servicios (habitación, alimentación, eventos) tanto para el personal de limpieza como para los huéspedes en ambas sedes.
+  Concentrar la información en un solo lugar reduciría los retrasos, los errores en reservas y los problemas de coordinación que hoy se derivan de consultar varias fuentes, y aliviaría la carga de trabajo del personal. También acortaría los varios minutos que hoy necesita para obtener una visión completa cuando no está en el hotel.
 * **Propuestas de mejora:**
-  * Tarjetas nominativas por trabajador para trazabilidad de responsabilidad.
-  * Ampliación del alcance del sistema de tarjetas a zonas comunes (piscina, sauna, gimnasio).
-  * Registro automatizado de consumo de servicios adicionales vinculado a la tarjeta del huésped.
-  * Gestión diferenciada por tipo de evento en la sede secundaria.
+  * Unificar reservas, habitaciones, almacén y accesos en una vista única y actualizada.
+  * Sustituir la conciliación manual entre el sistema y el Excel por un registro único de disponibilidad.
+  * Incorporar avisos automáticos de stock bajo en el almacén.
+  * Mantener un registro consultable de entregas, bloqueos y reemisiones de tarjetas de acceso.
+* **Aspectos a comprender mejor:**
+  El entrevistado subraya que las áreas no son independientes: un problema en reservas, en almacén o en accesos termina afectando la experiencia del huésped, de modo que una solución parcial sobre una sola área no resolvería el fondo del problema.
 
-En conjunto, la entrevista evidencia que el segmento de administradores hoteleros independientes con múltiples sedes valora sobre todo la trazabilidad de accesos y la automatización del registro de servicios adicionales, por encima de la simple apertura de puertas. Su adopción del producto dependerá de que este permita centralizar el control de ambas sedes, identificar responsables individuales por acceso y reducir la carga manual de registro que hoy recae en Excel y WhatsApp.
+En conjunto, la entrevista evidencia que el administrador de un hotel independiente no carece de herramientas sino de un punto único donde converjan: el sistema de reservas, el Excel de apoyo, el registro de almacén y el control de accesos funcionan por separado y obligan a reconstruir manualmente el estado de la operación. Su adopción del producto dependerá de que consolide esas cuatro áreas en tiempo real y de que llegue con un costo accesible, capacitación inicial y garantías de seguridad y respaldo de la información.
 
 
 
