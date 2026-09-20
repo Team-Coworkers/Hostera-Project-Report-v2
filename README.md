@@ -1177,7 +1177,7 @@ Entrevistado: Roy Ríos
 
 <br>Edad: 38 años
 
-Enlace de entrevista: `Entrevista hotel IBIS - 2026_09_18 12_00 GMT-05_00 - Recording.mp4`
+Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105\_upc\_edu\_pe/IQBXkmw7\_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb\_yy0aZ0](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQBXkmw7_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb_yy0aZ0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ETZm7N)
 <br>Ocupación: Subgerente de un hotel de la cadena Accor
 <br>Ubicación: Trujillo, La Libertad
 <br>Inicio de la entrevista: 00:01:56
