@@ -1684,7 +1684,7 @@ para su seguimiento, priorización y estimación.
 
 *Figura 3.3. Listado general del Product Backlog de Hostera en YouTrack.*
 
-El Product Backlog puede consultarse en el [Agile Board de Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5).
+El Product Backlog puede consultarse en el [proyecto Hostera en YouTrack](https://santanapromaster.youtrack.cloud/issues?q=project:%20HOS).
 
 # Capítulo IV: Product Design
 
@@ -3342,7 +3342,7 @@ las herramientas locales se instalan desde sus canales oficiales de distribució
 | Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
 | --- | --- | --- | --- |
 | GitHub | Aloja el repositorio del equipo, los repositorios de producto, los issues y el historial de revisiones. | [Repositorio del equipo Team Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
-| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
+| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
 | Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | [Prototipos de las aplicaciones web de Hostera](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes) | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
 | UXPressia | Elabora los artefactos de impact mapping utilizados para relacionar objetivos, actores, impactos e historias de usuario. | — | Los diagramas exportados se versionan junto con el informe cuando se utilizan como evidencia. |
 | Pandoc | Convierte `README.md` y sus recursos locales en el entregable PDF. | Instalación local; la configuración y ejecución están documentadas en `README.md`. | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` permanece sin seguimiento. |
@@ -3625,8 +3625,10 @@ valor; Darnell Cuba para la navegación; Jose Rudas para el camino del hotel
 independiente y el contenido de producto; Juan Diego Flores para el camino de la
 cadena hotelera pequeña y la comparación de planes; y José Santana para los
 beneficios, el flujo operativo y la variante multilingüe. El reparto se definió
-equilibrando los story points de cada aspecto, de modo que la carga por integrante
-se mantuviera entre 18 y 24 puntos sobre un total de 106. La responsabilidad de liderazgo no
+equilibrando las horas estimadas de los Work-Items de cada aspecto, de modo que la
+carga por integrante se mantuviera entre 18 y 24 horas sobre un total de 106, según
+la descomposición detallada en el Sprint Backlog 1. Medidas en Story Points, las ocho
+User Stories de la Epic 1 suman los 42 puntos comprometidos como velocity del Sprint. La responsabilidad de liderazgo no
 excluye la participación del resto del equipo, que colaboró en los ocho aspectos del
 Sprint.
 
@@ -3636,14 +3638,14 @@ El Sprint Backlog 1 descompone el objetivo de implementar la experiencia complet
 la Landing Page en tareas concretas para las ocho User Stories de `EP001`. El Board
 de YouTrack se utilizó para registrar las historias, sus responsables, los Story
 Points y su pertenencia al Sprint 1. La [vista pública del Board de Hostera en
-YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5) contiene el
+YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) contiene el
 seguimiento de estas User Stories.
 
 <img src="assets/chapter-5/sprint-1-youtrack-board.png" alt="Board de YouTrack con las User Stories de la Epic 1 asignadas al Sprint 1 de la Landing Page" style="width:100%; height:auto;"/>
 
 *Figura 5.2. Board de YouTrack con las User Stories asignadas al Sprint 1 de la Landing Page.*
 
-La captura corresponde al seguimiento del Board durante el sprint. La tabla siguiente
+La captura corresponde al Board al cierre del Sprint 1. La tabla siguiente
 presenta la descomposición de trabajo y el estado al cierre del Sprint 1. Las horas
 indicadas son estimaciones de planificación para cada Work-Item/Task y no sustituyen
 la estimación relativa en Story Points de cada User Story.
@@ -3815,18 +3817,20 @@ a las User Stories, mientras que la integración se realizó siguiendo Git Flow.
 La reunión de planificación se realizó de forma virtual el 12 de septiembre de
 2026 y contó con la asistencia de todos los integrantes.
 
-La siguiente relación resume los 20 commits funcionales registrados en la
+La siguiente relación resume los 28 commits funcionales registrados en la
 sección 5.2.1.4, sin contar los commits de merge ni los commits posteriores de
-release:
+release. El trabajo se distribuyó entre las once ramas de la Epic 1 y varios
+integrantes contribuyeron sobre una misma rama, por lo que la relación se
+presenta por rama de trabajo y no por atribución exclusiva de una User Story:
 
-| Integrante | User Stories / aspectos implementados | Commits funcionales del Sprint 1 |
+| Integrante | Ramas de la Epic 1 en las que registró commits | Commits funcionales del Sprint 1 |
 |---|---|---:|
-| Darnell Cuba (`darnell1910`) | US002: navegación primaria y secundaria, página de términos y menú móvil. | 3 |
-| Juan Diego Flores (`YopoFlores`) | US004 y US006: camino de la cadena pequeña, plan Professional, camino del grupo hotelero, plan Enterprise y acciones de cierre. | 5 |
-| Jorge Leon (`mateool10`) | US001: propuesta de valor, vista previa del panel y relato de la operación fragmentada. | 3 |
-| Jose Rudas (`josegabriel1604`) | US003 y US007: camino del hotel independiente, plan Free, contenido de producto y equipo, y sección de soporte. | 5 |
-| José Santana (`JhosBy2005`) | US005 y US008: beneficios de operaciones conectadas, flujo operativo y variantes de idioma. | 4 |
-| **Total** | **Ocho User Stories de `EP001`** | **20** |
+| Darnell Cuba (`darnell1910`) | `feature/site-shell`, `feature/solutions`, `feature/benefits-workflow`, `feature/product-discovery`, `feature/support-closing`, `feature/documentation` | 6 |
+| Juan Diego Flores (`YopoFlores`) | `feature/site-shell`, `feature/solutions`, `feature/pricing`, `feature/team`, `feature/localization`, `feature/documentation` | 6 |
+| Jorge Leon (`mateool10`) | `feature/site-shell`, `feature/solutions`, `feature/pricing`, `feature/team`, `feature/localization`, `feature/documentation` | 6 |
+| Jose Rudas (`josegabriel1604`) | `feature/hero`, `feature/benefits-workflow`, `feature/pricing`, `feature/team`, `feature/legal` | 5 |
+| José Santana (`JhosBy2005`) | `feature/hero`, `feature/benefits-workflow`, `feature/product-discovery`, `feature/support-closing`, `feature/legal` | 5 |
+| **Total** | **Once ramas de la Epic 1** | **28** |
 
 La captura del analítico de GitHub muestra la actividad de contribución del
 repositorio de la Landing Page. El historial de commits permite complementar
@@ -3841,10 +3845,13 @@ con cada User Story.
 
 *Figura 5.7. Historial de commits del repositorio de la Landing Page en la rama `main`.*
 
-La evidencia muestra una distribución de responsabilidades por User Story y
-una integración progresiva de los cambios. La participación de cada integrante
-se mantuvo vinculada con un aspecto funcional concreto y quedó respaldada por
-los commits detallados en la evidencia de desarrollo del Sprint Review.
+La evidencia muestra una participación repartida entre los cinco integrantes,
+con una carga de entre cinco y seis commits por persona, y una integración
+progresiva de los cambios rama por rama. A diferencia del Sprint Backlog, donde
+cada Work-Item se asignó a un responsable único, la ejecución fue colaborativa:
+la mayoría de las ramas reúne commits de más de un integrante. Cada
+contribución queda respaldada por los commits detallados en la evidencia de
+desarrollo del Sprint Review.
 
 # Conclusiones
 
@@ -3990,5 +3997,5 @@ This is program for AV2 (not in AV1)
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
-- **Board de seguimiento.** [Hostera en YouTrack](https://jqcuba.youtrack.cloud/projects/US/agiles/204-1/218-5)
+- **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
 - **Prototipo de Web Application.** [Hostera · Web Application Prototypes en Figma](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes)
