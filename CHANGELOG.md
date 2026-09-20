@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.14.0] - 2026-09-19
+
+### Changed
+
+- Replaced the first interview of the first segment with Roy Rios, deputy manager of an Accor chain hotel in Trujillo, including his portrait, timestamps and summary.
+- Rewrote the section 2.2.3 analysis for the first segment from the new interview, marking as PENDIENTE the four blocks the recording does not cover.
+
 ## [0.13.0] - 2026-09-19
 
 ### Changed
