@@ -1098,12 +1098,31 @@ Respecto a las dificultades, considera que no existe un único problema específ
 
 Finalmente, resalta la importancia de comprender mejor el trabajo del área de housekeeping. Señala que su función no se limita a limpiar habitaciones, sino que también implica cumplir estándares, identificar los gustos y preferencias de los huéspedes y cuidar los detalles durante la preparación de las habitaciones. Considera que este departamento tiene un trabajo altamente demandante y que su aporte es fundamental para la experiencia del huésped, razón por la cual algunas cadenas realizan actividades como el Housekeeping Week para reconocer su trabajo.
 
+**Entrevista 3:**
+
+**<img src="assets/chapter-2/interview-05-odar-quispe.png" alt="Entrevista 3 de Odar Quispe" style="width:100%; height:auto;"/>**
+*Figura 2.3. Entrevista a Odar Quispe, gerente de operaciones de una cadena hotelera boutique.*
+
+Entrevistado: Odar Fernando Quispe Salazar
+
+<br>Edad: 28 años
+
+Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202422549_upc_edu_pe/IQCWrCWNyT7sQ5FAOWgSeQ58AaF4sjTSr8rqBYv4p_8JIQg](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202422549_upc_edu_pe/IQCWrCWNyT7sQ5FAOWgSeQ58AaF4sjTSr8rqBYv4p_8JIQg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=T92PSC)
+<br>Ocupación: Gerente de Operaciones de una cadena hotelera boutique de tres sedes
+<br>Ubicación: Santiago de Surco, Lima
+<br>Inicio de la entrevista: 00:00:30
+<br>Duración: 06:02
+
+Resumen:
+
+Odar Quispe, de 28 años, es gerente de operaciones de una cadena hotelera boutique con tres sedes en Lima que suman 68 habitaciones. Indica que su mayor dificultad es no tener una vista unificada de la operación, ya que dos sedes usan un PMS básico y la tercera solo hojas de cálculo, por lo que dedica alrededor de cuarenta minutos diarios a consolidar la información de forma manual y termina decidiendo con datos desactualizados. El inventario se coordina por WhatsApp y las transferencias entre sedes no se registran, lo que produce diferencias de stock y compras duplicadas. Los accesos se administran de forma distinta en cada sede, sin un registro centralizado de quién ingresa ni desactivación de credenciales cuando alguien cesa. Como mejora principal plantea un panel consolidado en tiempo real accesible desde el celular, con roles y permisos, replicación de configuraciones al abrir nuevas sedes e integración con Booking y Expedia.
+
 **Segmento 2: Primer segmento objetivo: Gerentes o responsables de operaciones de pequeñas cadenas hoteleras**
 
 **Entrevista 1:**
 
 **<img src="assets/chapter-2/interview-02-melia-general-manager.png" alt="Entrevista 1 del gerente general del Hotel Meliá Lima Miraflores" style="width:100%; height:auto;"/>**
-*Figura 2.3. Entrevista al gerente general del Hotel Meliá Lima Miraflores.*
+*Figura 2.4. Entrevista al gerente general del Hotel Meliá Lima Miraflores.*
 
 Entrevistado: Gerente general del Hotel Meliá Lima Miraflores
 <br>Edad: 40 años
@@ -1128,7 +1147,7 @@ Finalmente, considera importantes aspectos como la seguridad de los datos person
 **Entrevista 2:**
 
 **<img src="assets/chapter-2/interview-04-otto-cuba.png" alt="Entrevista 3 de Otto Cuba" style="width:100%; height:auto;"/>**
-*Figura 2.4. Entrevista a Otto Cuba, accionista del Hotel Bahía de Cuba.*
+*Figura 2.5. Entrevista a Otto Cuba, accionista del Hotel Bahía de Cuba.*
 
 Entrevistado: Otto Cuba
 
@@ -1274,11 +1293,11 @@ Para ello seleccionamos los siguientes perfiles:
 
 User Persona 1
 ![Steven Huarcaya](assets/chapter-2/Steven%20Huarcaya%20(1).png)
-*Figura 2.5. User Persona de Steven Huarcaya.*
+*Figura 2.6. User Persona de Steven Huarcaya.*
 ---
 User Persona 2
 ![Anyeli Cardenas](assets/chapter-2/Anyeli%20C%C3%A1rdenas.png)
-*Figura 2.6. User Persona de Anyeli Cárdenas.*
+*Figura 2.7. User Persona de Anyeli Cárdenas.*
 ### 2.3.2. User Task Matrix
 En esta sección se presenta el User Task Matrix correspondiente al **Segmento 1: Propietarios o administradores de hoteles independientes de una sola sede**, representado por el User Persona **Steven Huarcaya**.
 
@@ -1336,7 +1355,7 @@ En esta sección se presentan los User Journey Maps en su versión **As-Is** (si
 El *journey* actual de Steven abarca desde la recepción de solicitudes de reserva por canales dispersos hasta la revisión del inventario y la entrega física de llaves en el hotel. El proceso se caracteriza por una alta dependencia de registros manuales y una constante interrupción operativa para resolver incidencias.
 
 ![As-Is User Journey Map - Steven Huarcaya](assets/chapter-2/StevenHuarcaya_journeymap.png)
-*Figura 2.7. As-Is User Journey Map de Steven Huarcaya.*
+*Figura 2.8. As-Is User Journey Map de Steven Huarcaya.*
 
 ---
 
@@ -1345,17 +1364,17 @@ El *journey* actual de Steven abarca desde la recepción de solicitudes de reser
 El *journey* actual de Anyeli contempla el proceso de consolidación y supervisión de la operación de múltiples sedes a la distancia. Las etapas clave incluyen la solicitud de reportes a los administradores locales, la consolidación manual de datos de inventario y la verificación diferida de accesos, lo cual genera retrasos y falta de visibilidad en tiempo real.
 
 ![As-Is User Journey Map - Anyeli Cárdenas](assets/chapter-2/AnyeliCardenas_journeymap.png)
-*Figura 2.8. As-Is User Journey Map de Anyeli Cárdenas.*
+*Figura 2.9. As-Is User Journey Map de Anyeli Cárdenas.*
 
 ### 2.3.4. Empathy Mapping
 
 Empathy Map 1
 ![StevenHuarcaya](assets/chapter-2/Empathy%20map-segmento1.png)
-*Figura 2.9. Empathy Map de Steven Huarcaya.*
+*Figura 2.10. Empathy Map de Steven Huarcaya.*
 ---
 Empathy Map 2
 ![AnyeliCardenas](assets/chapter-2/Empathy%20map-segmento2%20(1).png)
-*Figura 2.10. Empathy Map de Anyeli Cárdenas.*
+*Figura 2.11. Empathy Map de Anyeli Cárdenas.*
 
 
 ## 2.4. Big Picture EventStorming
@@ -1367,7 +1386,7 @@ posibles problemas y oportunidades que orientan la definición de la solución.
 
 <img src="assets/chapter-2/big-picture-event-storming-hostera.svg" alt="Diagrama Big Picture EventStorming del dominio de Hostera" style="width:100%; height:auto;"/>
 
-*Figura 2.11. Big Picture EventStorming del dominio de Hostera.*
+*Figura 2.12. Big Picture EventStorming del dominio de Hostera.*
 
 ## 2.5. Ubiquitous Language
 
