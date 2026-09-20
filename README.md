@@ -2430,7 +2430,7 @@ resultados, restricciones y errores se muestran como pasos alternativos dentro d
 recorrido correspondiente.
 
 Los diagramas fueron elaborados en FigJam utilizando las pantallas diseñadas en el
-archivo de Paper `Grafo-verde`. El board editable con los 25 Wireflows se encuentra
+archivo de Paper `Team-Coworkers`. El board editable con los 25 Wireflows se encuentra
 disponible en [Hostera — Web Application Wireflows](https://www.figma.com/board/cbBXWjZefifKIffGrMY6E7).
 
 #### Objetivos de usuario y recorridos especificados
@@ -2620,7 +2620,7 @@ disponible en [Hostera — Web Application Wireflows](https://www.figma.com/boar
 Los mock-ups de alta fidelidad de la aplicación web representan las vistas y estados
 principales de Hostera para la gestión operativa de una propiedad hotelera. El diseño
 se encuentra organizado en la página `Web Application` del archivo de Paper
-`Grafo-verde` y mantiene una composición consistente entre autenticación, monitoreo,
+`Team-Coworkers` y mantiene una composición consistente entre autenticación, monitoreo,
 reservas, habitaciones, inventario, control de acceso RFID y reportes.
 
 #### Acceso y panorama operativo
