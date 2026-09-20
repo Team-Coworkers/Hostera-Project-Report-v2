@@ -14,27 +14,27 @@ workspace "Hostera" "Plataforma web administrativa para gestión hotelera - Team
                 dashboardUI = component "Dashboard UI" "Panel de monitoreo en tiempo real."
             }
 
-            auth = container "Gestión de Autenticación" "Registra e inicia sesión al personal del hotel y administra roles y permisos." "Node.js / Express" {
+            auth = container "Gestión de Autenticación" "Registra e inicia sesión al personal del hotel y administra roles y permisos." "Spring Boot / Java" {
                 registro = component "Registro de Usuarios" "Procesa el alta de nuevas cuentas del staff."
                 validadorCred = component "Validador de Credenciales" "Valida usuario y contraseña."
                 sesiones = component "Generador de Sesiones" "Crea y gestiona tokens de sesión (JWT)."
                 roles = component "Gestor de Roles" "Administra permisos según el rol (admin, recepción, almacén)."
             }
 
-            reservas = container "Gestión de Reservas y Habitaciones" "Crea y administra reservas; controla la disponibilidad y el estado de las habitaciones." "Node.js / Express" {
+            reservas = container "Gestión de Reservas y Habitaciones" "Crea y administra reservas; controla la disponibilidad y el estado de las habitaciones." "Spring Boot / Java" {
                 creadorReservas = component "Creador de Reservas" "Registra nuevas reservas y valida los datos del huésped."
                 verificadorDisp = component "Verificador de Disponibilidad" "Consulta y bloquea habitaciones disponibles para evitar sobreventa."
                 calculadorTarifas = component "Calculador de Tarifas" "Calcula el costo de la reserva según fechas y habitación."
                 estadoHabitaciones = component "Gestor de Estado de Habitaciones" "Actualiza el estado de cada habitación (disponible, ocupada, mantenimiento)."
             }
 
-            inventario = container "Gestión de Inventario" "Controla el stock del almacén y genera alertas de reposición." "Node.js / Express" {
+            inventario = container "Gestión de Inventario" "Controla el stock del almacén y genera alertas de reposición." "Spring Boot / Java" {
                 gestorStock = component "Gestor de Stock" "Registra entradas y salidas de insumos del almacén."
                 alertasReposicion = component "Generador de Alertas" "Notifica cuando un insumo alcanza el stock mínimo."
                 movimientos = component "Registro de Movimientos" "Guarda el historial de movimientos de inventario."
             }
 
-            accesos = container "Gestión de Accesos RFID" "Valida tarjetas RFID, sincroniza eventos con los lectores y mantiene el historial de accesos." "Node.js / Express" {
+            accesos = container "Gestión de Accesos RFID" "Valida tarjetas RFID, sincroniza eventos con los lectores y mantiene el historial de accesos." "Spring Boot / Java" {
                 validadorTarjeta = component "Validador de Tarjetas" "Verifica que la tarjeta esté activa y autorizada."
                 sincronizadorIoT = component "Sincronizador de Eventos IoT" "Recibe y traduce las lecturas enviadas por los lectores RFID."
                 permisosAcceso = component "Gestor de Permisos de Acceso" "Asocia tarjetas con habitaciones y define su vigencia."
