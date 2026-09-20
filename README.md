@@ -1168,35 +1168,28 @@ Finalmente, respecto a las condiciones para adoptar la propuesta, menciona que e
 
 
 **Perfil del entrevistado:**
-Ingeniero de profesión, 46 años, propietario y administrador de un hotel en la ciudad de Puno desde hace 2 años (previamente trabajó 5 años como empleado en otro hotel). Actualmente gestiona dos sedes: la principal (~30 habitaciones) y una secundaria (~15 habitaciones más un ambiente para eventos).
+Subgerente de un hotel de la cadena Accor en Trujillo, 38 años. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Cada hotel de la cadena opera bajo una razón social independiente, condición que determina cómo se comparten el inventario y la información entre sedes.
 
 * **Motivación para participar:**
-  El entrevistado accede a colaborar principalmente porque el proyecto le ofrece acceso anticipado a un producto de gestión de acceso físico a habitaciones, aplicable a una o varias sedes hoteleras — es decir, una motivación directamente ligada a resolver un problema operativo propio, no solo altruista.
+  **[PENDIENTE]** No registrado en la entrevista. Completar con el motivo por el que el entrevistado accedió a colaborar.
 * **Dificultades actuales:**
   Se identifican varias barreras recurrentes:
-  * Fragmentación de la información: las reservas llegan por WhatsApp, TikTok, correo y aplicativos de reserva, y todo debe consolidarse manualmente en Excel.
-  * Falta de trazabilidad en los accesos: el sistema de tarjetas actual solo registra entrada/salida de habitaciones, sin identificar con certeza qué persona específica ingresó, lo que ha generado casos de objetos perdidos sin poder atribuir responsabilidad.
-  * Coordinación entre sedes: debe recibir reportes diarios del administrador de la segunda sede para poder redistribuir disponibilidad (por ejemplo, ante grupos grandes o promociones).
-  * Gestión de servicios adicionales dispersos: desayuno, almuerzo, frigobar, eventos (catering, DJ, proyector) se registran de forma manual y descentralizada.
+  * Separación jurídica entre sedes: cada hotel opera bajo una razón social distinta, por lo que no se realizan movimientos internos de inventario entre establecimientos de la misma cadena.
+  * Visibilidad financiera limitada: los responsables de cada hotel no tienen acceso directo a la información financiera de las demás sedes, lo que impide comparar ingresos y desempeño dentro de la cadena.
+  * Derivación manual de reservas: los traslados de reservas hacia otros hoteles se coordinan por correo electrónico y mediante ResaWeb, apoyándose en códigos internos de identificación.
+  * Dispersión de sistemas: la operación diaria se reparte entre tres plataformas distintas para alojamiento, facturación y restaurante, sin un punto único de consulta.
 * **Procesos y herramientas actuales:**
-  Uso intensivo de Excel como herramienta central de control de reservas y disponibilidad, complementado con un sistema de tarjetas tipo PID (solo para apertura de puertas y ascensor por piso). No usa un PMS formal ni navegador específico; la coordinación con clientes es mayormente vía WhatsApp.
+  La gestión operativa se apoya en Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El equipamiento incluye laptops, terminales táctiles y tablets. El control de acceso combina el registro previo del huésped con tarjetas magnéticas que restringen el ascensor y la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años.
 * **Funcionalidades deseadas (mejoras):**
-  * Tarjetas de acceso individualizadas por empleado (no compartidas), para poder identificar quién ingresó a cada habitación y en qué turno.
-  * Extensión del control de acceso a otras zonas: piscina, sauna, gimnasio en la sede principal.
-  * Registro automático de consumo de servicios (desayuno, almuerzo) mediante lectores de tarjeta, para evitar que el personal deba anotar manualmente quién usa cada servicio.
-  * Manejo diferenciado de tarjetas para el nuevo local de eventos (paquetes por tipo de evento: fiesta, reunión, conferencia).
-  * A futuro, incorporar bungalows tipo "experiencia vivencial" (modelo Airbnb) como una nueva línea de servicio con su propio esquema de costos.
+  **[PENDIENTE]** No registrado en la entrevista. Las dificultades señaladas apuntan a una vista comparable entre sedes, pero el entrevistado no enunció funcionalidades concretas; conviene confirmarlas con él antes de documentarlas.
 * **Factores para la adopción (costo, seguridad, soporte):**
-  Valora que el sistema permita centralizar el cobro de servicios adicionales bajo el ID de la tarjeta/habitación, reduciendo la necesidad de personal dedicado a registrar manualmente cada consumo. La seguridad y la trazabilidad de accesos (saber quién entra y cuándo) aparecen como el criterio más importante para justificar la inversión.
+  Para incorporar nuevas soluciones considera determinantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad. A ello suma que el crecimiento de la cadena —y con él la capacidad de invertir en nuevas herramientas— depende del desempeño de cada hotel, de las condiciones políticas, sociales y de seguridad del entorno, y de las decisiones de los inversionistas.
 * **Impacto percibido:**
-  El entrevistado reconoce que un mejor control de accesos y servicios simplificaría significativamente su carga operativa como propietario único, permitiéndole manejar de forma más eficiente el inventario de servicios (habitación, alimentación, eventos) tanto para el personal de limpieza como para los huéspedes en ambas sedes.
+  **[PENDIENTE]** No registrado en la entrevista. Completar con el efecto que el entrevistado espera sobre su carga operativa.
 * **Propuestas de mejora:**
-  * Tarjetas nominativas por trabajador para trazabilidad de responsabilidad.
-  * Ampliación del alcance del sistema de tarjetas a zonas comunes (piscina, sauna, gimnasio).
-  * Registro automatizado de consumo de servicios adicionales vinculado a la tarjeta del huésped.
-  * Gestión diferenciada por tipo de evento en la sede secundaria.
+  **[PENDIENTE]** No registrado en la entrevista. Completar con las propuestas planteadas por el entrevistado.
 
-En conjunto, la entrevista evidencia que el segmento de administradores hoteleros independientes con múltiples sedes valora sobre todo la trazabilidad de accesos y la automatización del registro de servicios adicionales, por encima de la simple apertura de puertas. Su adopción del producto dependerá de que este permita centralizar el control de ambas sedes, identificar responsables individuales por acceso y reducir la carga manual de registro que hoy recae en Excel y WhatsApp.
+En conjunto, la entrevista muestra que en una cadena cuyos establecimientos operan como razones sociales independientes la restricción principal no es la ausencia de sistemas —el hotel ya opera con un PMS, un sistema de facturación y uno de restaurante— sino la falta de una vista comparable entre sedes y la imposibilidad de mover inventario entre ellas. La adopción de una nueva solución en este segmento se evaluará por su costo, su efecto sobre los márgenes operativos y el soporte y la capacitación que la acompañen, antes que por la incorporación de funciones aisladas.
 
 
 
