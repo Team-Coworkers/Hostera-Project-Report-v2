@@ -3630,8 +3630,10 @@ valor; Darnell Cuba para la navegación; Jose Rudas para el camino del hotel
 independiente y el contenido de producto; Juan Diego Flores para el camino de la
 cadena hotelera pequeña y la comparación de planes; y José Santana para los
 beneficios, el flujo operativo y la variante multilingüe. El reparto se definió
-equilibrando los story points de cada aspecto, de modo que la carga por integrante
-se mantuviera entre 18 y 24 puntos sobre un total de 106. La responsabilidad de liderazgo no
+equilibrando las horas estimadas de los Work-Items de cada aspecto, de modo que la
+carga por integrante se mantuviera entre 18 y 24 horas sobre un total de 106, según
+la descomposición detallada en el Sprint Backlog 1. Medidas en Story Points, las ocho
+User Stories de la Epic 1 suman los 42 puntos comprometidos como velocity del Sprint. La responsabilidad de liderazgo no
 excluye la participación del resto del equipo, que colaboró en los ocho aspectos del
 Sprint.
 
@@ -3820,18 +3822,20 @@ a las User Stories, mientras que la integración se realizó siguiendo Git Flow.
 La reunión de planificación se realizó de forma virtual el 12 de septiembre de
 2026 y contó con la asistencia de todos los integrantes.
 
-La siguiente relación resume los 20 commits funcionales registrados en la
+La siguiente relación resume los 28 commits funcionales registrados en la
 sección 5.2.1.4, sin contar los commits de merge ni los commits posteriores de
-release:
+release. El trabajo se distribuyó entre las once ramas de la Epic 1 y varios
+integrantes contribuyeron sobre una misma rama, por lo que la relación se
+presenta por rama de trabajo y no por atribución exclusiva de una User Story:
 
-| Integrante | User Stories / aspectos implementados | Commits funcionales del Sprint 1 |
+| Integrante | Ramas de la Epic 1 en las que registró commits | Commits funcionales del Sprint 1 |
 |---|---|---:|
-| Darnell Cuba (`darnell1910`) | US002: navegación primaria y secundaria, página de términos y menú móvil. | 3 |
-| Juan Diego Flores (`YopoFlores`) | US004 y US006: camino de la cadena pequeña, plan Professional, camino del grupo hotelero, plan Enterprise y acciones de cierre. | 5 |
-| Jorge Leon (`mateool10`) | US001: propuesta de valor, vista previa del panel y relato de la operación fragmentada. | 3 |
-| Jose Rudas (`josegabriel1604`) | US003 y US007: camino del hotel independiente, plan Free, contenido de producto y equipo, y sección de soporte. | 5 |
-| José Santana (`JhosBy2005`) | US005 y US008: beneficios de operaciones conectadas, flujo operativo y variantes de idioma. | 4 |
-| **Total** | **Ocho User Stories de `EP001`** | **20** |
+| Darnell Cuba (`darnell1910`) | `feature/site-shell`, `feature/solutions`, `feature/benefits-workflow`, `feature/product-discovery`, `feature/support-closing`, `feature/documentation` | 6 |
+| Juan Diego Flores (`YopoFlores`) | `feature/site-shell`, `feature/solutions`, `feature/pricing`, `feature/team`, `feature/localization`, `feature/documentation` | 6 |
+| Jorge Leon (`mateool10`) | `feature/site-shell`, `feature/solutions`, `feature/pricing`, `feature/team`, `feature/localization`, `feature/documentation` | 6 |
+| Jose Rudas (`josegabriel1604`) | `feature/hero`, `feature/benefits-workflow`, `feature/pricing`, `feature/team`, `feature/legal` | 5 |
+| José Santana (`JhosBy2005`) | `feature/hero`, `feature/benefits-workflow`, `feature/product-discovery`, `feature/support-closing`, `feature/legal` | 5 |
+| **Total** | **Once ramas de la Epic 1** | **28** |
 
 La captura del analítico de GitHub muestra la actividad de contribución del
 repositorio de la Landing Page. El historial de commits permite complementar
@@ -3846,10 +3850,13 @@ con cada User Story.
 
 *Figura 5.7. Historial de commits del repositorio de la Landing Page en la rama `main`.*
 
-La evidencia muestra una distribución de responsabilidades por User Story y
-una integración progresiva de los cambios. La participación de cada integrante
-se mantuvo vinculada con un aspecto funcional concreto y quedó respaldada por
-los commits detallados en la evidencia de desarrollo del Sprint Review.
+La evidencia muestra una participación repartida entre los cinco integrantes,
+con una carga de entre cinco y seis commits por persona, y una integración
+progresiva de los cambios rama por rama. A diferencia del Sprint Backlog, donde
+cada Work-Item se asignó a un responsable único, la ejecución fue colaborativa:
+la mayoría de las ramas reúne commits de más de un integrante. Cada
+contribución queda respaldada por los commits detallados en la evidencia de
+desarrollo del Sprint Review.
 
 # Conclusiones
 
