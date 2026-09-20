@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Changed
 
 - Replaced the first interview of the first segment with Roy Rios, deputy manager of an Accor chain hotel in Trujillo, including his portrait, timestamps and summary.
-- Rewrote the section 2.2.3 analysis for the first segment from the new interview, marking as PENDIENTE the four blocks the recording does not cover.
+- Rewrote the section 2.2.3 analysis for the first segment from the new interview, writing the blocks the recording does not state directly as analysis derived from the difficulties, tools and adoption criteria it does cover.
 
 ## [0.13.0] - 2026-09-19
 
