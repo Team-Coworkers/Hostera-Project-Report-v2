@@ -67,7 +67,7 @@
 | Rudas Chavarria, Jose Gabriel    | `josegabriel1604` |
 | Santana Luna, José Antonio       | `JhosBY2005`      |
 
-**Repositorio del proyecto:** [Ver repositorio en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report)
+**Repositorio del proyecto:** [Ver repositorio en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 
 ## AV1
 
