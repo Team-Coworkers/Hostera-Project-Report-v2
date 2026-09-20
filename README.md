@@ -2468,8 +2468,9 @@ resultados, restricciones y errores se muestran como pasos alternativos dentro d
 recorrido correspondiente.
 
 Los diagramas fueron elaborados en FigJam utilizando las pantallas diseñadas en el
-archivo de Paper `Team-Coworkers`. El board editable con los 25 Wireflows se encuentra
-disponible en [Hostera — Web Application Wireflows](https://www.figma.com/board/cbBXWjZefifKIffGrMY6E7).
+archivo de Paper `Team-Coworkers`. El board editable con los 25 Wireflows se conserva
+en el espacio de trabajo del equipo; sus diagramas se presentan a continuación como
+capturas.
 
 #### Objetivos de usuario y recorridos especificados
 
@@ -3088,14 +3089,10 @@ y permite continuar, corregir o regresar.
 
 ### Prototipo interactivo
 
-El archivo de Figma contiene los dos puntos de inicio de la demostración: Desktop
-flow y Mobile flow. El Desktop flow integra las pantallas principales de la
-aplicación y sus estados de interacción; el Mobile flow presenta el recorrido
-adaptado para navegador móvil.
-
-- [Abrir el prototipo completo en Figma](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes)
-- [Abrir el Desktop flow](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes?node-id=2-2)
-- [Abrir el Mobile flow](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes?node-id=2-3)
+El prototipo se organiza en dos puntos de inicio: Desktop flow y Mobile flow. El
+Desktop flow integra las pantallas principales de la aplicación y sus estados de
+interacción; el Mobile flow presenta el recorrido adaptado para navegador móvil.
+Ambos recorridos quedan documentados en el video de demostración de esta sección.
 
 ### Video de demostración
 
@@ -3111,8 +3108,8 @@ y check-out, el inventario, el control de accesos y los reportes.
 **Enlace al video de Microsoft Stream:** [Ver la demostración del prototipo de Hostera](https://1drv.ms/f/c/8d4ae682dbad6a14/IgDpv3unJcdXQJ0d3eyvjDjBATcwFeKcn-JrAaMoJk2_5jQ?e=bsHpeN).
 
 La captura y el enlace anteriores corresponden a la evidencia de navegación exigida
-para esta sección; el enlace de Figma se incluye como referencia directa al prototipo
-interactivo y no sustituye el video solicitado.
+para esta sección: el video recorre el prototipo interactivo completo en sus dos
+puntos de inicio.
 
 ## 4.6. Domain-Driven Software Architecture
 
@@ -3343,7 +3340,7 @@ las herramientas locales se instalan desde sus canales oficiales de distribució
 | --- | --- | --- | --- |
 | GitHub | Aloja el repositorio del equipo, los repositorios de producto, los issues y el historial de revisiones. | [Repositorio del equipo Team Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
 | YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
-| Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | [Prototipos de las aplicaciones web de Hostera](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes) | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
+| Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | — | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
 | UXPressia | Elabora los artefactos de impact mapping utilizados para relacionar objetivos, actores, impactos e historias de usuario. | — | Los diagramas exportados se versionan junto con el informe cuando se utilizan como evidencia. |
 | Pandoc | Convierte `README.md` y sus recursos locales en el entregable PDF. | Instalación local; la configuración y ejecución están documentadas en `README.md`. | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` permanece sin seguimiento. |
 
@@ -3998,4 +3995,3 @@ This is program for AV2 (not in AV1)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
 - **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
-- **Prototipo de Web Application.** [Hostera · Web Application Prototypes en Figma](https://www.figma.com/design/3KIDTsjWUCaBv93Xa1jxOI/Hostera-%C2%B7-Web-Application-Prototypes)

@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.21.0] - 2026-09-19
+
+### Removed
+
+- Removed the five Figma links from the report. The design file is private: an anonymous visitor gets a sign-in wall instead of the prototype, so the links were not usable as evidence. The wireflows keep their 25 captures, and the prototype keeps its video-frame capture and its Microsoft Stream recording, both publicly reachable. The reference column of the Figma row in the tools table now carries an em dash, as the UXPressia row already did.
+
 ## [0.20.0] - 2026-09-19
 
 ### Fixed
