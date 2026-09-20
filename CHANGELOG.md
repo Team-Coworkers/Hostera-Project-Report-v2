@@ -6,8 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [0.10.0] - 2026-09-19
 
+### Added
+
+- Added the third interview of the first target segment to the interview registry: Odar Fernando Quispe Salazar, Operations Manager of a three-property boutique hotel chain, with its screenshot, recording link, timestamps and summary.
+
 ### Changed
 
+- Renumbered the chapter 2 figures from 2.3 onwards so the sequence stays correlative after the new interview entry.
 - Updated the team roster in the landing page wireframes and mock-ups so the artefacts show the five engineers published on the landing page, replacing Mateo Condori with Mateo Leon and Joaquin Cuba with Jose Rudas.
 
 ## [0.9.0] - 2026-09-19
