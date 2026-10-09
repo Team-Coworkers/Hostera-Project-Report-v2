@@ -3775,8 +3775,18 @@ ejemplo: `feat(iam): add the sign-in and sign-up views` o
 `docs(interviews): record the six video interviews by segment`. Los merges usan
 `merge(develop): <descripción>` y `merge(main): release <versión>`.
 
+Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
+`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
+`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
+imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
+ejemplo: `feat(iam): add the sign-in and sign-up views` o
+`docs(interviews): record the six video interviews by segment`. Los merges usan
+`merge(develop): <descripción>` y `merge(main): release <versión>`.
+
 Los releases utilizan [Semantic Versioning 2.0.0](https://semver.org/):
 `MAJOR.MINOR.PATCH`. Cada release se integra en `main` con `--no-ff`, se etiqueta con
+un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
 un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
 detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. El primer componente mayor permanece en `0` mientras el
 producto se encuentre en desarrollo inicial; durante esta fase, los cambios
@@ -3786,10 +3796,22 @@ las correcciones se registran de acuerdo con la política de releases del proyec
 ### 5.1.3. Source Code Style Guide & Conventions
 
 Esta sección establece las convenciones para nombrar elementos y programar en los
-lenguajes y frameworks utilizados por Hostera. De acuerdo con el Project Statement,
-los identificadores del código fuente se escribirán en inglés, aunque los textos
-visibles para los usuarios podrán presentarse en español o inglés según el idioma de
-la interfaz. Las reglas de Git Flow, Conventional Commits y Semantic Versioning se
+lenguajes y frameworks utilizados por Hostera: HTML, CSS, JavaScript, TypeScript y
+Java. De acuerdo con el Project Statement, los identificadores del código fuente se
+escriben en inglés en todos los productos, aunque los textos visibles para los usuarios
+se presentan en inglés o en español latinoamericano según el idioma de la interfaz.
+
+El equipo adopta como referencia las guías que indica el enunciado del proyecto:
+
+| Guía | Se aplica a | Referencia |
+| --- | --- | --- |
+| HTML Style Guide and Coding Conventions | HTML de la Landing Page y plantillas de Angular | https://www.w3schools.com/html/html5_syntax.asp |
+| Google HTML/CSS Style Guide | HTML y CSS de la Landing Page y del frontend | https://google.github.io/styleguide/htmlcssguide.html |
+| Angular coding style guide | Componentes, servicios, rutas y estructura del frontend | https://angular.dev/style-guide |
+| Google TypeScript Style Guide | Código TypeScript del frontend | https://google.github.io/styleguide/tsguide.html |
+| Gherkin Conventions for Readable Specifications | Criterios de aceptación de las User Stories | https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/ |
+| Google Java Style Guide (AV2) | Código Java de los RESTful Web Services | https://google.github.io/styleguide/javaguide.html |
+| Spring Boot Features (AV2) | Configuración, perfiles, persistencia y pruebas de los Web Services | https://docs.spring.io/spring-boot/reference/features/index.html | Las reglas de Git Flow, Conventional Commits y Semantic Versioning se
 describen en la sección 5.1.2 y no se repiten aquí.
 
 #### Convenciones generales de nomenclatura
@@ -3846,14 +3868,38 @@ utilizará para crear, ejecutar, probar y compilar el proyecto, manteniendo sus 
 y configuración en el workspace. El código de interfaz se organizará por áreas
 funcionales dentro de `src` y utilizará las opciones de tipado estricto de TypeScript.
 
-Cada componente agrupará archivos con el mismo nombre base, por ejemplo
-`reservation-card.component.ts`, `reservation-card.component.html` y
-`reservation-card.component.css`. Los componentes, servicios y directivas utilizarán
+El código se organiza por bounded context, cada uno con las carpetas `domain`,
+`application`, `infrastructure` y `presentation`, y los componentes son standalone.
+Cada componente agrupa archivos con el mismo nombre base, por ejemplo
+`booking-list.component.ts`, `booking-list.component.html` y
+`booking-list.component.css`. Los componentes, servicios y directivas utilizarán
 los sufijos `.component`, `.service` y `.directive`, respectivamente. Las clases se
 nombrarán en `PascalCase`; las propiedades y los métodos, en `camelCase`; y los flujos
 observables podrán utilizar el sufijo `$`. Los componentes se enfocarán en la
 presentación, mientras que la lógica reutilizable y el acceso a datos se mantendrán en
 servicios. Se evitará colocar lógica de negocio extensa directamente en las plantillas.
+Las interfaces se construyen con los componentes de Angular Material y el formato del
+código lo fija Prettier (comillas simples y punto y coma en TypeScript).
+
+#### Internacionalización y accesibilidad
+
+Los tres productos usan inglés como idioma por defecto y ofrecen español
+latinoamericano, con los códigos `en` y `es-419`. En la Landing Page, cada texto tiene
+un atributo `data-i18n` y sus traducciones viven en un archivo por idioma; al cambiar de
+idioma se actualizan el atributo `lang` del documento y los metadatos. En la Frontend
+Web Application, los mensajes se organizan en `src/locales/<idioma>/<contexto>/` y se
+cargan con ngx-translate; `I18nService` cambia el idioma, el atributo `lang` del
+documento y los formatos de fecha y moneda. Ningún texto visible se escribe directamente
+en el código: todo pasa por una clave de traducción. Los RESTful Web Services devolverán
+sus mensajes de error en inglés y en español latinoamericano según la cabecera
+`Accept-Language`.
+
+La accesibilidad sigue las pautas WCAG 2.2. Los elementos interactivos tienen nombre
+accesible mediante `aria-label` o `aria-labelledby`, los mensajes de estado usan
+`role="status"` o `aria-live="polite"`, el enlace de la navegación activa lleva
+`aria-current="page"` y los íconos decorativos se ocultan con `aria-hidden="true"`. Al
+cierre de TB1 la Landing Page tiene 68 atributos ARIA y la Frontend Web Application,
+210.
 
 #### Web Services: Spring Boot y Java
 
