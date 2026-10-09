@@ -1739,82 +1739,40 @@ perspectiva de un Developer y no generan Wireflow User Goals.
 
 ## 3.2. Impact Mapping
 
-El Impact Mapping de Hostera conecta las hipótesis estratégicas del modelo de negocio con los cambios de comportamiento esperados en los usuarios y las características del producto digital. Esta sección toma como base los criterios de éxito definidos en el proceso de Lean UX, las definiciones de los segmentos objetivo y los requerimientos funcionales documentados para el Landing Page y la Web Application.
+El Impact Mapping de Hostera conecta las hipótesis estratégicas del modelo de negocio digital con los cambios de comportamiento esperados en los usuarios y las características del producto a desarrollar. Esta sección toma como base los criterios de éxito definidos en el proceso de Lean UX, las definiciones de los segmentos objetivo y los requisitos funcionales documentados para la Landing Page y la Web Application.
 
 ### Business Goals (SMART)
 
-Los objetivos de negocio reflejan los criterios de éxito ("Success Criteria") establecidos en las Hipótesis de Lean UX para validar la propuesta de valor de Hostera, definidos bajo la estructura SMART.
+Los objetivos de negocio reflejan las metas comerciales y de adopción de Team Coworkers como plataforma B2B SaaS (Software as a Service) monetizada desde el inicio.
 
-| # | Business Goal | Descripción y Métricas de Éxito | Epic Relacionado |
-|---|---|---|---|
-| **BG1** | Centralización operativa | Aumentar en al menos 5% las tareas de supervisión completadas desde el panel sin consultar registros adicionales durante los primeros 6 meses de despliegue. | EP002 |
-| **BG2** | Precisión en reservas y disponibilidad | Reducir en al menos 5% las inconsistencias detectadas entre reservas y disponibilidad de habitaciones en el lapso de los primeros 6 meses de uso. | EP003, EP004 |
-| **BG3** | Visibilidad de inventario | Aumentar en al menos 5% los movimientos de inventario registrados y consultables, reduciendo diferencias de stock en un periodo de 3 meses tras la implementación. | EP005 |
-| **BG4** | Trazabilidad RFID | Aumentar en al menos 5% los accesos autorizados que quedan relacionados con una tarjeta RFID, una habitación y un huésped/usuario en los primeros 6 meses de operación. | EP006 |
-| **BG5** | Coordinación multi-sede | Aumentar en al menos 5% las tareas de supervisión completadas correctamente en escenarios de varias sedes en el transcurso de 6 meses. | EP007 |
-| **BG6** | Adquisición e incorporación | Convertir el 10% de los visitantes de la Landing Page en usuarios registrados a través de la web, identificando su escala operativa (hotel independiente o cadena) durante los primeros 3 meses de publicación. | EP001 |
+*   **BG1 (adquisición en el plan Starter):** Alcanzar 50 suscripciones de pago activas en el plan *Starter* (facturadas a S/39 mensuales) durante los primeros 4 meses de lanzamiento.
+*   **BG2 (expansión al plan Professional):** Lograr que 20 cadenas hoteleras pequeñas contraten el plan *Professional* (S/8 por habitación) y que el 10% de los clientes *Starter* actualicen a este plan al superar la restricción de una sola propiedad en un periodo de 6 meses.
+*   **BG3 (Retención y Uso Diario):** Alcanzar una tasa de retención mensual del 90%, garantizada mediante el uso diario (al menos 5 días a la semana) de las funciones críticas como codificación RFID y control de reservas por parte de los operadores del hotel.
 
 ### Actores (Actors)
 
-Los actores principales se derivan estrictamente de los User Personas definidos en la sección de Needfinding y los roles base requeridos para la Landing Page. Las tareas del personal operativo (recepción, almacén) se consideran acciones subordinadas a la coordinación de estos responsables.
+Se consideran exclusivamente los dos User Personas identificados como segmentos objetivo para el modelo de negocio digital. Las tareas del personal operativo (recepción, almacén) se consideran acciones subordinadas a la coordinación de estos responsables.
 
-- **A1 - Steven Huarcaya (Administrador de Hotel Independiente):** Propietario o administrador que supervisa la operación diaria de una sola sede (hasta 10 habitaciones). Requiere consultar información actualizada sin depender de sistemas separados.
-- **A2 - Anyeli Cárdenas (Gerente de Operaciones de Cadena):** Responsable de coordinar dos o más sedes de una cadena pequeña (2 a 5 locaciones). Necesita comparar información entre establecimientos manteniendo separados los datos de cada sede.
-- **A3 - Visitantes (Perfiles afines a Steven y Anyeli):** Usuarios que exploran la Landing Page para comprender la propuesta de valor, comparar planes y encontrar la ruta adecuada para su escala operativa.
+*   **A1. Steven Huarcaya (Administrador de Hotel Independiente):** Cliente objetivo del plan *Starter* que gestiona una sola propiedad de hasta 10 habitaciones y requiere una administración centralizada con un lector RFID.
+*   **A2. Anyeli Cárdenas (Gerente de Operaciones de Cadena):** Cliente objetivo del plan *Professional* que requiere consolidar la operación de 2 a 5 locaciones, gestionar reportes por sede y obtener alertas automáticas de inventario.
 
-### Impacts (Cambios en el Comportamiento de los Actores)
+### Mapeo Completo (Impacts, Deliverables y User Stories)
 
-Los Impacts describen cómo esperamos que cambien o se comporten los User Personas como resultado de usar Hostera. Cada Impact está formulado como un cambio observable y medible.
+La siguiente matriz detalla cómo cada meta del negocio digital se apoya en un cambio de comportamiento del usuario (Impact), qué debe construir la startup para provocarlo (Deliverable) y qué historias de usuario guiarán dicho desarrollo.
 
-| # | Actor | Impact (¿Cómo deben cambiar?) | BG |
-|---|---|---|---|
-| **IM1** | A3 | Explora la propuesta de valor en el Landing Page, diferencia los planes y se registra en la plataforma. | BG6 |
-| **IM2** | A1, A2 | Inician sesión y monitorean la operación diaria desde un overview unificado en lugar de usar registros separados. | BG1 |
-| **IM3** | A1, A2 | Gestionan el ciclo de vida de las reservas (check-in/check-out) afectando automáticamente la disponibilidad de habitaciones. | BG2 |
-| **IM4** | A1, A2 | Registran entradas y salidas de existencias en el almacén mediante ajustes de stock auditables. | BG3 |
-| **IM5** | A1, A2 | Codifican credenciales RFID, asocian accesos a las habitaciones y revisan los eventos denegados o concedidos. | BG4 |
-| **IM6** | A2 | Navega entre propiedades asignadas y genera reportes consolidados por sede sin mezclar información. | BG5 |
+| Business Goal | Actor | Impact (Cambio de comportamiento esperado) | Deliverables (¿Qué puedo hacer como negocio digital para provocar el impacto?) | User Stories (Derivadas del Impact Mapping) |
+| :--- | :--- | :--- | :--- | :--- |
+| **BG1** (50 suscripciones *Starter* a S/39/mes) | A1 (Steven Huarcaya) | El administrador abandona el uso de múltiples herramientas gratuitas y adquiere directamente la suscripción *Starter* desde la web para centralizar las reservas de su única sede. | Desarrollar un portal de adquisición (Landing Page) con un flujo de registro automatizado que comunique claramente los límites y beneficios del plan Starter para hoteles de 1 sede (EP001, EP002). | **US003:** Como visitante del segmento de hoteles independientes, deseo identificar la opción de Hostera para una propiedad con hasta 10 habitaciones para poder confirmar que se ajusta a mi operación y continuar con el plan correspondiente.<br><br>**US009:** Como administrador de hotel independiente, deseo crear una cuenta con una propiedad inicial para poder comenzar a configurar mi operación hotelera en Hostera. |
+| **BG2** (20 suscripciones *Professional* a S/8/habitación) | A2 (Anyeli Cárdenas) | La gerente de operaciones contrata el plan *Professional* en lugar de un ERP tradicional, para aprovechar los cinco administradores con roles y obtener reportes independientes por locación. | Implementar un módulo de analítica operativa multi-sede y un sistema de control de inventario capaz de generar alertas críticas de stock automáticamente (EP007, EP005). | **US031:** Como gerente de operaciones, deseo encontrar y revisar reportes operativos por propiedad y periodo para poder evaluar el rendimiento y la actividad de cada hotel de la cadena.<br><br>**US024:** Como gerente de operaciones, deseo monitorear las cantidades de inventario y condiciones de stock por ubicación para poder identificar rápidamente los suministros críticos que requieren atención. |
+| **BG3** (90% retención por uso diario) | A1, A2 (Steven y Anyeli) | Los responsables y su equipo confían exclusivamente en Hostera para su operación diaria, utilizándolo para emitir todas las llaves físicas y confirmar los check-ins diarios. | Proveer un sistema de gestión de estancias que esté directamente integrado con una API de codificación de tarjetas de proximidad (RFID) en la misma interfaz web (EP003, EP006). | **US017:** Como operador de recepción, deseo verificar la identidad del huésped, registrar los pagos de llegada que correspondan y codificar el acceso a la habitación al completar el check-in de una reserva confirmada para que el huésped pueda iniciar su estancia con una identidad verificada y tarjetas válidas.<br><br>**US029:** Como operador autorizado de recepción, deseo codificar tarjetas RFID con periodos de acceso válidos o reemplazarlas conservando el mismo fin de validez, limitando a cada miembro del personal a una credencial utilizable, para que los huéspedes y el personal reciban acceso adecuado para su rol o estancia. |
 
-### Deliverables (Características del Producto)
-
-Los entregables corresponden a los Epics (EP) definidos en el Product Backlog, los cuales agrupan las User Stories y Technical Stories necesarias para provocar los impactos.
-
-| # | Deliverable | Descripción Funcional | Impactos |
-|---|---|---|---|
-| **D1** | Landing Page Experience (EP001) | Portal con navegación clara, propuesta de valor, selección de planes e inicio de registro para hoteles y cadenas. | IM1 |
-| **D2** | Account Access & Overview (EP002) | Autenticación, selección de propiedad y un dashboard administrativo para monitorear el estado actual del hotel. | IM2 |
-| **D3** | Reservation & Room Management (EP003, EP004) | Módulos para gestionar disponibilidad, tarifas y el ciclo de la reserva desde la creación hasta el check-out. | IM3 |
-| **D4** | Inventory Management (EP005) | Control de artículos, ubicaciones de almacenamiento y registro inmutable de ajustes de stock. | IM4 |
-| **D5** | RFID Access Control (EP006) | Integración para codificar, reemplazar y revocar tarjetas RFID, y auditoría de eventos de acceso. | IM5 |
-| **D6** | Operational Reporting (EP007) | Generación y exportación de reportes operativos filtrados por propiedad y periodo de tiempo. | IM6 |
-| **D7** | API Reliability (EP008) | Estandarización de errores e infraestructura del RESTful API para respuestas consistentes (Technical Stories). | Todos |
-
-### User Stories Derivadas del Impact Mapping
-
-Las funcionalidades identificadas han sido traducidas a los requerimientos especificados en la sección 3.1. A continuación, se presenta el mapeo de historias representativas y su integración técnica (Technical Stories) redactadas en el formato "Como... deseo... para...".
-
-| Deliverable | IDs Relacionados | Historias Representativas (Formato estándar) |
-|---|---|---|
-| D1 | US001 - US008 | **US003:** Como administrador de un hotel independiente, deseo encontrar un camino para una sola propiedad para poder identificar el punto de entrada previsto para mi operación. |
-| D2 | US009 - US011 <br/>TS001 - TS004 | **US011:** Como administrador de hotel, deseo monitorear la información operativa actual y cambiar la propiedad activa para poder identificar condiciones que requieren atención. |
-| D3 | US012 - US023 <br/>TS005 - TS011 | **US017:** Como operador de recepción, deseo completar el check-in del huésped para que la identidad, el pago, la asignación de habitación y el acceso sean verificados antes de que comience la estancia. |
-| D4 | US024 - US027 <br/>TS012 - TS013 | **US026:** Como operador de inventario, deseo registrar el stock que entra o sale de una ubicación de almacenamiento para que las cantidades disponibles y su historial de auditoría permanezcan precisos. |
-| D5 | US028 - US030 <br/>TS014 - TS015 | **US029:** Como operador autorizado, deseo codificar o reemplazar una tarjeta de acceso RFID para que un huésped o miembro del personal reciba el acceso autorizado para su rol. |
-| D6 | US031 - US032 <br/>TS016 | **TS016:** Como desarrollador, deseo recuperar y exportar reportes operativos limitados por propiedad a través de la API para que los clientes puedan analizar resultados consistentes. |
-
-## Resumen Visual
+### Resumen Visual
 
 El mapa de impacto fue consolidado en la herramienta UXPressia, ilustrando la jerarquía completa desde los Business Goals hasta las User Stories establecidas para el producto mínimo viable de Hostera.
 
-### Impact Mapping: Segmento 1 - Hotel independiente
+<img src="assets/chapter-3/uxpressia-impact-mapping.png" alt="Impact Mapping de Hostera con los objetivos de negocio de ambos segmentos" style="width:100%; height:auto;"/>
 
-<img src="assets/chapter-3/uxpressia-impact-mapping-1.png" alt="Imagen de Impact Mapping Hotel Independiente" >
-*Figura 3.1. Impact Mapping del segmento de hoteles independientes.*
-
-### Impact Mapping: Segmento 2 - Cadena hotelera pequeña
-
-<img src="assets/chapter-3/uxpressia-impact-mapping-2.png" alt="Imagen de Impact Mapping Hotel Independiente" >
-*Figura 3.2. Impact Mapping del segmento de pequeñas cadenas hoteleras.*
+*Figura 3.1. Impact Mapping de Hostera para los hoteles independientes y las pequeñas cadenas hoteleras.*
 
 <div style="page-break-before: always;"></div>
 
@@ -1904,7 +1862,7 @@ para su seguimiento, priorización y estimación.
 
 ![Product Backlog de Hostera en YouTrack](assets/chapter-3/youtrack-product-backlog.png)
 
-*Figura 3.3. Listado general del Product Backlog de Hostera en YouTrack.*
+*Figura 3.2. Listado general del Product Backlog de Hostera en YouTrack.*
 
 El Product Backlog puede consultarse en el [proyecto Hostera en YouTrack](https://santanapromaster.youtrack.cloud/issues?q=project:%20HOS).
 
