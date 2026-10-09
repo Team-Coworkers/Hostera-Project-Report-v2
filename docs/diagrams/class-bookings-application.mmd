@@ -1,0 +1,40 @@
+classDiagram
+    direction LR
+    class BookingCommandService {
+        +create(CreateBookingCommand) Booking
+        +confirm(Long) void
+        +cancel(CancelBookingCommand) void
+        +recordPayment(RecordPaymentCommand) Payment
+        +checkIn(CheckInBookingCommand) void
+        +checkOut(CheckOutBookingCommand) void
+    }
+    class BookingQueryService {
+        +find(BookingSearchQuery) List~Booking~
+        +getById(Long) Booking
+    }
+    class BookingRepository {
+        <<interface>>
+        +findById(Long) Optional~Booking~
+        +findByProperty(Long) List~Booking~
+        +save(Booking) Booking
+    }
+    class PaymentRepository {
+        <<interface>>
+        +findByBooking(Long) List~Payment~
+        +save(Payment) Payment
+    }
+    class RoomsContextGateway {
+        <<interface>>
+        +isRoomAvailable(Long, LocalDate, LocalDate) boolean
+        +getStayPrice(Long, Long, LocalDate, LocalDate) BigDecimal
+    }
+    class AccessControlContextGateway {
+        <<interface>>
+        +issueGuestKeyCards(Long, Long, LocalDate) void
+        +expireGuestKeyCards(Long) void
+    }
+    BookingCommandService ..> BookingRepository
+    BookingCommandService ..> PaymentRepository
+    BookingCommandService ..> RoomsContextGateway
+    BookingCommandService ..> AccessControlContextGateway
+    BookingQueryService ..> BookingRepository

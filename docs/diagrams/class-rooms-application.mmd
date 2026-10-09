@@ -1,0 +1,48 @@
+classDiagram
+    direction LR
+    class IncludedService {
+        <<enumeration>>
+        ROOM_ONLY
+        BREAKFAST_INCLUDED
+        HALF_BOARD
+        FULL_BOARD
+    }
+    class RoomCommandService {
+        +createRoom(CreateRoomCommand) Room
+        +createRoomType(CreateRoomTypeCommand) RoomType
+        +createRatePlan(CreateRatePlanCommand) RatePlan
+        +setDailyRates(SetDailyRatesCommand) void
+        +setRoomStatus(SetRoomStatusCommand) void
+    }
+    class AvailabilityQueryService {
+        +getAvailability(Long, LocalDate, Long) List~RoomAvailability~
+        +isRoomAvailable(Long, LocalDate, LocalDate) boolean
+    }
+    class RoomRepository {
+        <<interface>>
+        +findByProperty(Long) List~Room~
+        +save(Room) Room
+    }
+    class RateRepository {
+        <<interface>>
+        +findRatePlans(Long) List~RatePlan~
+        +findDailyRates(Long, LocalDate, LocalDate) List~DailyRate~
+        +saveDailyRates(List~DailyRate~) void
+    }
+    class StatusPeriodRepository {
+        <<interface>>
+        +findByRoom(Long) List~StatusPeriod~
+        +save(StatusPeriod) StatusPeriod
+        +delete(StatusPeriod) void
+    }
+    class BookingsContextGateway {
+        <<interface>>
+        +getRoomAssignments(Long, LocalDate, LocalDate) List~RoomAssignment~
+    }
+    RatePlan --> IncludedService
+    RoomCommandService ..> RoomRepository
+    RoomCommandService ..> RateRepository
+    RoomCommandService ..> StatusPeriodRepository
+    AvailabilityQueryService ..> RoomRepository
+    AvailabilityQueryService ..> StatusPeriodRepository
+    AvailabilityQueryService ..> BookingsContextGateway

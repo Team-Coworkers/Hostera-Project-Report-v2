@@ -3446,83 +3446,116 @@ otro contexto lo hacen a través de un adaptador que actúa como capa anticorrup
 
 ### 4.7.1. Class Diagrams
 
-Los diagramas de clases detallan la implementación orientada a objetos de los
-bounded contexts de Hostera. Cada diagrama identifica las clases de dominio y de
-servicio, las interfaces utilizadas para acceder a persistencia o servicios
-externos, las enumeraciones que representan estados y las relaciones entre sus
-elementos. También se especifican los atributos, métodos, visibilidad y
-multiplicidad de las relaciones para hacer explícitas las responsabilidades de
-cada componente.
+Los diagramas de clases describen el modelo orientado a objetos de los RESTful Web
+Services de Hostera, organizado según los seis bounded contexts del modelo C4: IAM,
+Overview, Bookings, Rooms, Inventory y Access Control. Están escritos con las
+convenciones de Java, el lenguaje de los Web Services, según la Google Java Style Guide:
+clases en PascalCase, atributos y métodos en camelCase, enumeraciones con valores en
+UPPER_SNAKE_CASE, tipos de Java como `Long`, `BigDecimal`, `LocalDate` e `Instant`,
+colecciones `List<T>` y repositorios de Spring Data que devuelven `Optional<T>` al buscar
+por identificador. Los atributos y los valores de cada enumeración son los mismos que usa
+el dominio de la Frontend Web Application, de modo que el modelo del servidor y el del
+cliente coinciden.
 
-El diagrama de Identity and Access Management representa las entidades
-`Property`, `Account`, `PropertyAccess` y `Session`, junto con
-`AuthenticationService` y sus repositorios. Las enumeraciones `RoleType`,
-`Permission` y `AccountStatus` delimitan los roles, permisos y estados de las
-cuentas. Las relaciones muestran cómo una cuenta obtiene acceso a una propiedad,
-cómo se abre una sesión y cómo el servicio coordina los repositorios.
+Cada contexto se presenta en dos diagramas. El de dominio contiene las entidades, los
+objetos de valor, que se implementarán como `record` de Java, y las enumeraciones; el de
+aplicación contiene los servicios de comandos y de consultas, y las interfaces de los
+repositorios y de los gateways hacia otros contextos o sistemas externos. Las firmas de
+los métodos muestran solo los tipos de sus parámetros. Los diagramas se elaboraron como
+código Mermaid, una de las opciones de diagram-as-code que admite el enunciado del
+proyecto, y sus fuentes están en la carpeta `docs/diagrams/` del repositorio del informe.
 
-<img src="assets/chapter-4/class-diagram-identity-and-access-management.jpeg" alt="Diagrama de clases de Identity and Access Management de Hostera" style="width:100%; height:auto;"/>
+**IAM.** `Organization` guarda el plan de suscripción (`STARTER` o `PROFESSIONAL`) con la
+cantidad de propiedades y habitaciones que cubre, y calcula su precio mensual, como la
+clase `SubscriptionPlan` de la aplicación. `User` pertenece a una organización, tiene un
+rol y la lista de propiedades a las que puede acceder.
 
-*Figura 4.88. Diagrama de clases de Identity and Access Management de Hostera.*
+<img src="assets/chapter-4/class-iam-domain.svg" alt="Diagrama de clases del dominio de IAM" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-El diagrama de Reservations and Stay Management organiza el ciclo de una reserva
-desde el huésped hasta la estadía. Incluye las clases `Guest`, `Reservation`,
-`Payment` y `Stay`, los estados de reserva, pago y estadía, además de
-`ReservationService`, sus repositorios y las interfaces de disponibilidad,
-tarifación y credenciales. Las multiplicidades documentan, entre otras relaciones,
-la asociación entre huéspedes y reservas, reservas y pagos, y reservas y estadías.
+*Figura 4.88. Dominio del contexto IAM.*
 
-<img src="assets/chapter-4/class-diagram-reservations-and-stay-management.jpeg" alt="Diagrama de clases de Reservations and Stay Management de Hostera" style="width:100%; height:auto;"/>
+`AccountCommandService` registra la organización con su primer administrador, inicia
+sesión y devuelve un `AuthenticatedUser` con el token. Depende de `HashingService` y de
+`TokenService`, que se implementan con Spring Security.
 
-*Figura 4.89. Diagrama de clases de Reservations and Stay Management de Hostera.*
+<img src="assets/chapter-4/class-iam-application.svg" alt="Diagrama de clases de la capa de aplicación de IAM" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-El diagrama de Rooms, Availability and Rates muestra la relación entre los tipos
-de habitación, las habitaciones, los planes tarifarios y las tarifas diarias.
-`RoomManagementService` coordina las operaciones mediante los repositorios de
-habitaciones y planes tarifarios, así como la referencia a las reservas para
-proteger los estados controlados por estas. Las enumeraciones de configuración y
-estado de habitación complementan las reglas expresadas mediante los métodos y
-las relaciones del modelo.
+*Figura 4.89. Aplicación del contexto IAM.*
 
-<img src="assets/chapter-4/class-diagram-rooms-availability-and-rates.jpeg" alt="Diagrama de clases de habitaciones, disponibilidad y tarifas de Hostera" style="width:100%; height:auto;"/>
+**Overview.** Es un contexto de solo lectura. `OverviewQueryService` construye el
+panorama de cada propiedad, el rendimiento diario y las llegadas del día a partir de
+los datos que lee `OverviewReadRepository`; no modifica ningún recurso.
 
-*Figura 4.90. Diagrama de clases de habitaciones, disponibilidad y tarifas de Hostera.*
+<img src="assets/chapter-4/class-overview.svg" alt="Diagrama de clases del contexto Overview" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
-El diagrama de Inventory Management modela las ubicaciones de almacenamiento,
-los ítems de inventario y los ajustes de stock. `InventoryService` coordina la
-creación y actualización de ítems, el registro de movimientos y la gestión de
-ubicaciones mediante `IInventoryItemRepository` e
-`IStorageLocationRepository`. `StockCondition` y `StockMovementType` representan
-las condiciones calculadas del inventario y los tipos de movimiento; además, las
-relaciones muestran la ubicación de cada ítem y la trazabilidad de sus ajustes.
+*Figura 4.90. Diagrama de clases del contexto Overview.*
 
-<img src="assets/chapter-4/class-diagram-inventory-management.jpeg" alt="Diagrama de clases de gestión de inventario de Hostera" style="width:100%; height:auto;"/>
+**Bookings.** `Booking` es la raíz del agregado y concentra el ciclo de vida de la
+reserva: la confirmación, la cancelación, el no-show, el check-in y el check-out
+quedan registrados como objetos de valor con su momento y su responsable. `Payment`
+es un agregado aparte que referencia a la reserva por su identificador, y el saldo
+pendiente se calcula a partir de los pagos.
 
-*Figura 4.91. Diagrama de clases de gestión de inventario de Hostera.*
+<img src="assets/chapter-4/class-bookings-domain.svg" alt="Diagrama de clases del dominio de Bookings" style="display:block; width:95%; height:auto; margin:0 auto;"/>
 
-El diagrama de RFID Access Control representa las credenciales RFID, los puntos
-de acceso, los alcances autorizados y los eventos de acceso. La clase
-`RFIDAccessService` coordina el codificador y los repositorios de credenciales y
-eventos. Las enumeraciones de estado de credencial, tipo de asignado y resultado
-de acceso permiten distinguir el ciclo de vida de una credencial y si un intento
-fue concedido o denegado.
+*Figura 4.91. Dominio del contexto Bookings.*
 
-<img src="assets/chapter-4/class-diagram-rfid-access-control.jpeg" alt="Diagrama de clases de control de acceso RFID de Hostera" style="width:100%; height:auto;"/>
+`BookingCommandService` coordina las operaciones sobre la reserva. Para verificar la
+disponibilidad y calcular el precio de la estadía consulta al contexto Rooms mediante
+`RoomsContextGateway`, y para emitir y vencer las tarjetas del huésped llama al
+contexto Access Control mediante `AccessControlContextGateway`.
 
-*Figura 4.92. Diagrama de clases de control de acceso RFID de Hostera.*
+<img src="assets/chapter-4/class-bookings-application.svg" alt="Diagrama de clases de la capa de aplicación de Bookings" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
-El diagrama de Dashboard and Operational Analytics presenta la generación de
-resúmenes operativos a partir de proveedores especializados para reservas,
-habitaciones, inventario y accesos. `ReportService` construye el dashboard y los
-reportes operativos, mientras que `IReportExporter` define la exportación del
-resultado. El modelo incluye `OperationalDashboard`, `OperationalReport` y
-`OccupancyReport`, junto con los tipos de reporte y el estado de disponibilidad de
-los datos.
+*Figura 4.92. Aplicación del contexto Bookings.*
 
-<img src="assets/chapter-4/class-diagram-dashboard-operational-analytics.jpeg" alt="Diagrama de clases de dashboard y analítica operativa de Hostera" style="width:100%; height:auto;"/>
+**Rooms.** El contexto reúne la propiedad, los tipos de habitación, las habitaciones,
+los planes tarifarios con sus tarifas diarias y los periodos de estado. El estado de
+una habitación en un día se obtiene combinando sus periodos de estado con las
+asignaciones que provienen de las reservas.
 
-*Figura 4.93. Diagrama de clases de dashboard y analítica operativa de Hostera.*
+<img src="assets/chapter-4/class-rooms-domain.svg" alt="Diagrama de clases del dominio de Rooms" style="display:block; width:95%; height:auto; margin:0 auto;"/>
 
+*Figura 4.93. Dominio del contexto Rooms.*
+
+`AvailabilityQueryService` obtiene esas asignaciones del contexto Bookings mediante
+`BookingsContextGateway`, sin acceder a sus tablas.
+
+<img src="assets/chapter-4/class-rooms-application.svg" alt="Diagrama de clases de la capa de aplicación de Rooms" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.94. Aplicación del contexto Rooms.*
+
+**Inventory.** `InventoryItem` guarda sus existencias por ubicación y el historial de
+ajustes que las explica, y calcula su condición de stock a partir del umbral de
+reposición. `StorageLocation` solo puede eliminarse cuando ningún artículo la usa.
+
+<img src="assets/chapter-4/class-inventory-domain.svg" alt="Diagrama de clases del dominio de Inventory" style="display:block; width:95%; height:auto; margin:0 auto;"/>
+
+*Figura 4.95. Dominio del contexto Inventory.*
+
+`InventoryCommandService` registra los ajustes y, cuando un artículo baja de su umbral,
+envía la alerta mediante `NotificationGateway`, que corresponde al gateway de
+notificaciones del modelo C4.
+
+<img src="assets/chapter-4/class-inventory-application.svg" alt="Diagrama de clases de la capa de aplicación de Inventory" style="display:block; width:85%; height:auto; margin:0 auto;"/>
+
+*Figura 4.96. Aplicación del contexto Inventory.*
+
+**Access Control.** `Credential` representa tanto la tarjeta de un huésped como la
+credencial de un miembro del personal; su estado en un momento dado se deriva de su
+vigencia y de su revocación. `AccessEvent` registra cada intento de acceso con su
+resultado y, si fue denegado, el motivo.
+
+<img src="assets/chapter-4/class-access-control-domain.svg" alt="Diagrama de clases del dominio de Access Control" style="display:block; width:95%; height:auto; margin:0 auto;"/>
+
+*Figura 4.97. Dominio del contexto Access Control.*
+
+`CredentialCommandService` escribe y borra las tarjetas mediante `RfidEncoder`, que
+corresponde al adaptador del codificador RFID del modelo C4.
+
+<img src="assets/chapter-4/class-access-control-application.svg" alt="Diagrama de clases de la capa de aplicación de Access Control" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.98. Aplicación del contexto Access Control.*
 
 ## 4.8. Database Design
 
@@ -3530,7 +3563,7 @@ los datos.
 
 General database diagram
 ![general Databse diagram](assets/chapter-4/database-diagram-hostera.JPG)
-*Figura 4.94. Diagrama general de base de datos de Hostera.*
+*Figura 4.99. Diagrama general de base de datos de Hostera.*
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management
