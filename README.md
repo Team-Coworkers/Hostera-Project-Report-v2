@@ -1551,14 +1551,71 @@ no está.
 
 ## 2.4. Big Picture EventStorming
 
-El Big Picture EventStorming permite representar visualmente el dominio hotelero de
-Hostera desde una perspectiva general. El diagrama organiza los eventos significativos
-y sus relaciones para identificar los procesos principales del negocio, así como
-posibles problemas y oportunidades que orientan la definición de la solución.
+El Big Picture EventStorming representa el dominio hotelero de Hostera de principio a
+fin, antes de entrar en el diseño. El tablero ordena en el tiempo los eventos del
+negocio, escritos en pasado y en inglés como el resto del Ubiquitous Language, junto
+con los actores que los provocan, los sistemas externos que participan y los puntos
+que el equipo no podía resolver todavía. La sesión se desarrolló en tres etapas.
+
+### Etapa 1: exploración de eventos
+
+Solapamiento masivo de información, eventos repetidos con distinta redacción, y un fuerte desorden cronológico que dificulta la lectura global.
+
+<img src="assets/chapter-2/hostera-bigPicture-eventStorming-Etapa1.jpg" alt="Etapa 1 del Big Picture EventStorming de Hostera, con los eventos todavía sin ordenar" style="width:100%; height:auto;"/>
+
+*Figura 2.15. Etapa 1 del Big Picture EventStorming: exploración de eventos.*
+
+### Etapa 2: línea de tiempo
+
+Los eventos dispersos se alinean horizontalmente de izquierda a derecha siguiendo el flujo natural del negocio de Hostera, desde la reserva inicial hasta el check-out y el cierre diario.
+
+<img src="assets/chapter-2/BigPicture-eventStorming-etapa2.jpg" alt="Etapa 2 del Big Picture EventStorming de Hostera, con los eventos ordenados en el tiempo" style="width:100%; height:auto;"/>
+
+*Figura 2.16. Etapa 2 del Big Picture EventStorming: eventos ordenados en la línea de tiempo.*
+
+### Etapa 3: fases, actores y hotspots
+
+Se introducen los eventos negativos en rojo (problemas como conflictos de overbooking o fallas de stock) y se sitúan los elementos de control superior (cabeceras amarillas de fases y notas de actores o comandos que desencadenan los eventos), tal como se aprecia organizado en filas horizontales en la imagen.
 
 <img src="assets/chapter-2/big-picture-event-storming-hostera.svg" alt="Diagrama Big Picture EventStorming del dominio de Hostera" style="width:100%; height:auto;"/>
 
-*Figura 2.15. Big Picture EventStorming del dominio de Hostera.*
+*Figura 2.17. Etapa 3 del Big Picture EventStorming: tablero final con fases, actores, sistemas externos y hotspots.*
+
+El tablero se organiza en ocho flujos. Los cinco primeros siguen la vida de una
+estadía: la configuración de la propiedad (`Property Added`, `Rooms Registered`,
+`Rate Plan Defined`), el ciclo de la reserva (`Reservation Created`,
+`Room Assigned`, `Reservation Confirmed`, con sus alternativas de modificación,
+cancelación y no-show), la llegada y el check-in (`Guest Identity Verified`,
+`Payment Recorded`, `RFID Key Card Encoded`, `Guest Checked In`), el acceso y la
+salida (`Access Granted` o `Access Denied`, `Guest Checked Out`,
+`Guest Credential Revoked or Expired`) y la preparación de la habitación
+(`Room Status Updated`, `Room Cleaned`, `Room Inspected`, `Room Marked Ready`). Los
+otros tres flujos corren en paralelo a la estadía: el acceso del personal, las
+operaciones de inventario y el monitoreo con reportes.
+
+Tres eventos marcan el paso de un flujo al siguiente y funcionan como eventos pivote:
+`Reservation Confirmed` cierra la reserva y abre la espera de la llegada,
+`Guest Checked In` activa la credencial del huésped y `Guest Checked Out` revoca esa
+credencial y pone en marcha la preparación de la habitación.
+
+Los actores que aparecen en el tablero son el administrador o responsable de
+operaciones, el agente de recepción, el huésped, el personal de housekeeping y el
+encargado del inventario. Participan dos sistemas externos: el sistema de lectores
+RFID, que concede o deniega cada acceso, y un servicio de notificaciones, que envía
+las alertas de reposición del inventario y las alertas de la propiedad.
+
+Los hotspots registran las preguntas que la sesión dejó abiertas. Algunas se
+respondieron en el trabajo posterior y otras siguen pendientes.
+
+| Hotspot | Estado al cierre de TB1 |
+|---|---|
+| ¿Qué fuentes de reserva entran al MVP: recepción, reserva directa, agencias en línea o un PMS existente? | La primera versión registra las reservas desde la aplicación. La integración con agencias en línea queda fuera de esta versión, aunque las entrevistas muestran que es un canal frecuente. |
+| ¿El pago solo se registra desde un canal externo o Hostera debe integrarse con un proveedor de pagos? | La aplicación registra los pagos recibidos con su método (efectivo, terminal de tarjeta o transferencia) y su referencia, sin integrarse con un proveedor de pagos. |
+| ¿El check-out actualiza el estado de la habitación e inicia la limpieza? | El check-out registra la condición en que queda la habitación. El inicio automático del flujo de limpieza sigue pendiente. |
+| ¿Quién puede bloquear una habitación, marcarla fuera de servicio y aprobarla después de la inspección? | La aplicación maneja los estados bloqueada y fuera de servicio. Los permisos por rol dependen del inicio de sesión, previsto para después de los flujos principales. |
+| ¿A qué espacios accede cada rol del personal y qué pasa si un lector RFID queda sin conexión? | Pendiente. |
+| ¿Qué roles pueden ajustar stock y las alertas automáticas de stock crítico forman parte del MVP? | Las alertas automáticas se ofrecen en el plan Professional; el plan Starter controla el almacén sin ellas. Los roles quedan pendientes junto con el inicio de sesión. |
+| ¿Qué métricas se validan y los reportes se generan bajo demanda, programados o en tiempo real? ¿Por qué canales se envían las alertas? | Pendiente. Los reportes operativos (`US031`, `US032`) no forman parte de la primera versión del frontend. |
 
 ## 2.5. Ubiquitous Language
 
