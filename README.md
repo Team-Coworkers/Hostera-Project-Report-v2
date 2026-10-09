@@ -2062,6 +2062,15 @@ según la jerarquía de la tarea y no únicamente por preferencia estética.
 | Cards | Radio de `12px`; la variante outlined es la opción predeterminada. | Agrupación de información relacionada sin convertir toda la interfaz en tarjetas. |
 | List items | Altura base de `72px` para elementos de dos líneas. | Presentación de registros con título, información secundaria y acción o estado final. |
 
+En la Frontend Web Application estos componentes se implementan con Angular Material,
+la biblioteca oficial de componentes de Material Design para Angular: los botones con
+`mat-flat-button`, `mat-stroked-button` y `mat-button`; los campos con `mat-form-field`
+en su variante outlined; las tablas con `mat-table` y `mat-paginator`; la navegación
+con `mat-sidenav`; los filtros y el selector de idioma con `mat-button-toggle-group`; y
+los formularios laterales y las confirmaciones con `MatDialog` y `MatSnackBar`. Los
+tokens de Hostera se aplican sobre el tema de Angular Material, de modo que la
+aplicación y la Landing Page comparten colores, tipografía y forma.
+
 <img src="assets/chapter-4/web-components-m3.png" alt="Catálogo de componentes web M3 de Hostera" style="width:100%; height:auto;"/>
 
 *Figura 4.3. Catálogo de componentes web aislados del Design System de Hostera en Paper.*
@@ -2287,7 +2296,11 @@ misma terminología del producto, pero evitan presentarlo como contenido indexab
 
 | Vista principal | Title | Description | Keywords | Author | Robots |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Hostera web application | `Hostera Dashboard — Hotel operations` | `Administrative workspace to monitor reservations, room availability, inventory, and RFID access for one or more hotel properties.` | `Hostera dashboard, hotel operations, reservations, inventory, RFID access` | `Team Coworkers` | `noindex, nofollow` |
+| Hostera web application | `Hostera - <vista>`, por ejemplo `Hostera - Bookings` | `Hostera web application: manage bookings, room availability, warehouse inventory and RFID room access for every property from one workspace.` | `Hostera, hotel operations, hotel management, bookings, room availability, inventory, RFID access control` | `Team Coworkers` | `noindex` |
+
+El título de la aplicación se compone en cada navegación: `HosteraTitleStrategy`
+antepone `Hostera` al título de la ruta activa. Los demás metadatos están en
+`src/index.html` del repositorio `hostera-frontend`, junto con `theme-color`.
 
 #### Implementación mínima
 
@@ -2308,11 +2321,20 @@ los valores operativos definidos anteriormente.
 <meta name="author" content="Team Coworkers">
 ```
 
-En la aplicación web, el valor de `robots` se añade junto con los metadatos
-anteriores:
+En la aplicación web, el valor de `robots` se añade junto con sus propios
+metadatos:
 
 ```html
-<meta name="robots" content="noindex, nofollow">
+<meta
+  name="description"
+  content="Hostera web application: manage bookings, room availability, warehouse inventory and RFID room access for every property from one workspace."
+/>
+<meta
+  name="keywords"
+  content="Hostera, hotel operations, hotel management, bookings, room availability, inventory, RFID access control"
+/>
+<meta name="author" content="Team Coworkers" />
+<meta name="robots" content="noindex" />
 ```
 
 Los metadatos se mantienen alineados con el contenido visible, la estructura de
@@ -3326,175 +3348,301 @@ presentados en las siguientes secciones.
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El diagrama de contexto presenta a Hostera como el sistema central para la gestión
-administrativa del hotel. Identifica la interacción del personal del hotel con la
-plataforma y sus relaciones con el sistema de lectores RFID y el servicio externo de
-notificaciones.
+El modelo C4 de Hostera sigue la notación y los ejemplos de c4model.com (Brown, s.f.):
+cada elemento indica su tipo y su tecnología entre corchetes, las relaciones dicen qué
+hacen y con qué protocolo, y cada vista incluye una leyenda. El modelo completo está
+escrito en Structurizr DSL en el archivo `docs/hostera-structurizr.dsl` del repositorio
+del informe, y las vistas se dibujaron con una distribución manual para que ninguna
+relación cruce un elemento.
 
-<img src="assets/chapter-4/Context-diagram-Hostera.svg" alt="Diagrama de contexto del sistema Hostera" style="width:100%; height:auto;"/>
+El diagrama de contexto muestra a Hostera como el sistema de software en alcance y a las
+personas y sistemas externos con los que se relaciona. Las tres personas corresponden a
+los segmentos objetivo y a los usuarios operativos: el administrador de un hotel
+independiente, el responsable de operaciones de una pequeña cadena y el personal del
+hotel. Hostera se integra con tres sistemas externos con nombre: el sistema de
+cerraduras RFID del hotel, que codifica las tarjetas y reporta los eventos de acceso;
+Twilio SendGrid, que envía las alertas de stock bajo; y la API pública de feriados
+Nager.Date, que la aplicación ya consume para marcar los feriados en la disponibilidad
+de habitaciones.
 
-*Figura 4.79. Diagrama de contexto del sistema Hostera.*
+<img src="assets/chapter-4/c4-context-hostera.svg" alt="Diagrama de contexto de Hostera" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 4.79. Diagrama de contexto de Hostera.*
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-El diagrama de contenedores descompone Hostera en sus principales unidades de
-ejecución y almacenamiento. La propuesta incluye la aplicación web, los módulos de
-autenticación, reservas y habitaciones, inventario, accesos RFID y dashboard, además
-de las bases de datos y los sistemas externos con los que se integra la plataforma.
+Hostera se compone de cinco contenedores, cada uno desplegable de forma independiente:
 
-<img src="assets/chapter-4/Container-diagram-Hostera.svg" alt="Diagrama de contenedores del sistema Hostera" style="width:100%; height:auto;"/>
+- **Landing Page** (HTML, CSS y JavaScript): presenta los planes a cada segmento y lleva
+  a los visitantes a las vistas de inicio de sesión y de registro con plan de la
+  aplicación. Se publica en GitHub Pages.
+- **Web Application** (Angular 19, TypeScript y Angular Material): concentra las
+  funciones de operación del hotel. Se publica en GitHub Pages.
+- **Demo API** (Node.js y json-server): sirve los datos de demostración con los mismos
+  recursos que expondrá la RESTful API mientras esta se construye. En GitHub Pages, la
+  aplicación lee esos mismos datos dentro del navegador (sección 5.1.4).
+- **RESTful API** (Java 21 y Spring Boot 3): expone la funcionalidad de Hostera
+  organizada por bounded context y documentada con OpenAPI. Se implementa en AV2.
+- **Database** (MySQL 8): almacena las cuentas, propiedades, reservas, pagos,
+  habitaciones, tarifas, inventario, credenciales y eventos de acceso. Cada bounded
+  context es dueño de sus tablas (sección 4.8).
 
-*Figura 4.80. Diagrama de contenedores del sistema Hostera.*
+La aplicación web llama directamente a Nager.Date; los demás sistemas externos se
+integran desde la RESTful API, de modo que la aplicación no conoce sus credenciales.
+
+<img src="assets/chapter-4/c4-containers-hostera.svg" alt="Diagrama de contenedores de Hostera" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.80. Diagrama de contenedores de Hostera.*
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Los diagramas de componentes detallan la estructura interna de cada contenedor
-principal de Hostera. Se muestran las responsabilidades de sus componentes y las
-interacciones con bases de datos, otros módulos y servicios externos.
+Se presenta un diagrama de componentes para la Web Application y uno por cada bounded
+context de la RESTful API. Los bounded contexts son los mismos en ambos contenedores:
+IAM, Overview, Bookings, Rooms, Inventory y Access Control.
 
-#### Aplicación Web
+#### Web Application
 
-La aplicación web organiza las interfaces para autenticación, reservas, habitaciones,
-inventario, accesos RFID y monitoreo del dashboard en tiempo real.
+Los componentes de la Web Application corresponden a la estructura del repositorio
+`hostera-frontend`. Cada bounded context es una carpeta de `src/` (`iam`, `overview`,
+`bookings`, `rooms`, `inventory` y `access-control`) con sus capas `domain`,
+`application` (un store basado en signals), `infrastructure` (el gateway HTTP y sus
+assemblers) y `presentation` (componentes standalone de Angular con Angular Material).
+El App Shell reúne `app.routes.ts` y el layout compartido con la navegación lateral, el
+selector de idioma y el footer; Localization agrupa `I18nService` y los archivos de
+mensajes en inglés y en español latinoamericano (`es-419`); y Shared Infrastructure
+contiene las clases base de los gateways HTTP. En esta versión, la codificación de
+tarjetas RFID se simula en `RfidEncoderService` del contexto de control de accesos, y
+el módulo Rooms consulta Nager.Date para marcar los feriados.
 
-<img src="assets/chapter-4/Component-diagram-Hostera-web-application.svg" alt="Diagrama de componentes de la aplicación web de Hostera" style="width:100%; height:auto;"/>
+<img src="assets/chapter-4/c4-components-web-application.svg" alt="Diagrama de componentes de la Web Application" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
-*Figura 4.81. Diagrama de componentes de la aplicación web de Hostera.*
+*Figura 4.81. Diagrama de componentes de la Web Application.*
 
-#### Gestión de Autenticación
+#### RESTful API
 
-El contenedor de autenticación separa el registro de usuarios, la validación de
-credenciales, la generación de sesiones y la gestión de roles y permisos.
+Cada bounded context de la RESTful API sigue las mismas capas. En la capa de interfaces,
+un controlador REST de Spring expone los endpoints; en la capa de aplicación, los
+servicios separan comandos y consultas; en la capa de dominio, los agregados aplican las
+reglas de negocio; y en la capa de infraestructura, los repositorios de Spring Data JPA
+persisten la información en MySQL. Los contextos que dependen de un sistema externo o de
+otro contexto lo hacen a través de un adaptador que actúa como capa anticorrupción
+(ACL). Los nombres de los componentes coinciden con las clases de la sección 4.7.
 
-<img src="assets/chapter-4/Component-diagram-Hostera-authentication.svg" alt="Diagrama de componentes de gestión de autenticación de Hostera" style="width:100%; height:auto;"/>
+**Bounded context IAM.** Registra las organizaciones con su plan de suscripción, crea los usuarios con su rol y las propiedades a las que acceden, e inicia sesión. Los servicios de tokens y de hashing, implementados con Spring Security, emiten el JWT y protegen las contraseñas.
 
-*Figura 4.82. Diagrama de componentes de gestión de autenticación de Hostera.*
+<img src="assets/chapter-4/c4-components-api-iam.svg" alt="Diagrama de componentes del bounded context IAM" style="display:block; width:78%; height:auto; margin:0 auto;"/>
 
-#### Gestión de Reservas y Habitaciones
+*Figura 4.82. Diagrama de componentes del bounded context IAM de la RESTful API.*
 
-Este contenedor coordina la creación de reservas, la verificación de disponibilidad,
-el cálculo de tarifas y la actualización del estado de las habitaciones.
+**Bounded context Overview.** Reúne en una consulta el estado de la propiedad activa: ocupación, ingresos del día, estado de las habitaciones y llegadas. No modifica datos, por lo que solo tiene servicio de consultas y modelos de lectura.
 
-<img src="assets/chapter-4/Component-diagram-Hostera-reservations.svg" alt="Diagrama de componentes de gestión de reservas y habitaciones de Hostera" style="width:100%; height:auto;"/>
+<img src="assets/chapter-4/c4-components-api-overview.svg" alt="Diagrama de componentes del bounded context Overview" style="display:block; width:78%; height:auto; margin:0 auto;"/>
 
-*Figura 4.83. Diagrama de componentes de gestión de reservas y habitaciones de Hostera.*
+*Figura 4.83. Diagrama de componentes del bounded context Overview de la RESTful API.*
 
-#### Gestión de Inventario
+**Bounded context Bookings.** Gestiona el ciclo de vida de la reserva: creación, pago, check-in, check-out y cancelación. Consulta disponibilidad y tarifas al contexto Rooms y solicita las tarjetas del huésped al contexto Access Control mediante fachadas que actúan como capa anticorrupción (ACL).
 
-El contenedor de inventario está compuesto por los módulos de gestión de stock,
-alertas de reposición y registro histórico de movimientos.
+<img src="assets/chapter-4/c4-components-api-bookings.svg" alt="Diagrama de componentes del bounded context Bookings" style="display:block; width:78%; height:auto; margin:0 auto;"/>
 
-<img src="assets/chapter-4/Component-diagram-Hostera-inventory.svg" alt="Diagrama de componentes de gestión de inventario de Hostera" style="width:100%; height:auto;"/>
+*Figura 4.84. Diagrama de componentes del bounded context Bookings de la RESTful API.*
 
-*Figura 4.84. Diagrama de componentes de gestión de inventario de Hostera.*
+**Bounded context Rooms.** Administra habitaciones, tipos de habitación, planes de tarifa, tarifas diarias y periodos de estado, y responde las consultas de disponibilidad.
 
-#### Gestión de Accesos RFID
+<img src="assets/chapter-4/c4-components-api-rooms.svg" alt="Diagrama de componentes del bounded context Rooms" style="display:block; width:78%; height:auto; margin:0 auto;"/>
 
-Este contenedor integra la sincronización de eventos IoT, la validación de tarjetas,
-la gestión de permisos y el historial de accesos concedidos o denegados.
+*Figura 4.85. Diagrama de componentes del bounded context Rooms de la RESTful API.*
 
-<img src="assets/chapter-4/Component-diagram-Hostera-access-control.svg" alt="Diagrama de componentes de gestión de accesos RFID de Hostera" style="width:100%; height:auto;"/>
+**Bounded context Inventory.** Registra artículos, ubicaciones de almacén y ajustes de stock. Cuando un artículo baja de su umbral, envía la alerta por correo mediante Twilio SendGrid.
 
-*Figura 4.85. Diagrama de componentes de gestión de accesos RFID de Hostera.*
+<img src="assets/chapter-4/c4-components-api-inventory.svg" alt="Diagrama de componentes del bounded context Inventory" style="display:block; width:78%; height:auto; margin:0 auto;"/>
 
-#### Servicio de Dashboard
+*Figura 4.86. Diagrama de componentes del bounded context Inventory de la RESTful API.*
 
-El servicio de dashboard agrega información de reservas, habitaciones, inventario y
-accesos, y publica las actualizaciones al frontend en tiempo real.
+**Bounded context Access Control.** Emite, reemplaza y revoca las credenciales de huéspedes y personal, y registra los eventos de acceso que reportan los lectores del sistema de cerraduras RFID.
 
-<img src="assets/chapter-4/Component-diagram-Hostera-dashboard.svg" alt="Diagrama de componentes del servicio de dashboard de Hostera" style="width:100%; height:auto;"/>
+<img src="assets/chapter-4/c4-components-api-access.svg" alt="Diagrama de componentes del bounded context Access Control" style="display:block; width:78%; height:auto; margin:0 auto;"/>
 
-*Figura 4.86. Diagrama de componentes del servicio de dashboard de Hostera.*
+*Figura 4.87. Diagrama de componentes del bounded context Access Control de la RESTful API.*
 
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
 
-Los diagramas de clases detallan la implementación orientada a objetos de los
-bounded contexts de Hostera. Cada diagrama identifica las clases de dominio y de
-servicio, las interfaces utilizadas para acceder a persistencia o servicios
-externos, las enumeraciones que representan estados y las relaciones entre sus
-elementos. También se especifican los atributos, métodos, visibilidad y
-multiplicidad de las relaciones para hacer explícitas las responsabilidades de
-cada componente.
+Los diagramas de clases describen el modelo orientado a objetos de los RESTful Web
+Services de Hostera, organizado según los seis bounded contexts del modelo C4: IAM,
+Overview, Bookings, Rooms, Inventory y Access Control. Están escritos con las
+convenciones de Java, el lenguaje de los Web Services, según la Google Java Style Guide:
+clases en PascalCase, atributos y métodos en camelCase, enumeraciones con valores en
+UPPER_SNAKE_CASE, tipos de Java como `Long`, `BigDecimal`, `LocalDate` e `Instant`,
+colecciones `List<T>` y repositorios de Spring Data que devuelven `Optional<T>` al buscar
+por identificador. Los atributos y los valores de cada enumeración son los mismos que usa
+el dominio de la Frontend Web Application, de modo que el modelo del servidor y el del
+cliente coinciden.
 
-El diagrama de Identity and Access Management representa las entidades
-`Property`, `Account`, `PropertyAccess` y `Session`, junto con
-`AuthenticationService` y sus repositorios. Las enumeraciones `RoleType`,
-`Permission` y `AccountStatus` delimitan los roles, permisos y estados de las
-cuentas. Las relaciones muestran cómo una cuenta obtiene acceso a una propiedad,
-cómo se abre una sesión y cómo el servicio coordina los repositorios.
+Cada contexto se presenta en dos diagramas. El de dominio contiene las entidades, los
+objetos de valor, que se implementarán como `record` de Java, y las enumeraciones; el de
+aplicación contiene los servicios de comandos y de consultas, y las interfaces de los
+repositorios y de los gateways hacia otros contextos o sistemas externos. Las firmas de
+los métodos muestran solo los tipos de sus parámetros. Los diagramas se elaboraron como
+código Mermaid, una de las opciones de diagram-as-code que admite el enunciado del
+proyecto, y sus fuentes están en la carpeta `docs/diagrams/` del repositorio del informe.
 
-<img src="assets/chapter-4/class-diagram-identity-and-access-management.jpeg" alt="Diagrama de clases de Identity and Access Management de Hostera" style="width:100%; height:auto;"/>
+**IAM.** `Organization` guarda el plan de suscripción (`STARTER` o `PROFESSIONAL`) con la
+cantidad de propiedades y habitaciones que cubre, y calcula su precio mensual, como la
+clase `SubscriptionPlan` de la aplicación. `User` pertenece a una organización, tiene un
+rol y la lista de propiedades a las que puede acceder.
 
-*Figura 4.87. Diagrama de clases de Identity and Access Management de Hostera.*
+<img src="assets/chapter-4/class-iam-domain.svg" alt="Diagrama de clases del dominio de IAM" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-El diagrama de Reservations and Stay Management organiza el ciclo de una reserva
-desde el huésped hasta la estadía. Incluye las clases `Guest`, `Reservation`,
-`Payment` y `Stay`, los estados de reserva, pago y estadía, además de
-`ReservationService`, sus repositorios y las interfaces de disponibilidad,
-tarifación y credenciales. Las multiplicidades documentan, entre otras relaciones,
-la asociación entre huéspedes y reservas, reservas y pagos, y reservas y estadías.
+*Figura 4.88. Dominio del contexto IAM.*
 
-<img src="assets/chapter-4/class-diagram-reservations-and-stay-management.jpeg" alt="Diagrama de clases de Reservations and Stay Management de Hostera" style="width:100%; height:auto;"/>
+`AccountCommandService` registra la organización con su primer administrador, inicia
+sesión y devuelve un `AuthenticatedUser` con el token. Depende de `HashingService` y de
+`TokenService`, que se implementan con Spring Security.
 
-*Figura 4.88. Diagrama de clases de Reservations and Stay Management de Hostera.*
+<img src="assets/chapter-4/class-iam-application.svg" alt="Diagrama de clases de la capa de aplicación de IAM" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-El diagrama de Rooms, Availability and Rates muestra la relación entre los tipos
-de habitación, las habitaciones, los planes tarifarios y las tarifas diarias.
-`RoomManagementService` coordina las operaciones mediante los repositorios de
-habitaciones y planes tarifarios, así como la referencia a las reservas para
-proteger los estados controlados por estas. Las enumeraciones de configuración y
-estado de habitación complementan las reglas expresadas mediante los métodos y
-las relaciones del modelo.
+*Figura 4.89. Aplicación del contexto IAM.*
 
-<img src="assets/chapter-4/class-diagram-rooms-availability-and-rates.jpeg" alt="Diagrama de clases de habitaciones, disponibilidad y tarifas de Hostera" style="width:100%; height:auto;"/>
+**Overview.** Es un contexto de solo lectura. `OverviewQueryService` construye el
+panorama de cada propiedad, el rendimiento diario y las llegadas del día a partir de
+los datos que lee `OverviewReadRepository`; no modifica ningún recurso.
 
-*Figura 4.89. Diagrama de clases de habitaciones, disponibilidad y tarifas de Hostera.*
+<img src="assets/chapter-4/class-overview.svg" alt="Diagrama de clases del contexto Overview" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
-El diagrama de Inventory Management modela las ubicaciones de almacenamiento,
-los ítems de inventario y los ajustes de stock. `InventoryService` coordina la
-creación y actualización de ítems, el registro de movimientos y la gestión de
-ubicaciones mediante `IInventoryItemRepository` e
-`IStorageLocationRepository`. `StockCondition` y `StockMovementType` representan
-las condiciones calculadas del inventario y los tipos de movimiento; además, las
-relaciones muestran la ubicación de cada ítem y la trazabilidad de sus ajustes.
+*Figura 4.90. Diagrama de clases del contexto Overview.*
 
-<img src="assets/chapter-4/class-diagram-inventory-management.jpeg" alt="Diagrama de clases de gestión de inventario de Hostera" style="width:100%; height:auto;"/>
+**Bookings.** `Booking` es la raíz del agregado y concentra el ciclo de vida de la
+reserva: la confirmación, la cancelación, el no-show, el check-in y el check-out
+quedan registrados como objetos de valor con su momento y su responsable. `Payment`
+es un agregado aparte que referencia a la reserva por su identificador, y el saldo
+pendiente se calcula a partir de los pagos.
 
-*Figura 4.90. Diagrama de clases de gestión de inventario de Hostera.*
+<img src="assets/chapter-4/class-bookings-domain.svg" alt="Diagrama de clases del dominio de Bookings" style="display:block; width:95%; height:auto; margin:0 auto;"/>
 
-El diagrama de RFID Access Control representa las credenciales RFID, los puntos
-de acceso, los alcances autorizados y los eventos de acceso. La clase
-`RFIDAccessService` coordina el codificador y los repositorios de credenciales y
-eventos. Las enumeraciones de estado de credencial, tipo de asignado y resultado
-de acceso permiten distinguir el ciclo de vida de una credencial y si un intento
-fue concedido o denegado.
+*Figura 4.91. Dominio del contexto Bookings.*
 
-<img src="assets/chapter-4/class-diagram-rfid-access-control.jpeg" alt="Diagrama de clases de control de acceso RFID de Hostera" style="width:100%; height:auto;"/>
+`BookingCommandService` coordina las operaciones sobre la reserva. Para verificar la
+disponibilidad y calcular el precio de la estadía consulta al contexto Rooms mediante
+`RoomsContextGateway`, y para emitir y vencer las tarjetas del huésped llama al
+contexto Access Control mediante `AccessControlContextGateway`.
 
-*Figura 4.91. Diagrama de clases de control de acceso RFID de Hostera.*
+<img src="assets/chapter-4/class-bookings-application.svg" alt="Diagrama de clases de la capa de aplicación de Bookings" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
-El diagrama de Dashboard and Operational Analytics presenta la generación de
-resúmenes operativos a partir de proveedores especializados para reservas,
-habitaciones, inventario y accesos. `ReportService` construye el dashboard y los
-reportes operativos, mientras que `IReportExporter` define la exportación del
-resultado. El modelo incluye `OperationalDashboard`, `OperationalReport` y
-`OccupancyReport`, junto con los tipos de reporte y el estado de disponibilidad de
-los datos.
+*Figura 4.92. Aplicación del contexto Bookings.*
 
-<img src="assets/chapter-4/class-diagram-dashboard-operational-analytics.jpeg" alt="Diagrama de clases de dashboard y analítica operativa de Hostera" style="width:100%; height:auto;"/>
+**Rooms.** El contexto reúne la propiedad, los tipos de habitación, las habitaciones,
+los planes tarifarios con sus tarifas diarias y los periodos de estado. El estado de
+una habitación en un día se obtiene combinando sus periodos de estado con las
+asignaciones que provienen de las reservas.
 
-*Figura 4.92. Diagrama de clases de dashboard y analítica operativa de Hostera.*
+<img src="assets/chapter-4/class-rooms-domain.svg" alt="Diagrama de clases del dominio de Rooms" style="display:block; width:95%; height:auto; margin:0 auto;"/>
 
+*Figura 4.93. Dominio del contexto Rooms.*
+
+`AvailabilityQueryService` obtiene esas asignaciones del contexto Bookings mediante
+`BookingsContextGateway`, sin acceder a sus tablas.
+
+<img src="assets/chapter-4/class-rooms-application.svg" alt="Diagrama de clases de la capa de aplicación de Rooms" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.94. Aplicación del contexto Rooms.*
+
+**Inventory.** `InventoryItem` guarda sus existencias por ubicación y el historial de
+ajustes que las explica, y calcula su condición de stock a partir del umbral de
+reposición. `StorageLocation` solo puede eliminarse cuando ningún artículo la usa.
+
+<img src="assets/chapter-4/class-inventory-domain.svg" alt="Diagrama de clases del dominio de Inventory" style="display:block; width:95%; height:auto; margin:0 auto;"/>
+
+*Figura 4.95. Dominio del contexto Inventory.*
+
+`InventoryCommandService` registra los ajustes y, cuando un artículo baja de su umbral,
+envía la alerta mediante `NotificationGateway`, que corresponde al gateway de
+notificaciones del modelo C4.
+
+<img src="assets/chapter-4/class-inventory-application.svg" alt="Diagrama de clases de la capa de aplicación de Inventory" style="display:block; width:85%; height:auto; margin:0 auto;"/>
+
+*Figura 4.96. Aplicación del contexto Inventory.*
+
+**Access Control.** `Credential` representa tanto la tarjeta de un huésped como la
+credencial de un miembro del personal; su estado en un momento dado se deriva de su
+vigencia y de su revocación. `AccessEvent` registra cada intento de acceso con su
+resultado y, si fue denegado, el motivo.
+
+<img src="assets/chapter-4/class-access-control-domain.svg" alt="Diagrama de clases del dominio de Access Control" style="display:block; width:95%; height:auto; margin:0 auto;"/>
+
+*Figura 4.97. Dominio del contexto Access Control.*
+
+`CredentialCommandService` escribe y borra las tarjetas mediante `RfidEncoder`, que
+corresponde al adaptador del codificador RFID del modelo C4.
+
+<img src="assets/chapter-4/class-access-control-application.svg" alt="Diagrama de clases de la capa de aplicación de Access Control" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.98. Aplicación del contexto Access Control.*
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
-General database diagram
-![general Databse diagram](assets/chapter-4/database-diagram-hostera.JPG)
-*Figura 4.93. Diagrama general de base de datos de Hostera.*
+La base de datos de Hostera se implementa en MySQL 8 y se accede desde la RESTful API
+con Spring Data JPA. Cada bounded context es dueño de sus tablas y solo las modifica a
+través de sus propios repositorios. Dentro de un contexto, las relaciones se declaran
+con claves foráneas; entre contextos, una tabla guarda el identificador del registro del
+otro contexto sin clave foránea, y la consistencia se mantiene mediante los gateways
+descritos en la sección 4.7. Por eso en los diagramas esas columnas aparecen con la nota
+del recurso al que hacen referencia. Las tablas y columnas se nombran en inglés y en
+snake_case, las claves primarias son `bigint` autoincrementales y los montos usan
+`decimal`.
+
+Se presenta un diagrama por bounded context. Se elaboraron como código Mermaid, opción de
+diagram-as-code que admite el enunciado del proyecto para los diagramas de base de
+datos, y sus fuentes están en `docs/diagrams/`. El contexto Overview no tiene tablas
+propias, porque solo lee datos de los demás.
+
+**IAM.** La tabla `organizations` guarda el plan de suscripción y lo que cubre, `users`
+guarda las cuentas con su rol y un correo único, y `user_properties` resuelve la
+relación de muchos a muchos entre usuarios y propiedades, de modo que la responsable de
+operaciones de una cadena pueda trabajar con varias.
+
+<img src="assets/chapter-4/erd-iam.svg" alt="Diagrama de base de datos del contexto IAM" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 4.99. Diagrama de base de datos del contexto IAM.*
+
+**Rooms.** La tabla `rate_plan_room_types` resuelve la relación de muchos a muchos
+entre los planes tarifarios y los tipos de habitación, y `rate_plan_services` guarda
+los servicios incluidos en cada plan. Las tarifas diarias son únicas por plan, tipo de
+habitación y fecha.
+
+<img src="assets/chapter-4/erd-rooms.svg" alt="Diagrama de base de datos del contexto Rooms" style="display:block; width:95%; height:auto; margin:0 auto;"/>
+
+*Figura 4.100. Diagrama de base de datos del contexto Rooms.*
+
+**Bookings.** La tabla `bookings` guarda los datos del huésped y cada etapa del ciclo
+de la reserva en columnas propias, que el mapeo de JPA agrupa en los objetos de valor
+del dominio mediante `@Embedded`. Los pagos se guardan en `payments`, relacionados con
+su reserva.
+
+<img src="assets/chapter-4/erd-bookings.svg" alt="Diagrama de base de datos del contexto Bookings" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 4.101. Diagrama de base de datos del contexto Bookings.*
+
+**Inventory.** Las existencias por ubicación se guardan en `inventory_stocks`, con una
+fila por artículo y ubicación, y cada movimiento se registra en `stock_adjustments`,
+que corresponde a la entidad `StockAdjustment` del dominio. Una transferencia entre
+ubicaciones genera dos ajustes enlazados por `transfer_id`.
+
+<img src="assets/chapter-4/erd-inventory.svg" alt="Diagrama de base de datos del contexto Inventory" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.102. Diagrama de base de datos del contexto Inventory.*
+
+**Access Control.** Las credenciales de huéspedes y de personal comparten la tabla
+`credentials`; las de huésped referencian la reserva y la habitación, y las de
+personal referencian al miembro del personal. Los eventos de acceso se guardan en
+`access_events` con su resultado y el motivo de una denegación.
+
+<img src="assets/chapter-4/erd-access-control.svg" alt="Diagrama de base de datos del contexto Access Control" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.103. Diagrama de base de datos del contexto Access Control.*
+
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management

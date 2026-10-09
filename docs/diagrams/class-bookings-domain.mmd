@@ -1,0 +1,100 @@
+classDiagram
+    direction LR
+    class Booking {
+        +Long id
+        +Long propertyId
+        +String code
+        +BookingStatus status
+        +GuestContact guest
+        +LocalDate checkInDate
+        +LocalDate checkOutDate
+        +int guests
+        +Long roomTypeId
+        +Long roomId
+        +Long ratePlanId
+        +BigDecimal totalAmount
+        +String guestRequest
+        +Instant createdAt
+        +int nights
+        +confirm(Long) void
+        +cancel(CancellationReason, String, Long) void
+        +markNoShow(Long) void
+        +checkIn(GuestDocument, Long) void
+        +checkOut(RoomCondition, String, Long) void
+        +balanceDue(List~Payment~) BigDecimal
+        +overlaps(LocalDate, LocalDate) boolean
+    }
+    class GuestContact {
+        <<value object>>
+        +String name
+        +String email
+        +String phone
+        +String preferredLanguage
+    }
+    class GuestDocument {
+        <<value object>>
+        +GuestDocumentType type
+        +String number
+    }
+    class StatusChange {
+        <<value object>>
+        +Instant at
+        +Long operatorId
+    }
+    class Cancellation {
+        <<value object>>
+        +CancellationReason reason
+        +String note
+        +Instant at
+        +Long operatorId
+    }
+    class CheckOutRecord {
+        <<value object>>
+        +RoomCondition roomCondition
+        +String departureNote
+        +Instant at
+        +Long operatorId
+    }
+    class Payment {
+        +Long id
+        +Long propertyId
+        +Long bookingId
+        +BigDecimal amount
+        +PaymentMethod method
+        +Instant paidAt
+        +String reference
+        +Long recordedBy
+    }
+    class BookingStatus {
+        <<enumeration>>
+        PENDING
+        CONFIRMED
+        CHECKED_IN
+        CHECKED_OUT
+        CANCELLED
+        NO_SHOW
+    }
+    class PaymentMethod {
+        <<enumeration>>
+        CASH
+        CARD_TERMINAL
+        BANK_TRANSFER
+        OTHER
+    }
+    class CancellationReason {
+        <<enumeration>>
+        GUEST_REQUEST
+        CHANGE_OF_PLANS
+        DUPLICATE_BOOKING
+        PROPERTY_UNABLE
+        OTHER
+    }
+    Booking *-- GuestContact
+    Booking *-- "0..1" GuestDocument : check-in
+    Booking *-- "0..1" StatusChange : confirmation
+    Booking *-- "0..1" Cancellation
+    Booking *-- "0..1" CheckOutRecord
+    Booking --> BookingStatus
+    Payment --> PaymentMethod
+    Cancellation --> CancellationReason
+    Payment "0..*" --> "1" Booking : BookingId

@@ -1,0 +1,86 @@
+classDiagram
+    direction TB
+    class Property {
+        +Long id
+        +Long organizationId
+        +String name
+        +String city
+        +String currency
+    }
+    class RoomType {
+        +Long id
+        +Long propertyId
+        +String name
+        +int capacity
+        +String bedConfiguration
+        +BigDecimal baseNightlyRate
+        +RecordStatus status
+        +nightlyRateOn(LocalDate, List~DailyRate~) BigDecimal
+    }
+    class Room {
+        +Long id
+        +Long propertyId
+        +Long roomTypeId
+        +String number
+        +int floor
+        +dayStatusOn(LocalDate, List~StatusPeriod~) RoomDayStatus
+    }
+    class RatePlan {
+        +Long id
+        +Long propertyId
+        +String name
+        +String cancellationPolicy
+        +boolean refundable
+        +List~IncludedService~ includedServices
+        +List~int~ roomTypeIds
+        +RecordStatus status
+        +appliesTo(Long) boolean
+    }
+    class DailyRate {
+        +Long id
+        +Long propertyId
+        +Long ratePlanId
+        +Long roomTypeId
+        +LocalDate date
+        +BigDecimal amount
+    }
+    class StatusPeriod {
+        +Long id
+        +Long propertyId
+        +Long roomId
+        +RoomStatus status
+        +String reason
+        +LocalDate startDate
+        +LocalDate endDate
+        +boolean preventsBooking
+        +covers(LocalDate) boolean
+        +overlaps(LocalDate, LocalDate) boolean
+    }
+    class RoomStatus {
+        <<enumeration>>
+        BLOCKED
+        OUT_OF_SERVICE
+        NEEDS_CLEANING
+    }
+    class RoomDayStatus {
+        <<enumeration>>
+        AVAILABLE
+        BOOKED
+        OCCUPIED
+        NEEDS_CLEANING
+        BLOCKED
+        OUT_OF_SERVICE
+    }
+    class RecordStatus {
+        <<enumeration>>
+        ACTIVE
+        INACTIVE
+    }
+    Property "1" --> "0..*" RoomType
+    RoomType "1" --> "0..*" Room
+    Room "1" --> "0..*" StatusPeriod
+    RatePlan "0..*" --> "1..*" RoomType : applies to
+    DailyRate "0..*" --> "1" RatePlan
+    DailyRate "0..*" --> "1" RoomType
+    StatusPeriod --> RoomStatus
+    Room ..> RoomDayStatus

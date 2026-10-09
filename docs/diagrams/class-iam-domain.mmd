@@ -1,0 +1,39 @@
+classDiagram
+    direction LR
+    class Organization {
+        +Long id
+        +String name
+        +SubscriptionPlan plan
+        +int propertyCount
+        +int roomCount
+        +LocalDate subscribedOn
+        +monthlyPrice() BigDecimal
+        +changePlan(SubscriptionPlan) void
+    }
+    class User {
+        +Long id
+        +Long organizationId
+        +String fullName
+        +String email
+        +String passwordHash
+        +Role role
+        +List~Long~ propertyIds
+        +Instant createdAt
+        +canAccess(Long) boolean
+        +grantProperty(Long) void
+    }
+    class SubscriptionPlan {
+        <<enumeration>>
+        STARTER
+        PROFESSIONAL
+    }
+    class Role {
+        <<enumeration>>
+        ADMINISTRATOR
+        OPERATIONS_MANAGER
+        FRONT_DESK_OPERATOR
+        INVENTORY_OPERATOR
+    }
+    Organization --> SubscriptionPlan
+    User --> Role
+    User "1..*" --> "1" Organization : organizationId

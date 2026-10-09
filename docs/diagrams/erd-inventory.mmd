@@ -1,0 +1,43 @@
+erDiagram
+    storage_locations ||--o{ inventory_stocks : holds
+    inventory_items ||--o{ inventory_stocks : "is stored as"
+    inventory_items ||--o{ stock_adjustments : "is adjusted by"
+    storage_locations ||--o{ stock_adjustments : "records"
+    storage_locations |o--o{ inventory_items : "is primary location of"
+    storage_locations {
+        bigint id PK
+        bigint property_id "references properties"
+        varchar code UK "unique per property"
+        varchar name
+        varchar type
+        varchar area
+        varchar responsible_team
+        text description
+    }
+    inventory_items {
+        bigint id PK
+        bigint property_id "references properties"
+        varchar code UK "unique per property"
+        varchar name
+        varchar category
+        varchar unit
+        decimal low_stock_threshold
+        bigint primary_location_id FK
+    }
+    inventory_stocks {
+        bigint inventory_item_id PK, FK
+        bigint storage_location_id PK, FK
+        decimal quantity
+    }
+    stock_adjustments {
+        bigint id PK
+        bigint inventory_item_id FK
+        bigint storage_location_id FK
+        varchar operation
+        decimal quantity
+        varchar reason
+        text note
+        bigint transfer_id "pairs the two sides of a transfer"
+        datetime recorded_at
+        bigint operator_id
+    }
