@@ -2207,7 +2207,7 @@ producto, mientras que los botones se expresan como siguientes acciones.
 | Navegación primaria | `Solutions`, `Features`, `Pricing`, `Product`, `About` | Destinos temáticos | La persona anticipa el tipo de información que encontrará en cada sección. |
 | Segmentos objetivo | `Independent hotel`, `Small hotel chain` | Etiquetas de audiencia | La persona identifica el camino que corresponde a su escala de operación. |
 | Propuesta de valor | `Hotel operations, connected.` | Mensaje de posicionamiento | Resume la promesa de conectar la operación hotelera sin presentarse como una función aislada. |
-| Llamadas a la acción | `Start for free`, `Explore Professional`, `Talk to sales` | Acciones | Expresan el siguiente paso y distinguen entre iniciar una experiencia, evaluar un plan o solicitar contacto. |
+| Llamadas a la acción | `Explore Starter`, `Explore Professional`, `Talk to sales`, `Sign in` | Acciones | Expresan el siguiente paso y distinguen entre iniciar una experiencia, evaluar un plan o solicitar contacto. |
 | Soporte y contenido complementario | `Support`, `Discover Hostera`, `Meet the team`, `Frequently asked questions` | Destinos y puntos de entrada | Indican si la persona conocerá ayuda, el producto, el equipo o respuestas a dudas frecuentes. |
 
 Las etiquetas de navegación se mantienen como nombres de destinos, mientras que las
@@ -2280,8 +2280,14 @@ localizados para que el título y la descripción coincidan con el contenido vis
 
 | Variante | Title | Description | Keywords | Author |
 | :--- | :--- | :--- | :--- | :--- |
-| English | `Hostera — Hotel operations, connected.` | `Hostera connects reservations, room availability, inventory, and RFID access so hotel teams can operate with a clearer view of their properties.` | `hotel operations, hotel management platform, reservations, room availability, inventory, RFID access` | `Team Coworkers` |
-| Español | `Hostera — Operación hotelera conectada` | `Hostera conecta reservas, disponibilidad de habitaciones, inventario y accesos RFID para que los equipos hoteleros operen con una visión más clara de sus propiedades.` | `operación hotelera, plataforma de gestión hotelera, reservas, disponibilidad de habitaciones, inventario, accesos RFID` | `Team Coworkers` |
+| English | `Hostera \| Hotel operations, connected` | `Run reservations, rooms, inventory and access across every property from one place.` | `hotel operations, hotel management platform, reservations, room availability, inventory, RFID access` | `Team Coworkers` |
+| Español | `Hostera \| Operación hotelera, conectada` | `Gestiona reservas, habitaciones, inventario y accesos en todos tus hoteles desde un solo lugar.` | `operación hotelera, plataforma de gestión hotelera, reservas, disponibilidad de habitaciones, inventario, accesos RFID` | `Team Coworkers` |
+
+Las páginas de contacto comercial (`sales.html`) y de términos y condiciones
+(`terms.html`) tienen sus propios valores, con el mismo autor, y la página principal
+declara además la URL canónica y las etiquetas Open Graph. Al cambiar de idioma, la
+página actualiza el título, la descripción y las keywords con los valores de la variante
+elegida.
 
 El título y la descripción de cada variante reflejan la propuesta de valor sin
 confundir la Landing Page con una pantalla operativa. Los términos de `Keywords`
@@ -2309,10 +2315,10 @@ Page utiliza los valores de su variante correspondiente y la aplicación web uti
 los valores operativos definidos anteriormente.
 
 ```html
-<title>Hostera | Hotel operations, connected.</title>
+<title>Hostera | Hotel operations, connected</title>
 <meta
   name="description"
-  content="Hostera connects reservations, room availability, inventory, and RFID access so hotel teams can operate with a clearer view of their properties."
+  content="Run reservations, rooms, inventory and access across every property from one place."
 >
 <meta
   name="keywords"
@@ -2461,7 +2467,7 @@ El recorrido principal sigue esta secuencia:
 
 1. La persona reconoce la propuesta de valor en el hero y elige un siguiente paso.
 2. Revisa segmentos, funciones y planes para comparar la propuesta con su contexto.
-3. Selecciona una llamada a la acción, como `Start for free`, `Explore Professional`
+3. Selecciona una llamada a la acción, como `Explore Starter`, `Explore Professional`
    o `Talk to sales`.
 4. Puede continuar hacia el producto, el equipo o el soporte mediante los enlaces
    contextuales y el pie de página.
