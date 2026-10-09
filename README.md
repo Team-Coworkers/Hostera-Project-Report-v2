@@ -4465,6 +4465,72 @@ Coworkers, en la que colaboraron los demás integrantes. Darnell Cuba y Juan Die
 no registran commits en el código de la aplicación ni de la Landing Page durante este
 sprint, lo que se analiza en la sección 5.2.2.8.
 
+#### 5.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog 2 descompone las user stories en el trabajo implementado en cada
+bounded context de la aplicación, y agrega las tareas técnicas y las de la Landing Page
+del sprint. El responsable de cada tarea es el integrante que hizo los commits de los
+componentes que la implementan, según el historial de `hostera-frontend` y de
+`landing-page-main`. La estimación en horas de cada tarea de una historia se obtuvo de
+sus story points, a razón de dos horas por punto.
+
+<table>
+  <thead>
+    <tr>
+      <th>Sprint #</th>
+      <td colspan="7">Sprint 2</td>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>Story Id</th>
+      <th>Story Title</th>
+      <th>Task Id</th>
+      <th>Task Title</th>
+      <th>Task Description</th>
+      <th>Estimation (Hours)</th>
+      <th>Assigned To</th>
+      <th>Status<br>(To-do / In-Process / To-Review / Done)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>US011</td><td>Monitor operations across properties</td><td>T011.1</td><td>Build the operational overview</td><td>Panorama de la propiedad activa con ingresos, ocupación, llegadas del día, estado de las habitaciones y comparación entre propiedades.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US033</td><td>Navigate between operational areas</td><td>T033.1</td><td>Build the application shell</td><td>Layout con navegación lateral, selector de propiedad y rutas entre las áreas operativas.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US012</td><td>Find and review bookings</td><td>T012.1</td><td>Build the booking list and filters</td><td>Listado de reservas con búsqueda por huésped o código y filtros por periodo y estado.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US013</td><td>Create a booking</td><td>T013.1</td><td>Build the booking form</td><td>Registro, duplicado y edición de reservas con validación de disponibilidad, capacidad y plan tarifario.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US014</td><td>Review and update a booking</td><td>T014.1</td><td>Build the booking detail</td><td>Detalle de la reserva con sus acciones de estado y edición antes de la llegada.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US015</td><td>Manage the booking lifecycle</td><td>T015.1</td><td>Implement the booking lifecycle</td><td>Confirmación, cancelación con motivo, no-show y restauración de una reserva.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US016</td><td>Record a booking payment</td><td>T016.1</td><td>Record booking payments</td><td>Formulario de pago y resumen del saldo pendiente de cada reserva.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US017</td><td>Complete guest check-in</td><td>T017.1</td><td>Implement the guided check-in</td><td>Check-in guiado con verificación del documento y emisión de las tarjetas del huésped.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US018</td><td>Complete guest check-out</td><td>T018.1</td><td>Implement the check-out review</td><td>Check-out con cierre del saldo, condición de la habitación y vencimiento de las tarjetas.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US019</td><td>Review room availability for a selected date</td><td>T019.1</td><td>Build the weekly availability view</td><td>Disponibilidad semanal de las habitaciones desde una fecha, con filtros por tipo y estado.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US020</td><td>Create a room</td><td>T020.1</td><td>Build the room form</td><td>Registro de habitaciones a partir de su tipo y número.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US021</td><td>Maintain room information and operational status</td><td>T021.1</td><td>Build the room detail</td><td>Detalle de la habitación con su calendario mensual y periodos de estado.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US022</td><td>Manage room types</td><td>T022.1</td><td>Manage room types</td><td>Listado y formulario de tipos de habitación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US023</td><td>Manage rate plans and daily rates</td><td>T023.1</td><td>Manage rate plans and daily rates</td><td>Vista de tarifas con planes tarifarios y tarifas diarias por tipo de habitación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US024</td><td>Monitor property inventory</td><td>T024.1</td><td>Build the inventory item list</td><td>Listado de artículos con su condición de stock y existencias por ubicación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US025</td><td>Manage inventory item records</td><td>T025.1</td><td>Manage inventory items</td><td>Formulario y detalle de artículos con su historial de movimientos.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US026</td><td>Adjust inventory stock</td><td>T026.1</td><td>Record stock adjustments</td><td>Entradas, salidas y transferencias de stock entre ubicaciones.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US027</td><td>Manage storage locations</td><td>T027.1</td><td>Manage storage locations</td><td>Listado, detalle y formulario de ubicaciones de almacén.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US028</td><td>Review and manage RFID credentials</td><td>T028.1</td><td>Review and revoke credentials</td><td>Listado y detalle de credenciales con su vigencia, revocación y reemplazo.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US029</td><td>Encode or replace an RFID key card</td><td>T029.1</td><td>Encode and replace key cards</td><td>Emisión de credenciales de personal con el codificador RFID simulado.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US030</td><td>Review RFID access events</td><td>T030.1</td><td>Review access events</td><td>Listado de eventos de acceso concedidos y denegados por habitación y persona.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US009</td><td>Register a hotel operation</td><td>T009.1</td><td>Build the sign-up view with the plans</td><td>Registro con el plan elegido desde la Landing Page, estimado mensual y validación; sin persistencia hasta AV2.</td><td>10</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US010</td><td>Sign in to Hostera</td><td>T010.1</td><td>Build the sign-in view</td><td>Inicio de sesión que abre el espacio de trabajo con los datos de demostración; la autenticación llega con la API.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT01</td><td>Set up the Angular workspace</td><td>Angular CLI 19, Angular Material 3 con el tema de Hostera, ngx-translate y la estructura por bounded context.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT02</td><td>Document the Angular port</td><td>ADR del port y guía de los componentes, servicios y stores en `docs/`.</td><td>4</td><td>Jose Gabriel Rudas</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT03</td><td>Deploy the web application on GitHub Pages</td><td>Workflow `deploy-pages.yml`, base href `/hostera-frontend/` y `404.html` para los enlaces profundos.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT04</td><td>Serve the demonstration data in the browser</td><td>Interceptor que responde con `server/data` en GitHub Pages y Blueprint `render.yaml` como alternativa.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT05</td><td>Add the footer, metadata and es-419 locale</td><td>Footer con términos y condiciones, metadatos SEO y código de idioma `es-419`.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT06</td><td>Integrate the Nager.Date public holidays API</td><td>Servicio externo de terceros: feriados del Perú en la disponibilidad de habitaciones.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT07</td><td>Add unit tests and their workflow</td><td>28 pruebas en Jasmine y Karma y el workflow `test.yml`.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US006</td><td>Landing Page update</td><td>TL01</td><td>Publish the plans and the sales page (landing v0.4.0)</td><td>Precios de Starter y Professional con calculadora, página `sales.html`, enlace Sign in y metadatos.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US003, US004</td><td>Landing Page update</td><td>TL02</td><td>Open each segment's view in the web application (landing v0.5.0)</td><td>Los CTA de cada segmento abren `/sign-up?plan=starter` o `/sign-up?plan=professional`.</td><td>3</td><td>José Santana</td><td>Done</td></tr>
+  </tbody>
+</table>
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
