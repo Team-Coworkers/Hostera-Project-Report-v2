@@ -1,0 +1,42 @@
+erDiagram
+    staff_members |o--o{ credentials : holds
+    credentials |o--o{ access_events : "is presented in"
+    staff_members {
+        bigint id PK
+        bigint property_id "references properties"
+        varchar name
+        varchar role
+    }
+    credentials {
+        bigint id PK
+        bigint property_id "references properties"
+        varchar card_id
+        varchar type
+        varchar holder_name
+        bigint booking_id "references bookings, guest cards"
+        varchar booking_code
+        bigint room_id "references rooms, guest cards"
+        bigint staff_member_id FK
+        varchar scope
+        datetime valid_from
+        datetime valid_until
+        datetime issued_at
+        bigint issued_by
+        datetime revoked_at
+        bigint revoked_by
+        varchar revocation_reason
+        text revocation_note
+    }
+    access_events {
+        bigint id PK
+        bigint property_id "references properties"
+        bigint credential_id FK
+        varchar card_id
+        varchar holder_type
+        varchar holder_name
+        bigint room_id "references rooms"
+        varchar access_point
+        varchar result
+        varchar denial_reason
+        datetime occurred_at
+    }

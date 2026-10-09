@@ -3561,9 +3561,66 @@ corresponde al adaptador del codificador RFID del modelo C4.
 
 ### 4.8.1. Database Diagrams
 
-General database diagram
-![general Databse diagram](assets/chapter-4/database-diagram-hostera.JPG)
-*Figura 4.99. Diagrama general de base de datos de Hostera.*
+La base de datos de Hostera se implementa en MySQL 8 y se accede desde la RESTful API
+con Spring Data JPA. Cada bounded context es dueño de sus tablas y solo las modifica a
+través de sus propios repositorios. Dentro de un contexto, las relaciones se declaran
+con claves foráneas; entre contextos, una tabla guarda el identificador del registro del
+otro contexto sin clave foránea, y la consistencia se mantiene mediante los gateways
+descritos en la sección 4.7. Por eso en los diagramas esas columnas aparecen con la nota
+del recurso al que hacen referencia. Las tablas y columnas se nombran en inglés y en
+snake_case, las claves primarias son `bigint` autoincrementales y los montos usan
+`decimal`.
+
+Se presenta un diagrama por bounded context. Se elaboraron como código Mermaid, opción de
+diagram-as-code que admite el enunciado del proyecto para los diagramas de base de
+datos, y sus fuentes están en `docs/diagrams/`. El contexto Overview no tiene tablas
+propias, porque solo lee datos de los demás.
+
+**IAM.** La tabla `organizations` guarda el plan de suscripción y lo que cubre, `users`
+guarda las cuentas con su rol y un correo único, y `user_properties` resuelve la
+relación de muchos a muchos entre usuarios y propiedades, de modo que la responsable de
+operaciones de una cadena pueda trabajar con varias.
+
+<img src="assets/chapter-4/erd-iam.svg" alt="Diagrama de base de datos del contexto IAM" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 4.99. Diagrama de base de datos del contexto IAM.*
+
+**Rooms.** La tabla `rate_plan_room_types` resuelve la relación de muchos a muchos
+entre los planes tarifarios y los tipos de habitación, y `rate_plan_services` guarda
+los servicios incluidos en cada plan. Las tarifas diarias son únicas por plan, tipo de
+habitación y fecha.
+
+<img src="assets/chapter-4/erd-rooms.svg" alt="Diagrama de base de datos del contexto Rooms" style="display:block; width:95%; height:auto; margin:0 auto;"/>
+
+*Figura 4.100. Diagrama de base de datos del contexto Rooms.*
+
+**Bookings.** La tabla `bookings` guarda los datos del huésped y cada etapa del ciclo
+de la reserva en columnas propias, que el mapeo de JPA agrupa en los objetos de valor
+del dominio mediante `@Embedded`. Los pagos se guardan en `payments`, relacionados con
+su reserva.
+
+<img src="assets/chapter-4/erd-bookings.svg" alt="Diagrama de base de datos del contexto Bookings" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 4.101. Diagrama de base de datos del contexto Bookings.*
+
+**Inventory.** Las existencias por ubicación se guardan en `inventory_stocks`, con una
+fila por artículo y ubicación, y cada movimiento se registra en `stock_adjustments`,
+que corresponde a la entidad `StockAdjustment` del dominio. Una transferencia entre
+ubicaciones genera dos ajustes enlazados por `transfer_id`.
+
+<img src="assets/chapter-4/erd-inventory.svg" alt="Diagrama de base de datos del contexto Inventory" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.102. Diagrama de base de datos del contexto Inventory.*
+
+**Access Control.** Las credenciales de huéspedes y de personal comparten la tabla
+`credentials`; las de huésped referencian la reserva y la habitación, y las de
+personal referencian al miembro del personal. Los eventos de acceso se guardan en
+`access_events` con su resultado y el motivo de una denegación.
+
+<img src="assets/chapter-4/erd-access-control.svg" alt="Diagrama de base de datos del contexto Access Control" style="display:block; width:90%; height:auto; margin:0 auto;"/>
+
+*Figura 4.103. Diagrama de base de datos del contexto Access Control.*
+
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management
