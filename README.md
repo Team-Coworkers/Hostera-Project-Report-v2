@@ -4783,6 +4783,39 @@ anotado y se publicó como GitHub Release con las notas de su `CHANGELOG.md`.
 
 *Figura 5.20. Releases de la Frontend Web Application en GitHub.*
 
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Los analíticos de colaboración se tomaron de los repositorios de la Frontend Web
+Application y de la Landing Page. El gráfico se construyó con el historial de todas las
+ramas desde el 20 de septiembre de 2026, sin commits de merge, porque el analítico de
+contribuidores de GitHub solo cuenta la rama `main`.
+
+<img src="assets/chapter-5/sprint-2-commits-by-member.svg" alt="Commits por integrante en el frontend y la Landing Page durante el Sprint 2" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.21. Commits por integrante durante el Sprint 2.*
+
+| Integrante | `hostera-frontend` | `landing-page-main` | Aporte principal en el sprint |
+| --- | :---: | :---: | --- |
+| Leon Naupari, Jorge Mateo (`mateool10`) | 52 | 0 | Port de la aplicación a Angular en los seis bounded contexts. |
+| Santana Luna, José Antonio (`JhosBY2005`) | 20 | 8 | Despliegue, API de demostración, IAM, i18n, servicio externo, pruebas y Landing Page `v0.4.0` y `v0.5.0`. |
+| Rudas Chavarria, Jose Gabriel (`josegabriel1604`) | 3 | 0 | Documentación del port. |
+| Cuba Vega, Darnell Yadir (`darnell1910`) | 0 | 0 | Migración del informe (sección Project Report Collaboration Insights). |
+| Flores Rios, Juan Diego (`YopoFlores`) | 0 | 0 | Organización de los archivos del informe. |
+
+El sprint concentró el código en dos integrantes. El enunciado del proyecto exige que
+todos los integrantes colaboren en la implementación, las pruebas y el despliegue de la
+aplicación y de la Landing Page, por lo que el Sprint 3 debe asignar a Darnell Cuba y a
+Juan Diego Flores tareas de código con commits propios, como los endpoints de un bounded
+context de la RESTful API y sus pruebas.
+
+<img src="assets/chapter-5/sprint-2-frontend-contributors.png" alt="Analítico de contribuidores del repositorio hostera-frontend en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.22. Contribuidores de `hostera-frontend` en GitHub (rama `main`).*
+
+<img src="assets/chapter-5/sprint-2-landing-contributors.png" alt="Analítico de contribuidores del repositorio landing-page-main en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.23. Contribuidores de `landing-page-main` en GitHub (rama `main`).*
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
