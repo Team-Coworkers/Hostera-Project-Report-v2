@@ -3783,8 +3783,18 @@ ejemplo: `feat(iam): add the sign-in and sign-up views` o
 `docs(interviews): record the six video interviews by segment`. Los merges usan
 `merge(develop): <descripción>` y `merge(main): release <versión>`.
 
+Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
+`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
+`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
+imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
+ejemplo: `feat(iam): add the sign-in and sign-up views` o
+`docs(interviews): record the six video interviews by segment`. Los merges usan
+`merge(develop): <descripción>` y `merge(main): release <versión>`.
+
 Los releases utilizan [Semantic Versioning 2.0.0](https://semver.org/):
 `MAJOR.MINOR.PATCH`. Cada release se integra en `main` con `--no-ff`, se etiqueta con
+un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
 un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
 detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
 un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
@@ -3900,6 +3910,28 @@ accesible mediante `aria-label` o `aria-labelledby`, los mensajes de estado usan
 `aria-current="page"` y los íconos decorativos se ocultan con `aria-hidden="true"`. Al
 cierre de TB1 la Landing Page tiene 68 atributos ARIA y la Frontend Web Application,
 210.
+Las interfaces se construyen con los componentes de Angular Material y el formato del
+código lo fija Prettier (comillas simples y punto y coma en TypeScript).
+
+#### Internacionalización y accesibilidad
+
+Los tres productos usan inglés como idioma por defecto y ofrecen español
+latinoamericano, con los códigos `en` y `es-419`. En la Landing Page, cada texto tiene
+un atributo `data-i18n` y sus traducciones viven en un archivo por idioma; al cambiar de
+idioma se actualizan el atributo `lang` del documento y los metadatos. En la Frontend
+Web Application, los mensajes se organizan en `src/locales/<idioma>/<contexto>/` y se
+cargan con ngx-translate; `I18nService` cambia el idioma, el atributo `lang` del
+documento y los formatos de fecha y moneda. Ningún texto visible se escribe directamente
+en el código: todo pasa por una clave de traducción. Los RESTful Web Services devolverán
+sus mensajes de error en inglés y en español latinoamericano según la cabecera
+`Accept-Language`.
+
+La accesibilidad sigue las pautas WCAG 2.2. Los elementos interactivos tienen nombre
+accesible mediante `aria-label` o `aria-labelledby`, los mensajes de estado usan
+`role="status"` o `aria-live="polite"`, el enlace de la navegación activa lleva
+`aria-current="page"` y los íconos decorativos se ocultan con `aria-hidden="true"`. Al
+cierre de TB1 la Landing Page tiene 68 atributos ARIA y la Frontend Web Application,
+210.
 
 #### Web Services: Spring Boot y Java
 
@@ -3961,13 +3993,55 @@ la rama `main` y la carpeta `/ (root)`. La aplicación está disponible en la
 
 *Figura 5.1. Configuración y estado del despliegue de la Landing Page en GitHub Pages.*
 
-Los destinos de despliegue de los RESTful Web Services y las Frontend Web Applications
-aún no han sido definidos. Por ello, los nombres de sus proveedores, las URL
-públicas, las variables de entorno, los manifiestos de despliegue y las evidencias de
-ejecución se mantienen intencionalmente pendientes hasta que se definan la
-implementación y las decisiones de alojamiento. En ese momento, esta subsección se
-ampliará con un registro de configuración por producto y un enlace a su evidencia de
-despliegue.
+Los destinos de despliegue de la Frontend Web Application y de su API de datos de
+demostración se definieron en el Sprint 2. El siguiente registro resume la configuración
+de despliegue de cada producto:
+
+| Producto | Entorno objetivo | Fuente | Build | Publicación | URL pública |
+| --- | --- | --- | --- | --- | --- |
+| Landing Page | GitHub Pages | Rama `main` y carpeta `/ (root)` de `landing-page-main` | No requiere build: el sitio se sirve como HTML, CSS y JavaScript estáticos. | Automática al integrar un release en `main`. | https://team-coworkers.github.io/landing-page-main/ |
+| Frontend Web Application | GitHub Pages | Rama `main` de `hostera-frontend` | `npm run build:pages`, que compila con `--base-href /hostera-frontend/`. | Workflow `deploy-pages.yml` de GitHub Actions, en cada push a `main`. | https://team-coworkers.github.io/hostera-frontend/ |
+| API de datos de demostración | Navegador del usuario (GitHub Pages) y, como alternativa, Render | `server/data/*.json` de `hostera-frontend` | El build copia los archivos a `demo-data/`. | Se publica junto con la aplicación; el Blueprint `render.yaml` permite publicarla en Render. | Dentro de la aplicación publicada |
+| RESTful Web Services | Se elegirá en el Sprint 3 (AV2). | Repositorio de Web Services, que se creará en el Sprint 3. | `./mvnw package`, que genera el JAR de Spring Boot. | Se fijará junto con el proveedor elegido. | Se publicará en AV2. |
+
+**Frontend Web Application.** El workflow `.github/workflows/deploy-pages.yml` instala
+las dependencias con `npm ci`, ejecuta `npm run build:pages` y publica `dist/browser/`
+con las acciones oficiales de GitHub Pages. Antes de publicar, copia `index.html` como
+`404.html`, porque GitHub Pages devuelve ese archivo para cualquier ruta desconocida y así
+el router de Angular resuelve los enlaces profundos, como `/bookings` o
+`/sign-up?plan=professional`, al recargar la página. El workflow `test.yml` ejecuta las
+pruebas unitarias en Chrome sin interfaz en cada push y pull request a `main` y
+`develop`.
+
+**API de datos de demostración.** La aplicación consulta una única URL base,
+`hosteraApiUrl`, definida en `src/environments/`. En desarrollo apunta a json-server en
+`http://localhost:3000`. En producción, la opción `demoApiEnabled` activa el interceptor
+`demo-api.interceptor.ts`, que responde dentro del navegador con los mismos archivos de
+`server/data/` y las mismas reglas de json-server: filtros por campo, orden, límite y las
+operaciones `GET`, `POST`, `PUT`, `PATCH` y `DELETE`. Los cambios duran hasta recargar la
+página. Así, la aplicación publicada muestra datos sin depender de un servidor externo.
+El Blueprint `render.yaml` describe el mismo servicio para Render (`npm ci
+--include=dev`, inicio con json-server y health check en `/properties`); para usarlo
+basta con desactivar `demoApiEnabled`. Cuando se despliegue la RESTful API, ese mismo
+valor se desactiva y `hosteraApiUrl` pasa a apuntar a la API.
+
+**Servicio externo.** La aplicación consulta la API pública Nager.Date
+(`https://date.nager.at/api/v3`), que no requiere clave. Su URL base y el país se
+configuran en `src/environments/`.
+
+**Verificación y rollback.** Después de cada despliegue se comprueba que la ruta raíz de
+la aplicación carga el panorama operativo con datos, que `/sign-in` y
+`/sign-up?plan=starter` abren directamente y que la Landing Page lleva a esas vistas. Si
+una comprobación falla, el rollback consiste en volver a publicar la versión anterior:
+el workflow de GitHub Pages se puede ejecutar a mano sobre el último tag estable, y la
+Landing Page se republica desde el tag anterior de `main`. Como los despliegues se hacen
+siempre desde `main`, la versión restituida corresponde a un tag registrado en el
+`CHANGELOG.md` del repositorio.
+
+Los procedimientos de migración de base de datos se documentarán junto con los RESTful
+Web Services, porque la API de datos de demostración no utiliza un motor de base de
+datos: su estado se define por completo en los archivos versionados del repositorio del
+frontend.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
