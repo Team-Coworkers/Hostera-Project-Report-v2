@@ -4852,78 +4852,99 @@ context de la RESTful API y sus pruebas.
 
 ## Conclusiones y recomendaciones
 
-El trabajo realizado permitió convertir la propuesta inicial de Hostera en una
-Landing Page funcional y públicamente accesible. Al cierre del Sprint 1 se
-implementaron las ocho User Stories de `EP001`, con 42 Story Points completados,
-y se publicó la Landing Page mediante GitHub Pages. La entrega comunica la
-propuesta de valor, diferencia los caminos para hoteles independientes, cadenas
-pequeñas y grupos hoteleros, presenta los beneficios y planes de Hostera, y
-ofrece navegación en inglés y español.
+Esta sección recoge lo que dejó el proyecto desde su inicio hasta el cierre de TB1.
+Se organiza por etapas del ciclo de vida del producto, desde la investigación con
+usuarios hasta el despliegue, e incluye lo que se corrigió en cada una.
 
-**Conclusión sobre el Problem Statement.** La Landing Page responde al problema
-identificado al comunicar la necesidad de coordinar reservas, habitaciones,
-inventario y accesos desde una visión común. También hace explícita la promesa de
-Hostera de conectar estas áreas. Sin embargo, esta entrega demuestra la
-comunicación de la solución y no todavía la resolución operativa del problema:
-la reducción de conciliación manual, la actualización de datos, la trazabilidad
-RFID y la coordinación entre sedes deberán comprobarse cuando estén disponibles
-la Web Application, los Web Services y los escenarios de validación.
+### Investigación y needfinding
 
-**Conclusión sobre los segmentos y assumptions.** La estructura de la Landing
-Page refleja los segmentos priorizados en el proyecto: hoteles independientes,
-cadenas pequeñas y grupos hoteleros. Esta decisión permitió organizar una
-experiencia de descubrimiento y orientar cada segmento hacia un siguiente paso.
-No obstante, los supuestos sobre las necesidades, hábitos de trabajo, disposición
-de pago y valor percibido por cada segmento deben mantenerse como hipótesis de
-negocio que se seguirán contrastando durante la evolución del producto. La
-priorización actual ofrece una base coherente para organizar el roadmap y definir
-los siguientes experimentos de producto.
+El equipo registró seis entrevistas en video verificables: dos en el segmento de
+hoteles independientes y cuatro en el de cadenas pequeñas. La primera versión del
+registro asignaba tres entrevistas al segmento equivocado: Otto Cuba, con un solo
+hospedaje, figuraba entre las cadenas, y Odar Quispe y Rafael Prieto, que coordinan
+varias sedes, entre los hoteles independientes. Al reclasificarlas por número de
+establecimientos, el segmento 1 quedó con dos entrevistas, por debajo de las tres que
+pide el enunciado; la tercera es la tarea más urgente de la investigación.
 
-**Conclusión sobre los Hypothesis Statements.** Las hipótesis relacionadas con
-el panel centralizado, la gestión de reservas, el inventario, la trazabilidad RFID
-y la administración de una o varias sedes reciben respaldo inicial en la propuesta
-de valor y en la organización de los recorridos del producto. La Landing Page
-presenta estos beneficios, pero todavía se necesitan la interacción operativa y
-los datos de uso de las aplicaciones para comparar una línea base. Por tanto, los
-umbrales de mejora del 5 % definidos en los Hypothesis Statements permanecen
-pendientes de medición.
+Con las entrevistas bien asignadas, el problema aparece de forma distinta en cada
+segmento. En el segmento 1 la información se rompe dentro de la sede: los dos
+entrevistados concilian parte de su operación en Excel y reconstruyen a mano el estado
+del hotel. En el segmento 2 el costo está en consolidar varias sedes, unos cuarenta
+minutos diarios en la cadena de tres sedes que comparte administración. En los grupos
+donde cada hotel es una empresa distinta, la información se separa a propósito, de modo
+que consolidar solo tiene valor donde la administración es compartida.
 
-| Hypothesis Statement | Resultado al cierre del Sprint 1 | Evidencia necesaria para evaluarlo |
+### Especificación de la solución
+
+El Lean UX se escribió antes de contar con entrevistas: el problem statement usaba la
+plantilla de un producto existente y las hipótesis prometían mejoras del 5 % sin línea
+base. Se rehízo con la plantilla para una iniciativa nueva, y las hipótesis ahora nombran
+a Steven Huarcaya y Anyeli Cárdenas y apuntan a resultados de negocio de Team Coworkers:
+50 suscripciones del plan Starter en cuatro meses, 20 cadenas en el plan Professional en
+seis y una retención mensual del 90 %. El Product Backlog dejó el registro y el inicio de
+sesión después de los flujos operativos, y las user stories describen lo que logra el
+usuario en lugar de la interfaz.
+
+### Diseño del producto
+
+El modelo C4 se rehízo con la notación de c4model.com: una aplicación Angular, una sola
+RESTful API en Spring Boot organizada por bounded context, una base de datos MySQL y tres
+sistemas externos con nombre. Los diagramas de clases siguen las convenciones de Java y
+coinciden con el dominio del frontend, y la base de datos tiene un diagrama por bounded
+context. Ese diseño todavía no se ha probado con usuarios.
+
+### Implementación y despliegue
+
+El Sprint 1 cerró con las ocho user stories de `EP001` y la Landing Page publicada. El
+Sprint 2 dejó publicada la Frontend Web Application `v0.4.0` en GitHub Pages, con 23
+user stories implementadas sobre la API de datos de demostración, las vistas de registro
+e inicio de sesión a las que llevan los CTA de cada segmento, el footer con los términos
+y condiciones, los idiomas `en` y `es-419`, el servicio externo Nager.Date y 28 pruebas
+unitarias ejecutadas en GitHub Actions. La Landing Page llegó a la versión `v0.5.0`.
+
+El código del sprint se concentró en dos integrantes: Jorge Mateo Leon hizo el port a
+Angular y José Santana el despliegue, las nuevas funciones y las pruebas, mientras que
+Darnell Cuba y Juan Diego Flores no registran commits de código. El enunciado exige que
+todos participen en la implementación, las pruebas y el despliegue, de modo que el Sprint
+3 debe repartir los Web Services entre los cinco.
+
+### Estado de las hipótesis al cierre de TB1
+
+Ninguno de los resultados de negocio puede medirse todavía, porque Hostera aún no tiene
+clientes. Por ahora solo hay evidencia del problema que cada hipótesis busca resolver, y
+viene de las entrevistas.
+
+| Hipótesis | Evidencia disponible | Lo que falta medir |
 |---|---|---|
-| Panel administrativo centralizado | La propuesta comunica el valor de una visión común, pero el panel operativo aún forma parte del roadmap. | Web Application funcional, tareas representativas y comparación con una línea base. |
-| Gestión de reservas y disponibilidad | La necesidad está reflejada en la propuesta; faltan los servicios y flujos operativos para medir el resultado. | Escenarios de consulta y actualización, tiempo de tarea e inconsistencias detectadas. |
-| Registro y consulta del inventario | La Landing Page comunica el beneficio de la centralización, mientras que la operación de inventario se implementará posteriormente. | Movimientos registrados, consultas de existencias y pruebas de control. |
-| Control y trazabilidad de accesos RFID | La propuesta reconoce la trazabilidad como capacidad prioritaria; la integración RFID aún no forma parte del Sprint 1. | Eventos relacionados con tarjeta, habitación y usuario, además del tiempo de consulta. |
-| Administración de una o varias sedes | Los caminos y planes de la Landing Page representan distintas escalas; falta comprobar la operación multi-sede. | Escenarios de una y varias sedes sin duplicidad ni pérdida de contexto. |
+| 1. Panel de la propiedad activa | Formarse una visión del hotel exige varios minutos de llamadas y mensajes (E1). | Cuánto tarda un administrador en conocer el estado de su propiedad con la aplicación publicada. |
+| 2. Reservas y disponibilidad sobre un mismo calendario | Las reservas duplicadas se corrigen comparando a mano el sistema con Excel (E1). | Si las reservas duplicadas dejan de ocurrir durante un mes de uso. |
+| 3. Control de existencias por ubicación de almacén | Los faltantes se detectan en el inventario periódico (E1) y las transferencias entre sedes no se registran (E3). | Si las alertas anticipan los faltantes y motivan el cambio al plan Professional. |
+| 4. Reportes por propiedad y cambio de propiedad activa | Consolidar tres sedes toma unos cuarenta minutos diarios (E3); en dos grupos la información se separa a propósito (E5, E6). | Cuánto tarda el consolidado dentro de la plataforma, una vez implementados los reportes (`US031`, `US032`). |
+| 5. Trazabilidad de los accesos con credenciales RFID | No hay un registro centralizado de accesos ni se desactivan las credenciales a tiempo (E3); reconstruir un evento exige preguntar al personal (E1). | Si cada acceso queda asociado a una credencial, una habitación y una persona. Requiere la integración RFID. |
 
-**Conclusión sobre los criterios de éxito.** El criterio de entrega definido para
-el Sprint 1 se cumplió: las ocho User Stories de `EP001` fueron implementadas y
-la Landing Page quedó publicada y accesible. Este resultado confirma el avance de
-implementación del producto y del trabajo colaborativo, pero no sustituye los
-criterios de éxito del Lean UX, que requieren observar tareas reales con
-información centralizada, actualizada y relacionada. Esos indicadores deberán
-medirse después de implementar los productos operativos y realizar las
-evaluaciones de uso correspondientes.
+<div style="page-break-before: always;"></div>
 
-**Recomendaciones para el roadmap.**
+### Recomendaciones para el roadmap
 
-| Prioridad | Siguiente paso recomendado | Resultado esperado |
+| Prioridad | Siguiente paso | Para qué |
 |---:|---|---|
-| 1 | Implementar la primera versión de la Web Application a partir de las User Stories de acceso y operación, comenzando por registro, autenticación, dashboard y navegación operacional (`US009`, `US010`, `US011` y `US033`). | Permitir que un usuario autorizado consulte la operación y conserve el contexto de su propiedad. |
-| 2 | Implementar los Web Services correspondientes y documentar cada endpoint con OpenAPI, incluyendo acciones, verbos HTTP, parámetros y respuestas. | Proporcionar una base verificable para la Web Application y para futuras integraciones. |
-| 3 | Incorporar progresivamente reservas, habitaciones, inventario, reportes y control de accesos RFID con pruebas de escenarios normales y alternativos. | Generar la evidencia necesaria para evaluar las cinco hipótesis y sus metas del 5 %. |
-| 4 | Conectar los CTA de la Landing Page con las experiencias implementadas y desplegar los productos en sus entornos correspondientes. | Mantener una experiencia consistente entre el descubrimiento en la Landing Page y la operación en las aplicaciones. |
-| 5 | Mantener Git Flow, Conventional Commits, documentación en cada repositorio y analíticos de colaboración por sprint. | Conservar trazabilidad de cambios, responsabilidades, integración y evolución del producto. |
+| 1 | Registrar la tercera entrevista del segmento 1 con el mismo protocolo. | Cumplir el mínimo del enunciado y revisar las conclusiones de ese segmento. |
+| 2 | Implementar la RESTful API en Spring Boot con Spring Data JPA y MySQL, documentada con OpenAPI y con pruebas unitarias e integración, repartida entre los cinco integrantes. | Reemplazar los datos de demostración por operaciones persistentes y que todos aporten código. |
+| 3 | Conectar el registro y el inicio de sesión a los endpoints de IAM (`TS001` a `TS003`). | Proteger la información de cada propiedad antes de exponerla. |
+| 4 | Completar los reportes operativos (`US031`, `US032`). | Probar la hipótesis 4 con responsables de cadenas pequeñas. |
+| 5 | Llevar la aplicación publicada a administradores de hotel y medir cuánto tardan en conocer el estado de su propiedad. | Probar la hipótesis 1, la de mayor riesgo. |
+| 6 | Mantener Git Flow, Conventional Commits, releases con notas y el workflow de pruebas. | Conservar la trazabilidad de cada cambio. |
 
-En síntesis, el Sprint 1 logró una primera entrega publicable y coherente con la
-propuesta de Hostera. La principal conclusión del ciclo actual es que la
-comunicación del producto ya puede ser evaluada públicamente, mientras que el
-valor operativo y las hipótesis de negocio todavía requieren implementación y
-validación con usuarios reales.
+Al cierre de TB1, Hostera tiene una Landing Page y una aplicación web publicadas y un
+problema mejor entendido que al inicio del curso, pero ninguna de sus hipótesis se ha
+probado con el producto. La siguiente entrega debe poner la aplicación, ya conectada a su
+propia API, en manos de administradores de hotel y medir lo que hasta ahora solo se
+conoce por las entrevistas.
 
 ## Video About-the-Team
 
-This is program for AV2 (not in AV1)
+El video About-the-Team se presentará en AV2, junto con el video About-the-Product, como
+indica el enunciado del proyecto.
 
 # Bibliografía
 
