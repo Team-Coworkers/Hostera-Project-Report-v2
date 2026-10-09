@@ -7,12 +7,12 @@
 
 <div class="cover-course-block">
   <div class="cover-code">1ASI0729</div>
-  <div class="cover-course">Diseño de aplicaciones Open Source</div>
+  <div class="cover-course">Desarrollo de Aplicaciones Open Source</div>
   <div class="cover-label">NRC</div>
   <div class="cover-nrc">7737</div>
   <div class="cover-title">Informe del Trabajo Final</div>
   <div class="cover-label">Docente</div>
-  <div class="cover-value">Ivan Robles Fernández</div>
+  <div class="cover-value">Robles Fernández, Iván</div>
   <div class="cover-label">Equipo</div>
   <div class="cover-value">Team Coworkers</div>
   <div class="cover-label">Proyecto</div>
@@ -38,7 +38,7 @@
 </table>
 
 <div class="cover-period">Período 202620</div>
-<div class="cover-date">Septiembre 2026</div>
+<div class="cover-date">Octubre 2026</div>
 
 </div>
 <div class="version-history">
@@ -47,6 +47,7 @@
 
 | Versión |   Fecha    | Autor(es)                                                                                         | Descripción de cambios                                                                                                                                                                  |
 | :-----: | :--------: | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  0.7.0  | 08/10/2026 | José Antonio Santana Luna (`JhosBY2005`) | Versión de TB1. Se corrigieron los artefactos de AV1: las entrevistas se reorganizaron por segmento con sus datos completos y las seis entrevistas verificables, y su análisis se rehízo sobre ellas; el 5W2H y el Lean UX se reescribieron con la plantilla para una iniciativa nueva, hipótesis medibles y un canvas posterior a las personas; se reforzó la diferenciación frente a competidores, el Big Picture EventStorming pasó a tres etapas, se completó el Impact Mapping y el Product Backlog dejó la autenticación al final. Se rehízo el modelo C4 para Angular, Spring Boot y MySQL, los diagramas de clases en convenciones Java y un diagrama de base de datos por bounded context. Se completó la configuración del entorno, del control de código y del despliegue, se sincronizó la Landing Page `v0.5.0` y se agregó el Sprint 2 con la Frontend Web Application `v0.4.0`. Se actualizaron las conclusiones, la bibliografía en APA, el Student Outcome y este registro, y `README.md` volvió a ser el archivo principal del informe. |
 |  0.6.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se alineó el informe con la conformación vigente del equipo: se retiraron los integrantes que ya no participan y se redistribuyeron sus aspectos entre los cinco integrantes actuales. La redistribución se equilibró por story points, dejando la carga entre 18 y 24 puntos por integrante sobre un total de 106. Se actualizaron el Registro de Versiones, el Student Outcome, la matriz de liderazgo y colaboración, el Sprint Backlog y las contribuciones del Sprint 1. |
 |  0.5.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se completó la identidad de Team Coworkers en el informe, la guía del repositorio, el changelog y el modelo Structurizr. Se estableció `README.md` como archivo principal del informe según el enunciado, se trasladó la guía del repositorio a `docs/repository-guide.md` y se actualizó la relación de colaboradores autorizados con la conformación vigente del equipo. Se completaron las fotografías de los cinco integrantes en la sección 1.1.2, se retiraron las imágenes de integrantes que ya no forman parte del equipo y se optimizaron los retratos para reducir el peso del repositorio. |
 |  0.4.0  | 19/09/2026 | Darnell Cuba (`darnell1910`) | Se trasladó el informe al repositorio de Team Coworkers y se actualizaron la portada, los integrantes del equipo, sus perfiles y el Student Outcome con la nueva conformación del equipo. |
@@ -101,6 +102,37 @@ fue una actividad compartida.
 *Evidencia 2. Historial de commits de la rama `main` del repositorio del Project Report durante AV1.*
 
 ## TB1
+
+Durante TB1 el informe se trabajó en ramas `feature/*` que se integraron en `develop` con
+merges `--no-ff`, mensajes Conventional Commits y una release por entrega. Desde el 18 de
+septiembre de 2026 los cinco integrantes registraron commits en el repositorio del
+informe. La siguiente tabla resume qué secciones trabajó cada uno.
+
+| Integrante | Aportes al informe en TB1 |
+| --- | --- |
+| Darnell Cuba (`darnell1910`) | Traslado del informe al repositorio de Team Coworkers con la nueva conformación del equipo; entrevista a Domínguez en el primer segmento, enlace de la grabación de Roy Ríos y su traslado al segundo segmento, análisis del primer segmento y evidencia de colaboración de AV1. |
+| Juan Diego Flores (`YopoFlores`) | Guías tecnológicas del enunciado, convenciones de nomenclatura alineadas con Angular y Spring Boot, y diagramas de diseño del producto. |
+| Jorge Mateo Leon (`mateool10`) | Guía de servicios con Spring Boot, datos del curso, flujos y mock-ups de la aplicación, y registro de hitos en el changelog. |
+| Jose Gabriel Rudas (`josegabriel1604`) | Arquitectura de servicios con Spring Boot, prácticas de Angular y TypeScript, evidencia de implementación y colaboración, y guía del repositorio y del PDF. |
+| José Santana (`JhosBY2005`) | Referencias de Java, Spring Boot, Angular y TypeScript, workspace de Structurizr y portada; y en la versión 0.7.0, las correcciones de TB1 de los capítulos I a V, el Sprint 2 y las secciones de entrega. |
+
+El número de commits del informe no mide todo el aporte de TB1. En el mismo periodo se
+construyó la Frontend Web Application, donde Jorge Mateo Leon realizó el port a Angular,
+como muestra la sección 5.2.2.8.
+
+El analítico de contribuidores de GitHub solo cuenta la rama `main` y muestra el total
+histórico. Por eso el gráfico se construyó a partir del historial de todas las ramas
+desde el 18 de septiembre, sin commits de merge.
+
+<div style="page-break-before: always;"></div>
+
+<img src="assets/project-report-collaboration-insights/tb1-commits-by-member.svg" alt="Commits por integrante en el repositorio del informe durante TB1" style="width:85%; height:auto; display:block; margin:0 auto;"/>
+
+*Evidencia 3. Commits por integrante en el repositorio del Project Report durante TB1.*
+
+<img src="assets/project-report-collaboration-insights/tb1-github-contributors.png" alt="Analítico de contribuidores del repositorio del Project Report en GitHub" style="width:85%; height:auto; display:block; margin:0 auto;"/>
+
+*Evidencia 4. Analítico de contribuidores del repositorio del Project Report en GitHub.*
 
 ## AV2
 
@@ -201,9 +233,24 @@ fue una actividad compartida.
         - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
         - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
         - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+    - [5.2.2. Sprint 2](#522-sprint-2)
+        - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+        - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+        - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+        - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+        - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+        - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+        - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+        - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+        - [Investigación y needfinding](#investigación-y-needfinding)
+        - [Especificación de la solución](#especificación-de-la-solución)
+        - [Diseño del producto](#diseño-del-producto)
+        - [Implementación y despliegue](#implementación-y-despliegue)
+        - [Estado de las hipótesis al cierre de TB1](#estado-de-las-hipótesis-al-cierre-de-tb1)
+        - [Recomendaciones para el roadmap](#recomendaciones-para-el-roadmap)
     - [Video About-the-Team](#video-about-the-team)
 
 - [Bibliografía](#bibliografía)
@@ -218,8 +265,8 @@ fue una actividad compartida.
 
 | Criterio específico                                                                             | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trabaja en equipo para proporcionar liderazgo en forma conjunta                                 | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Lideré US002, definiendo la navegación primaria y secundaria, la página de términos y el menú móvil de la Landing Page, y colaboré en la integración del Sprint 1 mediante Git Flow. Además, documenté el backlog, la matriz de liderazgo y colaboración, la evidencia de ejecución y despliegue, las convenciones de código, el prototipo web, los diagramas de clases y el Design-Level EventStorming.<br>**Flores Rios, Juan Diego**<br>Lideré US004 y US006, definiendo el camino de la cadena hotelera pequeña, el plan Professional, el camino del grupo hotelero, el plan Enterprise y las acciones de cierre de la Landing Page, y participé en la integración mediante Git Flow. También colaboré en el análisis de impactos y en el diseño de los artefactos del producto.<br>**Leon Naupari, Jorge Mateo**<br>Preparé el Sprint Planning 1 y lideré US001, definiendo la propuesta de valor, la vista previa del panel y el relato de la operación fragmentada, además de participar en la integración mediante Git Flow. También contribuí en la definición de segmentos, User Stories, Product Backlog y diseño de la Landing Page.<br>**Rudas Chavarria, Jose Gabriel**<br>Lideré US003 y US007, definiendo el camino del hotel independiente, el plan Free, el contenido de producto y equipo, y la sección de soporte, y participé en la integración mediante Git Flow. También contribuí al análisis competitivo y a la definición del problema, assumptions e hipótesis de Lean UX.<br>**Santana Luna, José Antonio**<br>Lideré US005 y US008, definiendo los beneficios de operaciones conectadas, el flujo operativo y las variantes de idioma de la Landing Page. También participé en la documentación colaborativa de entrevistas, arquitectura y gestión del proyecto.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Mi conclusión es que mi participación combinó liderazgo funcional y documentación técnica, ayudando a mantener alineadas las responsabilidades del equipo y la evolución del producto.<br>**Flores Rios, Juan Diego**<br>Mi conclusión es que mi trabajo conectó la estrategia del producto con una experiencia clara para cadenas pequeñas y grupos hoteleros.<br>**Leon Naupari, Jorge Mateo**<br>Mi conclusión es que mi liderazgo combinó coordinación y ejecución técnica, facilitando que el equipo avanzara de forma integrada desde el análisis hasta la implementación.<br>**Rudas Chavarria, Jose Gabriel**<br>Mi conclusión es que mi trabajo conectó el análisis del usuario con una experiencia concreta para hoteles independientes y con el contenido que sustenta la propuesta.<br>**Santana Luna, José Antonio**<br>Mi conclusión es que mi trabajo conectó los beneficios operativos con un flujo comprensible y una base técnica para continuar el producto.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** |
-| Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos. | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Definí y organicé las tareas del Sprint 1 para US002, descomponiendo la navegación primaria y secundaria, la página de términos y el menú móvil. También elaboré evidencias de desarrollo, ejecución y despliegue, y documenté arquitectura, convenciones y prototipos para contribuir al cumplimiento de las ocho User Stories y la publicación de la Landing Page.<br>**Flores Rios, Juan Diego**<br>Definí y organicé las tareas del Sprint 1 para US004 y US006, descomponiendo el camino de la cadena pequeña, la comparación de planes y las acciones de cierre. Además documenté User Stories y servicios de inventario, elaboré mockups de alta fidelidad y contribuí al Impact Mapping y a los sistemas de búsqueda y organización.<br>**Leon Naupari, Jorge Mateo**<br>Definí el objetivo y la métrica del sprint, organicé el backlog y las tareas de US001, y contribuí al cumplimiento de 8/8 User Stories y al despliegue en GitHub Pages. Además, documenté estándares, estructura del informe y evidencias del proceso.<br>**Rudas Chavarria, Jose Gabriel**<br>Definí las tareas y artefactos de US003 y US007; elaboré wireframes y wireflows, documenté User Stories y servicios de habitaciones, y aporté al diseño de la solución.<br>**Santana Luna, José Antonio**<br>Definí las tareas y artefactos de US005 y US008; documenté entrevistas y su análisis, servicios de RFID y reporting, diagramas de arquitectura y la configuración de los repositorios.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Mi conclusión es que la planificación y la documentación que realicé hicieron trazable el trabajo del sprint y ayudaron a convertir el backlog en una entrega publicada.<br>**Flores Rios, Juan Diego**<br>Mi conclusión es que los artefactos de impacto, diseño e inventario facilitaron una visión trazable de las necesidades y funcionalidades.<br>**Leon Naupari, Jorge Mateo**<br>Mi conclusión es que mi trabajo ayudó a convertir objetivos y tareas compartidas en artefactos trazables y una entrega funcional.<br>**Rudas Chavarria, Jose Gabriel**<br>Mi conclusión es que los artefactos que elaboré hicieron más clara y trazable la transición desde las necesidades hasta la implementación.<br>**Santana Luna, José Antonio**<br>Mi conclusión es que la documentación de investigación, arquitectura y configuración hizo más trazable la evolución del proyecto.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** |
+| Trabaja en equipo para proporcionar liderazgo en forma conjunta                                 | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Lideré US002, definiendo la navegación primaria y secundaria, la página de términos y el menú móvil de la Landing Page, y colaboré en la integración del Sprint 1 mediante Git Flow. Además, documenté el backlog, la matriz de liderazgo y colaboración, la evidencia de ejecución y despliegue, las convenciones de código, el prototipo web, los diagramas de clases y el Design-Level EventStorming.<br>**Flores Rios, Juan Diego**<br>Lideré US004 y US006, definiendo el camino de la cadena hotelera pequeña, el plan Professional, el camino del grupo hotelero, el plan Enterprise y las acciones de cierre de la Landing Page, y participé en la integración mediante Git Flow. También colaboré en el análisis de impactos y en el diseño de los artefactos del producto.<br>**Leon Naupari, Jorge Mateo**<br>Preparé el Sprint Planning 1 y lideré US001, definiendo la propuesta de valor, la vista previa del panel y el relato de la operación fragmentada, además de participar en la integración mediante Git Flow. También contribuí en la definición de segmentos, User Stories, Product Backlog y diseño de la Landing Page.<br>**Rudas Chavarria, Jose Gabriel**<br>Lideré US003 y US007, definiendo el camino del hotel independiente, el plan Free, el contenido de producto y equipo, y la sección de soporte, y participé en la integración mediante Git Flow. También contribuí al análisis competitivo y a la definición del problema, assumptions e hipótesis de Lean UX.<br>**Santana Luna, José Antonio**<br>Lideré US005 y US008, definiendo los beneficios de operaciones conectadas, el flujo operativo y las variantes de idioma de la Landing Page. También participé en la documentación colaborativa de entrevistas, arquitectura y gestión del proyecto.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>Lideré la actualización de las entrevistas después de AV1: incorporé la entrevista a Domínguez en el primer segmento, enlacé la grabación de Roy Ríos y lo moví al segundo segmento, y reescribí el análisis del primer segmento. También trasladé el informe al repositorio de Team Coworkers con la nueva conformación del equipo.<br>**Flores Rios, Juan Diego**<br>Adapté al stack del curso las convenciones de nomenclatura del informe, alineándolas con Angular y Spring Boot, y referencié las guías tecnológicas que exige el enunciado. También incorporé los diagramas de diseño del producto.<br>**Leon Naupari, Jorge Mateo**<br>Lideré el port de la Frontend Web Application a Angular: configuré el workspace con Angular Material y ngx-translate e implementé los seis bounded contexts, con 52 commits en `hostera-frontend`. En el informe reemplacé la guía de servicios por Spring Boot y agregué los flujos y mock-ups de la aplicación.<br>**Rudas Chavarria, Jose Gabriel**<br>Documenté el port a Angular en los ADR, el diagrama de clases y la trazabilidad de user stories del repositorio del frontend. En el informe alineé la arquitectura de servicios con Spring Boot y especifiqué las prácticas de Angular y TypeScript.<br>**Santana Luna, José Antonio**<br>Lideré el despliegue de la Frontend Web Application en GitHub Pages con su API de demostración, las vistas de registro e inicio de sesión, el servicio externo de feriados, las pruebas unitarias y las versiones `v0.4.0` y `v0.5.0` de la Landing Page. En el informe redacté las correcciones de TB1 y el Sprint 2.<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Mi conclusión es que mi participación combinó liderazgo funcional y documentación técnica, ayudando a mantener alineadas las responsabilidades del equipo y la evolución del producto.<br>**Flores Rios, Juan Diego**<br>Mi conclusión es que mi trabajo conectó la estrategia del producto con una experiencia clara para cadenas pequeñas y grupos hoteleros.<br>**Leon Naupari, Jorge Mateo**<br>Mi conclusión es que mi liderazgo combinó coordinación y ejecución técnica, facilitando que el equipo avanzara de forma integrada desde el análisis hasta la implementación.<br>**Rudas Chavarria, Jose Gabriel**<br>Mi conclusión es que mi trabajo conectó el análisis del usuario con una experiencia concreta para hoteles independientes y con el contenido que sustenta la propuesta.<br>**Santana Luna, José Antonio**<br>Mi conclusión es que mi trabajo conectó los beneficios operativos con un flujo comprensible y una base técnica para continuar el producto.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>Mi conclusión es que corregir las entrevistas con sus grabaciones y su segmento correcto dio al equipo una base verificable para el resto del análisis.<br>**Flores Rios, Juan Diego**<br>Mi conclusión es que alinear las convenciones con el stack del curso evita que el diseño y el código usen nombres distintos para lo mismo.<br>**Leon Naupari, Jorge Mateo**<br>Mi conclusión es que portar la aplicación por bounded context permitió avanzar cada contexto de forma independiente sin perder la estructura del dominio.<br>**Rudas Chavarria, Jose Gabriel**<br>Mi conclusión es que documentar las decisiones del port deja al equipo un registro claro para continuar con los Web Services.<br>**Santana Luna, José Antonio**<br>Mi conclusión es que publicar la aplicación con datos, pruebas y releases hace verificable lo que el equipo construyó en el sprint.<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** |
+| Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos. | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Definí y organicé las tareas del Sprint 1 para US002, descomponiendo la navegación primaria y secundaria, la página de términos y el menú móvil. También elaboré evidencias de desarrollo, ejecución y despliegue, y documenté arquitectura, convenciones y prototipos para contribuir al cumplimiento de las ocho User Stories y la publicación de la Landing Page.<br>**Flores Rios, Juan Diego**<br>Definí y organicé las tareas del Sprint 1 para US004 y US006, descomponiendo el camino de la cadena pequeña, la comparación de planes y las acciones de cierre. Además documenté User Stories y servicios de inventario, elaboré mockups de alta fidelidad y contribuí al Impact Mapping y a los sistemas de búsqueda y organización.<br>**Leon Naupari, Jorge Mateo**<br>Definí el objetivo y la métrica del sprint, organicé el backlog y las tareas de US001, y contribuí al cumplimiento de 8/8 User Stories y al despliegue en GitHub Pages. Además, documenté estándares, estructura del informe y evidencias del proceso.<br>**Rudas Chavarria, Jose Gabriel**<br>Definí las tareas y artefactos de US003 y US007; elaboré wireframes y wireflows, documenté User Stories y servicios de habitaciones, y aporté al diseño de la solución.<br>**Santana Luna, José Antonio**<br>Definí las tareas y artefactos de US005 y US008; documenté entrevistas y su análisis, servicios de RFID y reporting, diagramas de arquitectura y la configuración de los repositorios.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>Registré en el changelog cada corrección de las entrevistas y actualicé la evidencia de colaboración de AV1, para que el equipo pudiera seguir qué cambió y por qué.<br>**Flores Rios, Juan Diego**<br>Propuse una organización del repositorio del informe con una descripción del proyecto y las instrucciones para generar el PDF.<br>**Leon Naupari, Jorge Mateo**<br>Planifiqué el port en ramas separadas por contexto (configuración, overview, bookings, rooms, inventory y access control) e integré cada una en `develop` mediante pull requests.<br>**Rudas Chavarria, Jose Gabriel**<br>Preparé la guía del repositorio y del PDF del informe, y agregué la evidencia de implementación y colaboración.<br>**Santana Luna, José Antonio**<br>Planifiqué el Sprint 2 en el informe con su objetivo, métrica y backlog, publiqué las releases con sus notas y agregué el workflow que ejecuta las pruebas en cada push.<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** | **AV1**<br>**Cuba Vega, Darnell Yadir**<br>Mi conclusión es que la planificación y la documentación que realicé hicieron trazable el trabajo del sprint y ayudaron a convertir el backlog en una entrega publicada.<br>**Flores Rios, Juan Diego**<br>Mi conclusión es que los artefactos de impacto, diseño e inventario facilitaron una visión trazable de las necesidades y funcionalidades.<br>**Leon Naupari, Jorge Mateo**<br>Mi conclusión es que mi trabajo ayudó a convertir objetivos y tareas compartidas en artefactos trazables y una entrega funcional.<br>**Rudas Chavarria, Jose Gabriel**<br>Mi conclusión es que los artefactos que elaboré hicieron más clara y trazable la transición desde las necesidades hasta la implementación.<br>**Santana Luna, José Antonio**<br>Mi conclusión es que la documentación de investigación, arquitectura y configuración hizo más trazable la evolución del proyecto.<br><br>**TB1**<br>**Cuba Vega, Darnell Yadir**<br>Mi conclusión es que dejar registrado cada cambio facilita revisar el trabajo de otros y corregirlo a tiempo.<br>**Flores Rios, Juan Diego**<br>Mi conclusión es que una guía de repositorio clara reduce los errores al generar los entregables.<br>**Leon Naupari, Jorge Mateo**<br>Mi conclusión es que integrar por contexto y con pull requests hizo revisable un cambio grande.<br>**Rudas Chavarria, Jose Gabriel**<br>Mi conclusión es que la guía del PDF permite que cualquier integrante genere el entregable con el mismo resultado.<br>**Santana Luna, José Antonio**<br>Mi conclusión es que planificar con métricas y automatizar las pruebas da al equipo una forma objetiva de saber si cumplió el sprint.<br><br>**AV2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio**<br><br>**TB2**<br>**Cuba Vega, Darnell Yadir**<br>**Flores Rios, Juan Diego**<br>**Leon Naupari, Jorge Mateo**<br>**Rudas Chavarria, Jose Gabriel**<br>**Santana Luna, José Antonio** |
 
 # Capítulo I: Introducción
 
@@ -663,7 +710,7 @@ Como contexto del mercado peruano, el Ministerio de Comercio Exterior y Turismo
 hospedaje, 329 340 habitaciones y 567 292 plazas-cama. El 85,1 % de los
 establecimientos no estaba categorizado y el 14,9 % estaba categorizado. Durante el
 mismo año se registraron 57,6 millones de arribos, de los cuales el 88,4 % correspondió
-a visitantes nacionales [4]. Estas cifras muestran la amplitud y diversidad del
+a visitantes nacionales (Ministerio de Comercio Exterior y Turismo [MINCETUR], 2025). Estas cifras muestran la amplitud y diversidad del
 sector, pero no clasifican directamente los establecimientos según propiedad
 independiente o pertenencia a una cadena.
 
@@ -687,7 +734,7 @@ Entre sus características relevantes se encuentran las siguientes:
 
 La importancia de este segmento se relaciona con la composición de la oferta peruana:
 MINCETUR registró que el 85,1 % de los establecimientos de hospedaje no estaba
-categorizado en 2024 [4]. Este indicador describe la estructura de categorización del
+categorizado en 2024 (MINCETUR, 2025). Este indicador describe la estructura de categorización del
 sector y no demuestra por sí solo que todos esos establecimientos sean independientes.
 Las entrevistas muestran el perfil del segmento: Domínguez (`E1`) administra un hotel
 independiente en Lima con un sistema de reservas apoyado en hojas de Excel, y Otto Cuba
@@ -722,7 +769,7 @@ las franquicias de gran tamaño.
 Este segmento se relaciona con la concentración geográfica de la oferta hotelera
 peruana. En 2024, Lima concentró el 27,6 % de los establecimientos de hospedaje,
 seguida por Cusco (8,1 %), Arequipa (5,9 %), Junín (5,7 %) y La Libertad (4,6 %); estas
-cinco regiones reunieron el 52,0 % de la oferta nacional [4]. La concentración no
+cinco regiones reunieron el 52,0 % de la oferta nacional (MINCETUR, 2025). La concentración no
 confirma por sí misma la existencia de cadenas pequeñas, pero evidencia un contexto
 en el que la coordinación entre sedes es relevante. Las entrevistas lo confirman: Odar
 Quispe (`E3`) dedica alrededor de cuarenta minutos diarios a consolidar a mano la
@@ -1876,7 +1923,7 @@ El Product Backlog puede consultarse en el tablero de YouTrack del proyecto (htt
 
 El sistema de diseño de Hostera centraliza las decisiones visuales que deben
 mantenerse en el Landing Page y en las aplicaciones web. La propuesta adopta
-Material Design 3 (M3) [10] y lo adapta a la identidad de Hostera mediante tokens de
+Material Design 3 (M3) (Google, s.f.-e) y lo adapta a la identidad de Hostera mediante tokens de
 color, tipografía, espaciado, forma y elevación compartidos.
 
 ### 4.1.1. General Style Guidelines
@@ -2014,7 +2061,7 @@ Las interfaces de Hostera se diseñan como una única experiencia web responsive
 se ejecuta en el navegador. Las vistas de escritorio, tablet y móvil comparten la
 misma estructura semántica, componentes y jerarquía de acciones; únicamente cambia
 su distribución según el ancho disponible. Los estándares visuales y de interacción
-siguen los estados de Material Design 3 [10].
+siguen los estados de Material Design 3 (Google, s.f.-e).
 
 #### Responsive layout
 
@@ -2098,7 +2145,7 @@ el único medio para comunicar un cambio. Cuando el navegador indique
 #### Accessibility and input methods
 
 Hostera toma como referencia WCAG 2.2 (*Web Content Accessibility Guidelines 2.2*)
-[11] para mantener interfaces perceptibles, operables y comprensibles. Los criterios
+(World Wide Web Consortium [W3C], 2024) para mantener interfaces perceptibles, operables y comprensibles. Los criterios
 se aplican tanto a la interacción mediante puntero como al teclado y a la pantalla
 táctil.
 
@@ -3791,30 +3838,11 @@ ejemplo: `feat(iam): add the sign-in and sign-up views` o
 `docs(interviews): record the six video interviews by segment`. Los merges usan
 `merge(develop): <descripción>` y `merge(main): release <versión>`.
 
-Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
-`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
-`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
-imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
-ejemplo: `feat(iam): add the sign-in and sign-up views` o
-`docs(interviews): record the six video interviews by segment`. Los merges usan
-`merge(develop): <descripción>` y `merge(main): release <versión>`.
-
-Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
-`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
-`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
-imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
-ejemplo: `feat(iam): add the sign-in and sign-up views` o
-`docs(interviews): record the six video interviews by segment`. Los merges usan
-`merge(develop): <descripción>` y `merge(main): release <versión>`.
-
 Los releases utilizan [Semantic Versioning 2.0.0](https://semver.org/):
 `MAJOR.MINOR.PATCH`. Cada release se integra en `main` con `--no-ff`, se etiqueta con
 un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
-detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
-un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
-detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
-un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
-detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. El primer componente mayor permanece en `0` mientras el
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog.
+El primer componente mayor permanece en `0` mientras el
 producto se encuentre en desarrollo inicial; durante esta fase, los cambios
 incompatibles incrementan el componente minor, y las funcionalidades compatibles o
 las correcciones se registran de acuerdo con la política de releases del proyecto.
@@ -3904,28 +3932,6 @@ nombrarán en `PascalCase`; las propiedades y los métodos, en `camelCase`; y lo
 observables podrán utilizar el sufijo `$`. Los componentes se enfocarán en la
 presentación, mientras que la lógica reutilizable y el acceso a datos se mantendrán en
 servicios. Se evitará colocar lógica de negocio extensa directamente en las plantillas.
-Las interfaces se construyen con los componentes de Angular Material y el formato del
-código lo fija Prettier (comillas simples y punto y coma en TypeScript).
-
-#### Internacionalización y accesibilidad
-
-Los tres productos usan inglés como idioma por defecto y ofrecen español
-latinoamericano, con los códigos `en` y `es-419`. En la Landing Page, cada texto tiene
-un atributo `data-i18n` y sus traducciones viven en un archivo por idioma; al cambiar de
-idioma se actualizan el atributo `lang` del documento y los metadatos. En la Frontend
-Web Application, los mensajes se organizan en `src/locales/<idioma>/<contexto>/` y se
-cargan con ngx-translate; `I18nService` cambia el idioma, el atributo `lang` del
-documento y los formatos de fecha y moneda. Ningún texto visible se escribe directamente
-en el código: todo pasa por una clave de traducción. Los RESTful Web Services devolverán
-sus mensajes de error en inglés y en español latinoamericano según la cabecera
-`Accept-Language`.
-
-La accesibilidad sigue las pautas WCAG 2.2. Los elementos interactivos tienen nombre
-accesible mediante `aria-label` o `aria-labelledby`, los mensajes de estado usan
-`role="status"` o `aria-live="polite"`, el enlace de la navegación activa lleva
-`aria-current="page"` y los íconos decorativos se ocultan con `aria-hidden="true"`. Al
-cierre de TB1 la Landing Page tiene 68 atributos ARIA y la Frontend Web Application,
-210.
 Las interfaces se construyen con los componentes de Angular Material y el formato del
 código lo fija Prettier (comillas simples y punto y coma en TypeScript).
 
@@ -4630,6 +4636,10 @@ por bounded context; por eso tres mensajes mencionan la tecnología anterior.
 | [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `release/0.5.0` | [`d9cf58f`](https://github.com/Team-Coworkers/landing-page-main/commit/d9cf58f01abccdde60b16a41afe3baef96697171) | chore(release): prepare 0.5.0 | — | 2026-10-08 |
 | [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/segment-cta-app-views` | [`5061ae1`](https://github.com/Team-Coworkers/landing-page-main/commit/5061ae145c966242f7cd858ab04ac4266902cb35) | feat(landing): open each segment's view in the web application | The project statement asks each segment's call-to-action to open the corresponding view of the web application. The independent-hotel path, the Starter plan and the closing… | 2026-10-08 |
 
+<img src="assets/chapter-5/sprint-2-frontend-commits.png" alt="Historial de commits de la rama develop de hostera-frontend en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.8. Últimos commits de la rama `develop` de `hostera-frontend` en GitHub.*
+
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
 Al cierre del Sprint 2 la Frontend Web Application está publicada en
@@ -4641,13 +4651,17 @@ propiedades.
 **Landing Page v0.5.0.** La página presenta los planes con sus precios y la calculadora
 del plan Professional, y cada camino por segmento abre su vista en la aplicación.
 
+<img src="assets/chapter-5/sprint-2-landing-segments.png" alt="Caminos por segmento de la Landing Page con sus llamadas a la acción" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.9. Caminos por segmento de la Landing Page; cada llamada a la acción abre su vista en la aplicación.*
+
 <img src="assets/chapter-5/sprint-2-landing-pricing.png" alt="Planes Starter, Professional y Enterprise de la Landing Page con la calculadora" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-*Figura 5.8. Planes de la Landing Page v0.5.0 con el estimado del plan Professional.*
+*Figura 5.10. Planes de la Landing Page v0.5.0 con el estimado del plan Professional.*
 
 <img src="assets/chapter-5/sprint-2-landing-sales.png" alt="Página de contacto comercial de la Landing Page" style="display:block; width:65%; height:auto; margin:0 auto;"/>
 
-*Figura 5.9. Página de contacto comercial para grupos hoteleros.*
+*Figura 5.11. Página de contacto comercial para grupos hoteleros.*
 
 **Registro con plan e inicio de sesión.** El CTA del segmento de cadenas pequeñas abre
 el registro con el plan Professional seleccionado y su estimado mensual; el enlace
@@ -4656,49 +4670,49 @@ términos y condiciones.
 
 <img src="assets/chapter-5/sprint-2-web-app-sign-up.png" alt="Vista de registro con el plan Professional seleccionado" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-*Figura 5.10. Registro con el plan Professional abierto desde la Landing Page.*
+*Figura 5.12. Registro con el plan Professional abierto desde la Landing Page.*
 
 <img src="assets/chapter-5/sprint-2-web-app-sign-in.png" alt="Vista de inicio de sesión de Hostera" style="display:block; width:65%; height:auto; margin:0 auto;"/>
 
-*Figura 5.11. Inicio de sesión de la aplicación.*
+*Figura 5.13. Inicio de sesión de la aplicación.*
 
 **Panorama operativo.** Muestra los ingresos y la ocupación de la propiedad activa, el
 resumen de las propiedades, las llegadas del día y el estado de las habitaciones.
 
 <img src="assets/chapter-5/sprint-2-web-app-overview.png" alt="Panorama operativo de la propiedad activa" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.12. Panorama operativo de la propiedad activa.*
+*Figura 5.14. Panorama operativo de la propiedad activa.*
 
 **Reservas.** Lista las reservas de la propiedad con su estadía, habitación, estado y
 estado de pago, con búsqueda y filtros.
 
 <img src="assets/chapter-5/sprint-2-web-app-bookings.png" alt="Listado de reservas con su estado y pago" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.13. Listado de reservas de la propiedad.*
+*Figura 5.15. Listado de reservas de la propiedad.*
 
 **Habitaciones.** La disponibilidad semanal marca los feriados obtenidos de Nager.Date;
 el 8 de octubre aparece el feriado del Combate de Angamos.
 
 <img src="assets/chapter-5/sprint-2-web-app-rooms.png" alt="Disponibilidad semanal de habitaciones con el feriado marcado" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.14. Disponibilidad semanal con el feriado del 8 de octubre obtenido de Nager.Date.*
+*Figura 5.16. Disponibilidad semanal con el feriado del 8 de octubre obtenido de Nager.Date.*
 
 **Inventario y control de accesos.**
 
 <img src="assets/chapter-5/sprint-2-web-app-inventory.png" alt="Listado de artículos de inventario con su condición de stock" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.15. Artículos de inventario con su condición de stock.*
+*Figura 5.17. Artículos de inventario con su condición de stock.*
 
 <img src="assets/chapter-5/sprint-2-web-app-access-control.png" alt="Listado de credenciales RFID con su vigencia y estado" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.16. Credenciales RFID de huéspedes y personal.*
+*Figura 5.18. Credenciales RFID de huéspedes y personal.*
 
 **Diseño responsive.** En un navegador móvil la navegación lateral se oculta y las tablas
 pasan a listas.
 
 <img src="assets/chapter-5/sprint-2-web-app-mobile.png" alt="Listado de reservas en un navegador móvil" style="display:block; width:30%; height:auto; margin:0 auto;"/>
 
-*Figura 5.17. Listado de reservas en un navegador móvil.*
+*Figura 5.19. Listado de reservas en un navegador móvil.*
 
 **Video de navegación.** El video que recorre la aplicación publicada debe grabarse y
 subirse a Microsoft Stream por el equipo; su enlace se agregará en esta sección y en el
@@ -4753,7 +4767,7 @@ Respuesta de ejemplo de `GET /bookings?propertyId=1&_sort=code&_order=desc&_limi
 
 <img src="assets/chapter-5/sprint-2-demo-api-local.png" alt="API de datos de demostración ejecutándose en local con sus 13 recursos" style="display:block; width:60%; height:auto; margin:0 auto;"/>
 
-*Figura 5.18. API de datos de demostración en local con json-server y sus 13 recursos.*
+*Figura 5.20. API de datos de demostración en local con json-server y sus 13 recursos.*
 
 **Servicio externo.** La aplicación consume un único endpoint de Nager.Date:
 
@@ -4777,11 +4791,11 @@ anotado y se publicó como GitHub Release con las notas de su `CHANGELOG.md`.
 
 <img src="assets/chapter-5/sprint-2-github-actions.png" alt="Ejecuciones de los workflows de despliegue y pruebas en GitHub Actions" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.19. Ejecuciones de los workflows de despliegue y de pruebas del frontend.*
+*Figura 5.21. Ejecuciones de los workflows de despliegue y de pruebas del frontend.*
 
 <img src="assets/chapter-5/sprint-2-frontend-releases.png" alt="Releases del repositorio hostera-frontend en GitHub" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.20. Releases de la Frontend Web Application en GitHub.*
+*Figura 5.22. Releases de la Frontend Web Application en GitHub.*
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -4792,7 +4806,7 @@ contribuidores de GitHub solo cuenta la rama `main`.
 
 <img src="assets/chapter-5/sprint-2-commits-by-member.svg" alt="Commits por integrante en el frontend y la Landing Page durante el Sprint 2" style="display:block; width:80%; height:auto; margin:0 auto;"/>
 
-*Figura 5.21. Commits por integrante durante el Sprint 2.*
+*Figura 5.23. Commits por integrante durante el Sprint 2.*
 
 | Integrante | `hostera-frontend` | `landing-page-main` | Aporte principal en el sprint |
 | --- | :---: | :---: | --- |
@@ -4810,138 +4824,183 @@ context de la RESTful API y sus pruebas.
 
 <img src="assets/chapter-5/sprint-2-frontend-contributors.png" alt="Analítico de contribuidores del repositorio hostera-frontend en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-*Figura 5.22. Contribuidores de `hostera-frontend` en GitHub (rama `main`).*
+*Figura 5.24. Contribuidores de `hostera-frontend` en GitHub (rama `main`).*
 
 <img src="assets/chapter-5/sprint-2-landing-contributors.png" alt="Analítico de contribuidores del repositorio landing-page-main en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-*Figura 5.23. Contribuidores de `landing-page-main` en GitHub (rama `main`).*
+*Figura 5.25. Contribuidores de `landing-page-main` en GitHub (rama `main`).*
 
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
-El trabajo realizado permitió convertir la propuesta inicial de Hostera en una
-Landing Page funcional y públicamente accesible. Al cierre del Sprint 1 se
-implementaron las ocho User Stories de `EP001`, con 42 Story Points completados,
-y se publicó la Landing Page mediante GitHub Pages. La entrega comunica la
-propuesta de valor, diferencia los caminos para hoteles independientes, cadenas
-pequeñas y grupos hoteleros, presenta los beneficios y planes de Hostera, y
-ofrece navegación en inglés y español.
+Esta sección recoge lo que dejó el proyecto desde su inicio hasta el cierre de TB1.
+Se organiza por etapas del ciclo de vida del producto, desde la investigación con
+usuarios hasta el despliegue, e incluye lo que se corrigió en cada una.
 
-**Conclusión sobre el Problem Statement.** La Landing Page responde al problema
-identificado al comunicar la necesidad de coordinar reservas, habitaciones,
-inventario y accesos desde una visión común. También hace explícita la promesa de
-Hostera de conectar estas áreas. Sin embargo, esta entrega demuestra la
-comunicación de la solución y no todavía la resolución operativa del problema:
-la reducción de conciliación manual, la actualización de datos, la trazabilidad
-RFID y la coordinación entre sedes deberán comprobarse cuando estén disponibles
-la Web Application, los Web Services y los escenarios de validación.
+### Investigación y needfinding
 
-**Conclusión sobre los segmentos y assumptions.** La estructura de la Landing
-Page refleja los segmentos priorizados en el proyecto: hoteles independientes,
-cadenas pequeñas y grupos hoteleros. Esta decisión permitió organizar una
-experiencia de descubrimiento y orientar cada segmento hacia un siguiente paso.
-No obstante, los supuestos sobre las necesidades, hábitos de trabajo, disposición
-de pago y valor percibido por cada segmento deben mantenerse como hipótesis de
-negocio que se seguirán contrastando durante la evolución del producto. La
-priorización actual ofrece una base coherente para organizar el roadmap y definir
-los siguientes experimentos de producto.
+El equipo registró seis entrevistas en video verificables: dos en el segmento de
+hoteles independientes y cuatro en el de cadenas pequeñas. La primera versión del
+registro asignaba tres entrevistas al segmento equivocado: Otto Cuba, con un solo
+hospedaje, figuraba entre las cadenas, y Odar Quispe y Rafael Prieto, que coordinan
+varias sedes, entre los hoteles independientes. Al reclasificarlas por número de
+establecimientos, el segmento 1 quedó con dos entrevistas, por debajo de las tres que
+pide el enunciado; la tercera es la tarea más urgente de la investigación.
 
-**Conclusión sobre los Hypothesis Statements.** Las hipótesis relacionadas con
-el panel centralizado, la gestión de reservas, el inventario, la trazabilidad RFID
-y la administración de una o varias sedes reciben respaldo inicial en la propuesta
-de valor y en la organización de los recorridos del producto. La Landing Page
-presenta estos beneficios, pero todavía se necesitan la interacción operativa y
-los datos de uso de las aplicaciones para comparar una línea base. Por tanto, los
-umbrales de mejora del 5 % definidos en los Hypothesis Statements permanecen
-pendientes de medición.
+Con las entrevistas bien asignadas, el problema aparece de forma distinta en cada
+segmento. En el segmento 1 la información se rompe dentro de la sede: los dos
+entrevistados concilian parte de su operación en Excel y reconstruyen a mano el estado
+del hotel. En el segmento 2 el costo está en consolidar varias sedes, unos cuarenta
+minutos diarios en la cadena de tres sedes que comparte administración. En los grupos
+donde cada hotel es una empresa distinta, la información se separa a propósito, de modo
+que consolidar solo tiene valor donde la administración es compartida.
 
-| Hypothesis Statement | Resultado al cierre del Sprint 1 | Evidencia necesaria para evaluarlo |
+### Especificación de la solución
+
+El Lean UX se escribió antes de contar con entrevistas: el problem statement usaba la
+plantilla de un producto existente y las hipótesis prometían mejoras del 5 % sin línea
+base. Se rehízo con la plantilla para una iniciativa nueva, y las hipótesis ahora nombran
+a Steven Huarcaya y Anyeli Cárdenas y apuntan a resultados de negocio de Team Coworkers:
+50 suscripciones del plan Starter en cuatro meses, 20 cadenas en el plan Professional en
+seis y una retención mensual del 90 %. El Product Backlog dejó el registro y el inicio de
+sesión después de los flujos operativos, y las user stories describen lo que logra el
+usuario en lugar de la interfaz.
+
+### Diseño del producto
+
+El modelo C4 se rehízo con la notación de c4model.com: una aplicación Angular, una sola
+RESTful API en Spring Boot organizada por bounded context, una base de datos MySQL y tres
+sistemas externos con nombre. Los diagramas de clases siguen las convenciones de Java y
+coinciden con el dominio del frontend, y la base de datos tiene un diagrama por bounded
+context. Ese diseño todavía no se ha probado con usuarios.
+
+### Implementación y despliegue
+
+El Sprint 1 cerró con las ocho user stories de `EP001` y la Landing Page publicada. El
+Sprint 2 dejó publicada la Frontend Web Application `v0.4.0` en GitHub Pages, con 23
+user stories implementadas sobre la API de datos de demostración, las vistas de registro
+e inicio de sesión a las que llevan los CTA de cada segmento, el footer con los términos
+y condiciones, los idiomas `en` y `es-419`, el servicio externo Nager.Date y 28 pruebas
+unitarias ejecutadas en GitHub Actions. La Landing Page llegó a la versión `v0.5.0`.
+
+El código del sprint se concentró en dos integrantes: Jorge Mateo Leon hizo el port a
+Angular y José Santana el despliegue, las nuevas funciones y las pruebas, mientras que
+Darnell Cuba y Juan Diego Flores no registran commits de código. El enunciado exige que
+todos participen en la implementación, las pruebas y el despliegue, de modo que el Sprint
+3 debe repartir los Web Services entre los cinco.
+
+### Estado de las hipótesis al cierre de TB1
+
+Ninguno de los resultados de negocio puede medirse todavía, porque Hostera aún no tiene
+clientes. Por ahora solo hay evidencia del problema que cada hipótesis busca resolver, y
+viene de las entrevistas.
+
+| Hipótesis | Evidencia disponible | Lo que falta medir |
 |---|---|---|
-| Panel administrativo centralizado | La propuesta comunica el valor de una visión común, pero el panel operativo aún forma parte del roadmap. | Web Application funcional, tareas representativas y comparación con una línea base. |
-| Gestión de reservas y disponibilidad | La necesidad está reflejada en la propuesta; faltan los servicios y flujos operativos para medir el resultado. | Escenarios de consulta y actualización, tiempo de tarea e inconsistencias detectadas. |
-| Registro y consulta del inventario | La Landing Page comunica el beneficio de la centralización, mientras que la operación de inventario se implementará posteriormente. | Movimientos registrados, consultas de existencias y pruebas de control. |
-| Control y trazabilidad de accesos RFID | La propuesta reconoce la trazabilidad como capacidad prioritaria; la integración RFID aún no forma parte del Sprint 1. | Eventos relacionados con tarjeta, habitación y usuario, además del tiempo de consulta. |
-| Administración de una o varias sedes | Los caminos y planes de la Landing Page representan distintas escalas; falta comprobar la operación multi-sede. | Escenarios de una y varias sedes sin duplicidad ni pérdida de contexto. |
+| 1. Panel de la propiedad activa | Formarse una visión del hotel exige varios minutos de llamadas y mensajes (E1). | Cuánto tarda un administrador en conocer el estado de su propiedad con la aplicación publicada. |
+| 2. Reservas y disponibilidad sobre un mismo calendario | Las reservas duplicadas se corrigen comparando a mano el sistema con Excel (E1). | Si las reservas duplicadas dejan de ocurrir durante un mes de uso. |
+| 3. Control de existencias por ubicación de almacén | Los faltantes se detectan en el inventario periódico (E1) y las transferencias entre sedes no se registran (E3). | Si las alertas anticipan los faltantes y motivan el cambio al plan Professional. |
+| 4. Reportes por propiedad y cambio de propiedad activa | Consolidar tres sedes toma unos cuarenta minutos diarios (E3); en dos grupos la información se separa a propósito (E5, E6). | Cuánto tarda el consolidado dentro de la plataforma, una vez implementados los reportes (`US031`, `US032`). |
+| 5. Trazabilidad de los accesos con credenciales RFID | No hay un registro centralizado de accesos ni se desactivan las credenciales a tiempo (E3); reconstruir un evento exige preguntar al personal (E1). | Si cada acceso queda asociado a una credencial, una habitación y una persona. Requiere la integración RFID. |
 
-**Conclusión sobre los criterios de éxito.** El criterio de entrega definido para
-el Sprint 1 se cumplió: las ocho User Stories de `EP001` fueron implementadas y
-la Landing Page quedó publicada y accesible. Este resultado confirma el avance de
-implementación del producto y del trabajo colaborativo, pero no sustituye los
-criterios de éxito del Lean UX, que requieren observar tareas reales con
-información centralizada, actualizada y relacionada. Esos indicadores deberán
-medirse después de implementar los productos operativos y realizar las
-evaluaciones de uso correspondientes.
+<div style="page-break-before: always;"></div>
 
-**Recomendaciones para el roadmap.**
+### Recomendaciones para el roadmap
 
-| Prioridad | Siguiente paso recomendado | Resultado esperado |
+| Prioridad | Siguiente paso | Para qué |
 |---:|---|---|
-| 1 | Implementar la primera versión de la Web Application a partir de las User Stories de acceso y operación, comenzando por registro, autenticación, dashboard y navegación operacional (`US009`, `US010`, `US011` y `US033`). | Permitir que un usuario autorizado consulte la operación y conserve el contexto de su propiedad. |
-| 2 | Implementar los Web Services correspondientes y documentar cada endpoint con OpenAPI, incluyendo acciones, verbos HTTP, parámetros y respuestas. | Proporcionar una base verificable para la Web Application y para futuras integraciones. |
-| 3 | Incorporar progresivamente reservas, habitaciones, inventario, reportes y control de accesos RFID con pruebas de escenarios normales y alternativos. | Generar la evidencia necesaria para evaluar las cinco hipótesis y sus metas del 5 %. |
-| 4 | Conectar los CTA de la Landing Page con las experiencias implementadas y desplegar los productos en sus entornos correspondientes. | Mantener una experiencia consistente entre el descubrimiento en la Landing Page y la operación en las aplicaciones. |
-| 5 | Mantener Git Flow, Conventional Commits, documentación en cada repositorio y analíticos de colaboración por sprint. | Conservar trazabilidad de cambios, responsabilidades, integración y evolución del producto. |
+| 1 | Registrar la tercera entrevista del segmento 1 con el mismo protocolo. | Cumplir el mínimo del enunciado y revisar las conclusiones de ese segmento. |
+| 2 | Implementar la RESTful API en Spring Boot con Spring Data JPA y MySQL, documentada con OpenAPI y con pruebas unitarias e integración, repartida entre los cinco integrantes. | Reemplazar los datos de demostración por operaciones persistentes y que todos aporten código. |
+| 3 | Conectar el registro y el inicio de sesión a los endpoints de IAM (`TS001` a `TS003`). | Proteger la información de cada propiedad antes de exponerla. |
+| 4 | Completar los reportes operativos (`US031`, `US032`). | Probar la hipótesis 4 con responsables de cadenas pequeñas. |
+| 5 | Llevar la aplicación publicada a administradores de hotel y medir cuánto tardan en conocer el estado de su propiedad. | Probar la hipótesis 1, la de mayor riesgo. |
+| 6 | Mantener Git Flow, Conventional Commits, releases con notas y el workflow de pruebas. | Conservar la trazabilidad de cada cambio. |
 
-En síntesis, el Sprint 1 logró una primera entrega publicable y coherente con la
-propuesta de Hostera. La principal conclusión del ciclo actual es que la
-comunicación del producto ya puede ser evaluada públicamente, mientras que el
-valor operativo y las hipótesis de negocio todavía requieren implementación y
-validación con usuarios reales.
+Al cierre de TB1, Hostera tiene una Landing Page y una aplicación web publicadas y un
+problema mejor entendido que al inicio del curso, pero ninguna de sus hipótesis se ha
+probado con el producto. La siguiente entrega debe poner la aplicación, ya conectada a su
+propia API, en manos de administradores de hotel y medir lo que hasta ahora solo se
+conoce por las entrevistas.
 
 ## Video About-the-Team
 
-This is program for AV2 (not in AV1)
+El video About-the-Team se presentará en AV2, junto con el video About-the-Product, como
+indica el enunciado del proyecto.
 
 # Bibliografía
 
-[1] Progressa Lean. (2021, 13 de mayo). [_5W+2H: Técnica de análisis de problemas_](https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/).
+<div class="references">
 
-[2] Gothelf, J., & Seiden, J. (2021). _Lean UX: Creating Great Products with Agile Teams_ (3rd ed.). O'Reilly Media.
+Angular. (s.f.-a). _Angular CLI_. Recuperado el 16 de septiembre de 2026, de https://angular.dev/tools/cli
 
-[3] Universidad Peruana de Ciencias Aplicadas. (2021). _Lean & Hypothesis-Driven Development_ [Material de clase].
+Angular. (s.f.-b). _Angular coding style guide_. Recuperado el 16 de septiembre de 2026, de https://angular.dev/style-guide
 
-[4] Ministerio de Comercio Exterior y Turismo. (2025, 6 de junio). [_Perú: Oferta y Demanda de Establecimientos de Hospedaje - Año 2024_](https://www.gob.pe/institucion/mincetur/informes-publicaciones/6844713-informe-peru-oferta-y-demanda-de-establecimientos-de-hospedaje-ano-2024).
+Angular. (s.f.-c). _Angular Material: UI component library_. Recuperado el 8 de octubre de 2026, de https://material.angular.dev/
 
-[5] HotelClick. (s. f.). [_Sistema de Administración y Gestión Hotelera para Perú: Nexus PMS_](https://hotelclick.net.pe/). Recuperado el 4 de septiembre de 2026.
+Brown, S. (s.f.). _The C4 model for visualising software architecture_. Recuperado el 1 de octubre de 2026, de https://c4model.com/diagrams
 
-[6] Montalvo Soluciones Tecnológicas S.A.C. (s. f.). [_Sistema hotelero para hoteles en Perú: PMS con facturación SUNAT — OkFac_](https://okfac.pe/sistema-hotelero-peru). Recuperado el 4 de septiembre de 2026.
+Conventional Commits. (s.f.). _Conventional Commits 1.0.0_. Recuperado el 16 de septiembre de 2026, de https://www.conventionalcommits.org/en/v1.0.0/
 
-[7] SysHotel. (s. f.). [_PMS hotelero en Perú: software de gestión hotelera_](https://syshotel.app/). Recuperado el 4 de septiembre de 2026.
+Driessen, V. (2010). _A successful Git branching model_. https://nvie.com/posts/a-successful-git-branching-model/
 
-[8] Oracle Hospitality. (s. f.). [_What is a Hotel PMS (Property Management System)?_](https://www.oracle.com/ca-en/hospitality/what-is-hotel-pms/). Recuperado el 5 de septiembre de 2026.
+ECMA International. (s.f.). _ECMAScript® language specification_. Recuperado el 16 de septiembre de 2026, de https://tc39.es/ecma262/
 
-[9] STR. (s. f.). [_How to calculate RevPAR_](https://str.com/sites/default/files/The-Ultimate-Guide-to-Hotel-Benchmarking.pdf). Recuperado el 5 de septiembre de 2026.
+Google. (s.f.-a). _Google HTML/CSS style guide_. Recuperado el 16 de septiembre de 2026, de https://google.github.io/styleguide/htmlcssguide.html
 
-[10] Google. (s. f.). [_Material Design 3_](https://m3.material.io/). Recuperado el 5 de septiembre de 2026.
+Google. (s.f.-b). _Google Java style guide_. Recuperado el 8 de octubre de 2026, de https://google.github.io/styleguide/javaguide.html
 
-[11] World Wide Web Consortium. (2024). [_Web Content Accessibility Guidelines (WCAG) 2.2_](https://www.w3.org/TR/WCAG22/). Recuperado el 5 de septiembre de 2026.
+Google. (s.f.-c). _Google JavaScript style guide_. Recuperado el 16 de septiembre de 2026, de https://google.github.io/styleguide/jsguide.html
 
-[12] Driessen, V. (2010). [_A successful Git branching model_](https://nvie.com/posts/a-successful-git-branching-model/). Recuperado el 16 de septiembre de 2026.
+Google. (s.f.-d). _Google TypeScript style guide_. Recuperado el 8 de octubre de 2026, de https://google.github.io/styleguide/tsguide.html
 
-[13] Preston-Werner, T. (s. f.). [_Semantic Versioning 2.0.0_](https://semver.org/). Recuperado el 16 de septiembre de 2026.
+Google. (s.f.-e). _Material Design 3_. Recuperado el 5 de septiembre de 2026, de https://m3.material.io/
 
-[14] Conventional Commits. (s. f.). [_Conventional Commits 1.0.0_](https://www.conventionalcommits.org/en/v1.0.0/). Recuperado el 16 de septiembre de 2026.
+Gothelf, J., & Seiden, J. (2021). _Lean UX: Creating great products with agile teams_ (3a. ed.). O'Reilly Media.
 
-[15] Google. (s. f.). [_Google HTML/CSS Style Guide_](https://google.github.io/styleguide/htmlcssguide.html). Recuperado el 16 de septiembre de 2026.
+HotelClick. (s.f.). _Sistema de administración y gestión hotelera para Perú: Nexus PMS_. Recuperado el 4 de septiembre de 2026, de https://hotelclick.net.pe/
 
-[16] Angular. (s. f.). [_Angular coding style guide_](https://angular.dev/style-guide). Recuperado el 16 de septiembre de 2026.
+JSDoc. (s.f.). _JSDoc documentation_. Recuperado el 16 de septiembre de 2026, de https://jsdoc.app/
 
-[17] Microsoft. (s. f.). [_The TypeScript Handbook_](https://www.typescriptlang.org/docs/handbook/intro.html). Recuperado el 16 de septiembre de 2026.
+Mermaid. (s.f.). _Mermaid: Diagramming and charting tool_. Recuperado el 8 de octubre de 2026, de https://mermaid.js.org/
 
-[18] Angular. (s. f.). [_Angular CLI_](https://angular.dev/tools/cli). Recuperado el 16 de septiembre de 2026.
+Microsoft. (s.f.). _The TypeScript handbook_. Recuperado el 16 de septiembre de 2026, de https://www.typescriptlang.org/docs/handbook/intro.html
 
-[19] JSDoc. (s. f.). [_JSDoc Documentation_](https://jsdoc.app/). Recuperado el 16 de septiembre de 2026.
+Ministerio de Comercio Exterior y Turismo. (2025, 6 de junio). _Perú: Oferta y demanda de establecimientos de hospedaje - Año 2024_. https://www.gob.pe/institucion/mincetur/informes-publicaciones/6844713-informe-peru-oferta-y-demanda-de-establecimientos-de-hospedaje-ano-2024
 
-[20] Mozilla Developer Network. (s. f.). [_JavaScript modules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). Recuperado el 16 de septiembre de 2026.
+Montalvo Soluciones Tecnológicas S.A.C. (s.f.). _Sistema hotelero para hoteles en Perú: PMS con facturación SUNAT | OkFac_. Recuperado el 4 de septiembre de 2026, de https://okfac.pe/sistema-hotelero-peru
 
-[21] ECMA International. (s. f.). [_ECMAScript® Language Specification_](https://tc39.es/ecma262/). Recuperado el 16 de septiembre de 2026.
+Mozilla Developer Network. (s.f.). _JavaScript modules_. Recuperado el 16 de septiembre de 2026, de https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[22] Google. (s. f.). [_Google JavaScript Style Guide_](https://google.github.io/styleguide/jsguide.html). Recuperado el 16 de septiembre de 2026.
+Nager.Date. (s.f.). _Worldwide public holiday API_. Recuperado el 8 de octubre de 2026, de https://date.nager.at/
 
-[23] Oracle. (s. f.). [_Code Conventions for the Java Programming Language: Naming Conventions_](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html). Recuperado el 16 de septiembre de 2026.
+Oracle. (s.f.). _Code conventions for the Java programming language: Naming conventions_. Recuperado el 16 de septiembre de 2026, de https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
 
-[24] Spring. (s. f.). [_Spring Boot Reference Documentation_](https://docs.spring.io/spring-boot/reference/). Recuperado el 16 de septiembre de 2026.
+Oracle Hospitality. (s.f.). _What is a hotel PMS (property management system)?_ Recuperado el 5 de septiembre de 2026, de https://www.oracle.com/ca-en/hospitality/what-is-hotel-pms/
+
+Preston-Werner, T. (s.f.). _Semantic Versioning 2.0.0_. Recuperado el 16 de septiembre de 2026, de https://semver.org/
+
+Progressa Lean. (2021, 13 de mayo). _5W+2H: Técnica de análisis de problemas_. https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/
+
+SpecFlow. (s.f.). _Gherkin conventions for readable specifications_. Recuperado el 8 de octubre de 2026, de https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
+
+Spring. (s.f.-a). _Spring Boot features_. Recuperado el 8 de octubre de 2026, de https://docs.spring.io/spring-boot/reference/features/index.html
+
+Spring. (s.f.-b). _Spring Boot reference documentation_. Recuperado el 16 de septiembre de 2026, de https://docs.spring.io/spring-boot/reference/
+
+STR. (s.f.). _How to calculate RevPAR_. Recuperado el 5 de septiembre de 2026, de https://str.com/sites/default/files/The-Ultimate-Guide-to-Hotel-Benchmarking.pdf
+
+Structurizr. (s.f.). _Structurizr DSL_. Recuperado el 1 de octubre de 2026, de https://docs.structurizr.com/dsl
+
+SysHotel. (s.f.). _PMS hotelero en Perú: Software de gestión hotelera_. Recuperado el 4 de septiembre de 2026, de https://syshotel.app/
+
+Universidad Peruana de Ciencias Aplicadas. (2021). _Lean & hypothesis-driven development_ [Material de clase].
+
+W3Schools. (s.f.). _HTML style guide and coding conventions_. Recuperado el 8 de octubre de 2026, de https://www.w3schools.com/html/html5_syntax.asp
+
+World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 2.2_. https://www.w3.org/TR/WCAG22/
+
+</div>
 
 <div style="page-break-before: always;"></div>
 
@@ -4950,6 +5009,7 @@ This is program for AV2 (not in AV1)
 ## Anexo A. Videos de exposiciones
 
 - **AV1 – Sprint Review – Semana 4.** Exposición del informe y revisión del Sprint 1. [Enlace al video de exposición](https://1drv.ms/f/c/8d4ae682dbad6a14/IgCXbQYBxh5ZQLSHCeblDgTkAbiAPQvF9cBxkcFff5XFl_A?e=BxNv39).
+- **TB1 – Stage Review – Semana 7.** Exposición del informe y revisión del Sprint 2. El enlace se agregará cuando el equipo publique el video en Microsoft Stream.
 
 <div style="page-break-before: always;"></div>
 
@@ -4960,4 +5020,6 @@ This is program for AV2 (not in AV1)
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
+- **Repositorio de la Frontend Web Application.** [hostera-frontend en GitHub](https://github.com/Team-Coworkers/hostera-frontend)
+- **Frontend Web Application desplegada.** [Abrir la aplicación](https://team-coworkers.github.io/hostera-frontend/)
 - **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
