@@ -233,9 +233,24 @@ desde el 18 de septiembre, sin commits de merge.
         - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
         - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
         - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+    - [5.2.2. Sprint 2](#522-sprint-2)
+        - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+        - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+        - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+        - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+        - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+        - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+        - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+        - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+        - [Investigación y needfinding](#investigación-y-needfinding)
+        - [Especificación de la solución](#especificación-de-la-solución)
+        - [Diseño del producto](#diseño-del-producto)
+        - [Implementación y despliegue](#implementación-y-despliegue)
+        - [Estado de las hipótesis al cierre de TB1](#estado-de-las-hipótesis-al-cierre-de-tb1)
+        - [Recomendaciones para el roadmap](#recomendaciones-para-el-roadmap)
     - [Video About-the-Team](#video-about-the-team)
 
 - [Bibliografía](#bibliografía)
@@ -5027,6 +5042,7 @@ World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 
 ## Anexo A. Videos de exposiciones
 
 - **AV1 – Sprint Review – Semana 4.** Exposición del informe y revisión del Sprint 1. [Enlace al video de exposición](https://1drv.ms/f/c/8d4ae682dbad6a14/IgCXbQYBxh5ZQLSHCeblDgTkAbiAPQvF9cBxkcFff5XFl_A?e=BxNv39).
+- **TB1 – Stage Review – Semana 7.** Exposición del informe y revisión del Sprint 2. El enlace se agregará cuando el equipo publique el video en Microsoft Stream.
 
 <div style="page-break-before: always;"></div>
 
@@ -5037,4 +5053,6 @@ World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
+- **Repositorio de la Frontend Web Application.** [hostera-frontend en GitHub](https://github.com/Team-Coworkers/hostera-frontend)
+- **Frontend Web Application desplegada.** [Abrir la aplicación](https://team-coworkers.github.io/hostera-frontend/)
 - **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
