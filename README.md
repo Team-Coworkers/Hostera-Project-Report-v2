@@ -4438,6 +4438,33 @@ de las tarjetas del huésped y al ajuste de existencias del almacén. El registr
 inicio de sesión funcionan sobre los datos de demostración y guardarán las cuentas cuando
 existan los endpoints de IAM de la RESTful API. La evidencia está en la sección 5.2.2.5.
 
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+En el Sprint 2 cada aspecto corresponde a un área de trabajo del sprint. La matriz se
+obtuvo del historial de commits de los repositorios `hostera-frontend`,
+`landing-page-main` y del informe: el líder de cada aspecto es quien concentra sus
+commits, y un colaborador es quien también hizo commits en él.
+
+En la matriz Leadership-and-Collaboration (LACX), `L` representa al líder del aspecto,
+`C` a un colaborador y `N/A` indica que el integrante no participó en ese aspecto.
+
+| Team Member | GitHub Username | Angular Port (six contexts) | Port Documentation | IAM, i18n and Footer | External Service | Deployment and Demo API | Unit Tests and CI | Landing Page v0.4.0 and v0.5.0 | Report Migration |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Cuba Vega, Darnell Yadir | `darnell1910` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | L |
+| Flores Rios, Juan Diego | `YopoFlores` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | C |
+| Leon Naupari, Jorge Mateo | `mateool10` | L | C | N/A | N/A | N/A | N/A | N/A | C |
+| Rudas Chavarria, Jose Gabriel | `josegabriel1604` | N/A | L | N/A | N/A | N/A | N/A | N/A | C |
+| Santana Luna, José Antonio | `JhosBY2005` | C | C | L | L | L | L | L | C |
+
+Jorge Mateo Leon lideró el port de la aplicación a Angular en los seis bounded contexts,
+que es el aspecto con más commits del sprint. Jose Gabriel Rudas lideró la documentación
+del port. José Santana lideró el despliegue, la API de demostración, las vistas de IAM,
+la internacionalización, el servicio externo, las pruebas y las nuevas versiones de la
+Landing Page. Darnell Cuba lideró la migración del informe al repositorio de Team
+Coworkers, en la que colaboraron los demás integrantes. Darnell Cuba y Juan Diego Flores
+no registran commits en el código de la aplicación ni de la Landing Page durante este
+sprint, lo que se analiza en la sección 5.2.2.8.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
