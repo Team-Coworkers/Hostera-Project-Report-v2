@@ -3667,14 +3667,53 @@ completarán cuando dichos artefactos estén disponibles.
 Las siguientes herramientas forman parte del entorno actual de colaboración. Las
 herramientas SaaS se utilizan mediante sus aplicaciones web oficiales, mientras que
 las herramientas locales se instalan desde sus canales oficiales de distribución.
+Se agrupan por el tipo de actividad que cumplen en el ciclo de vida del producto:
+gestión del proyecto y de los requisitos, diseño UX/UI, desarrollo, despliegue y
+documentación. Las herramientas marcadas para AV2 corresponden a los RESTful Web
+Services, que se implementan en el Sprint 3.
+
+**Project Management y Requirements Management**
 
 | Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
 | --- | --- | --- | --- |
-| GitHub | Aloja el repositorio del equipo, los repositorios de producto, los issues y el historial de revisiones. | [Repositorio del equipo Team Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
-| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
-| Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | — | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
-| UXPressia | Elabora los artefactos de impact mapping utilizados para relacionar objetivos, actores, impactos e historias de usuario. | — | Los diagramas exportados se versionan junto con el informe cuando se utilizan como evidencia. |
-| Pandoc | Convierte `README.md` y sus recursos locales en el entregable PDF. | Instalación local; la configuración y ejecución están documentadas en `README.md`. | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` permanece sin seguimiento. |
+| YouTrack | Gestiona el Product Backlog, los sprints y el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
+| GitHub | Aloja la organización del equipo, los repositorios de producto y del informe, y su historial. | [Organización Team-Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
+| Git | Controla las versiones locales del informe y de cada producto, y ejecuta el modelo de ramas del equipo. | Instalación local desde [git-scm.com](https://git-scm.com/). | Cada integrante configura su nombre y su correo antes de su primer commit. |
+
+**Product UX/UI Design**
+
+| Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
+| --- | --- | --- | --- |
+| UXPressia | Elabora las User Personas, los journey maps, los empathy maps y el impact mapping. | [uxpressia.com](https://uxpressia.com/) | Las exportaciones se versionan en `assets/chapter-2/` y `assets/chapter-3/` del repositorio del informe. |
+| Paper | Elabora el Design System, los wireframes y los mock-ups de la Landing Page y de la aplicación web. | [paper.design](https://paper.design/) | Los componentes y tokens se mantienen en el archivo compartido de Hostera y se exportan como imágenes al informe. |
+| FigJam | Elabora los wireflow diagrams que conectan las pantallas con los recorridos de usuario. | [figma.com/figjam](https://www.figma.com/figjam/) | Cada recorrido se exporta como imagen independiente en `assets/chapter-4/`. |
+| Structurizr DSL | Describe como código el modelo C4 de Hostera: sistema, contenedores, componentes y vistas. | [docs.structurizr.com/dsl](https://docs.structurizr.com/dsl) | `docs/hostera-structurizr.dsl` es la fuente del modelo; las vistas se versionan como SVG en `assets/chapter-4/`. |
+| Mermaid | Elabora como código los diagramas de clases y de base de datos de cada bounded context. | [mermaid.js.org](https://mermaid.js.org/) | Las fuentes se versionan en `docs/diagrams/` y se exportan como SVG en `assets/chapter-4/`. |
+
+**Software Development**
+
+| Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
+| --- | --- | --- | --- |
+| JetBrains WebStorm | Edita el código de la Landing Page y de la Frontend Web Application. | Instalación local desde [jetbrains.com/webstorm](https://www.jetbrains.com/webstorm/). | La carpeta `.idea/` se excluye del control de versiones; el formato del código lo fija Prettier. |
+| Node.js y npm | Ejecutan Angular CLI, las pruebas y la API de datos de demostración. | Instalación local desde [nodejs.org](https://nodejs.org/) (versión LTS 22). | Las dependencias se declaran en `package.json` y `package-lock.json` se conserva en el control de versiones. |
+| Angular CLI | Crea, ejecuta, prueba y compila la Frontend Web Application (Angular 19 con Angular Material). | [angular.dev/tools/cli](https://angular.dev/tools/cli) | `npm start` levanta el servidor de desarrollo, `npm test` ejecuta las pruebas y `npm run build:pages` compila para GitHub Pages. |
+| Prettier | Da formato uniforme al código TypeScript, HTML y CSS del frontend. | [prettier.io](https://prettier.io/) | `npm run format:check` verifica el formato antes de cada commit. |
+| Jasmine y Karma | Ejecutan las pruebas unitarias de la Frontend Web Application. | [angular.dev/guide/testing](https://angular.dev/guide/testing) | Cada archivo `.spec.ts` está junto a la clase que prueba; el workflow `test.yml` las ejecuta en cada push. |
+| json-server | Expone la API de datos de demostración mientras los RESTful Web Services no están implementados. | [github.com/typicode/json-server](https://github.com/typicode/json-server) | Los datos se versionan como un archivo JSON por recurso en `server/data/`; `server/build-db.js` los reúne en `server/db.json`, que no se versiona. |
+| IntelliJ IDEA (AV2) | Edita y depura los RESTful Web Services en Java y Spring Boot. | Instalación local desde [jetbrains.com/idea](https://www.jetbrains.com/idea/). | La configuración del proyecto se toma del `pom.xml`; la carpeta `.idea/` no se versiona. |
+| OpenJDK 21 y Maven (AV2) | Compilan, prueban y empaquetan los RESTful Web Services. | [openjdk.org](https://openjdk.org/) y [maven.apache.org](https://maven.apache.org/) | La versión de Java y las dependencias de Spring Boot se fijan en el `pom.xml`; se usa el Maven Wrapper del proyecto. |
+| MySQL 8 (AV2) | Provee la base de datos relacional de la solución. | [dev.mysql.com/doc](https://dev.mysql.com/doc/) | El esquema se genera desde las entidades JPA; las credenciales se leen desde variables de entorno. |
+| Postman (AV2) | Verifica manualmente los endpoints de los RESTful Web Services. | [postman.com](https://www.postman.com/) | Las colecciones se exportan al repositorio de Web Services para que cualquier integrante reproduzca las pruebas. |
+
+**Software Deployment y Software Documentation**
+
+| Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
+| --- | --- | --- | --- |
+| GitHub Pages | Publica la Landing Page y la Frontend Web Application. | [team-coworkers.github.io](https://team-coworkers.github.io/landing-page-main/) | La configuración de cada producto se detalla en la sección 5.1.4. |
+| GitHub Actions | Construye, prueba y despliega la Frontend Web Application. | [docs.github.com/actions](https://docs.github.com/actions) | Los workflows `deploy-pages.yml` y `test.yml` se versionan en `.github/workflows/` del repositorio del frontend. |
+| Render | Alternativa para publicar la API de datos de demostración como servicio web. | [render.com](https://render.com/) | El Blueprint `render.yaml` del repositorio del frontend define el servicio. |
+| Microsoft Stream | Aloja los videos de exposición, de entrevistas y de demostración del producto. | Cuenta institucional de la UPC en Microsoft 365. | Cada video se enlaza desde el informe con su duración y la marca de tiempo en la que inicia el contenido referido. |
+| Pandoc y WeasyPrint | Convierten `README.md` y sus recursos locales en el entregable PDF. | [pandoc.org](https://pandoc.org/) y [weasyprint.org](https://weasyprint.org/) | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` no se versiona. |
 
 Los repositorios de Landing Page, RESTful Web Services y Frontend Web Applications
 mantendrán una estructura documental común. Cada repositorio incluirá un `README.md`
