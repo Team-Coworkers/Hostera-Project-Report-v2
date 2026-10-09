@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.22.0] - 2026-10-08
+
+Report version 0.7.0, delivered for TB1.
+
+### Added
+
+- Sprint 2 (sections 5.2.2.1 to 5.2.2.8): planning with the Scrum.org sprint goal, leadership and collaboration matrix, backlog, development evidence generated from git, execution, services and deployment evidence, and collaboration insights.
+- C4 model for Angular, Spring Boot and MySQL with a key and one component view per bounded context, regenerated in `docs/hostera-structurizr.dsl`.
+- Class diagrams in Java conventions and one MySQL database diagram per bounded context, as Mermaid sources in `docs/diagrams/`.
+- TB1 sections of Project Report Collaboration Insights and Student Outcome, and the TB1 entries of the annexes.
+
+### Changed
+
+- Interviews reorganized by segment with the six verifiable video interviews, full data tables and a new analysis with two charts.
+- 5W2H, Lean UX problem statement, hypotheses and canvas rewritten on the interview evidence with the new-initiative template.
+- Competitors, Big Picture EventStorming in three stages, Ubiquitous Language, user stories, complete Impact Mapping and a Product Backlog with authentication last.
+- Section 5.1 completed with the tools of every activity, the frontend repository, the statement's style guides, i18n, accessibility and the deployment of the web application.
+- Landing page stories, labels and metadata synced with landing page v0.5.0.
+- Conclusions by life-cycle stage and the bibliography in APA.
+
+### Fixed
+
+- `README.md` is again the main report file, as the statement requires and `scripts/build-pdf.sh` expects.
+
 ## [0.21.0] - 2026-09-19
 
 ### Removed
