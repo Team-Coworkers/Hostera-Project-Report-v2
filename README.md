@@ -4369,6 +4369,75 @@ la mayoría de las ramas reúne commits de más de un integrante. Cada
 contribución queda respaldada por los commits detallados en la evidencia de
 desarrollo del Sprint Review.
 
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+El Sprint 2 se planificó para construir y desplegar la primera versión de la Frontend
+Web Application de Hostera en Angular y publicar una nueva versión de la Landing Page.
+El alcance reúne las user stories de las epics `EP002` a `EP006`: el panorama operativo,
+las reservas, las habitaciones, el inventario y el control de accesos, más el registro y
+el inicio de sesión en su versión de demostración. Los RESTful Web Services corresponden
+a AV2, así que la aplicación trabaja sobre la API de datos de demostración.
+
+| Campo | Resumen |
+| --- | --- |
+| Sprint # | Sprint 2 |
+| Sprint Planning Background | Planificación de la primera versión de la Frontend Web Application en Angular, organizada por bounded context, y de las versiones `v0.4.0` y `v0.5.0` de la Landing Page. |
+| Date | Por confirmar |
+| Time | Por confirmar |
+| Location | Por confirmar |
+| Prepared By | Santana Luna, José Antonio (`JhosBY2005`) |
+| Attendees (to planning meeting) | Por confirmar |
+| Sprint 1 Review Summary | El Sprint 1 cerró con la Landing Page publicada en GitHub Pages y las ocho user stories de `EP001` implementadas (42 story points). Después de AV1, el equipo revisó los artefactos con la rúbrica del curso y corrigió en el informe el Lean UX, las entrevistas, el Impact Mapping, el orden del Product Backlog, el modelo C4 y los diagramas de clases y de base de datos. |
+| Sprint 1 Retrospective Summary | Funcionó trabajar con una rama por historia integrada con Git Flow y repartir las historias entre los cinco integrantes. Como oportunidad de mejora, el historial muestra que el código de la Landing Page se integró en una sola jornada, el 19 de septiembre, en lugar de avanzar de forma continua durante el sprint. |
+| Sprint 2 Goal | Nuestro enfoque está en que el responsable de operaciones de un hotel independiente o de una cadena pequeña pueda entrar desde la Landing Page con el plan de su segmento y llevar en una sola aplicación web publicada las reservas, las habitaciones, el inventario y las credenciales de acceso de la propiedad con la que trabaja. Creemos que esto le permite dejar de reconstruir el estado de su hotel a partir de registros separados. Esto se confirmará cuando, en la aplicación publicada, una persona pueda pasar del plan elegido en la Landing Page al panorama de su propiedad y desde allí registrar una reserva, hacer el check-in con la emisión de las tarjetas del huésped y ajustar las existencias del almacén. |
+| Sprint 2 Goal Metric | El objetivo se considera cumplido cuando ese recorrido se completa en la aplicación desplegada en GitHub Pages con los datos de demostración. Como condición de entrega, las 23 user stories del sprint deben estar implementadas y las pruebas unitarias deben pasar en el workflow de integración. |
+| Sprint 2 Velocity | 117 Story Points comprometidos para el sprint. |
+| Sum of Story Points | 117 Story Points. |
+
+La velocity pasó de 42 a 117 story points porque el Sprint 2 abarca la aplicación
+web completa, organizada en seis áreas que se trabajaron en ramas paralelas, una por
+bounded context. Los datos de la reunión de planificación (fecha, hora, lugar y
+asistentes) quedan por confirmar por el equipo.
+
+Las user stories incluidas en el Sprint 2 son las siguientes. Los story points
+corresponden a la estimación registrada en el Product Backlog.
+
+| User Story ID | User Story | Bounded Context | Story Points | Estado al cierre del sprint |
+| --- | --- | --- | :---: | --- |
+| US011 | Monitor operations across properties | Overview | 8 | Implementada |
+| US033 | Navigate between operational areas | Shared | 3 | Implementada |
+| US012 | Find and review bookings | Bookings | 3 | Implementada |
+| US013 | Create a booking | Bookings | 8 | Implementada |
+| US014 | Review and update a booking | Bookings | 5 | Implementada |
+| US015 | Manage the booking lifecycle | Bookings | 5 | Implementada |
+| US016 | Record a booking payment | Bookings | 3 | Implementada |
+| US017 | Complete guest check-in | Bookings | 8 | Implementada |
+| US018 | Complete guest check-out | Bookings | 5 | Implementada |
+| US019 | Review room availability for a selected date | Rooms | 5 | Implementada |
+| US020 | Create a room | Rooms | 3 | Implementada |
+| US021 | Maintain room information and operational status | Rooms | 5 | Implementada |
+| US022 | Manage room types | Rooms | 5 | Implementada |
+| US023 | Manage rate plans and daily rates | Rooms | 5 | Implementada |
+| US024 | Monitor property inventory | Inventory | 5 | Implementada |
+| US025 | Manage inventory item records | Inventory | 5 | Implementada |
+| US026 | Adjust inventory stock | Inventory | 5 | Implementada |
+| US027 | Manage storage locations | Inventory | 5 | Implementada |
+| US028 | Review and manage RFID credentials | Access Control | 5 | Implementada |
+| US029 | Encode or replace an RFID key card | Access Control | 8 | Implementada |
+| US030 | Review RFID access events | Access Control | 5 | Implementada |
+| US009 | Register a hotel operation | IAM | 5 | Implementada en versión de demostración |
+| US010 | Sign in to Hostera | IAM | 3 | Implementada en versión de demostración |
+| **Total** | **23 user stories** | **Seis bounded contexts** | **117** | **23/23 implementadas** |
+
+Al cierre del sprint, en la aplicación publicada se puede recorrer el flujo que define el
+objetivo: desde la Landing Page se abre el registro con el plan del segmento, y desde el
+panorama de la propiedad se llega al registro de una reserva, al check-in con la emisión
+de las tarjetas del huésped y al ajuste de existencias del almacén. El registro y el
+inicio de sesión funcionan sobre los datos de demostración y guardarán las cuentas cuando
+existan los endpoints de IAM de la RESTful API. La evidencia está en la sección 5.2.2.5.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
