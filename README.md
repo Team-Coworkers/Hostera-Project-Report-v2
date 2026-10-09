@@ -7,12 +7,12 @@
 
 <div class="cover-course-block">
   <div class="cover-code">1ASI0729</div>
-  <div class="cover-course">Diseño de aplicaciones Open Source</div>
+  <div class="cover-course">Desarrollo de Aplicaciones Open Source</div>
   <div class="cover-label">NRC</div>
   <div class="cover-nrc">7737</div>
   <div class="cover-title">Informe del Trabajo Final</div>
   <div class="cover-label">Docente</div>
-  <div class="cover-value">Ivan Robles Fernández</div>
+  <div class="cover-value">Robles Fernández, Iván</div>
   <div class="cover-label">Equipo</div>
   <div class="cover-value">Team Coworkers</div>
   <div class="cover-label">Proyecto</div>
@@ -38,7 +38,7 @@
 </table>
 
 <div class="cover-period">Período 202620</div>
-<div class="cover-date">Septiembre 2026</div>
+<div class="cover-date">Octubre 2026</div>
 
 </div>
 <div class="version-history">
@@ -47,6 +47,7 @@
 
 | Versión |   Fecha    | Autor(es)                                                                                         | Descripción de cambios                                                                                                                                                                  |
 | :-----: | :--------: | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  0.7.0  | 08/10/2026 | José Antonio Santana Luna (`JhosBY2005`) | Versión de TB1. Se corrigieron los artefactos de AV1: las entrevistas se reorganizaron por segmento con sus datos completos y las seis entrevistas verificables, y su análisis se rehízo sobre ellas; el 5W2H y el Lean UX se reescribieron con la plantilla para una iniciativa nueva, hipótesis medibles y un canvas posterior a las personas; se reforzó la diferenciación frente a competidores, el Big Picture EventStorming pasó a tres etapas, se completó el Impact Mapping y el Product Backlog dejó la autenticación al final. Se rehízo el modelo C4 para Angular, Spring Boot y MySQL, los diagramas de clases en convenciones Java y un diagrama de base de datos por bounded context. Se completó la configuración del entorno, del control de código y del despliegue, se sincronizó la Landing Page `v0.5.0` y se agregó el Sprint 2 con la Frontend Web Application `v0.4.0`. Se actualizaron las conclusiones, la bibliografía en APA, el Student Outcome y este registro, y `README.md` volvió a ser el archivo principal del informe. |
 |  0.6.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se alineó el informe con la conformación vigente del equipo: se retiraron los integrantes que ya no participan y se redistribuyeron sus aspectos entre los cinco integrantes actuales. La redistribución se equilibró por story points, dejando la carga entre 18 y 24 puntos por integrante sobre un total de 106. Se actualizaron el Registro de Versiones, el Student Outcome, la matriz de liderazgo y colaboración, el Sprint Backlog y las contribuciones del Sprint 1. |
 |  0.5.0  | 19/09/2026 | José Antonio Santana Luna (`JhosBy2005`) | Se completó la identidad de Team Coworkers en el informe, la guía del repositorio, el changelog y el modelo Structurizr. Se estableció `README.md` como archivo principal del informe según el enunciado, se trasladó la guía del repositorio a `docs/repository-guide.md` y se actualizó la relación de colaboradores autorizados con la conformación vigente del equipo. Se completaron las fotografías de los cinco integrantes en la sección 1.1.2, se retiraron las imágenes de integrantes que ya no forman parte del equipo y se optimizaron los retratos para reducir el peso del repositorio. |
 |  0.4.0  | 19/09/2026 | Darnell Cuba (`darnell1910`) | Se trasladó el informe al repositorio de Team Coworkers y se actualizaron la portada, los integrantes del equipo, sus perfiles y el Student Outcome con la nueva conformación del equipo. |
