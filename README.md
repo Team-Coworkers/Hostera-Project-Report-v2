@@ -695,7 +695,7 @@ Como contexto del mercado peruano, el Ministerio de Comercio Exterior y Turismo
 hospedaje, 329 340 habitaciones y 567 292 plazas-cama. El 85,1 % de los
 establecimientos no estaba categorizado y el 14,9 % estaba categorizado. Durante el
 mismo año se registraron 57,6 millones de arribos, de los cuales el 88,4 % correspondió
-a visitantes nacionales [4]. Estas cifras muestran la amplitud y diversidad del
+a visitantes nacionales (Ministerio de Comercio Exterior y Turismo [MINCETUR], 2025). Estas cifras muestran la amplitud y diversidad del
 sector, pero no clasifican directamente los establecimientos según propiedad
 independiente o pertenencia a una cadena.
 
@@ -719,7 +719,7 @@ Entre sus características relevantes se encuentran las siguientes:
 
 La importancia de este segmento se relaciona con la composición de la oferta peruana:
 MINCETUR registró que el 85,1 % de los establecimientos de hospedaje no estaba
-categorizado en 2024 [4]. Este indicador describe la estructura de categorización del
+categorizado en 2024 (MINCETUR, 2025). Este indicador describe la estructura de categorización del
 sector y no demuestra por sí solo que todos esos establecimientos sean independientes.
 Las entrevistas muestran el perfil del segmento: Domínguez (`E1`) administra un hotel
 independiente en Lima con un sistema de reservas apoyado en hojas de Excel, y Otto Cuba
@@ -754,7 +754,7 @@ las franquicias de gran tamaño.
 Este segmento se relaciona con la concentración geográfica de la oferta hotelera
 peruana. En 2024, Lima concentró el 27,6 % de los establecimientos de hospedaje,
 seguida por Cusco (8,1 %), Arequipa (5,9 %), Junín (5,7 %) y La Libertad (4,6 %); estas
-cinco regiones reunieron el 52,0 % de la oferta nacional [4]. La concentración no
+cinco regiones reunieron el 52,0 % de la oferta nacional (MINCETUR, 2025). La concentración no
 confirma por sí misma la existencia de cadenas pequeñas, pero evidencia un contexto
 en el que la coordinación entre sedes es relevante. Las entrevistas lo confirman: Odar
 Quispe (`E3`) dedica alrededor de cuarenta minutos diarios a consolidar a mano la
@@ -1908,7 +1908,7 @@ El Product Backlog puede consultarse en el tablero de YouTrack del proyecto (htt
 
 El sistema de diseño de Hostera centraliza las decisiones visuales que deben
 mantenerse en el Landing Page y en las aplicaciones web. La propuesta adopta
-Material Design 3 (M3) [10] y lo adapta a la identidad de Hostera mediante tokens de
+Material Design 3 (M3) (Google, s.f.-e) y lo adapta a la identidad de Hostera mediante tokens de
 color, tipografía, espaciado, forma y elevación compartidos.
 
 ### 4.1.1. General Style Guidelines
@@ -2046,7 +2046,7 @@ Las interfaces de Hostera se diseñan como una única experiencia web responsive
 se ejecuta en el navegador. Las vistas de escritorio, tablet y móvil comparten la
 misma estructura semántica, componentes y jerarquía de acciones; únicamente cambia
 su distribución según el ancho disponible. Los estándares visuales y de interacción
-siguen los estados de Material Design 3 [10].
+siguen los estados de Material Design 3 (Google, s.f.-e).
 
 #### Responsive layout
 
@@ -2130,7 +2130,7 @@ el único medio para comunicar un cambio. Cuando el navegador indique
 #### Accessibility and input methods
 
 Hostera toma como referencia WCAG 2.2 (*Web Content Accessibility Guidelines 2.2*)
-[11] para mantener interfaces perceptibles, operables y comprensibles. Los criterios
+(World Wide Web Consortium [W3C], 2024) para mantener interfaces perceptibles, operables y comprensibles. Los criterios
 se aplican tanto a la interacción mediante puntero como al teclado y a la pantalla
 táctil.
 
@@ -4948,53 +4948,77 @@ indica el enunciado del proyecto.
 
 # Bibliografía
 
-[1] Progressa Lean. (2021, 13 de mayo). [_5W+2H: Técnica de análisis de problemas_](https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/).
+<div class="references">
 
-[2] Gothelf, J., & Seiden, J. (2021). _Lean UX: Creating Great Products with Agile Teams_ (3rd ed.). O'Reilly Media.
+Angular. (s.f.-a). _Angular CLI_. Recuperado el 16 de septiembre de 2026, de https://angular.dev/tools/cli
 
-[3] Universidad Peruana de Ciencias Aplicadas. (2021). _Lean & Hypothesis-Driven Development_ [Material de clase].
+Angular. (s.f.-b). _Angular coding style guide_. Recuperado el 16 de septiembre de 2026, de https://angular.dev/style-guide
 
-[4] Ministerio de Comercio Exterior y Turismo. (2025, 6 de junio). [_Perú: Oferta y Demanda de Establecimientos de Hospedaje - Año 2024_](https://www.gob.pe/institucion/mincetur/informes-publicaciones/6844713-informe-peru-oferta-y-demanda-de-establecimientos-de-hospedaje-ano-2024).
+Angular. (s.f.-c). _Angular Material: UI component library_. Recuperado el 8 de octubre de 2026, de https://material.angular.dev/
 
-[5] HotelClick. (s. f.). [_Sistema de Administración y Gestión Hotelera para Perú: Nexus PMS_](https://hotelclick.net.pe/). Recuperado el 4 de septiembre de 2026.
+Brown, S. (s.f.). _The C4 model for visualising software architecture_. Recuperado el 1 de octubre de 2026, de https://c4model.com/diagrams
 
-[6] Montalvo Soluciones Tecnológicas S.A.C. (s. f.). [_Sistema hotelero para hoteles en Perú: PMS con facturación SUNAT — OkFac_](https://okfac.pe/sistema-hotelero-peru). Recuperado el 4 de septiembre de 2026.
+Conventional Commits. (s.f.). _Conventional Commits 1.0.0_. Recuperado el 16 de septiembre de 2026, de https://www.conventionalcommits.org/en/v1.0.0/
 
-[7] SysHotel. (s. f.). [_PMS hotelero en Perú: software de gestión hotelera_](https://syshotel.app/). Recuperado el 4 de septiembre de 2026.
+Driessen, V. (2010). _A successful Git branching model_. https://nvie.com/posts/a-successful-git-branching-model/
 
-[8] Oracle Hospitality. (s. f.). [_What is a Hotel PMS (Property Management System)?_](https://www.oracle.com/ca-en/hospitality/what-is-hotel-pms/). Recuperado el 5 de septiembre de 2026.
+ECMA International. (s.f.). _ECMAScript® language specification_. Recuperado el 16 de septiembre de 2026, de https://tc39.es/ecma262/
 
-[9] STR. (s. f.). [_How to calculate RevPAR_](https://str.com/sites/default/files/The-Ultimate-Guide-to-Hotel-Benchmarking.pdf). Recuperado el 5 de septiembre de 2026.
+Google. (s.f.-a). _Google HTML/CSS style guide_. Recuperado el 16 de septiembre de 2026, de https://google.github.io/styleguide/htmlcssguide.html
 
-[10] Google. (s. f.). [_Material Design 3_](https://m3.material.io/). Recuperado el 5 de septiembre de 2026.
+Google. (s.f.-b). _Google Java style guide_. Recuperado el 8 de octubre de 2026, de https://google.github.io/styleguide/javaguide.html
 
-[11] World Wide Web Consortium. (2024). [_Web Content Accessibility Guidelines (WCAG) 2.2_](https://www.w3.org/TR/WCAG22/). Recuperado el 5 de septiembre de 2026.
+Google. (s.f.-c). _Google JavaScript style guide_. Recuperado el 16 de septiembre de 2026, de https://google.github.io/styleguide/jsguide.html
 
-[12] Driessen, V. (2010). [_A successful Git branching model_](https://nvie.com/posts/a-successful-git-branching-model/). Recuperado el 16 de septiembre de 2026.
+Google. (s.f.-d). _Google TypeScript style guide_. Recuperado el 8 de octubre de 2026, de https://google.github.io/styleguide/tsguide.html
 
-[13] Preston-Werner, T. (s. f.). [_Semantic Versioning 2.0.0_](https://semver.org/). Recuperado el 16 de septiembre de 2026.
+Google. (s.f.-e). _Material Design 3_. Recuperado el 5 de septiembre de 2026, de https://m3.material.io/
 
-[14] Conventional Commits. (s. f.). [_Conventional Commits 1.0.0_](https://www.conventionalcommits.org/en/v1.0.0/). Recuperado el 16 de septiembre de 2026.
+Gothelf, J., & Seiden, J. (2021). _Lean UX: Creating great products with agile teams_ (3a. ed.). O'Reilly Media.
 
-[15] Google. (s. f.). [_Google HTML/CSS Style Guide_](https://google.github.io/styleguide/htmlcssguide.html). Recuperado el 16 de septiembre de 2026.
+HotelClick. (s.f.). _Sistema de administración y gestión hotelera para Perú: Nexus PMS_. Recuperado el 4 de septiembre de 2026, de https://hotelclick.net.pe/
 
-[16] Angular. (s. f.). [_Angular coding style guide_](https://angular.dev/style-guide). Recuperado el 16 de septiembre de 2026.
+JSDoc. (s.f.). _JSDoc documentation_. Recuperado el 16 de septiembre de 2026, de https://jsdoc.app/
 
-[17] Microsoft. (s. f.). [_The TypeScript Handbook_](https://www.typescriptlang.org/docs/handbook/intro.html). Recuperado el 16 de septiembre de 2026.
+Mermaid. (s.f.). _Mermaid: Diagramming and charting tool_. Recuperado el 8 de octubre de 2026, de https://mermaid.js.org/
 
-[18] Angular. (s. f.). [_Angular CLI_](https://angular.dev/tools/cli). Recuperado el 16 de septiembre de 2026.
+Microsoft. (s.f.). _The TypeScript handbook_. Recuperado el 16 de septiembre de 2026, de https://www.typescriptlang.org/docs/handbook/intro.html
 
-[19] JSDoc. (s. f.). [_JSDoc Documentation_](https://jsdoc.app/). Recuperado el 16 de septiembre de 2026.
+Ministerio de Comercio Exterior y Turismo. (2025, 6 de junio). _Perú: Oferta y demanda de establecimientos de hospedaje - Año 2024_. https://www.gob.pe/institucion/mincetur/informes-publicaciones/6844713-informe-peru-oferta-y-demanda-de-establecimientos-de-hospedaje-ano-2024
 
-[20] Mozilla Developer Network. (s. f.). [_JavaScript modules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). Recuperado el 16 de septiembre de 2026.
+Montalvo Soluciones Tecnológicas S.A.C. (s.f.). _Sistema hotelero para hoteles en Perú: PMS con facturación SUNAT | OkFac_. Recuperado el 4 de septiembre de 2026, de https://okfac.pe/sistema-hotelero-peru
 
-[21] ECMA International. (s. f.). [_ECMAScript® Language Specification_](https://tc39.es/ecma262/). Recuperado el 16 de septiembre de 2026.
+Mozilla Developer Network. (s.f.). _JavaScript modules_. Recuperado el 16 de septiembre de 2026, de https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[22] Google. (s. f.). [_Google JavaScript Style Guide_](https://google.github.io/styleguide/jsguide.html). Recuperado el 16 de septiembre de 2026.
+Nager.Date. (s.f.). _Worldwide public holiday API_. Recuperado el 8 de octubre de 2026, de https://date.nager.at/
 
-[23] Oracle. (s. f.). [_Code Conventions for the Java Programming Language: Naming Conventions_](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html). Recuperado el 16 de septiembre de 2026.
+Oracle. (s.f.). _Code conventions for the Java programming language: Naming conventions_. Recuperado el 16 de septiembre de 2026, de https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
 
-[24] Spring. (s. f.). [_Spring Boot Reference Documentation_](https://docs.spring.io/spring-boot/reference/). Recuperado el 16 de septiembre de 2026.
+Oracle Hospitality. (s.f.). _What is a hotel PMS (property management system)?_ Recuperado el 5 de septiembre de 2026, de https://www.oracle.com/ca-en/hospitality/what-is-hotel-pms/
+
+Preston-Werner, T. (s.f.). _Semantic Versioning 2.0.0_. Recuperado el 16 de septiembre de 2026, de https://semver.org/
+
+Progressa Lean. (2021, 13 de mayo). _5W+2H: Técnica de análisis de problemas_. https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/
+
+SpecFlow. (s.f.). _Gherkin conventions for readable specifications_. Recuperado el 8 de octubre de 2026, de https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
+
+Spring. (s.f.-a). _Spring Boot features_. Recuperado el 8 de octubre de 2026, de https://docs.spring.io/spring-boot/reference/features/index.html
+
+Spring. (s.f.-b). _Spring Boot reference documentation_. Recuperado el 16 de septiembre de 2026, de https://docs.spring.io/spring-boot/reference/
+
+STR. (s.f.). _How to calculate RevPAR_. Recuperado el 5 de septiembre de 2026, de https://str.com/sites/default/files/The-Ultimate-Guide-to-Hotel-Benchmarking.pdf
+
+Structurizr. (s.f.). _Structurizr DSL_. Recuperado el 1 de octubre de 2026, de https://docs.structurizr.com/dsl
+
+SysHotel. (s.f.). _PMS hotelero en Perú: Software de gestión hotelera_. Recuperado el 4 de septiembre de 2026, de https://syshotel.app/
+
+Universidad Peruana de Ciencias Aplicadas. (2021). _Lean & hypothesis-driven development_ [Material de clase].
+
+W3Schools. (s.f.). _HTML style guide and coding conventions_. Recuperado el 8 de octubre de 2026, de https://www.w3schools.com/html/html5_syntax.asp
+
+World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 2.2_. https://www.w3.org/TR/WCAG22/
+
+</div>
 
 <div style="page-break-before: always;"></div>
 
