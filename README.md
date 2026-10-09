@@ -4630,6 +4630,80 @@ por bounded context; por eso tres mensajes mencionan la tecnología anterior.
 | [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `release/0.5.0` | [`d9cf58f`](https://github.com/Team-Coworkers/landing-page-main/commit/d9cf58f01abccdde60b16a41afe3baef96697171) | chore(release): prepare 0.5.0 | — | 2026-10-08 |
 | [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/segment-cta-app-views` | [`5061ae1`](https://github.com/Team-Coworkers/landing-page-main/commit/5061ae145c966242f7cd858ab04ac4266902cb35) | feat(landing): open each segment's view in the web application | The project statement asks each segment's call-to-action to open the corresponding view of the web application. The independent-hotel path, the Starter plan and the closing… | 2026-10-08 |
 
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 2 la Frontend Web Application está publicada en
+https://team-coworkers.github.io/hostera-frontend/ y la Landing Page en
+https://team-coworkers.github.io/landing-page-main/. Las capturas se tomaron de los
+sitios publicados el 8 de octubre de 2026, con los datos de demostración de dos
+propiedades.
+
+**Landing Page v0.5.0.** La página presenta los planes con sus precios y la calculadora
+del plan Professional, y cada camino por segmento abre su vista en la aplicación.
+
+<img src="assets/chapter-5/sprint-2-landing-pricing.png" alt="Planes Starter, Professional y Enterprise de la Landing Page con la calculadora" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.8. Planes de la Landing Page v0.5.0 con el estimado del plan Professional.*
+
+<img src="assets/chapter-5/sprint-2-landing-sales.png" alt="Página de contacto comercial de la Landing Page" style="display:block; width:65%; height:auto; margin:0 auto;"/>
+
+*Figura 5.9. Página de contacto comercial para grupos hoteleros.*
+
+**Registro con plan e inicio de sesión.** El CTA del segmento de cadenas pequeñas abre
+el registro con el plan Professional seleccionado y su estimado mensual; el enlace
+`Sign in` abre el inicio de sesión. Ambas vistas incluyen el footer con el enlace a los
+términos y condiciones.
+
+<img src="assets/chapter-5/sprint-2-web-app-sign-up.png" alt="Vista de registro con el plan Professional seleccionado" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.10. Registro con el plan Professional abierto desde la Landing Page.*
+
+<img src="assets/chapter-5/sprint-2-web-app-sign-in.png" alt="Vista de inicio de sesión de Hostera" style="display:block; width:65%; height:auto; margin:0 auto;"/>
+
+*Figura 5.11. Inicio de sesión de la aplicación.*
+
+**Panorama operativo.** Muestra los ingresos y la ocupación de la propiedad activa, el
+resumen de las propiedades, las llegadas del día y el estado de las habitaciones.
+
+<img src="assets/chapter-5/sprint-2-web-app-overview.png" alt="Panorama operativo de la propiedad activa" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.12. Panorama operativo de la propiedad activa.*
+
+**Reservas.** Lista las reservas de la propiedad con su estadía, habitación, estado y
+estado de pago, con búsqueda y filtros.
+
+<img src="assets/chapter-5/sprint-2-web-app-bookings.png" alt="Listado de reservas con su estado y pago" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.13. Listado de reservas de la propiedad.*
+
+**Habitaciones.** La disponibilidad semanal marca los feriados obtenidos de Nager.Date;
+el 8 de octubre aparece el feriado del Combate de Angamos.
+
+<img src="assets/chapter-5/sprint-2-web-app-rooms.png" alt="Disponibilidad semanal de habitaciones con el feriado marcado" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.14. Disponibilidad semanal con el feriado del 8 de octubre obtenido de Nager.Date.*
+
+**Inventario y control de accesos.**
+
+<img src="assets/chapter-5/sprint-2-web-app-inventory.png" alt="Listado de artículos de inventario con su condición de stock" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.15. Artículos de inventario con su condición de stock.*
+
+<img src="assets/chapter-5/sprint-2-web-app-access-control.png" alt="Listado de credenciales RFID con su vigencia y estado" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.16. Credenciales RFID de huéspedes y personal.*
+
+**Diseño responsive.** En un navegador móvil la navegación lateral se oculta y las tablas
+pasan a listas.
+
+<img src="assets/chapter-5/sprint-2-web-app-mobile.png" alt="Listado de reservas en un navegador móvil" style="display:block; width:30%; height:auto; margin:0 auto;"/>
+
+*Figura 5.17. Listado de reservas en un navegador móvil.*
+
+**Video de navegación.** El video que recorre la aplicación publicada debe grabarse y
+subirse a Microsoft Stream por el equipo; su enlace se agregará en esta sección y en el
+Anexo A cuando esté disponible.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
