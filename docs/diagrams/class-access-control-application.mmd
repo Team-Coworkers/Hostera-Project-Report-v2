@@ -1,0 +1,36 @@
+classDiagram
+    direction LR
+    class CredentialCommandService {
+        +issueGuestKeyCards(IssueGuestKeyCardsCommand) List~Credential~
+        +issueStaffCredential(IssueStaffCredentialCommand) Credential
+        +replaceKeyCard(Long) Credential
+        +revoke(RevokeCredentialCommand) void
+    }
+    class AccessEventQueryService {
+        +find(AccessEventSearchQuery) List~AccessEvent~
+        +record(AccessEventReport) AccessEvent
+    }
+    class CredentialRepository {
+        <<interface>>
+        +findById(Long) Optional~Credential~
+        +findByProperty(Long) List~Credential~
+        +save(Credential) Credential
+    }
+    class StaffMemberRepository {
+        <<interface>>
+        +findByProperty(Long) List~StaffMember~
+    }
+    class AccessEventRepository {
+        <<interface>>
+        +find(AccessEventSearchQuery) List~AccessEvent~
+        +save(AccessEvent) AccessEvent
+    }
+    class RfidEncoder {
+        <<interface>>
+        +encode(Credential) String
+        +erase(String) void
+    }
+    CredentialCommandService ..> CredentialRepository
+    CredentialCommandService ..> StaffMemberRepository
+    CredentialCommandService ..> RfidEncoder
+    AccessEventQueryService ..> AccessEventRepository

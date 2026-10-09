@@ -12,10 +12,10 @@
     <g transform="translate(1190,44)">
       <rect width="206" height="36" rx="8" fill="#FFFFFF" stroke="#C6CFCA"/>
       <text x="12" y="23" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#5B6862">DATE</text>
-      <text x="130" y="23" font-family="monospace" font-size="13" font-weight="700">03.09.26</text>
+      <text x="130" y="23" font-family="monospace" font-size="13" font-weight="700">08.10.26</text>
       <rect y="44" width="206" height="36" rx="8" fill="#FFFFFF" stroke="#C6CFCA"/>
       <text x="12" y="67" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1" fill="#5B6862">ITERATION</text>
-      <text x="174" y="67" font-family="monospace" font-size="13" font-weight="700" fill="#14523E">01</text>
+      <text x="174" y="67" font-family="monospace" font-size="13" font-weight="700" fill="#14523E">02</text>
     </g>
 
     <rect x="40" y="196" width="1360" height="820" rx="12" fill="#FFFFFF" stroke="#0D1613" stroke-width="2"/>
@@ -60,33 +60,33 @@
     </g>
 
     <g font-size="14" fill="#33423B">
-      <text x="62" y="288"><tspan x="62" dy="0">La información de reservas, habitaciones,</tspan><tspan x="62" dy="20">inventario y accesos puede estar distribuida</tspan><tspan x="62" dy="20">entre registros y herramientas independientes.</tspan></text>
-      <text x="62" y="372" fill="#14523E" font-weight="700"><tspan x="62" dy="0">Esto dificulta conocer el estado actualizado,</tspan><tspan x="62" dy="20">conciliar datos y mantener la trazabilidad</tspan><tspan x="62" dy="20">de los eventos.</tspan></text>
+      <text x="62" y="288"><tspan x="62" dy="0">Los hoteles de una a cinco sedes registran la</tspan><tspan x="62" dy="20">reserva en un canal y la operación en otro,</tspan><tspan x="62" dy="20">y concilian esa información a mano.</tspan></text>
+      <text x="62" y="372" fill="#14523E" font-weight="700"><tspan x="62" dy="0">Consolidar a mano toma unos 40 min al</tspan><tspan x="62" dy="20">día en una cadena de tres sedes, y varios</tspan><tspan x="62" dy="20">minutos por consulta en una sede.</tspan></text>
 
-      <text x="62" y="548"><tspan font-weight="700" fill="#14523E">Primary</tspan><tspan x="128">· Administradores y responsables</tspan><tspan x="128" dy="18">de la operación.</tspan></text>
-      <text x="62" y="596"><tspan font-weight="700" fill="#14523E">Operativos</tspan><tspan x="150">· Recepción y almacén.</tspan></text>
-      <text x="62" y="624"><tspan font-weight="700" fill="#14523E">Autorizados</tspan><tspan x="158">· Gestión y supervisión de accesos.</tspan></text>
-      <text x="62" y="652"><tspan font-weight="700" fill="#14523E">Indirectos</tspan><tspan x="146">· Huéspedes beneficiados.</tspan></text>
+      <text x="62" y="548"><tspan font-weight="700" fill="#14523E">Primary</tspan><tspan x="128">· Steven Huarcaya, administrador de un</tspan><tspan x="128" dy="18">hotel independiente de una sede.</tspan></text><text x="62" y="596"><tspan font-weight="700" fill="#14523E">Primary</tspan><tspan x="128">· Anyeli Cárdenas, responsable de</tspan><tspan x="128" dy="18">operaciones de una cadena de 2 a 5 sedes.</tspan></text>
+      <text x="62" y="644"><tspan font-weight="700" fill="#14523E">Operativos</tspan><tspan x="150">· Recepción y almacén.</tspan></text>
+      <text x="62" y="672"><tspan font-weight="700" fill="#14523E">Autorizados</tspan><tspan x="158">· Gestión y supervisión de accesos.</tspan></text>
+      <text x="62" y="700"><tspan font-weight="700" fill="#14523E">Indirectos</tspan><tspan x="146">· Huéspedes beneficiados.</tspan></text>
 
-      <text x="62" y="850" font-size="9" fill="#0D1613"><tspan x="62" dy="0">1. Creemos que un panel centralizado reducirá registros independientes.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más tareas de supervisión.</tspan><tspan x="62" dy="15">2. Creemos que reservas y disponibilidad actualizadas reducirán inconsistencias.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% menos inconsistencias.</tspan><tspan x="62" dy="15">3. Creemos que registrar movimientos mejorará la visibilidad del inventario.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más movimientos consultables.</tspan><tspan x="62" dy="15">4. Creemos que integrar RFID mejorará la trazabilidad de accesos.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más accesos RFID vinculados.</tspan><tspan x="62" dy="15">5. Creemos que gestionar una o varias sedes mantendrá el contexto operativo.</tspan><tspan x="62" dy="15">Sabremos que hemos tenido éxito cuando veamos 5% más tareas correctas multi-sede.</tspan></text>
+      <text x="62" y="850" font-size="9" fill="#0D1613"><tspan x="62" dy="0">1. Creemos que lograremos 50 suscripciones Starter en 4 meses si Steven obtiene</tspan><tspan x="62" dy="15">el estado de su propiedad sin su hoja de cálculo, con el panel de la propiedad.</tspan><tspan x="62" dy="15">2. Creemos que lograremos 90 % de retención con uso 5 días a la semana si</tspan><tspan x="62" dy="15">recepción ve la disponibilidad al atender, con reservas en un mismo calendario.</tspan><tspan x="62" dy="15">3. Creemos que lograremos 10 % de upgrades en 6 meses si Steven recibe la alerta</tspan><tspan x="62" dy="15">de un insumo bajo su umbral, con el control de existencias por ubicación.</tspan><tspan x="62" dy="15">4. Creemos que lograremos 20 cadenas en el plan Professional en 6 meses</tspan><tspan x="62" dy="15">si Anyeli obtiene el consolidado de sus sedes, con los reportes por propiedad.</tspan><tspan x="62" dy="15">5. Creemos que lograremos 90 % de retención con uso diario del RFID si Steven</tspan><tspan x="62" dy="15">identifica quién entró a una habitación, con la trazabilidad RFID.</tspan></text>
 
-      <text x="472" y="288"><tspan x="472" dy="0">Plataforma web administrativa</tspan><tspan x="472" dy="20">para coordinar la operación</tspan><tspan x="472" dy="20">entre áreas y sedes.</tspan></text>
+      <text x="472" y="288"><tspan x="472" dy="0">Plataforma web administrativa</tspan><tspan x="472" dy="20">centrada en la propiedad activa,</tspan><tspan x="472" dy="20">para una a cinco sedes.</tspan></text>
       <g fill="#0D1613">
-        <circle cx="480" cy="372" r="9" fill="#14523E"/><text x="476" y="376" font-family="monospace" font-size="10" fill="#FFFFFF">A</text><text x="498" y="376">Panel centralizado para reservas.</text><text x="498" y="394">Habitaciones, inventario y accesos.</text>
-        <circle cx="480" cy="430" r="9" fill="#14523E"/><text x="476" y="434" font-family="monospace" font-size="10" fill="#FFFFFF">B</text><text x="498" y="434">Registro y consulta de reservas.</text><text x="498" y="452">Disponibilidad actualizada.</text>
-        <circle cx="480" cy="486" r="9" fill="#14523E"/><text x="476" y="490" font-family="monospace" font-size="10" fill="#FFFFFF">C</text><text x="498" y="490">Movimientos y existencias.</text>
-        <circle cx="480" cy="524" r="9" fill="#14523E"/><text x="476" y="528" font-family="monospace" font-size="10" fill="#FFFFFF">D</text><text x="498" y="528">Tarjetas RFID y habitaciones.</text><text x="498" y="546">Usuarios y eventos relacionados.</text>
-        <circle cx="480" cy="584" r="9" fill="#14523E"/><text x="476" y="588" font-family="monospace" font-size="10" fill="#FFFFFF">E</text><text x="498" y="588">Administración multi-sede.</text>
+        <circle cx="480" cy="372" r="9" fill="#14523E"/><text x="476" y="376" font-family="monospace" font-size="10" fill="#FFFFFF">A</text><text x="498" y="376">Panel de la propiedad activa.</text><text x="498" y="394">Ocupación, inventario y accesos.</text>
+        <circle cx="480" cy="430" r="9" fill="#14523E"/><text x="476" y="434" font-family="monospace" font-size="10" fill="#FFFFFF">B</text><text x="498" y="434">Reservas y disponibilidad</text><text x="498" y="452">sobre un mismo calendario.</text>
+        <circle cx="480" cy="488" r="9" fill="#14523E"/><text x="476" y="492" font-family="monospace" font-size="10" fill="#FFFFFF">C</text><text x="498" y="492">Existencias por ubicación,</text><text x="498" y="510">con alertas de reposición.</text>
+        <circle cx="480" cy="546" r="9" fill="#14523E"/><text x="476" y="550" font-family="monospace" font-size="10" fill="#FFFFFF">D</text><text x="498" y="550">Credencial RFID ligada a</text><text x="498" y="568">habitación, persona e historial.</text>
+        <circle cx="480" cy="604" r="9" fill="#14523E"/><text x="476" y="608" font-family="monospace" font-size="10" fill="#FFFFFF">E</text><text x="498" y="608">Reportes por propiedad y</text><text x="498" y="626">cambio de propiedad activa.</text>
       </g>
 
-      <text x="472" y="880" font-size="11"><tspan x="472" dy="0">• Si los hoteles están dispuestos a utilizar</tspan><tspan x="472" dy="15">  la plataforma centralizada.</tspan><tspan x="472" dy="15">• Si los responsables aceptarían adaptar</tspan><tspan x="472" dy="15">  sus flujos de trabajo.</tspan><tspan x="472" dy="15">• Si centralizar reduce la conciliación</tspan><tspan x="472" dy="15">  manual entre áreas.</tspan><tspan x="472" dy="15">• Cuáles son las métricas críticas</tspan><tspan x="472" dy="15">  de la operación.</tspan></text>
+      <text x="472" y="880" font-size="11"><tspan x="472" dy="0">• Si el administrador de una sede</tspan><tspan x="472" dy="15">  sostiene su operación diaria en Hostera.</tspan><tspan x="472" dy="15">• Si eso basta para contratar y renovar</tspan><tspan x="472" dy="15">  el plan Starter (hipótesis 1).</tspan><tspan x="472" dy="15">• Si el consolidado ya construido decide</tspan><tspan x="472" dy="15">  el paso al plan Professional (hip. 4).</tspan></text>
 
-      <text x="772" y="288"><tspan x="772" dy="0">• Centralizar la supervisión de la operación.</tspan><tspan x="772" dy="24">• Reducir la conciliación entre registros.</tspan><tspan x="772" dy="24">• Mejorar la visibilidad de reservas e inventario.</tspan><tspan x="772" dy="24">• Mantener la trazabilidad de accesos y eventos.</tspan><tspan x="772" dy="24">• Escalar a una o varias sedes.</tspan></text>
+      <text x="772" y="288"><tspan x="772" dy="0">• 50 suscripciones de pago activas en el plan Starter (S/39) en 4 meses.</tspan><tspan x="772" dy="24">• 20 cadenas pequeñas en el plan Professional (S/8 por habitación) en 6 meses.</tspan><tspan x="772" dy="24">• 10 % de clientes Starter que actualicen al plan Professional en 6 meses.</tspan><tspan x="772" dy="24">• Retención mensual del 90 % de los clientes.</tspan><tspan x="772" dy="24">• Uso de la plataforma al menos 5 días a la semana.</tspan></text>
 
-      <text x="772" y="548"><tspan x="772" dy="0">• Supervisar con información actualizada.</tspan><tspan x="772" dy="24">• Consultar rápidamente reservas y disponibilidad.</tspan><tspan x="772" dy="24">• Revisar existencias y movimientos del almacén.</tspan><tspan x="772" dy="24">• Rastrear accesos vinculados a tarjetas RFID.</tspan><tspan x="772" dy="24">• Coordinar con menos conciliación manual.</tspan></text>
+      <text x="772" y="548"><tspan x="772" dy="0">• Conocer el estado de la propiedad sin reconstruirlo en una hoja de cálculo.</tspan><tspan x="772" dy="24">• Encontrar la disponibilidad y la reserva en el momento del check-in.</tspan><tspan x="772" dy="24">• Anticipar la falta de un insumo antes del descuadre del almacén.</tspan><tspan x="772" dy="24">• Saber qué persona accedió a una habitación y en qué momento.</tspan><tspan x="772" dy="24">• Obtener el consolidado de todas las sedes ya construido.</tspan></text>
 
-      <text x="772" y="880"><tspan x="772" dy="0">• Entrevistas con responsables de hoteles.</tspan><tspan x="772" dy="20">• Reencuadre de supuestos con la información obtenida.</tspan><tspan x="772" dy="20">• Validación de los flujos de reservas, inventario y accesos.</tspan></text>
-      <text x="772" y="952" fill="#33423B"><tspan x="772" dy="0">• Prototipo de baja fidelidad para introducir datos,</tspan><tspan x="772" dy="18">sin tarjetas RFID.</tspan></text>
+      <text x="772" y="880"><tspan x="772" dy="0">• Publicar la Frontend Web Application con datos de demostración.</tspan><tspan x="772" dy="20">• Medir con tres administradores de una sede cuánto tardan en obtener</tspan><tspan x="772" dy="20">  el estado de su propiedad frente a su hoja de cálculo actual.</tspan></text>
+      <text x="772" y="952" fill="#33423B"><tspan x="772" dy="0">• Sin Web Services ni integración RFID: alcance del Sprint 2.</tspan></text>
     </g>
 
   </g>

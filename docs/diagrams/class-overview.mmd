@@ -1,0 +1,43 @@
+classDiagram
+    direction LR
+    class PropertyOverview {
+        +Long propertyId
+        +String name
+        +int roomsCount
+        +int heldRooms
+        +int roomsNeedingCleaning
+        +int roomsOutOfOrder
+        +int availableRooms
+        +int alertsCount
+        +BigDecimal occupancyRate
+    }
+    class DailyPerformance {
+        +LocalDate date
+        +BigDecimal revenue
+        +int roomsCount
+        +int soldRooms
+        +BigDecimal occupancyRate
+    }
+    class ArrivalSummary {
+        +Long bookingId
+        +String bookingCode
+        +String guestName
+        +String roomNumber
+        +LocalDate checkInDate
+        +LocalDate checkOutDate
+    }
+    class OverviewQueryService {
+        +getPropertyOverviews(Long, LocalDate) List~PropertyOverview~
+        +getDailyPerformance(Long, LocalDate, LocalDate) List~DailyPerformance~
+        +getTodaysArrivals(Long, LocalDate) List~ArrivalSummary~
+    }
+    class OverviewReadRepository {
+        <<interface>>
+        +getRooms(Long) List~RoomReadModel~
+        +getBookings(Long, LocalDate, LocalDate) List~BookingReadModel~
+        +getStatusPeriods(Long, LocalDate, LocalDate) List~StatusPeriodReadModel~
+    }
+    OverviewQueryService ..> OverviewReadRepository : reads through
+    OverviewQueryService ..> PropertyOverview : builds
+    OverviewQueryService ..> DailyPerformance : builds
+    OverviewQueryService ..> ArrivalSummary : builds

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1200" viewBox="0 0 1780 1200">
+<defs><marker id="arr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#707070"/></marker></defs>
+<rect width="1780" height="1200" fill="#FFFFFF"/>
+<circle cx="190.0" cy="46" r="26" fill="#08427B"/>
+<rect x="60" y="61.6" width="260" height="108.4" rx="24" fill="#08427B"/>
+<text x="190.0" y="85.6" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Hotel Administrator</text>
+<text x="190.0" y="100.6" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Person]</text>
+<text x="190.0" y="121.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Owner or administrator of an</text>
+<text x="190.0" y="136.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">independent hotel who supervises its</text>
+<text x="190.0" y="151.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">daily operation.</text>
+<circle cx="750.0" cy="46" r="26" fill="#08427B"/>
+<rect x="620" y="61.6" width="260" height="108.4" rx="24" fill="#08427B"/>
+<text x="750.0" y="85.6" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Operations Manager</text>
+<text x="750.0" y="100.6" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Person]</text>
+<text x="750.0" y="121.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Person responsible for the operation</text>
+<text x="750.0" y="136.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">of a small hotel chain with two to</text>
+<text x="750.0" y="151.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">five properties.</text>
+<circle cx="1310.0" cy="46" r="26" fill="#08427B"/>
+<rect x="1180" y="61.6" width="260" height="108.4" rx="24" fill="#08427B"/>
+<text x="1310.0" y="85.6" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Hotel Staff</text>
+<text x="1310.0" y="100.6" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Person]</text>
+<text x="1310.0" y="121.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Front desk, inventory and security</text>
+<text x="1310.0" y="136.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">operators who run the daily operation</text>
+<text x="1310.0" y="151.6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">of a property.</text>
+<rect x="30" y="310" width="1080" height="840" rx="10" fill="none" stroke="#666" stroke-width="1.6" stroke-dasharray="8,5"/>
+<text x="44.0" y="1136.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#444" text-anchor="start">Hostera [Software System]</text>
+<rect x="80" y="370" width="290" height="160" rx="8" fill="#438DD5" stroke="#2E6295"/>
+<text x="225.0" y="394.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Landing Page</text>
+<text x="225.0" y="409.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: HTML, CSS and JavaScript]</text>
+<text x="225.0" y="430.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Static website that presents the plans to</text>
+<text x="225.0" y="445.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">each segment and leads visitors to the web</text>
+<text x="225.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">application.</text>
+<rect x="600" y="380" width="300" height="170" rx="8" fill="#438DD5" stroke="#2E6295"/>
+<text x="750.0" y="404.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Web Application</text>
+<text x="750.0" y="419.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: Angular 19, TypeScript and Angular</text>
+<text x="750.0" y="434.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Material]</text>
+<text x="750.0" y="455.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Single-page application with sign-in, the</text>
+<text x="750.0" y="470.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">overview, bookings, rooms, inventory and</text>
+<text x="750.0" y="485.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">access control features.</text>
+<rect x="80" y="690" width="290" height="160" rx="8" fill="#438DD5" stroke="#2E6295"/>
+<text x="225.0" y="714.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Demo API</text>
+<text x="225.0" y="729.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: Node.js and json-server]</text>
+<text x="225.0" y="750.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Serves demonstration data with the same</text>
+<text x="225.0" y="765.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">resources while the RESTful API is built.</text>
+<rect x="600" y="720" width="300" height="170" rx="8" fill="#438DD5" stroke="#2E6295"/>
+<text x="750.0" y="744.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">RESTful API</text>
+<text x="750.0" y="759.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: Java 21 and Spring Boot 3]</text>
+<text x="750.0" y="780.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Provides the hotel operations functionality</text>
+<text x="750.0" y="795.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">through a JSON/HTTPS API organised by</text>
+<text x="750.0" y="810.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">bounded context, documented with OpenAPI.</text>
+<path d="M600,992 L600,1108 A150.0,12 0 0 0 900,1108 L900,992 A150.0,12 0 0 0 600,992 Z" fill="#438DD5" stroke="#2E6295"/>
+<ellipse cx="750.0" cy="992" rx="150.0" ry="12" fill="none" stroke="#2E6295"/>
+<text x="750.0" y="1016.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Database</text>
+<text x="750.0" y="1031.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: MySQL 8]</text>
+<text x="750.0" y="1052.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Stores accounts, properties, bookings,</text>
+<text x="750.0" y="1067.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">payments, rooms, rates, inventory,</text>
+<text x="750.0" y="1082.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">credentials and access events.</text>
+<rect x="1200" y="380" width="300" height="150" rx="8" fill="#999999" stroke="#6B6B6B"/>
+<text x="1350.0" y="404.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Nager.Date API</text>
+<text x="1350.0" y="419.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Software System]</text>
+<text x="1350.0" y="440.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Free public holidays API of each country.</text>
+<rect x="1200" y="660" width="300" height="150" rx="8" fill="#999999" stroke="#6B6B6B"/>
+<text x="1350.0" y="684.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">RFID Lock System</text>
+<text x="1350.0" y="699.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Software System]</text>
+<text x="1350.0" y="720.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Door readers and front desk key-card encoder</text>
+<text x="1350.0" y="735.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">installed in the hotel.</text>
+<rect x="1200" y="940" width="300" height="150" rx="8" fill="#999999" stroke="#6B6B6B"/>
+<text x="1350.0" y="964.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Twilio SendGrid</text>
+<text x="1350.0" y="979.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Software System]</text>
+<text x="1350.0" y="1000.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Cloud e-mail delivery service.</text>
+<line x1="197.4" y1="170.0" x2="217.1" y2="370.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="639.1" y1="170.0" x2="343.3" y2="370.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="303.5" y1="170.0" x2="621.4" y2="380.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="750.0" y1="170.0" x2="750.0" y2="380.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="1196.5" y1="170.0" x2="878.6" y2="380.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="370.0" y1="454.1" x2="600.0" y2="460.7" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="603.7" y1="550.0" x2="362.7" y2="690.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="750.0" y1="550.0" x2="750.0" y2="720.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="900.0" y1="462.5" x2="1200.0" y2="457.5" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="750.0" y1="890.0" x2="750.0" y2="980.0" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="900.0" y1="787.5" x2="1200.0" y2="752.5" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="1200.0" y1="752.5" x2="900.0" y2="787.5" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<line x1="900.0" y1="857.5" x2="1200.0" y2="962.5" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<rect x="95.3" y="229.5" width="144.0" height="21" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="167.3" y="244.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Reviews the plans in</text>
+<rect x="324.2" y="314.5" width="144.0" height="21" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="396.2" y="329.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Reviews the plans in</text>
+<rect x="472.2" y="312.0" width="170.4" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="557.4" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Supervises the operation</text>
+<text x="557.4" y="342.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">using</text>
+<rect x="668.1" y="257.0" width="163.8" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="750.0" y="272.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Monitors every property</text>
+<text x="750.0" y="287.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">using</text>
+<rect x="952.4" y="257.0" width="170.4" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1037.6" y="272.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Runs the daily operation</text>
+<text x="1037.6" y="287.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">using</text>
+<rect x="393.2" y="439.4" width="183.6" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="485.0" y="454.4" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Opens the sign-in and plan</text>
+<text x="485.0" y="469.4" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">views of</text>
+<rect x="391.4" y="594.5" width="183.6" height="51" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="483.2" y="609.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Reads and writes</text>
+<text x="483.2" y="624.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">demonstration data through</text>
+<text x="483.2" y="639.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[JSON/HTTPS]</text>
+<rect x="674.7" y="617.0" width="150.6" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="750.0" y="632.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Makes API requests to</text>
+<text x="750.0" y="647.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[JSON/HTTPS]</text>
+<rect x="958.2" y="442.0" width="183.6" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1050.0" y="457.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Reads public holidays from</text>
+<text x="1050.0" y="472.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[JSON/HTTPS]</text>
+<rect x="664.8" y="917.0" width="170.4" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="750.0" y="932.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Reads from and writes to</text>
+<text x="750.0" y="947.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[JDBC]</text>
+<rect x="968.1" y="726.0" width="163.8" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1050.0" y="741.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Encodes key cards using</text>
+<text x="1050.0" y="756.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[HTTPS]</text>
+<rect x="964.8" y="778.0" width="170.4" height="36" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1050.0" y="793.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Reports access events to</text>
+<text x="1050.0" y="808.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[HTTPS]</text>
+<rect x="971.4" y="884.5" width="157.2" height="51" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1050.0" y="899.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">Sends low-stock alerts</text>
+<text x="1050.0" y="914.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle">using</text>
+<text x="1050.0" y="929.5" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#4A4A4A" text-anchor="middle" font-style="italic">[HTTPS]</text>
+<rect x="1530" y="16" width="230" height="178" rx="6" fill="#FFFFFF" stroke="#BBBBBB"/>
+<text x="1542.0" y="38.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Key</text>
+<circle cx="1554" cy="52" r="8" fill="#08427B"/>
+<text x="1576.0" y="56.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#333" text-anchor="start">Person</text>
+<rect x="1542" y="68" width="24" height="16" rx="3" fill="#438DD5"/>
+<text x="1576.0" y="80.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#333" text-anchor="start">Container</text>
+<ellipse cx="1554" cy="100" rx="12" ry="7" fill="#438DD5" stroke="#2E6295"/>
+<text x="1576.0" y="104.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#333" text-anchor="start">Container: database</text>
+<rect x="1542" y="116" width="24" height="16" rx="3" fill="#999999"/>
+<text x="1576.0" y="128.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#333" text-anchor="start">External software system</text>
+<rect x="1542" y="140" width="24" height="16" rx="3" fill="none" stroke="#666" stroke-dasharray="4,3"/>
+<text x="1576.0" y="152.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#333" text-anchor="start">Boundary</text>
+<line x1="1542" y1="172" x2="1566" y2="172" stroke="#707070" stroke-width="1.4" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+<text x="1576.0" y="176.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#333" text-anchor="start">Relationship [technology]</text>
+<text x="20.0" y="1184.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="start">[Container] Hostera</text>
+</svg>

@@ -1,0 +1,45 @@
+classDiagram
+    direction LR
+    class AccountCommandService {
+        +registerAccount(RegisterAccountCommand) User
+        +signIn(SignInCommand) AuthenticatedUser
+        +inviteStaffMember(InviteStaffMemberCommand) User
+    }
+    class UserQueryService {
+        +getById(Long) User
+        +findByOrganization(Long) List~User~
+    }
+    class AuthenticatedUser {
+        <<value object>>
+        +Long userId
+        +String token
+        +List~Long~ propertyIds
+    }
+    class UserRepository {
+        <<interface>>
+        +findById(Long) Optional~User~
+        +findByEmail(String) Optional~User~
+        +existsByEmail(String) boolean
+        +save(User) User
+    }
+    class OrganizationRepository {
+        <<interface>>
+        +findById(Long) Optional~Organization~
+        +save(Organization) Organization
+    }
+    class HashingService {
+        <<interface>>
+        +encode(String) String
+        +matches(String, String) boolean
+    }
+    class TokenService {
+        <<interface>>
+        +generateToken(User) String
+        +getUserIdFromToken(String) Long
+    }
+    AccountCommandService ..> UserRepository
+    AccountCommandService ..> OrganizationRepository
+    AccountCommandService ..> HashingService
+    AccountCommandService ..> TokenService
+    AccountCommandService ..> AuthenticatedUser : returns
+    UserQueryService ..> UserRepository

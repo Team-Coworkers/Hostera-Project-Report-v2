@@ -1,0 +1,47 @@
+erDiagram
+    bookings ||--o{ payments : receives
+    bookings {
+        bigint id PK
+        bigint property_id "references properties"
+        varchar code UK
+        varchar status
+        varchar guest_name
+        varchar guest_email
+        varchar guest_phone
+        char preferred_language
+        date check_in_date
+        date check_out_date
+        int guests
+        bigint room_type_id "references room_types"
+        bigint room_id "references rooms, nullable"
+        bigint rate_plan_id "references rate_plans"
+        decimal total_amount
+        text guest_request
+        datetime created_at
+        datetime confirmed_at
+        bigint confirmed_by
+        datetime cancelled_at
+        bigint cancelled_by
+        varchar cancellation_reason
+        text cancellation_note
+        datetime no_show_at
+        bigint no_show_by
+        varchar guest_document_type
+        varchar guest_document_number
+        datetime checked_in_at
+        bigint checked_in_by
+        datetime checked_out_at
+        bigint checked_out_by
+        varchar room_condition
+        text departure_note
+    }
+    payments {
+        bigint id PK
+        bigint property_id "references properties"
+        bigint booking_id FK
+        decimal amount
+        varchar method
+        datetime paid_at
+        varchar reference
+        bigint recorded_by
+    }

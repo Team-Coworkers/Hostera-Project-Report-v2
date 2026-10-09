@@ -1,0 +1,24 @@
+erDiagram
+    organizations ||--o{ users : employs
+    users ||--o{ user_properties : "works in"
+    organizations {
+        bigint id PK
+        varchar name
+        varchar subscription_plan
+        int property_count
+        int room_count
+        date subscribed_on
+    }
+    users {
+        bigint id PK
+        bigint organization_id FK
+        varchar full_name
+        varchar email UK
+        varchar password_hash
+        varchar role
+        datetime created_at
+    }
+    user_properties {
+        bigint user_id PK, FK
+        bigint property_id PK "references properties"
+    }

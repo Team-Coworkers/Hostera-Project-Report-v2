@@ -1,0 +1,33 @@
+classDiagram
+    direction LR
+    class InventoryCommandService {
+        +createItem(CreateInventoryItemCommand) InventoryItem
+        +updateItem(UpdateInventoryItemCommand) void
+        +adjustStock(AdjustStockCommand) StockAdjustment
+        +createLocation(CreateStorageLocationCommand) StorageLocation
+        +removeLocation(Long) void
+    }
+    class InventoryQueryService {
+        +getItems(Long, Long, StockCondition) List~InventoryItem~
+        +getLocations(Long) List~StorageLocation~
+    }
+    class InventoryItemRepository {
+        <<interface>>
+        +findById(Long) Optional~InventoryItem~
+        +findByProperty(Long) List~InventoryItem~
+        +save(InventoryItem) InventoryItem
+    }
+    class StorageLocationRepository {
+        <<interface>>
+        +findByProperty(Long) List~StorageLocation~
+        +save(StorageLocation) StorageLocation
+        +delete(StorageLocation) void
+    }
+    class NotificationGateway {
+        <<interface>>
+        +sendLowStockAlert(InventoryItem) void
+    }
+    InventoryCommandService ..> InventoryItemRepository
+    InventoryCommandService ..> StorageLocationRepository
+    InventoryCommandService ..> NotificationGateway
+    InventoryQueryService ..> InventoryItemRepository

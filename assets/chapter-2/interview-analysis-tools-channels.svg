@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="984" height="528" viewBox="0 0 984 528">
+<rect width="984" height="528" fill="#FFFFFF"/>
+<rect x="340" y="14" width="204" height="24" rx="4" fill="#DCE7E1"/>
+<text x="444.0" y="31" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#14523E">Segmento 1</text>
+<rect x="548" y="14" width="416" height="24" rx="4" fill="#DCE7E1"/>
+<text x="756.0" y="31" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#14523E">Segmento 2</text>
+<text x="392.0" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B2420">E1</text>
+<text x="392.0" y="77" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6E7B75">Domínguez</text>
+<text x="496.0" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B2420">E2</text>
+<text x="496.0" y="77" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6E7B75">Otto Cuba</text>
+<text x="600.0" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B2420">E3</text>
+<text x="600.0" y="77" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6E7B75">Odar Quispe</text>
+<text x="704.0" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B2420">E4</text>
+<text x="704.0" y="77" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6E7B75">Rafael Prieto</text>
+<text x="808.0" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B2420">E5</text>
+<text x="808.0" y="77" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6E7B75">P. P. Spigno</text>
+<text x="912.0" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B2420">E6</text>
+<text x="912.0" y="77" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-anchor="middle" fill="#6E7B75">Roy Ríos</text>
+<rect x="10" y="92" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="112" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Registros manuales o en papel</text>
+<circle cx="392.0" cy="107.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="107.0" r="8" fill="#14523E"/>
+<circle cx="600.0" cy="107.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="107.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="107.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="107.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<text x="20" y="142" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Excel u hoja de cálculo</text>
+<circle cx="392.0" cy="137.0" r="8" fill="#14523E"/>
+<circle cx="496.0" cy="137.0" r="8" fill="#14523E"/>
+<circle cx="600.0" cy="137.0" r="8" fill="#14523E"/>
+<circle cx="704.0" cy="137.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="137.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="137.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<rect x="10" y="152" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">WhatsApp o mensajes</text>
+<circle cx="392.0" cy="167.0" r="8" fill="#14523E"/>
+<circle cx="496.0" cy="167.0" r="8" fill="#14523E"/>
+<circle cx="600.0" cy="167.0" r="8" fill="#14523E"/>
+<circle cx="704.0" cy="167.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="167.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="167.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<text x="20" y="202" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Llamadas telefónicas</text>
+<circle cx="392.0" cy="197.0" r="8" fill="#14523E"/>
+<circle cx="496.0" cy="197.0" r="8" fill="#14523E"/>
+<circle cx="600.0" cy="197.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="197.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="197.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="197.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<rect x="10" y="212" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="232" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Redes sociales</text>
+<circle cx="392.0" cy="227.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="227.0" r="8" fill="#14523E"/>
+<circle cx="600.0" cy="227.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="227.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="227.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="227.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<text x="20" y="262" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Correo electrónico</text>
+<circle cx="392.0" cy="257.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="257.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="257.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="257.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="257.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="257.0" r="8" fill="#14523E"/>
+<rect x="10" y="272" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="292" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Booking, Expedia u otras agencias en línea</text>
+<circle cx="392.0" cy="287.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="287.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="287.0" r="8" fill="#14523E"/>
+<circle cx="704.0" cy="287.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="287.0" r="8" fill="#14523E"/>
+<circle cx="912.0" cy="287.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<text x="20" y="322" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Sistema de reservas o PMS</text>
+<circle cx="392.0" cy="317.0" r="8" fill="#14523E"/>
+<circle cx="496.0" cy="317.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="317.0" r="8" fill="#14523E"/>
+<circle cx="704.0" cy="317.0" r="8" fill="#14523E"/>
+<circle cx="808.0" cy="317.0" r="8" fill="#14523E"/>
+<circle cx="912.0" cy="317.0" r="8" fill="#14523E"/>
+<rect x="10" y="332" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="352" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">PMS corporativo (Opera / Opera Cloud)</text>
+<circle cx="392.0" cy="347.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="347.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="347.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="347.0" r="8" fill="#14523E"/>
+<circle cx="808.0" cy="347.0" r="8" fill="#14523E"/>
+<circle cx="912.0" cy="347.0" r="8" fill="#14523E"/>
+<text x="20" y="382" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Laptop o computadora</text>
+<circle cx="392.0" cy="377.0" r="8" fill="#14523E"/>
+<circle cx="496.0" cy="377.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="377.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="377.0" r="8" fill="#14523E"/>
+<circle cx="808.0" cy="377.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="377.0" r="8" fill="#14523E"/>
+<rect x="10" y="392" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="412" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Acceso remoto con laptop, celular y VPN</text>
+<circle cx="392.0" cy="407.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="407.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="407.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="407.0" r="8" fill="#14523E"/>
+<circle cx="808.0" cy="407.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="407.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<text x="20" y="442" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Tarjetas de acceso a las habitaciones</text>
+<circle cx="392.0" cy="437.0" r="8" fill="#14523E"/>
+<circle cx="496.0" cy="437.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="437.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="437.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="437.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="912.0" cy="437.0" r="8" fill="#14523E"/>
+<rect x="10" y="452" width="964" height="30" fill="#F4F7F5"/>
+<text x="20" y="472" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#1B2420">Usuario y permisos por trabajador</text>
+<circle cx="392.0" cy="467.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="496.0" cy="467.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="600.0" cy="467.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="704.0" cy="467.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="808.0" cy="467.0" r="8" fill="#14523E"/>
+<circle cx="912.0" cy="467.0" r="7" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<circle cx="26" cy="504" r="7" fill="#14523E"/>
+<text x="40" y="508" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#6E7B75">Lo menciona en la entrevista</text>
+<circle cx="290" cy="504" r="6.5" fill="none" stroke="#6E7B75" stroke-width="1.2"/>
+<text x="304" y="508" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#6E7B75">No lo menciona</text>
+</svg>
