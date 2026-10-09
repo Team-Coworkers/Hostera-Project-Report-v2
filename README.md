@@ -4761,6 +4761,28 @@ Respuesta de ejemplo de `GET /bookings?propertyId=1&_sort=code&_order=desc&_limi
 | --- | --- | --- |
 | `GET` | `https://date.nager.at/api/v3/PublicHolidays/{year}/PE` | Obtiene los feriados del Perú de cada año visible en la disponibilidad de habitaciones y conserva solo los nacionales. |
 
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+En el Sprint 2 se desplegaron dos productos, con la configuración descrita en la sección
+5.1.4:
+
+| Producto | Release | Evidencia de despliegue | URL pública |
+| --- | --- | --- | --- |
+| Frontend Web Application | `v0.4.0` (también `v0.2.0` con el port a Angular y `v0.3.0` con el primer despliegue) | Workflow `Deploy to GitHub Pages`, ejecución `37876465598` sobre el commit `38dbd31` de `main`, con resultado exitoso; ejecución anterior `37870903860` para `v0.3.0`. | https://team-coworkers.github.io/hostera-frontend/ |
+| Pruebas de la Frontend Web Application | `v0.4.0` | Workflow `Unit tests`, ejecuciones `37876465600` en `main` y `37876464628` en `develop`, con las 28 pruebas aprobadas. | https://github.com/Team-Coworkers/hostera-frontend/actions |
+| Landing Page | `v0.5.0` (y `v0.4.0`) | GitHub Pages construyó la rama `main` en los commits `60fece4` (`v0.4.0`) y `adbb190` (`v0.5.0`). | https://team-coworkers.github.io/landing-page-main/ |
+
+Cada release se integró en `main` desde una rama `release/*`, se etiquetó con un tag
+anotado y se publicó como GitHub Release con las notas de su `CHANGELOG.md`.
+
+<img src="assets/chapter-5/sprint-2-github-actions.png" alt="Ejecuciones de los workflows de despliegue y pruebas en GitHub Actions" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.19. Ejecuciones de los workflows de despliegue y de pruebas del frontend.*
+
+<img src="assets/chapter-5/sprint-2-frontend-releases.png" alt="Releases del repositorio hostera-frontend en GitHub" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.20. Releases de la Frontend Web Application en GitHub.*
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
