@@ -3667,14 +3667,53 @@ completarán cuando dichos artefactos estén disponibles.
 Las siguientes herramientas forman parte del entorno actual de colaboración. Las
 herramientas SaaS se utilizan mediante sus aplicaciones web oficiales, mientras que
 las herramientas locales se instalan desde sus canales oficiales de distribución.
+Se agrupan por el tipo de actividad que cumplen en el ciclo de vida del producto:
+gestión del proyecto y de los requisitos, diseño UX/UI, desarrollo, despliegue y
+documentación. Las herramientas marcadas para AV2 corresponden a los RESTful Web
+Services, que se implementan en el Sprint 3.
+
+**Project Management y Requirements Management**
 
 | Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
 | --- | --- | --- | --- |
-| GitHub | Aloja el repositorio del equipo, los repositorios de producto, los issues y el historial de revisiones. | [Repositorio del equipo Team Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
-| YouTrack | Gestiona el Product Backlog y realiza el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
-| Figma | Elabora y comparte los wireflows, prototipos y mock-ups de las aplicaciones web. | — | Los cambios de diseño se mantienen en los archivos compartidos de Hostera y se referencian desde el informe. |
-| UXPressia | Elabora los artefactos de impact mapping utilizados para relacionar objetivos, actores, impactos e historias de usuario. | — | Los diagramas exportados se versionan junto con el informe cuando se utilizan como evidencia. |
-| Pandoc | Convierte `README.md` y sus recursos locales en el entregable PDF. | Instalación local; la configuración y ejecución están documentadas en `README.md`. | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` permanece sin seguimiento. |
+| YouTrack | Gestiona el Product Backlog, los sprints y el seguimiento de las historias de usuario y los ítems de trabajo. | [Agile Board de Hostera](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3) | El trabajo se asocia a un ítem del backlog antes de su implementación y revisión. |
+| GitHub | Aloja la organización del equipo, los repositorios de producto y del informe, y su historial. | [Organización Team-Coworkers](https://github.com/Team-Coworkers) | Los cambios se realizan en ramas de trabajo y se integran mediante el flujo Git Flow descrito en la sección 5.1.2. |
+| Git | Controla las versiones locales del informe y de cada producto, y ejecuta el modelo de ramas del equipo. | Instalación local desde [git-scm.com](https://git-scm.com/). | Cada integrante configura su nombre y su correo antes de su primer commit. |
+
+**Product UX/UI Design**
+
+| Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
+| --- | --- | --- | --- |
+| UXPressia | Elabora las User Personas, los journey maps, los empathy maps y el impact mapping. | [uxpressia.com](https://uxpressia.com/) | Las exportaciones se versionan en `assets/chapter-2/` y `assets/chapter-3/` del repositorio del informe. |
+| Paper | Elabora el Design System, los wireframes y los mock-ups de la Landing Page y de la aplicación web. | [paper.design](https://paper.design/) | Los componentes y tokens se mantienen en el archivo compartido de Hostera y se exportan como imágenes al informe. |
+| FigJam | Elabora los wireflow diagrams que conectan las pantallas con los recorridos de usuario. | [figma.com/figjam](https://www.figma.com/figjam/) | Cada recorrido se exporta como imagen independiente en `assets/chapter-4/`. |
+| Structurizr DSL | Describe como código el modelo C4 de Hostera: sistema, contenedores, componentes y vistas. | [docs.structurizr.com/dsl](https://docs.structurizr.com/dsl) | `docs/hostera-structurizr.dsl` es la fuente del modelo; las vistas se versionan como SVG en `assets/chapter-4/`. |
+| Mermaid | Elabora como código los diagramas de clases y de base de datos de cada bounded context. | [mermaid.js.org](https://mermaid.js.org/) | Las fuentes se versionan en `docs/diagrams/` y se exportan como SVG en `assets/chapter-4/`. |
+
+**Software Development**
+
+| Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
+| --- | --- | --- | --- |
+| JetBrains WebStorm | Edita el código de la Landing Page y de la Frontend Web Application. | Instalación local desde [jetbrains.com/webstorm](https://www.jetbrains.com/webstorm/). | La carpeta `.idea/` se excluye del control de versiones; el formato del código lo fija Prettier. |
+| Node.js y npm | Ejecutan Angular CLI, las pruebas y la API de datos de demostración. | Instalación local desde [nodejs.org](https://nodejs.org/) (versión LTS 22). | Las dependencias se declaran en `package.json` y `package-lock.json` se conserva en el control de versiones. |
+| Angular CLI | Crea, ejecuta, prueba y compila la Frontend Web Application (Angular 19 con Angular Material). | [angular.dev/tools/cli](https://angular.dev/tools/cli) | `npm start` levanta el servidor de desarrollo, `npm test` ejecuta las pruebas y `npm run build:pages` compila para GitHub Pages. |
+| Prettier | Da formato uniforme al código TypeScript, HTML y CSS del frontend. | [prettier.io](https://prettier.io/) | `npm run format:check` verifica el formato antes de cada commit. |
+| Jasmine y Karma | Ejecutan las pruebas unitarias de la Frontend Web Application. | [angular.dev/guide/testing](https://angular.dev/guide/testing) | Cada archivo `.spec.ts` está junto a la clase que prueba; el workflow `test.yml` las ejecuta en cada push. |
+| json-server | Expone la API de datos de demostración mientras los RESTful Web Services no están implementados. | [github.com/typicode/json-server](https://github.com/typicode/json-server) | Los datos se versionan como un archivo JSON por recurso en `server/data/`; `server/build-db.js` los reúne en `server/db.json`, que no se versiona. |
+| IntelliJ IDEA (AV2) | Edita y depura los RESTful Web Services en Java y Spring Boot. | Instalación local desde [jetbrains.com/idea](https://www.jetbrains.com/idea/). | La configuración del proyecto se toma del `pom.xml`; la carpeta `.idea/` no se versiona. |
+| OpenJDK 21 y Maven (AV2) | Compilan, prueban y empaquetan los RESTful Web Services. | [openjdk.org](https://openjdk.org/) y [maven.apache.org](https://maven.apache.org/) | La versión de Java y las dependencias de Spring Boot se fijan en el `pom.xml`; se usa el Maven Wrapper del proyecto. |
+| MySQL 8 (AV2) | Provee la base de datos relacional de la solución. | [dev.mysql.com/doc](https://dev.mysql.com/doc/) | El esquema se genera desde las entidades JPA; las credenciales se leen desde variables de entorno. |
+| Postman (AV2) | Verifica manualmente los endpoints de los RESTful Web Services. | [postman.com](https://www.postman.com/) | Las colecciones se exportan al repositorio de Web Services para que cualquier integrante reproduzca las pruebas. |
+
+**Software Deployment y Software Documentation**
+
+| Producto | Propósito en Hostera | Ruta de referencia | Convención de configuración o uso |
+| --- | --- | --- | --- |
+| GitHub Pages | Publica la Landing Page y la Frontend Web Application. | [team-coworkers.github.io](https://team-coworkers.github.io/landing-page-main/) | La configuración de cada producto se detalla en la sección 5.1.4. |
+| GitHub Actions | Construye, prueba y despliega la Frontend Web Application. | [docs.github.com/actions](https://docs.github.com/actions) | Los workflows `deploy-pages.yml` y `test.yml` se versionan en `.github/workflows/` del repositorio del frontend. |
+| Render | Alternativa para publicar la API de datos de demostración como servicio web. | [render.com](https://render.com/) | El Blueprint `render.yaml` del repositorio del frontend define el servicio. |
+| Microsoft Stream | Aloja los videos de exposición, de entrevistas y de demostración del producto. | Cuenta institucional de la UPC en Microsoft 365. | Cada video se enlaza desde el informe con su duración y la marca de tiempo en la que inicia el contenido referido. |
+| Pandoc y WeasyPrint | Convierten `README.md` y sus recursos locales en el entregable PDF. | [pandoc.org](https://pandoc.org/) y [weasyprint.org](https://weasyprint.org/) | La compilación se ejecuta con `bash scripts/build-pdf.sh`; el archivo generado `report.pdf` no se versiona. |
 
 Los repositorios de Landing Page, RESTful Web Services y Frontend Web Applications
 mantendrán una estructura documental común. Cada repositorio incluirá un `README.md`
@@ -3696,16 +3735,18 @@ archivos del entorno local se excluirán del control de versiones.
 ### 5.1.2. Source Code Management
 
 GitHub es la plataforma de gestión del código fuente requerida para los repositorios
-de producto. Cada producto tendrá un repositorio dedicado para que su implementación,
-pruebas y evidencias de despliegue sean trazables. El repositorio del informe se
-mantiene por separado como fuente de documentación y no se considera uno de los
-repositorios de producto exigidos por el enunciado del proyecto:
+de producto. Todos los repositorios pertenecen a la organización pública
+[Team-Coworkers](https://github.com/Team-Coworkers), y cada producto tiene un
+repositorio dedicado para que su implementación, pruebas y evidencias de despliegue
+sean trazables. El repositorio del informe se mantiene por separado como fuente de
+documentación:
 
-| Producto | URL del repositorio | Estado actual |
+| Producto | URL del repositorio | Estado al cierre de TB1 |
 | --- | --- | --- |
-| Landing Page | [Repositorio de Landing Page](https://github.com/Team-Coworkers/landing-page-main) | Repositorio registrado para la implementación de la Landing Page. |
-| RESTful Web Services | Por registrar | El repositorio deberá incluir pruebas unitarias y pruebas de integración/aceptación, según lo requerido por el enunciado del proyecto. |
-| Frontend Web Applications | Por registrar | La URL se añadirá cuando se cree el repositorio de implementación. |
+| Landing Page | https://github.com/Team-Coworkers/landing-page-main | Versión `v0.5.0` publicada en GitHub Pages. |
+| Frontend Web Applications | https://github.com/Team-Coworkers/hostera-frontend | Versión `v0.4.0` publicada en GitHub Pages, con 28 pruebas unitarias en Jasmine y Karma. |
+| RESTful Web Services | Por registrar en AV2 | El repositorio incluirá el proyecto Spring Boot y sus pruebas unitarias (JUnit) y de integración y aceptación, según lo requerido por el enunciado del proyecto. |
+| Informe del proyecto | https://github.com/Team-Coworkers/Hostera-Project-Report-v2 | Archivo principal `README.md`; las versiones del informe se registran en el Control de versiones. |
 
 El equipo aplica las siguientes ramas de Git Flow:
 
@@ -3726,8 +3767,38 @@ rama de trabajo y su historial de commits antes de ejecutar el merge correspondi
 El equipo no realizará commits directos en `main` o `develop` para el trabajo normal
 de funcionalidades.
 
+Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
+`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
+`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
+imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
+ejemplo: `feat(iam): add the sign-in and sign-up views` o
+`docs(interviews): record the six video interviews by segment`. Los merges usan
+`merge(develop): <descripción>` y `merge(main): release <versión>`.
+
+Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
+`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
+`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
+imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
+ejemplo: `feat(iam): add the sign-in and sign-up views` o
+`docs(interviews): record the six video interviews by segment`. Los merges usan
+`merge(develop): <descripción>` y `merge(main): release <versión>`.
+
+Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
+`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
+`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
+imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
+ejemplo: `feat(iam): add the sign-in and sign-up views` o
+`docs(interviews): record the six video interviews by segment`. Los merges usan
+`merge(develop): <descripción>` y `merge(main): release <versión>`.
+
 Los releases utilizan [Semantic Versioning 2.0.0](https://semver.org/):
-`MAJOR.MINOR.PATCH`. El primer componente mayor permanece en `0` mientras el
+`MAJOR.MINOR.PATCH`. Cada release se integra en `main` con `--no-ff`, se etiqueta con
+un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
+un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. Cada release se integra en `main` con `--no-ff`, se etiqueta con
+un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. El primer componente mayor permanece en `0` mientras el
 producto se encuentre en desarrollo inicial; durante esta fase, los cambios
 incompatibles incrementan el componente minor, y las funcionalidades compatibles o
 las correcciones se registran de acuerdo con la política de releases del proyecto.
@@ -3735,10 +3806,22 @@ las correcciones se registran de acuerdo con la política de releases del proyec
 ### 5.1.3. Source Code Style Guide & Conventions
 
 Esta sección establece las convenciones para nombrar elementos y programar en los
-lenguajes y frameworks utilizados por Hostera. De acuerdo con el Project Statement,
-los identificadores del código fuente se escribirán en inglés, aunque los textos
-visibles para los usuarios podrán presentarse en español o inglés según el idioma de
-la interfaz. Las reglas de Git Flow, Conventional Commits y Semantic Versioning se
+lenguajes y frameworks utilizados por Hostera: HTML, CSS, JavaScript, TypeScript y
+Java. De acuerdo con el Project Statement, los identificadores del código fuente se
+escriben en inglés en todos los productos, aunque los textos visibles para los usuarios
+se presentan en inglés o en español latinoamericano según el idioma de la interfaz.
+
+El equipo adopta como referencia las guías que indica el enunciado del proyecto:
+
+| Guía | Se aplica a | Referencia |
+| --- | --- | --- |
+| HTML Style Guide and Coding Conventions | HTML de la Landing Page y plantillas de Angular | https://www.w3schools.com/html/html5_syntax.asp |
+| Google HTML/CSS Style Guide | HTML y CSS de la Landing Page y del frontend | https://google.github.io/styleguide/htmlcssguide.html |
+| Angular coding style guide | Componentes, servicios, rutas y estructura del frontend | https://angular.dev/style-guide |
+| Google TypeScript Style Guide | Código TypeScript del frontend | https://google.github.io/styleguide/tsguide.html |
+| Gherkin Conventions for Readable Specifications | Criterios de aceptación de las User Stories | https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/ |
+| Google Java Style Guide (AV2) | Código Java de los RESTful Web Services | https://google.github.io/styleguide/javaguide.html |
+| Spring Boot Features (AV2) | Configuración, perfiles, persistencia y pruebas de los Web Services | https://docs.spring.io/spring-boot/reference/features/index.html | Las reglas de Git Flow, Conventional Commits y Semantic Versioning se
 describen en la sección 5.1.2 y no se repiten aquí.
 
 #### Convenciones generales de nomenclatura
@@ -3795,14 +3878,60 @@ utilizará para crear, ejecutar, probar y compilar el proyecto, manteniendo sus 
 y configuración en el workspace. El código de interfaz se organizará por áreas
 funcionales dentro de `src` y utilizará las opciones de tipado estricto de TypeScript.
 
-Cada componente agrupará archivos con el mismo nombre base, por ejemplo
-`reservation-card.component.ts`, `reservation-card.component.html` y
-`reservation-card.component.css`. Los componentes, servicios y directivas utilizarán
+El código se organiza por bounded context, cada uno con las carpetas `domain`,
+`application`, `infrastructure` y `presentation`, y los componentes son standalone.
+Cada componente agrupa archivos con el mismo nombre base, por ejemplo
+`booking-list.component.ts`, `booking-list.component.html` y
+`booking-list.component.css`. Los componentes, servicios y directivas utilizarán
 los sufijos `.component`, `.service` y `.directive`, respectivamente. Las clases se
 nombrarán en `PascalCase`; las propiedades y los métodos, en `camelCase`; y los flujos
 observables podrán utilizar el sufijo `$`. Los componentes se enfocarán en la
 presentación, mientras que la lógica reutilizable y el acceso a datos se mantendrán en
 servicios. Se evitará colocar lógica de negocio extensa directamente en las plantillas.
+Las interfaces se construyen con los componentes de Angular Material y el formato del
+código lo fija Prettier (comillas simples y punto y coma en TypeScript).
+
+#### Internacionalización y accesibilidad
+
+Los tres productos usan inglés como idioma por defecto y ofrecen español
+latinoamericano, con los códigos `en` y `es-419`. En la Landing Page, cada texto tiene
+un atributo `data-i18n` y sus traducciones viven en un archivo por idioma; al cambiar de
+idioma se actualizan el atributo `lang` del documento y los metadatos. En la Frontend
+Web Application, los mensajes se organizan en `src/locales/<idioma>/<contexto>/` y se
+cargan con ngx-translate; `I18nService` cambia el idioma, el atributo `lang` del
+documento y los formatos de fecha y moneda. Ningún texto visible se escribe directamente
+en el código: todo pasa por una clave de traducción. Los RESTful Web Services devolverán
+sus mensajes de error en inglés y en español latinoamericano según la cabecera
+`Accept-Language`.
+
+La accesibilidad sigue las pautas WCAG 2.2. Los elementos interactivos tienen nombre
+accesible mediante `aria-label` o `aria-labelledby`, los mensajes de estado usan
+`role="status"` o `aria-live="polite"`, el enlace de la navegación activa lleva
+`aria-current="page"` y los íconos decorativos se ocultan con `aria-hidden="true"`. Al
+cierre de TB1 la Landing Page tiene 68 atributos ARIA y la Frontend Web Application,
+210.
+Las interfaces se construyen con los componentes de Angular Material y el formato del
+código lo fija Prettier (comillas simples y punto y coma en TypeScript).
+
+#### Internacionalización y accesibilidad
+
+Los tres productos usan inglés como idioma por defecto y ofrecen español
+latinoamericano, con los códigos `en` y `es-419`. En la Landing Page, cada texto tiene
+un atributo `data-i18n` y sus traducciones viven en un archivo por idioma; al cambiar de
+idioma se actualizan el atributo `lang` del documento y los metadatos. En la Frontend
+Web Application, los mensajes se organizan en `src/locales/<idioma>/<contexto>/` y se
+cargan con ngx-translate; `I18nService` cambia el idioma, el atributo `lang` del
+documento y los formatos de fecha y moneda. Ningún texto visible se escribe directamente
+en el código: todo pasa por una clave de traducción. Los RESTful Web Services devolverán
+sus mensajes de error en inglés y en español latinoamericano según la cabecera
+`Accept-Language`.
+
+La accesibilidad sigue las pautas WCAG 2.2. Los elementos interactivos tienen nombre
+accesible mediante `aria-label` o `aria-labelledby`, los mensajes de estado usan
+`role="status"` o `aria-live="polite"`, el enlace de la navegación activa lleva
+`aria-current="page"` y los íconos decorativos se ocultan con `aria-hidden="true"`. Al
+cierre de TB1 la Landing Page tiene 68 atributos ARIA y la Frontend Web Application,
+210.
 
 #### Web Services: Spring Boot y Java
 
@@ -3864,13 +3993,55 @@ la rama `main` y la carpeta `/ (root)`. La aplicación está disponible en la
 
 *Figura 5.1. Configuración y estado del despliegue de la Landing Page en GitHub Pages.*
 
-Los destinos de despliegue de los RESTful Web Services y las Frontend Web Applications
-aún no han sido definidos. Por ello, los nombres de sus proveedores, las URL
-públicas, las variables de entorno, los manifiestos de despliegue y las evidencias de
-ejecución se mantienen intencionalmente pendientes hasta que se definan la
-implementación y las decisiones de alojamiento. En ese momento, esta subsección se
-ampliará con un registro de configuración por producto y un enlace a su evidencia de
-despliegue.
+Los destinos de despliegue de la Frontend Web Application y de su API de datos de
+demostración se definieron en el Sprint 2. El siguiente registro resume la configuración
+de despliegue de cada producto:
+
+| Producto | Entorno objetivo | Fuente | Build | Publicación | URL pública |
+| --- | --- | --- | --- | --- | --- |
+| Landing Page | GitHub Pages | Rama `main` y carpeta `/ (root)` de `landing-page-main` | No requiere build: el sitio se sirve como HTML, CSS y JavaScript estáticos. | Automática al integrar un release en `main`. | https://team-coworkers.github.io/landing-page-main/ |
+| Frontend Web Application | GitHub Pages | Rama `main` de `hostera-frontend` | `npm run build:pages`, que compila con `--base-href /hostera-frontend/`. | Workflow `deploy-pages.yml` de GitHub Actions, en cada push a `main`. | https://team-coworkers.github.io/hostera-frontend/ |
+| API de datos de demostración | Navegador del usuario (GitHub Pages) y, como alternativa, Render | `server/data/*.json` de `hostera-frontend` | El build copia los archivos a `demo-data/`. | Se publica junto con la aplicación; el Blueprint `render.yaml` permite publicarla en Render. | Dentro de la aplicación publicada |
+| RESTful Web Services | Se elegirá en el Sprint 3 (AV2). | Repositorio de Web Services, que se creará en el Sprint 3. | `./mvnw package`, que genera el JAR de Spring Boot. | Se fijará junto con el proveedor elegido. | Se publicará en AV2. |
+
+**Frontend Web Application.** El workflow `.github/workflows/deploy-pages.yml` instala
+las dependencias con `npm ci`, ejecuta `npm run build:pages` y publica `dist/browser/`
+con las acciones oficiales de GitHub Pages. Antes de publicar, copia `index.html` como
+`404.html`, porque GitHub Pages devuelve ese archivo para cualquier ruta desconocida y así
+el router de Angular resuelve los enlaces profundos, como `/bookings` o
+`/sign-up?plan=professional`, al recargar la página. El workflow `test.yml` ejecuta las
+pruebas unitarias en Chrome sin interfaz en cada push y pull request a `main` y
+`develop`.
+
+**API de datos de demostración.** La aplicación consulta una única URL base,
+`hosteraApiUrl`, definida en `src/environments/`. En desarrollo apunta a json-server en
+`http://localhost:3000`. En producción, la opción `demoApiEnabled` activa el interceptor
+`demo-api.interceptor.ts`, que responde dentro del navegador con los mismos archivos de
+`server/data/` y las mismas reglas de json-server: filtros por campo, orden, límite y las
+operaciones `GET`, `POST`, `PUT`, `PATCH` y `DELETE`. Los cambios duran hasta recargar la
+página. Así, la aplicación publicada muestra datos sin depender de un servidor externo.
+El Blueprint `render.yaml` describe el mismo servicio para Render (`npm ci
+--include=dev`, inicio con json-server y health check en `/properties`); para usarlo
+basta con desactivar `demoApiEnabled`. Cuando se despliegue la RESTful API, ese mismo
+valor se desactiva y `hosteraApiUrl` pasa a apuntar a la API.
+
+**Servicio externo.** La aplicación consulta la API pública Nager.Date
+(`https://date.nager.at/api/v3`), que no requiere clave. Su URL base y el país se
+configuran en `src/environments/`.
+
+**Verificación y rollback.** Después de cada despliegue se comprueba que la ruta raíz de
+la aplicación carga el panorama operativo con datos, que `/sign-in` y
+`/sign-up?plan=starter` abren directamente y que la Landing Page lleva a esas vistas. Si
+una comprobación falla, el rollback consiste en volver a publicar la versión anterior:
+el workflow de GitHub Pages se puede ejecutar a mano sobre el último tag estable, y la
+Landing Page se republica desde el tag anterior de `main`. Como los despliegues se hacen
+siempre desde `main`, la versión restituida corresponde a un tag registrado en el
+`CHANGELOG.md` del repositorio.
+
+Los procedimientos de migración de base de datos se documentarán junto con los RESTful
+Web Services, porque la API de datos de demostración no utiliza un motor de base de
+datos: su estado se define por completo en los archivos versionados del repositorio del
+frontend.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
