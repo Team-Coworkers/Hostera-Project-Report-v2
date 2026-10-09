@@ -716,15 +716,16 @@ Entre sus características relevantes se encuentran las siguientes:
 La importancia de este segmento se relaciona con la composición de la oferta peruana:
 MINCETUR registró que el 85,1 % de los establecimientos de hospedaje no estaba
 categorizado en 2024 [4]. Este indicador describe la estructura de categorización del
-sector y no demuestra por sí solo que todos esos establecimientos sean independientes;
-por ello, la relación entre esta característica y el tipo de propiedad deberá
-validarse mediante entrevistas con administradores y propietarios en el mercado
-peruano.
+sector y no demuestra por sí solo que todos esos establecimientos sean independientes.
+Las entrevistas muestran el perfil del segmento: Domínguez (`E1`) administra un hotel
+independiente en Lima con un sistema de reservas apoyado en hojas de Excel, y Otto Cuba
+(`E2`), accionista de un hospedaje de una sola sede en Huarmey, gestiona reservas,
+habitaciones y accesos con registros manuales que luego traslada a Excel.
 
 ### 1.3.2. Gerentes o responsables de operaciones de pequeñas cadenas hoteleras
 
 Este segmento está conformado por personas que supervisan la operación de una cadena
-hotelera pequeña con dos o más sedes. Su responsabilidad consiste en coordinar y
+hotelera pequeña de dos a cinco sedes. Su responsabilidad consiste en coordinar y
 comparar información de reservas, disponibilidad, inventario y accesos entre los
 establecimientos, manteniendo la visibilidad de cada sede y una visión consolidada
 del negocio.
@@ -739,13 +740,22 @@ Entre sus características relevantes se encuentran las siguientes:
 - Interés en una plataforma que pueda crecer junto con la incorporación de nuevos
   establecimientos.
 
+Para clasificar a los entrevistados se considera el grupo de establecimientos en cuya
+operación participa la persona, y no el tamaño total de la marca. Forman parte del
+segmento quienes trabajan en un grupo de dos a cinco establecimientos de un mismo
+propietario, complejo o grupo inversionista, aunque esos hoteles lleven la marca de una
+cadena internacional. Quedan fuera quienes administran seis o más establecimientos, como
+las franquicias de gran tamaño.
+
 Este segmento se relaciona con la concentración geográfica de la oferta hotelera
 peruana. En 2024, Lima concentró el 27,6 % de los establecimientos de hospedaje,
 seguida por Cusco (8,1 %), Arequipa (5,9 %), Junín (5,7 %) y La Libertad (4,6 %); estas
 cinco regiones reunieron el 52,0 % de la oferta nacional [4]. La concentración no
 confirma por sí misma la existencia de cadenas pequeñas, pero evidencia un contexto
-en el que la coordinación entre sedes puede ser relevante y deberá validarse con
-gerentes o responsables de operaciones del sector hotelero peruano.
+en el que la coordinación entre sedes es relevante. Las entrevistas lo confirman: Odar
+Quispe (`E3`) dedica alrededor de cuarenta minutos diarios a consolidar a mano la
+información de las tres sedes que coordina, y Pier Paolo Spigno (`E5`) deriva huéspedes
+entre sus dos sedes cuando hay sobreventa.
 
 Los perfiles de recepción, almacén y control de accesos se consideran usuarios
 operativos relacionados con estos dos segmentos. Los huéspedes son beneficiarios
@@ -981,7 +991,7 @@ no participen en la operación del establecimiento.
 | Segmento                                                                 | Criterios de selección del participante                                                                                                        | Contexto que se buscará cubrir                                                                                                                     |
 | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Administradores y propietarios de hoteles independientes**             | Propietario, administrador o responsable de un hotel de una sola sede que participe directamente en decisiones y supervisión operativa.        | Gestión de reservas, disponibilidad, almacén y accesos desde la perspectiva de quien coordina varias áreas en un establecimiento individual.       |
-| **Gerentes o responsables de operaciones de pequeñas cadenas hoteleras** | Persona que coordine o supervise dos o más sedes de una cadena hotelera pequeña y que compare información o resultados entre establecimientos. | Consolidación de reservas, disponibilidad, inventario y accesos; coordinación de equipos y necesidad de mantener separados los datos de cada sede. |
+| **Gerentes o responsables de operaciones de pequeñas cadenas hoteleras** | Persona que coordine o supervise de dos a cinco sedes de una cadena hotelera pequeña y que compare información o resultados entre establecimientos. | Consolidación de reservas, disponibilidad, inventario y accesos; coordinación de equipos y necesidad de mantener separados los datos de cada sede. |
 
 La participación será voluntaria. Antes de iniciar se explicará el propósito académico,
 la duración, el uso del registro y la posibilidad de no responder cualquier pregunta o
@@ -994,16 +1004,16 @@ separado para publicar capturas o enlaces del video.
 
 Cada sesión seguirá una estructura común de aproximadamente 30 a 45 minutos:
 
-1. **Introducción y consentimiento (3–5 minutos):** presentación del entrevistador,
+1. **Introducción y consentimiento (3 a 5 minutos):** presentación del entrevistador,
    propósito, confidencialidad, autorización de grabación y permiso para tomar notas.
 2. **Contexto del participante (5 minutos):** rol, establecimiento, experiencia y
    responsabilidades dentro de la operación.
-3. **Relato de la operación actual (15–20 minutos):** descripción de actividades
+3. **Relato de la operación actual (15 a 20 minutos):** descripción de actividades
    recientes y herramientas utilizadas para reservas, habitaciones, inventario y
    accesos.
-4. **Problemas, objetivos y criterios (7–10 minutos):** dificultades, consecuencias,
+4. **Problemas, objetivos y criterios (7 a 10 minutos):** dificultades, consecuencias,
    prioridades y señales de una mejora valiosa.
-5. **Cierre (3–5 minutos):** oportunidad para agregar información, confirmar si se
+5. **Cierre (3 a 5 minutos):** oportunidad para agregar información, confirmar si se
    puede contactar nuevamente y agradecer la participación.
 
 #### 1. Primer segmento objetivo: administradores y propietarios de hoteles independientes
@@ -1026,7 +1036,7 @@ persona propietaria o administradora coordina directamente.
 
 #### 2. Segundo segmento objetivo: gerentes o responsables de operaciones de pequeñas cadenas hoteleras
 
-Las preguntas se enfocan en la coordinación de dos o más sedes, la consolidación de
+Las preguntas se enfocan en la coordinación de dos a cinco sedes, la consolidación de
 información y el control de las diferencias entre establecimientos.
 
 | N.º | Pregunta principal                                                                                                               | Pregunta complementaria                                                                                     |
@@ -1044,112 +1054,68 @@ información y el control de las diferencias entre establecimientos.
 
 ### 2.2.2. Registro de entrevistas
 
-**Segmento 1: Primer segmento objetivo: administradores y propietarios de hoteles independientes**
+Se registraron seis entrevistas en video con responsables de la operación hotelera.
+Cada entrevista se asignó al segmento según la definición de la sección 1.3: el
+segmento 1 reúne a quienes administran un hotel independiente de una sola sede y el
+segmento 2 a quienes trabajan en un grupo de dos a cinco establecimientos de un mismo
+propietario, complejo o grupo inversionista. Con este criterio, el segmento 1 cuenta con
+dos entrevistas y el segmento 2 con cuatro.
 
-Entrevista 1:
+El segmento 1 queda por debajo del mínimo de tres entrevistas que pide el enunciado del
+proyecto. La tercera entrevista del segmento se realizará y registrará con el mismo
+protocolo en el siguiente sprint; hasta entonces, las conclusiones sobre este segmento
+se apoyan en dos casos y se presentan con esa limitación.
 
-<img src="assets/chapter-2/interview-07-dominguez.png" alt="Entrevista 1 de Domínguez" style="width:40%; height:auto;"/>
-*Figura 2.1. Entrevista a Domínguez, administrador de un hotel independiente.*
+| Código | Entrevistado | Edad | Distrito y ciudad | Cargo | Segmento |
+| :---: | --- | :---: | --- | --- | :---: |
+| E1 | Domínguez | 38 | Lima | Administrador de hotel independiente | 1 |
+| E2 | Otto Cuba | 50 | Huarmey, Huarmey | Accionista del Hotel Bahía de Cuba | 1 |
+| E3 | Odar Fernando Quispe Salazar | 28 | Santiago de Surco, Lima | Gerente de operaciones de una cadena boutique | 2 |
+| E4 | Rafael Prieto | 40 | Miraflores, Lima | Room Division Manager | 2 |
+| E5 | Pier Paolo Spigno | 40 | Miraflores, Lima | Gerente general | 2 |
+| E6 | Roy Ríos | 38 | Trujillo, Trujillo | Subgerente del Hotel Ibis Trujillo | 2 |
 
-Entrevistado: Domínguez
-<br>Edad: 38 años
+#### Segmento 1: administradores y propietarios de hoteles independientes
 
-Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410062\_upc\_edu\_pe/IQAg\_8vb6HA\_SYhbV8IV9rdJASYjqJk4BTlfvZw6UZM194I](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410062_upc_edu_pe/IQAg_8vb6HA_SYhbV8IV9rdJASYjqJk4BTlfvZw6UZM194I?e=tKSihE)
-<br>Ocupación: Administrador de un hotel independiente
-<br>Ubicación: Lima
-<br>Inicio de la entrevista: 00:00:00
-<br>Duración: 06:40
+**Entrevista E1: Domínguez**
 
-Resumen:
+<img src="assets/chapter-2/interview-07-dominguez.png" alt="Captura de la entrevista a Domínguez" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 2.1. Captura de la entrevista a Domínguez, administrador de un hotel independiente en Lima.*
+
+| Dato | Detalle |
+| --- | --- |
+| Nombres y apellidos | Domínguez (apellido con el que se identifica en la grabación) |
+| Edad | 38 años |
+| Distrito y ciudad | Lima (no indica el distrito) |
+| Ocupación | Administrador de hotel |
+| Establecimiento | Hotel independiente de una sola sede |
+| URL de la entrevista | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410062_upc_edu_pe/IQAg_8vb6HA_SYhbV8IV9rdJASYjqJk4BTlfvZw6UZM194I?e=tKSihE |
+| Inicio y duración en el video | Inicio en 0:00 · duración 6:40 |
+
+**Resumen.**
+
 Domínguez, de 38 años, es administrador de un hotel independiente en Lima. Trabaja en el sector hotelero desde hace aproximadamente diez años y cumple el rol de administrador desde hace cinco. Su jornada comienza revisando las reservas y las habitaciones disponibles, para luego coordinar con el personal de limpieza y recepción y verificar el almacén junto con cualquier incidencia de accesos; prioriza las reservas y las llegadas porque afectan directamente la disponibilidad y la atención del día. El registro de reservas se apoya en un sistema de reservas complementado con hojas de Excel para controles adicionales, y ante una diferencia o una reserva duplicada revisa ambas fuentes, se comunica con recepción y corrige la distribución de forma manual. En el almacén, el personal registra los ingresos y salidas de productos y se realizan inventarios periódicos; el encargado actualiza la información y los faltantes se detectan en esos inventarios o cuando un trabajador avisa que un producto está por agotarse. Los accesos de los huéspedes se entregan al momento del registro y los del personal se asignan según sus funciones, revisando los registros de entrada y salida cuando es necesario; si se pierde una tarjeta, se bloquea la anterior y se emite una nueva, y para reconstruir un evento se consultan los registros del sistema o se pregunta al encargado. Para supervisar el hotel a distancia necesita conocer reservas, ocupación, habitaciones disponibles, incidencias, estado del almacén y cualquier problema de seguridad o accesos, información que recibe por llamadas, mensajes y sistemas y que le toma varios minutos consolidar. Opera con computadora, teléfonos celulares, Excel, un sistema de reservas, cámaras y control de acceso. Señala como dificultad principal que la información está repartida entre distintas herramientas y personas, lo que lo obliga a consultar varias fuentes y genera retrasos, errores en reservas, problemas de coordinación y mayor carga para el personal. Como mejora plantea una plataforma centralizada que permita consultar reservas, habitaciones, almacén y accesos desde un mismo lugar y en tiempo real, con un costo accesible, facilidad de uso, capacitación inicial, seguridad y respaldo de la información. Finalmente, subraya que las áreas están relacionadas entre sí y que un problema en reservas, almacén o accesos termina afectando la experiencia del huésped.
 
-**Entrevista 2:**
+**Tecnología y canales.** Registra las reservas en un sistema de reservas y lleva controles adicionales en hojas de Excel. Recibe la información de la operación por llamadas y mensajes, y trabaja con computadora y celulares. El hotel cuenta con cámaras y con un sistema de control de acceso con tarjetas que se bloquean y reemiten cuando se pierden.
 
-**<img src="assets/chapter-2/interview-03-rafael-prieto.png" alt="Entrevista 2 de Rafael Prieto" style="width:100%; height:auto;"/>**
-*Figura 2.2. Entrevista a Rafael Prieto, Room Division Manager.*
+**Entrevista E2: Otto Cuba**
 
-Entrevistado: Rafael Prieto, Manager del Hotel Intercontinental Lima Miraflores y Hotel Índigo Lima Miraflores
+<img src="assets/chapter-2/interview-04-otto-cuba.png" alt="Captura de la entrevista a Otto Cuba" style="display:block; width:60%; height:auto; margin:0 auto;"/>
 
-<br>Edad: 40 años
+*Figura 2.2. Captura de la entrevista a Otto Cuba, accionista del Hotel Bahía de Cuba.*
 
-Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105\_upc\_edu\_pe/IQC901DA6BjRSKuU5x3JudJLAa2SeS-YUguP5l7-N93o1b8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=J85c3I](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQC901DA6BjRSKuU5x3JudJLAa2SeS-YUguP5l7-N93o1b8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=J85c3I)
-<br>Ocupación: Room Division Manager
-<br>Ubicación: Miraflores, Lima
+| Dato | Detalle |
+| --- | --- |
+| Nombres y apellidos | Otto Cuba |
+| Edad | 50 años |
+| Distrito y ciudad | Huarmey, Huarmey (playa de Tokio, Áncash) |
+| Ocupación | Accionista del Hotel Bahía de Cuba |
+| Establecimiento | Hospedaje independiente de una sede con cerca de cuatro años de operación |
+| URL de la entrevista | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQB_fsbaBkPlQLUXDh5QHPT0ASoAszTA2Lnd-492y2nm1Mo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oNhS76 |
+| Inicio y duración en el video | Inicio en 0:00 · duración 3:38 |
 
-Resumen:
-
-El entrevistado, Room Division Manager de un complejo hotelero conformado por el Hotel Intercontinental Lima Miraflores, con 321 habitaciones, y el Hotel Índigo Lima Miraflores, con 76 habitaciones, comenta sobre las principales actividades y responsabilidades que realiza en la gestión de ambas propiedades. Está encargado de supervisar las áreas de recepción, SPA, seguridad y housekeeping. En su rutina diaria revisa las reservas que ingresarán al día siguiente y realiza una verificación adicional para identificar nuevos huéspedes, clientes VIP y requerimientos especiales. También supervisa que las habitaciones estén correctamente asignadas de acuerdo con el tipo de habitación, piso, reserva y beneficios de los huéspedes.
-
-Para la gestión de reservas, el entrevistado señala que esta actividad es realizada principalmente por el departamento de reservas, aunque también puede ser gestionada por el Front Desk Manager o los MODs cuando es necesario. La disponibilidad de habitaciones se analiza estratégicamente mediante reuniones semanales de revenue, donde se revisa el comportamiento del mercado, los hoteles competidores, las tarifas, los eventos de la semana y los niveles de disponibilidad. A partir de esta información, diferentes áreas como ventas, gerencia general, revenue management y reservas establecen estrategias para responder a los cambios entre temporadas de alta y baja ocupación.
-
-En cuanto al almacén, el entrevistado no controla directamente las existencias ni las salidas, ya que esta función corresponde al departamento de almacén. Su responsabilidad consiste principalmente en revisar y aprobar los pedidos de las áreas bajo su cargo, verificando que sean coherentes y que no excedan el presupuesto establecido. Para el control de accesos de huéspedes, participan principalmente los departamentos de seguridad y recepción. Seguridad identifica posibles anomalías durante el ingreso, mientras que recepción verifica en el sistema que las personas que indican tener una reserva efectivamente estén registradas.
-
-Para supervisar el hotel de manera remota, cuenta con una laptop y un celular proporcionados por la organización. Mediante una conexión VPN autorizada puede ingresar al sistema desde su domicilio y revisar información como las llegadas, salidas y movimiento de huéspedes. Utiliza principalmente Opera y la VPN como herramientas para realizar estas tareas. El acceso remoto está restringido a determinados trabajadores según su nivel de responsabilidad dentro del hotel, por lo que no todos cuentan con una laptop corporativa o acceso mediante VPN.
-
-Respecto a las dificultades, considera que no existe un único problema específico, sino diferentes circunstancias que pueden presentarse en una operación hotelera, relacionadas con el personal, la percepción del huésped o descuidos en la atención y preparación de las habitaciones. Por ello, considera que la organización y la capacidad de responder ante estas situaciones son aspectos importantes para la operación. Como cambio para mejorar la administración, destaca la importancia de la mejora continua y de mantener motivado al equipo, especialmente mediante el reconocimiento y proporcionándoles las herramientas necesarias para realizar correctamente su trabajo.
-
-Finalmente, resalta la importancia de comprender mejor el trabajo del área de housekeeping. Señala que su función no se limita a limpiar habitaciones, sino que también implica cumplir estándares, identificar los gustos y preferencias de los huéspedes y cuidar los detalles durante la preparación de las habitaciones. Considera que este departamento tiene un trabajo altamente demandante y que su aporte es fundamental para la experiencia del huésped, razón por la cual algunas cadenas realizan actividades como el Housekeeping Week para reconocer su trabajo.
-
-**Entrevista 3:**
-
-**<img src="assets/chapter-2/interview-05-odar-quispe.png" alt="Entrevista 3 de Odar Quispe" style="width:100%; height:auto;"/>**
-*Figura 2.3. Entrevista a Odar Quispe, gerente de operaciones de una cadena hotelera boutique.*
-
-Entrevistado: Odar Fernando Quispe Salazar
-
-<br>Edad: 28 años
-
-Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202422549_upc_edu_pe/IQCWrCWNyT7sQ5FAOWgSeQ58AaF4sjTSr8rqBYv4p_8JIQg](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202422549_upc_edu_pe/IQCWrCWNyT7sQ5FAOWgSeQ58AaF4sjTSr8rqBYv4p_8JIQg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=T92PSC)
-<br>Ocupación: Gerente de Operaciones de una cadena hotelera boutique de tres sedes
-<br>Ubicación: Santiago de Surco, Lima
-<br>Inicio de la entrevista: 00:00:30
-<br>Duración: 06:02
-
-Resumen:
-
-Odar Quispe, de 28 años, es gerente de operaciones de una cadena hotelera boutique con tres sedes en Lima que suman 68 habitaciones. Indica que su mayor dificultad es no tener una vista unificada de la operación, ya que dos sedes usan un PMS básico y la tercera solo hojas de cálculo, por lo que dedica alrededor de cuarenta minutos diarios a consolidar la información de forma manual y termina decidiendo con datos desactualizados. El inventario se coordina por WhatsApp y las transferencias entre sedes no se registran, lo que produce diferencias de stock y compras duplicadas. Los accesos se administran de forma distinta en cada sede, sin un registro centralizado de quién ingresa ni desactivación de credenciales cuando alguien cesa. Como mejora principal plantea un panel consolidado en tiempo real accesible desde el celular, con roles y permisos, replicación de configuraciones al abrir nuevas sedes e integración con Booking y Expedia.
-
-**Segmento 2: Primer segmento objetivo: Gerentes o responsables de operaciones de pequeñas cadenas hoteleras**
-
-**Entrevista 1:**
-
-**<img src="assets/chapter-2/interview-02-melia-general-manager.png" alt="Entrevista 1 del gerente general del Hotel Meliá Lima Miraflores" style="width:100%; height:auto;"/>**
-*Figura 2.4. Entrevista al gerente general del Hotel Meliá Lima Miraflores.*
-
-Entrevistado: Gerente general del Hotel Meliá Lima Miraflores
-<br>Edad: 40 años
-
-Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105\_upc\_edu\_pe/IQCvOeF36LNrRIzEPxPdq4GpAR6at3G-kDTtjlDdXhdzrUY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1IQwni](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQCvOeF36LNrRIzEPxPdq4GpAR6at3G-kDTtjlDdXhdzrUY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1IQwni)
-<br>Ocupación: Administrador de negocios turísticos y hoteleros / Gerente general
-<br>Ubicación: Miraflores, Lima
-
-Resumen:
-El entrevistado, administrador de negocios turísticos y hoteleros y gerente general de un hotel en Miraflores, comenta sobre los principales procesos y herramientas que utiliza para supervisar las reservas, habitaciones e información de las propiedades que administra. Diariamente recibe informes de recepción, entre ellos el *Flash Manager* y el *History and Forecast*, que le permiten revisar información consolidada, histórica y proyectada. Además, el supervisor de recepción, el área de Experience y el agente de reservas realizan un seguimiento diario de las reservas y sus observaciones, considerando aspectos como el tipo de habitación, tarifa, plan de alimentación y procedencia de la reserva mediante plataformas como Booking y Expedia.
-
-Para la gestión de reservas e inventario utiliza principalmente Opera Cloud, integrado con el CRM. El sistema permite administrar el inventario de habitaciones y realizar seguimiento de las reservas. También facilita el trabajo del *revenue manager*, quien puede modificar las tarifas de acuerdo con la disponibilidad de cada tipo de habitación. Como medida de seguridad, cada trabajador cuenta con un usuario y contraseña personal e intransferible, lo que permite realizar un *tracking* de los movimientos efectuados en las reservas, como cambios de tarifas o incorporación de información.
-
-En situaciones de sobreventa u *overbooking*, se realiza una coordinación entre los responsables de las diferentes propiedades para derivar a los huéspedes a otra sede. Para mantener separada la información de cada hotel, cada propiedad cuenta con informes y un centro de costos o código propio. De esta manera, los usuarios autorizados pueden acceder únicamente a la información correspondiente a las sedes que tienen bajo su responsabilidad. Opera también permite realizar comparaciones entre diferentes informes y propiedades.
-
-Respecto a la seguridad de la información, señala que Opera está configurado de acuerdo con el código de cada propiedad, evitando que otras sedes o personas externas puedan acceder a información que no les corresponde. También menciona que Opera Cloud representa una versión más moderna del sistema, utilizando almacenamiento en la nube en lugar de depender de la misma infraestructura de centros de datos.
-
-Como solución complementaria para la administración de habitaciones, comenta que propuso implementar una plataforma destinada al área de ama de llaves. Actualmente, esta plataforma permite visualizar en tiempo real el estado de las habitaciones y realizar seguimiento de trabajos de mantenimiento y pendientes relacionados con las áreas de *Room Divisions*, incluyendo ama de llaves, recepción y mantenimiento. El costo aproximado es de 1.500 dólares anuales por propiedad, e incluye soporte 24/7 desde España. Las capacitaciones se realizan constantemente y también forman parte de la inducción de los nuevos trabajadores que utilizarán la plataforma.
-
-Finalmente, considera importantes aspectos como la seguridad de los datos personales, el soporte permanente, la capacitación de los trabajadores y la integración continua del sistema. Señala que las actualizaciones mensuales permiten corregir errores y reducir procesos repetitivos mediante la automatización, facilitando así la gestión y supervisión de las operaciones del hotel.
-
-**Entrevista 2:**
-
-**<img src="assets/chapter-2/interview-04-otto-cuba.png" alt="Entrevista 3 de Otto Cuba" style="width:100%; height:auto;"/>**
-*Figura 2.5. Entrevista a Otto Cuba, accionista del Hotel Bahía de Cuba.*
-
-Entrevistado: Otto Cuba
-
-<br>Edad: 50 años
-
-Enlace de entrevista: [https://upcedupe-my.sharepoint.com/personal/u202410105\_upc\_edu\_pe/\_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202410105\_upc\_edu\_pe%2FDocuments%2Fentrevista%20elvis%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E922c884b-726d-4027-b0b8-4c17dee11c12](https://upcedupe-my.sharepoint.com/personal/u202410105_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202410105_upc_edu_pe%2FDocuments%2Fentrevista%20elvis%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E922c884b-726d-4027-b0b8-4c17dee11c12)
-<br>Ocupación: Accionista del Hotel Bahía de Cuba
-<br>Ubicación: Playa de Tokio, Huarmey, Áncash
-
-Resumen:
+**Resumen.**
 
 Otto Cuba, accionista del Hotel Bahía de Cuba, comenta sobre la forma en que actualmente gestionan las reservas, habitaciones y accesos de su hospedaje, el cual lleva aproximadamente cuatro años operando en la playa de Tokio, Huarmey. Señala que durante este tiempo la gestión se ha realizado principalmente de manera manual y mediante redes sociales. A pesar de ello, menciona que el desempeño y la disponibilidad del hospedaje han ido incrementándose año tras año, logrando captar y fidelizar nuevos huéspedes, con un crecimiento aproximado del 10 al 15 % anual.
 
@@ -1161,147 +1127,279 @@ Como solución para mejorar la coordinación y acompañar el crecimiento del neg
 
 Finalmente, respecto a las condiciones para adoptar la propuesta, menciona que están evaluando financiar la implementación mediante una entidad bancaria, con el objetivo de concretar el proyecto para la nueva temporada del año 2027. De esta manera, buscan avanzar desde una gestión principalmente manual hacia una administración más automatizada de las reservas y con mayor presencia digital.
 
-**Entrevista 3:**
+**Tecnología y canales.** Registra los accesos de huéspedes y personal de forma manual y luego los traslada a una tabla de Excel. El equipo se coordina mediante grupos de WhatsApp y llamadas telefónicas, y los huéspedes llegan principalmente por redes sociales. No utiliza un sistema de reservas y evalúa implementar uno con página web para la temporada 2027.
 
-**<img src="assets/chapter-2/interview-06-roy-rios.png" alt="Entrevista 3 de Roy Ríos" style="width:100%; height:auto;"/>**
-*Figura 2.6. Entrevista a Roy Ríos, subgerente de un hotel de la cadena Accor.*
+#### Segmento 2: gerentes o responsables de operaciones de pequeñas cadenas hoteleras
 
-Entrevistado: Roy Ríos
+**Entrevista E3: Odar Fernando Quispe Salazar**
 
-<br>Edad: 38 años
+<img src="assets/chapter-2/interview-05-odar-quispe.png" alt="Captura de la entrevista a Odar Fernando Quispe Salazar" style="display:block; width:60%; height:auto; margin:0 auto;"/>
 
-Enlace de entrevista: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105\_upc\_edu\_pe/IQBXkmw7\_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb\_yy0aZ0](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQBXkmw7_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb_yy0aZ0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ETZm7N)
-<br>Ocupación: Subgerente de un hotel de la cadena Accor
-<br>Ubicación: Trujillo, La Libertad
-<br>Inicio de la entrevista: 00:01:56
-<br>Duración: 16:26
+*Figura 2.3. Captura de la entrevista a Odar Fernando Quispe Salazar, gerente de operaciones de una cadena hotelera boutique de tres sedes.*
 
-Resumen:
-Roy Ríos, de 38 años, es subgerente de un hotel de la cadena Accor ubicado en Trujillo. El establecimiento cuenta con 112 habitaciones y registró una ocupación aproximada de 65 % durante el último año, frente al 71 % alcanzado el año anterior. Debido a que cada hotel opera bajo una razón social diferente, no se realizan movimientos internos de inventario entre sedes y los responsables de cada establecimiento no tienen acceso directo a la información financiera de los demás hoteles, lo que limita la comparación de ingresos y desempeño. Las reservas derivadas a otros hoteles se coordinan mediante correo electrónico y a través de ResaWeb, utilizando códigos internos de identificación. Para la gestión operativa emplean Opera Cloud como PMS, Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante. El hotel utiliza laptops, terminales táctiles y tablets. En materia de seguridad, los huéspedes deben registrarse previamente y se emplean tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada. La documentación administrativa y operativa se conserva de manera independiente durante cinco años. Finalmente, señala que el crecimiento de la cadena depende del desempeño de cada hotel, las condiciones políticas, sociales y de seguridad, así como de las decisiones de los inversionistas. Para adoptar nuevas soluciones, considera importantes los costos, el impacto en los márgenes operativos, la capacitación, el soporte y la seguridad.
+| Dato | Detalle |
+| --- | --- |
+| Nombres y apellidos | Odar Fernando Quispe Salazar |
+| Edad | 28 años |
+| Distrito y ciudad | Santiago de Surco, Lima |
+| Ocupación | Gerente de operaciones |
+| Establecimiento | Cadena hotelera boutique de tres sedes en Lima, con 68 habitaciones en total |
+| URL de la entrevista | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202422549_upc_edu_pe/IQCWrCWNyT7sQ5FAOWgSeQ58AaF4sjTSr8rqBYv4p_8JIQg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=T92PSC |
+| Inicio y duración en el video | Inicio en 0:30 · duración 6:02 |
 
+**Resumen.**
+
+Odar Quispe, de 28 años, es gerente de operaciones de una cadena hotelera boutique con tres sedes en Lima que suman 68 habitaciones. Indica que su mayor dificultad es no tener una vista unificada de la operación, ya que dos sedes usan un PMS básico y la tercera solo hojas de cálculo, por lo que dedica alrededor de cuarenta minutos diarios a consolidar la información de forma manual y termina decidiendo con datos desactualizados. El inventario se coordina por WhatsApp y las transferencias entre sedes no se registran, lo que produce diferencias de stock y compras duplicadas. Los accesos se administran de forma distinta en cada sede, sin un registro centralizado de quién ingresa ni desactivación de credenciales cuando alguien cesa. Como mejora principal plantea un panel consolidado en tiempo real accesible desde el celular, con roles y permisos, replicación de configuraciones al abrir nuevas sedes e integración con Booking y Expedia.
+
+**Tecnología y canales.** Dos sedes usan un PMS básico y la tercera solo hojas de cálculo. El inventario se coordina por WhatsApp y los accesos se administran de forma distinta en cada sede. Pide un panel consolidado accesible desde el celular, con roles y permisos, y la integración con Booking y Expedia.
+
+**Entrevista E4: Rafael Prieto**
+
+<img src="assets/chapter-2/interview-03-rafael-prieto.png" alt="Captura de la entrevista a Rafael Prieto" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 2.4. Captura de la entrevista a Rafael Prieto, Room Division Manager.*
+
+| Dato | Detalle |
+| --- | --- |
+| Nombres y apellidos | Rafael Prieto |
+| Edad | 40 años |
+| Distrito y ciudad | Miraflores, Lima |
+| Ocupación | Room Division Manager del Hotel Intercontinental Lima Miraflores y del Hotel Índigo Lima Miraflores |
+| Establecimiento | Complejo de dos hoteles de marca internacional (321 y 76 habitaciones) |
+| URL de la entrevista | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQC901DA6BjRSKuU5x3JudJLAa2SeS-YUguP5l7-N93o1b8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=J85c3I |
+| Inicio y duración en el video | Inicio en 0:00 · duración 11:38 |
+
+**Resumen.**
+
+Rafael Prieto, Room Division Manager de un complejo hotelero conformado por el Hotel Intercontinental Lima Miraflores, con 321 habitaciones, y el Hotel Índigo Lima Miraflores, con 76 habitaciones, comenta sobre las principales actividades y responsabilidades que realiza en la gestión de ambas propiedades. Está encargado de supervisar las áreas de recepción, SPA, seguridad y housekeeping. En su rutina diaria revisa las reservas que ingresarán al día siguiente y realiza una verificación adicional para identificar nuevos huéspedes, clientes VIP y solicitudes especiales. También supervisa que las habitaciones estén correctamente asignadas de acuerdo con el tipo de habitación, piso, reserva y beneficios de los huéspedes.
+
+Para la gestión de reservas, el entrevistado señala que esta actividad es realizada principalmente por el departamento de reservas, aunque también puede ser gestionada por el Front Desk Manager o los MODs cuando es necesario. La disponibilidad de habitaciones se analiza estratégicamente mediante reuniones semanales de revenue, donde se revisa el comportamiento del mercado, los hoteles competidores, las tarifas, los eventos de la semana y los niveles de disponibilidad. A partir de esta información, diferentes áreas como ventas, gerencia general, revenue management y reservas establecen estrategias para responder a los cambios entre temporadas de alta y baja ocupación.
+
+En cuanto al almacén, el entrevistado no controla directamente las existencias ni las salidas, ya que esta función corresponde al departamento de almacén. Su responsabilidad consiste principalmente en revisar y aprobar los pedidos de las áreas bajo su cargo, verificando que sean coherentes y que no excedan el presupuesto establecido. Para el control de accesos de huéspedes, participan principalmente los departamentos de seguridad y recepción. Seguridad identifica posibles anomalías durante el ingreso, mientras que recepción verifica en el sistema que las personas que indican tener una reserva efectivamente estén registradas.
+
+Para supervisar el hotel de manera remota, cuenta con una laptop y un celular proporcionados por la organización. Mediante una conexión VPN autorizada puede ingresar al sistema desde su domicilio y revisar información como las llegadas, salidas y movimiento de huéspedes. Utiliza principalmente Opera y la VPN como herramientas para realizar estas tareas. El acceso remoto está restringido a determinados trabajadores según su nivel de responsabilidad dentro del hotel, por lo que no todos cuentan con una laptop corporativa o acceso mediante VPN.
+
+Respecto a las dificultades, considera que no existe un único problema específico, sino diferentes circunstancias que pueden presentarse en una operación hotelera, relacionadas con el personal, la percepción del huésped o descuidos en la atención y preparación de las habitaciones. Por ello, considera que la organización y la capacidad de responder ante estas situaciones son aspectos importantes para la operación. Como cambio para mejorar la administración, destaca la importancia de la mejora continua y de mantener motivado al equipo, especialmente mediante el reconocimiento y proporcionándoles las herramientas necesarias para realizar correctamente su trabajo.
+
+Finalmente, resalta la importancia de comprender mejor el trabajo del área de housekeeping. Señala que su función no se limita a limpiar habitaciones, sino que también implica cumplir estándares, identificar los gustos y preferencias de los huéspedes y cuidar los detalles durante la preparación de las habitaciones. Considera que este departamento tiene un trabajo altamente demandante y que su aporte es fundamental para la experiencia del huésped, razón por la cual algunas cadenas realizan actividades como el Housekeeping Week para reconocer su trabajo.
+
+**Tecnología y canales.** Utiliza Opera como sistema de gestión hotelera. Revisa llegadas, salidas y movimiento de huéspedes desde su domicilio con una laptop y un celular corporativos mediante una VPN autorizada; el acceso remoto está restringido según el cargo.
+
+**Entrevista E5: Pier Paolo Spigno**
+
+<img src="assets/chapter-2/interview-02-melia-general-manager.png" alt="Captura de la entrevista a Pier Paolo Spigno" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 2.5. Captura de la entrevista a Pier Paolo Spigno, gerente general del Hotel Meliá Lima Miraflores.*
+
+| Dato | Detalle |
+| --- | --- |
+| Nombres y apellidos | Pier Paolo Spigno |
+| Edad | 40 años |
+| Distrito y ciudad | Miraflores, Lima |
+| Ocupación | Administrador de negocios turísticos y hoteleros; gerente general |
+| Establecimiento | Dos sedes de una cadena internacional: Meliá Lima Miraflores y Meliá Lima San Isidro |
+| URL de la entrevista | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQCvOeF36LNrRIzEPxPdq4GpAR6at3G-kDTtjlDdXhdzrUY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1IQwni |
+| Inicio y duración en el video | Inicio en 0:00 · duración 9:03 |
+
+**Resumen.**
+
+Pier Paolo Spigno, administrador de negocios turísticos y hoteleros y gerente general del Hotel Meliá Lima Miraflores, comenta sobre los principales procesos y herramientas que utiliza para supervisar las reservas, habitaciones e información de las propiedades que administra. Diariamente recibe informes de recepción, entre ellos el *Flash Manager* y el *History and Forecast*, que le permiten revisar información consolidada, histórica y proyectada. Además, el supervisor de recepción, el área de Experience y el agente de reservas realizan un seguimiento diario de las reservas y sus observaciones, considerando aspectos como el tipo de habitación, tarifa, plan de alimentación y procedencia de la reserva mediante plataformas como Booking y Expedia.
+
+Para la gestión de reservas e inventario utiliza principalmente Opera Cloud, integrado con el CRM. El sistema permite administrar el inventario de habitaciones y realizar seguimiento de las reservas. También facilita el trabajo del *revenue manager*, quien puede modificar las tarifas de acuerdo con la disponibilidad de cada tipo de habitación. Como medida de seguridad, cada trabajador cuenta con un usuario y contraseña personal e intransferible, lo que permite realizar un *tracking* de los movimientos efectuados en las reservas, como cambios de tarifas o incorporación de información.
+
+En situaciones de sobreventa u *overbooking*, se realiza una coordinación entre los responsables de las diferentes propiedades para derivar a los huéspedes a otra sede. Para mantener separada la información de cada hotel, cada propiedad cuenta con informes y un centro de costos o código propio. De esta manera, los usuarios autorizados pueden acceder únicamente a la información correspondiente a las sedes que tienen bajo su responsabilidad. Opera también permite realizar comparaciones entre diferentes informes y propiedades.
+
+Respecto a la seguridad de la información, señala que Opera está configurado de acuerdo con el código de cada propiedad, evitando que otras sedes o personas externas puedan acceder a información que no les corresponde. También menciona que Opera Cloud representa una versión más moderna del sistema, utilizando almacenamiento en la nube en lugar de depender de la misma infraestructura de centros de datos.
+
+Como solución complementaria para la administración de habitaciones, comenta que propuso implementar una plataforma destinada al área de ama de llaves. Actualmente, esta plataforma permite visualizar en tiempo real el estado de las habitaciones y realizar seguimiento de trabajos de mantenimiento y pendientes relacionados con las áreas de *Room Divisions*, incluyendo ama de llaves, recepción y mantenimiento. El costo aproximado es de 1.500 dólares anuales por propiedad, e incluye soporte 24/7 desde España. Las capacitaciones se realizan constantemente y también forman parte de la inducción de los nuevos trabajadores que utilizarán la plataforma.
+
+Finalmente, considera importantes aspectos como la seguridad de los datos personales, el soporte permanente, la capacitación de los trabajadores y la integración continua del sistema. Señala que las actualizaciones mensuales permiten corregir errores y reducir procesos repetitivos mediante la automatización, facilitando así la gestión y supervisión de las operaciones del hotel.
+
+**Tecnología y canales.** Utiliza Opera Cloud integrado con el CRM y recibe a diario los informes *Flash Manager* y *History and Forecast*. Las reservas llegan, entre otros canales, desde Booking y Expedia. Cada trabajador tiene usuario y contraseña personales, y el hotel usa una plataforma complementaria para housekeeping que cuesta cerca de USD 1 500 al año por propiedad, con soporte 24/7.
+
+**Entrevista E6: Roy Ríos**
+
+<img src="assets/chapter-2/interview-06-roy-rios.png" alt="Captura de la entrevista a Roy Ríos" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 2.6. Captura de la entrevista a Roy Ríos, subgerente del Hotel Ibis Trujillo.*
+
+| Dato | Detalle |
+| --- | --- |
+| Nombres y apellidos | Roy Ríos |
+| Edad | 38 años |
+| Distrito y ciudad | Trujillo, Trujillo |
+| Ocupación | Subgerente del Hotel Ibis Trujillo, cadena Accor |
+| Establecimiento | Hotel de 112 habitaciones que forma parte de un grupo de tres hoteles Ibis en el Perú del mismo inversionista |
+| URL de la entrevista | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQBXkmw7_ruBTJOmqXxAJKrYATbAXyGpF2SWSbsb_yy0aZ0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=i1f2oE |
+| Inicio y duración en el video | Inicio en 0:51 · duración del video 16:23 |
+
+**Resumen.**
+
+Roy Ríos, subgerente del Hotel Ibis Trujillo, explica cómo se gestionan las reservas,
+los accesos y la información de su hotel dentro de la cadena Accor. Tiene 38 años y
+reside en Trujillo. Supervisa la sede de Trujillo, que cuenta con 112 habitaciones y
+registró una ocupación de alrededor de 65 % en el último año, frente al 71 % del año
+anterior. Su hotel forma parte de un grupo de tres hoteles Ibis en el Perú que
+pertenecen al mismo inversionista.
+
+Señala que cada hotel opera con una razón social propia, incluso cuando pertenece al
+mismo inversionista, por lo que no se realizan movimientos de inventario entre sedes y
+los responsables de un hotel no acceden a los ingresos de los demás. La información de
+cada hotel se conserva por separado: el hotel archiva durante cinco años sus tarjetas de
+registro y sus comprobantes, y no los comparte con otras sedes.
+
+Para el acceso, los huéspedes se registran previamente y las habitaciones usan tarjetas
+magnéticas que activan el ascensor solo hasta el piso asignado y abren únicamente la
+habitación del huésped. Cuando apoyan reservas de otros hoteles de la cadena, las
+derivan por correo electrónico y mediante ResaWeb, el portal interno de Accor, usando el
+código interno de cada hotel.
+
+Sobre el crecimiento, explica que depende del contexto político, social y de seguridad,
+de los resultados de cada hotel y de las decisiones de los inversionistas. Para adoptar
+una solución considera los costos frente a los márgenes operativos de la industria, la
+capacitación, el soporte y la seguridad.
+
+**Tecnología y canales.** Usa Opera Cloud como PMS, Aztec para la facturación y Oracle Symphony en las terminales táctiles del restaurante. Las reservas se derivan a otros hoteles de la cadena por correo electrónico y mediante ResaWeb. En recepción trabajan con laptops y una tablet, y los accesos se controlan con tarjetas magnéticas vinculadas al ascensor y a la habitación.
 
 ### 2.2.3. Análisis de entrevistas
 
-**Segmento 1: Primer segmento objetivo: administradores y propietarios de hoteles independientes**
+Este análisis reúne las seis entrevistas registradas en la sección 2.2.2 y es la base
+sobre la que se construyen los arquetipos de la sección 2.3. Las fuentes se identifican
+con el código de cada entrevista: `E1` y `E2` para el segmento 1, y `E3` a `E6` para el
+segmento 2. Todas las características se obtienen de lo que cada persona describe en su
+video; cuando una entrevista no menciona un dato, no se cuenta.
 
+#### Segmento 1: administradores y propietarios de hoteles independientes (n = 2)
 
+| Característica | Resultado | Fuente |
+| :--- | :---: | :--- |
+| Concilia reservas, accesos o almacén en hojas de Excel | 2 de 2 | E1, E2 |
+| Coordina la operación por mensajes, WhatsApp o llamadas | 2 de 2 | E1, E2 |
+| Reconstruye a mano el estado de la operación a partir de varias fuentes | 2 de 2 | E1, E2 |
+| Pide una vista única de reservas, habitaciones, almacén y accesos | 2 de 2 | E1, E2 |
+| Condiciona la adopción al costo, la capacitación o el financiamiento | 2 de 2 | E1, E2 |
+| Registra las reservas en un sistema de reservas | 1 de 2 | E1 |
+| Controla el acceso a las habitaciones con tarjeta | 1 de 2 | E1 |
+| Detecta los faltantes del almacén solo en el inventario periódico | 1 de 2 | E1 |
+| Recibe a sus huéspedes principalmente por redes sociales | 1 de 2 | E2 |
 
-**Perfil del entrevistado:**
-Administrador de un hotel independiente en Lima, 38 años. Cuenta con alrededor de diez años de experiencia en el sector hotelero y cinco en el rol de administrador, con responsabilidad directa sobre reservas, habitaciones, almacén y accesos de una sola sede.
+El segmento está formado por quienes responden por la operación completa de un solo
+establecimiento, con cargos de administrador y de accionista. Su rasgo común no es la
+herramienta que utilizan, sino el punto donde la información se rompe. Domínguez (`E1`)
+tiene un sistema de reservas, pero lo complementa con hojas de Excel y, ante una reserva
+duplicada, revisa ambas fuentes y corrige la distribución a mano; para supervisar el
+hotel a distancia necesita varios minutos de llamadas y mensajes. Otto Cuba (`E2`) no
+usa un sistema: registra los accesos en papel, los traslada a Excel y obtiene sus
+reportes recién en el cierre de caja. En los dos casos el trabajo manual aparece como
+consecuencia de la desconexión entre registros, no de la ausencia total de herramientas.
 
-* **Motivación para participar:**
-  Participa desde su rol de administrador único de la operación y autoriza expresamente el uso de sus respuestas y de la grabación. Su interés se orienta a resolver un problema propio y concreto: reunir en un solo lugar información que hoy debe reconstruir consultando varias fuentes.
-* **Dificultades actuales:**
-  Se identifican varias barreras recurrentes:
-    * Información repartida entre herramientas y personas: para saber qué está ocurriendo debe consultar el sistema de reservas, las hojas de Excel y al personal de recepción o almacén.
-    * Conciliación manual de reservas: ante una diferencia o una reserva duplicada contrasta el sistema con el Excel, coordina con recepción y corrige la distribución a mano.
-    * Detección tardía de faltantes: las existencias se verifican mediante inventarios periódicos o cuando un trabajador avisa que un producto está por agotarse, sin alerta anticipada.
-    * Supervisión remota lenta: fuera del hotel recibe la información por llamadas, mensajes y sistemas distintos, y necesita varios minutos para formarse una visión completa de la operación.
-    * Trazabilidad de accesos limitada: reconstruir un evento exige consultar los registros del sistema o preguntar al encargado, en lugar de disponer de un historial consolidado.
-* **Procesos y herramientas actuales:**
-  La operación diaria comienza revisando reservas y habitaciones disponibles, continúa con la coordinación con limpieza y recepción y cierra con la revisión del almacén y de las incidencias de acceso. El registro de reservas se apoya en un sistema propio complementado con Excel para controles adicionales; el almacén se controla con registro de ingresos y salidas más inventarios periódicos a cargo de un encargado. Los accesos se entregan al huésped en el registro y al personal según sus funciones, con bloqueo y reemisión de tarjeta en caso de pérdida. El equipamiento incluye computadora, teléfonos celulares, cámaras y sistemas de control de acceso.
-* **Funcionalidades deseadas (mejoras):**
-    * Plataforma centralizada que permita consultar reservas, habitaciones, almacén y accesos desde un mismo lugar y en tiempo real.
-    * Acceso remoto a esa vista, de modo que la supervisión fuera del hotel no dependa de llamadas ni mensajes.
-    * Alertas de reposición que anticipen los faltantes en lugar de detectarlos en el inventario periódico.
-    * Historial consultable de accesos que evite reconstruir los eventos preguntando al personal.
-* **Factores para la adopción (costo, seguridad, soporte):**
-  Requiere un costo accesible, facilidad de uso y capacitación inicial para el personal. La seguridad y el respaldo de la información aparecen como condiciones explícitas para confiar la operación a una sola herramienta.
-* **Impacto percibido:**
-  Concentrar la información en un solo lugar reduciría los retrasos, los errores en reservas y los problemas de coordinación que hoy se derivan de consultar varias fuentes, y aliviaría la carga de trabajo del personal. También acortaría los varios minutos que hoy necesita para obtener una visión completa cuando no está en el hotel.
-* **Propuestas de mejora:**
-    * Unificar reservas, habitaciones, almacén y accesos en una vista única y actualizada.
-    * Sustituir la conciliación manual entre el sistema y el Excel por un registro único de disponibilidad.
-    * Incorporar avisos automáticos de stock bajo en el almacén.
-    * Mantener un registro consultable de entregas, bloqueos y reemisiones de tarjetas de acceso.
-* **Aspectos a comprender mejor:**
-  El entrevistado subraya que las áreas no son independientes: un problema en reservas, en almacén o en accesos termina afectando la experiencia del huésped, de modo que una solución parcial sobre una sola área no resolvería el fondo del problema.
+El nivel de digitalización dentro del segmento es desigual y conviene no promediarlo:
+uno de los entrevistados ya trabaja con un sistema de reservas y tarjetas de acceso,
+mientras que el otro opera con papel, hojas de cálculo y mensajería. Esa diferencia
+marca dos puntos de partida para el producto: para uno, Hostera sustituye un registro
+manual; para el otro, debe reunir en un solo lugar lo que hoy está repartido entre un
+sistema, una hoja de cálculo y el personal.
 
-En conjunto, la entrevista evidencia que el administrador de un hotel independiente no carece de herramientas sino de un punto único donde converjan: el sistema de reservas, el Excel de apoyo, el registro de almacén y el control de accesos funcionan por separado y obligan a reconstruir manualmente el estado de la operación. Su adopción del producto dependerá de que consolide esas cuatro áreas en tiempo real y de que llegue con un costo accesible, capacitación inicial y garantías de seguridad y respaldo de la información.
+Las condiciones de adopción son coincidentes. Domínguez (`E1`) pide un costo accesible,
+facilidad de uso, capacitación inicial, seguridad y respaldo de la información, y Otto
+Cuba (`E2`) condiciona la implementación a un financiamiento bancario proyectado para la
+temporada 2027, lo que muestra que en este segmento la inversión se evalúa contra el
+ciclo del negocio y no como un gasto corriente.
 
+#### Segmento 2: gerentes o responsables de operaciones de pequeñas cadenas hoteleras (n = 4)
 
+| Característica | Resultado | Fuente |
+| :--- | :---: | :--- |
+| Forma parte de una operación de dos a cinco establecimientos | 4 de 4 | E3, E4, E5, E6 |
+| Usa un PMS o sistema hotelero | 4 de 4 | E3, E4, E5, E6 |
+| Usa un PMS corporativo (Opera u Opera Cloud) | 3 de 4 | E4, E5, E6 |
+| Supervisa procesos que ejecutan otros departamentos | 3 de 4 | E4, E5, E6 |
+| Menciona Booking, Expedia u otras agencias en línea como canal de reservas | 2 de 4 | E3, E5 |
+| Deriva huéspedes o reservas a otra sede | 2 de 4 | E5, E6 |
+| Mantiene separada la información de cada sede por decisión de la organización | 2 de 4 | E5, E6 |
+| Declara que consolidar la información entre sedes es una dificultad central | 1 de 4 | E3 |
+| Coordina el inventario entre sedes por WhatsApp | 1 de 4 | E3 |
+| Señala la falta de un registro centralizado de accesos | 1 de 4 | E3 |
+| Cuenta con usuario y permisos individuales por trabajador | 1 de 4 | E5 |
 
+El segmento reúne a quienes forman parte de una operación con más de un
+establecimiento, con cargos de gerente de operaciones, gerente general, subgerente y
+Room Division Manager. A diferencia del segmento 1, en tres de los cuatro casos la
+operación diaria está repartida entre departamentos (reservas, recepción, seguridad,
+almacén y housekeeping), y el entrevistado supervisa en lugar de ejecutar. Rafael Prieto
+(`E4`) no controla directamente las existencias del almacén, sino que aprueba los
+pedidos de las áreas a su cargo, y Pier Paolo Spigno (`E5`) recibe a diario los informes
+consolidados en lugar de revisar reserva por reserva.
 
+La dificultad que define al segmento no es registrar, sino consolidar, y aparece con
+fuerza donde las sedes comparten administración. Odar Quispe (`E3`) coordina tres sedes
+con herramientas distintas, dos con un PMS básico y una con hojas de cálculo, dedica
+alrededor de cuarenta minutos diarios a consolidar la información a mano y termina
+decidiendo con datos desactualizados; además, las transferencias de inventario entre
+sedes no se registran, lo que produce diferencias de stock y compras duplicadas.
 
+La entrevista a Roy Ríos (`E6`) incorpora un caso que conviene leer en contraste. Su
+hotel pertenece a un grupo de tres establecimientos de la misma cadena internacional,
+pero cada uno opera con razón social propia y la información no se comparte entre ellos.
+La separación es una decisión de la organización, no una limitación de sus herramientas,
+y Pier Paolo Spigno (`E5`) describe el mismo criterio cuando explica que cada propiedad
+tiene su centro de costos y su acceso restringido. Para estos casos, consolidar entre
+sedes no es un problema por resolver, lo que delimita el alcance de Hostera: la
+consolidación es decisiva para operaciones que comparten administración, como la de
+`E3`, y lo valioso para las demás es mantener separada y protegida la información de
+cada sede.
 
+La madurez tecnológica es mayor que en el segmento 1, pero también es desigual. Tres de
+los cuatro trabajan sobre un PMS corporativo, mientras que `E3` sostiene una operación de
+tres sedes sobre un PMS básico y hojas de cálculo. Donde ya existe un PMS corporativo, el
+problema se desplaza hacia la integración: Pier Paolo Spigno (`E5`) paga cerca de
+USD 1 500 al año por propiedad solo por una plataforma complementaria de housekeeping, lo
+que fija una referencia de precio para la categoría.
 
+El control de accesos ocupa posiciones distintas dentro del segmento. Odar Quispe (`E3`)
+señala que cada sede administra los accesos a su manera, sin un registro centralizado de
+quién ingresa ni desactivación de credenciales cuando alguien deja la empresa. En cambio,
+donde existe un control por usuario individual, como describe `E5` para las operaciones
+sobre reservas, o un control físico cerrado, como la tarjeta magnética que en el hotel de
+`E6` habilita únicamente el piso y la habitación del huésped, la trazabilidad deja de
+percibirse como un problema.
 
+#### Comparación entre los dos segmentos
 
+El perfil tecnológico declarado en cada entrevista permite verificar que las
+características de las tablas anteriores provienen de respuestas individuales y no de
+una generalización del segmento.
 
+<img src="assets/chapter-2/interview-analysis-tools-channels.svg" alt="Herramientas y canales que menciona cada una de las seis entrevistas" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
+*Figura 2.7. Herramientas y canales mencionados en cada entrevista, agrupados por segmento.*
 
+Las dificultades y necesidades declaradas separan a los dos segmentos. En el segmento 1
+se concentran dentro de la sede: información repartida, traslados manuales y faltantes
+detectados tarde. En el segmento 2 aparecen dos situaciones distintas: la consolidación
+entre sedes que comparten administración (`E3`) y la separación deliberada de la
+información en los grupos donde cada hotel es una empresa distinta (`E5`, `E6`).
 
+<img src="assets/chapter-2/interview-analysis-needs.svg" alt="Dificultades y necesidades que declara cada una de las seis entrevistas" style="display:block; width:90%; height:auto; margin:0 auto;"/>
 
+*Figura 2.8. Dificultades y necesidades declaradas en cada entrevista, agrupadas por segmento.*
 
+De este análisis se desprenden cuatro conclusiones que alimentan los arquetipos de la
+sección 2.3. La primera es que la fragmentación de la información se manifiesta de forma
+distinta en cada segmento: dentro de la sede en el segmento 1 y entre sedes en el
+segmento 2. La segunda es que tener a la vista las reservas y la disponibilidad es la
+necesidad común a ambos, lo que sostiene su posición en el Product Backlog. La tercera es
+que el nivel de digitalización es desigual dentro de cada segmento, de modo que el
+producto debe funcionar tanto para quien parte de papel y Excel como para quien ya
+trabaja con un PMS. La cuarta es que el control de accesos no es una prioridad uniforme:
+resulta decisivo donde no hay un registro centralizado y secundario donde ya existen
+permisos individuales.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Segmento 2: Primer segmento objetivo: Gerentes o responsables de operaciones de pequeñas cadenas hoteleras**
-
-
-
-
-
-**Perfiles de los entrevistados:**
-
-* Entrevistado 1: 40 años, administrador de negocios turísticos y hoteleros, Gerente General del Hotel Meliá Lima Miraflores, reside en Miraflores, a cargo de dos sedes (Meliá Lima Miraflores y Meliá Lima San Isidro).
-* Entrevistado 2: Room Division Manager de un complejo de dos hoteles (Intercontinental Lima Miraflores, 321 habitaciones, e Índigo Lima Miraflores, 76 habitaciones), a cargo de recepción, SPA, seguridad y housekeeping.
-* Entrevistado 3: 38 años, subgerente de un hotel de la cadena Accor en Trujillo (112 habitaciones), con una ocupación aproximada de 65 % durante el último año frente al 71 % del anterior.
-* **Motivación / rol frente a la gestión:**
-  A diferencia del segmento 1 (dueños-administradores independientes), aquí los entrevistados no son propietarios sino gestores profesionales dentro de cadenas hoteleras estructuradas, con responsabilidades divididas por departamentos (reservas, recepción, seguridad, housekeeping, almacén) y bajo sistemas corporativos estandarizados.
-* **Herramientas y sistemas actuales:**
-  Los tres establecimientos utilizan **Opera / Opera Cloud** como PMS y CRM principal, el mismo sistema que usan cadenas internacionales (Hilton, Marriott, Intercontinental, Mandarin Oriental). Destacan:
-    * Informes diarios consolidados (Flash Manager, History and Forecast) para visión general de ocupación y proyecciones.
-    * Usuario y contraseña individual por empleado para trazabilidad de cambios en reservas (por seguridad, no transferible).
-    * Cada sede tiene un código/centro de costos propio (ej. 58.50 y 52.20) que segrega la información entre propiedades, incluso dentro de la misma cadena.
-    * Uso de una plataforma adicional (Easy) para housekeeping y mantenimiento, con seguimiento en tiempo real del estado de habitaciones — costo aprox. USD 1,500 anuales por propiedad, con soporte 24/7 desde España.
-    * Acceso remoto vía VPN + laptop/celular corporativo para supervisión fuera del hotel (solo personal autorizado según nivel jerárquico).
-    * En el hotel de la cadena Accor, Opera Cloud se complementa con Aztec para la facturación y Symphony, de Oracle, para las operaciones del restaurante, sobre laptops, terminales táctiles y tablets.
-* **Dificultades identificadas:**
-    * Gestión de overbooking/sobreventa: se resuelve derivando huéspedes a otra propiedad de la misma cadena, trasladando el valor de la tarifa.
-    * Circunstancias operativas variables (personal, percepción del huésped, descuidos puntuales) más que "problemas" fijos — se percibe como parte normal de la operación, no como una dificultad estructural.
-    * Separación estricta de responsabilidades: el Room Division Manager no controla directamente accesos ni almacén, sino que aprueba/supervisa procesos que ejecutan otros departamentos (seguridad, recepción, almacén).
-    * Separación por razón social: en la cadena Accor cada hotel opera como una razón social independiente, por lo que no se realizan movimientos internos de inventario entre sedes y los responsables no acceden a la información financiera de las demás propiedades, lo que impide comparar ingresos y desempeño dentro de la cadena.
-    * Derivación de reservas fuera del sistema: los traslados hacia otros hoteles de la cadena se coordinan por correo electrónico y mediante ResaWeb, apoyándose en códigos internos de identificación.
-* **Procesos de control de accesos:**
-  A diferencia del segmento 1, el acceso de huéspedes y personal no depende de un solo responsable, sino de la coordinación entre **seguridad** (detecta anomalías) y **recepción** (verifica reserva en sistema). La supervisión es "macro": el gerente confía en que el proceso ya se cumplió antes de intervenir directamente. En el hotel de la cadena Accor el control se apoya en el registro previo del huésped y en tarjetas magnéticas que restringen el acceso al ascensor y a la habitación asignada.
-* **Reuniones y toma de decisiones (revenue management):**
-  Reuniones semanales de revenue (todos los martes) donde participan gerente general, revenue manager, ventas y reservas para ajustar tarifas según comportamiento del set competitivo, eventos en la zona y disponibilidad de la competencia.
-* **Factores de adopción (costo, soporte, seguridad):**
-    * Costo conocido y presupuestado por propiedad (referencia: USD 1,500/año para plataforma de housekeeping).
-    * Soporte internacional 24/7 y capacitaciones continuas, incluidas en la inducción de nuevo personal.
-    * Seguridad enmarcada en cumplimiento normativo (Ley de Protección de Datos Personales) y en accesos individualizados por usuario.
-    * Fuerte énfasis en que la información de cada propiedad/cadena esté "blindada" — aislamiento total entre marcas competidoras dentro del mismo sistema (Opera).
-    * Costos, impacto en los márgenes operativos, capacitación, soporte y seguridad como criterios explícitos de evaluación; la capacidad de invertir depende además del desempeño de cada hotel, de las condiciones políticas, sociales y de seguridad del entorno, y de las decisiones de los inversionistas.
-    * Conservación independiente de la documentación administrativa y operativa durante cinco años por establecimiento.
-* **Cambios/mejoras propuestas:**
-    * Mejora continua y reconocimiento del personal como eje central (filosofía "el trabajador es más importante que el huésped, porque cuida al huésped").
-    * Mayor visibilidad y valoración del departamento de housekeeping, más allá de la limpieza: identificación de preferencias de huéspedes, estándares de detalle, iniciativas como el "housekeeping week".
-* **Aspectos a comprender mejor:**
-  Ambos entrevistados destacan que la operación hotelera tiende a centralizarse en la percepción de "recepción", pero que housekeeping es un departamento crítico y subvalorado que requiere mayor entendimiento por su carga operativa y su impacto directo en la experiencia del huésped.
-
-En conjunto, este segmento evidencia un perfil mucho más estructurado y tecnificado que el segmento 1: no gestionan por Excel/WhatsApp sino mediante PMS corporativos (Opera/Opera Cloud) con roles y permisos individualizados, procesos departamentales bien delimitados y mecanismos formales de soporte, capacitación y seguridad de datos. Su interés no está en digitalizar procesos básicos (como en el segmento 1), sino en la integración, trazabilidad fina y optimización continua de sistemas que ya son robustos, además de la valoración del capital humano como palanca de mejora operativa.
+Dos limitaciones acotan el alcance de estos resultados. La primera es el tamaño de la
+muestra: con dos y cuatro entrevistas por segmento, los conteos describen a los
+entrevistados y no permiten inferir proporciones de la población hotelera peruana. La
+segunda es que el segmento 1 aún no alcanza las tres entrevistas que pide el enunciado,
+por lo que sus conclusiones se revisarán cuando se registre la tercera entrevista.
 
 ## 2.3. Needfinding
 
@@ -1312,11 +1410,11 @@ Para ello seleccionamos los siguientes perfiles:
 
 User Persona 1
 ![Steven Huarcaya](assets/chapter-2/Steven%20Huarcaya%20(1).png)
-*Figura 2.7. User Persona de Steven Huarcaya.*
+*Figura 2.9. User Persona de Steven Huarcaya.*
 ---
 User Persona 2
 ![Anyeli Cardenas](assets/chapter-2/Anyeli%20C%C3%A1rdenas.png)
-*Figura 2.8. User Persona de Anyeli Cárdenas.*
+*Figura 2.10. User Persona de Anyeli Cárdenas.*
 ### 2.3.2. User Task Matrix
 En esta sección se presenta el User Task Matrix correspondiente al **Segmento 1: Propietarios o administradores de hoteles independientes de una sola sede**, representado por el User Persona **Steven Huarcaya**.
 
@@ -1374,7 +1472,7 @@ En esta sección se presentan los User Journey Maps en su versión **As-Is** (si
 El *journey* actual de Steven abarca desde la recepción de solicitudes de reserva por canales dispersos hasta la revisión del inventario y la entrega física de llaves en el hotel. El proceso se caracteriza por una alta dependencia de registros manuales y una constante interrupción operativa para resolver incidencias.
 
 ![As-Is User Journey Map - Steven Huarcaya](assets/chapter-2/StevenHuarcaya_journeymap.png)
-*Figura 2.9. As-Is User Journey Map de Steven Huarcaya.*
+*Figura 2.11. As-Is User Journey Map de Steven Huarcaya.*
 
 ---
 
@@ -1383,17 +1481,17 @@ El *journey* actual de Steven abarca desde la recepción de solicitudes de reser
 El *journey* actual de Anyeli contempla el proceso de consolidación y supervisión de la operación de múltiples sedes a la distancia. Las etapas clave incluyen la solicitud de reportes a los administradores locales, la consolidación manual de datos de inventario y la verificación diferida de accesos, lo cual genera retrasos y falta de visibilidad en tiempo real.
 
 ![As-Is User Journey Map - Anyeli Cárdenas](assets/chapter-2/AnyeliCardenas_journeymap.png)
-*Figura 2.10. As-Is User Journey Map de Anyeli Cárdenas.*
+*Figura 2.12. As-Is User Journey Map de Anyeli Cárdenas.*
 
 ### 2.3.4. Empathy Mapping
 
 Empathy Map 1
 ![StevenHuarcaya](assets/chapter-2/Empathy%20map-segmento1.png)
-*Figura 2.11. Empathy Map de Steven Huarcaya.*
+*Figura 2.13. Empathy Map de Steven Huarcaya.*
 ---
 Empathy Map 2
 ![AnyeliCardenas](assets/chapter-2/Empathy%20map-segmento2%20(1).png)
-*Figura 2.12. Empathy Map de Anyeli Cárdenas.*
+*Figura 2.14. Empathy Map de Anyeli Cárdenas.*
 
 
 ## 2.4. Big Picture EventStorming
@@ -1405,7 +1503,7 @@ posibles problemas y oportunidades que orientan la definición de la solución.
 
 <img src="assets/chapter-2/big-picture-event-storming-hostera.svg" alt="Diagrama Big Picture EventStorming del dominio de Hostera" style="width:100%; height:auto;"/>
 
-*Figura 2.13. Big Picture EventStorming del dominio de Hostera.*
+*Figura 2.15. Big Picture EventStorming del dominio de Hostera.*
 
 ## 2.5. Ubiquitous Language
 
