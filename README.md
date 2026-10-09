@@ -2543,6 +2543,16 @@ preguntas frecuentes y acciones de conversión. Este recorrido conserva el mismo
 y significado en navegadores de escritorio y móviles, aunque adapta la distribución,
 la navegación y el tamaño de los elementos al espacio disponible.
 
+La versión `v0.5.0` publicada en el Sprint 2 presenta los planes con sus precios: Starter
+a S/39 por propiedad al mes para un hotel de hasta 10 habitaciones, y Professional a S/8
+por habitación al mes para cadenas de 2 a 5 sedes, con una calculadora que estima el
+costo mensual a partir del total de habitaciones. Los grupos hoteleros mayores pasan a
+una página de contacto comercial (`sales.html`). El encabezado de todas las páginas
+incluye el enlace `Sign in`, y la llamada a la acción de cada segmento abre su vista en
+la aplicación web: el camino del hotel independiente y el plan Starter abren el registro
+con Starter seleccionado (`/sign-up?plan=starter`), y el camino de la cadena pequeña y el
+plan Professional lo abren con Professional seleccionado (`/sign-up?plan=professional`).
+
 ### 4.3.1. Landing Page Wireframe
 
 Los wireframes definen la estructura, la prioridad del contenido y las relaciones
