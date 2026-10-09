@@ -4704,6 +4704,63 @@ pasan a listas.
 subirse a Microsoft Stream por el equipo; su enlace se agregará en esta sección y en el
 Anexo A cuando esté disponible.
 
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+En este sprint la aplicación consume la API de datos de demostración, que reproduce los
+recursos que expondrá la RESTful API de Spring Boot. Se ejecuta en local con json-server
+en `http://localhost:3000` (`npm run server:start`), como admite el enunciado para los
+sprints previos al despliegue de los Web Services, y en la aplicación publicada responde
+dentro del navegador con los mismos datos y reglas. La documentación con OpenAPI y
+Swagger se publicará con los Web Services en AV2.
+
+La API expone 13 recursos, todos con las operaciones CRUD de json-server. Las consultas
+de colección admiten filtros por cualquier campo, como `propertyId=1`, y los parámetros
+`_sort`, `_order` y `_limit`; por ejemplo, la aplicación obtiene el último código de
+reserva de una propiedad con `GET /bookings?propertyId=1&_sort=code&_order=desc&_limit=1`.
+
+| Recurso | Contenido | Operaciones |
+| --- | --- | --- |
+| `/properties` | Propiedades de la organización | `GET /properties?propertyId=1`, `GET /properties/{id}`, `POST /properties`, `PUT /properties/{id}`, `DELETE /properties/{id}` |
+| `/room-types` | Tipos de habitación | `GET /room-types?propertyId=1`, `GET /room-types/{id}`, `POST /room-types`, `PUT /room-types/{id}`, `DELETE /room-types/{id}` |
+| `/rooms` | Habitaciones | `GET /rooms?propertyId=1`, `GET /rooms/{id}`, `POST /rooms`, `PUT /rooms/{id}`, `DELETE /rooms/{id}` |
+| `/status-periods` | Periodos de estado de las habitaciones | `GET /status-periods?propertyId=1`, `GET /status-periods/{id}`, `POST /status-periods`, `PUT /status-periods/{id}`, `DELETE /status-periods/{id}` |
+| `/rate-plans` | Planes tarifarios | `GET /rate-plans?propertyId=1`, `GET /rate-plans/{id}`, `POST /rate-plans`, `PUT /rate-plans/{id}`, `DELETE /rate-plans/{id}` |
+| `/daily-rates` | Tarifas diarias por tipo de habitación | `GET /daily-rates?propertyId=1`, `GET /daily-rates/{id}`, `POST /daily-rates`, `PUT /daily-rates/{id}`, `DELETE /daily-rates/{id}` |
+| `/bookings` | Reservas | `GET /bookings?propertyId=1`, `GET /bookings/{id}`, `POST /bookings`, `PUT /bookings/{id}`, `DELETE /bookings/{id}` |
+| `/payments` | Pagos de las reservas | `GET /payments?propertyId=1`, `GET /payments/{id}`, `POST /payments`, `PUT /payments/{id}`, `DELETE /payments/{id}` |
+| `/inventory-items` | Artículos de inventario | `GET /inventory-items?propertyId=1`, `GET /inventory-items/{id}`, `POST /inventory-items`, `PUT /inventory-items/{id}`, `DELETE /inventory-items/{id}` |
+| `/storage-locations` | Ubicaciones de almacén | `GET /storage-locations?propertyId=1`, `GET /storage-locations/{id}`, `POST /storage-locations`, `PUT /storage-locations/{id}`, `DELETE /storage-locations/{id}` |
+| `/credentials` | Credenciales RFID | `GET /credentials?propertyId=1`, `GET /credentials/{id}`, `POST /credentials`, `PUT /credentials/{id}`, `DELETE /credentials/{id}` |
+| `/staff-members` | Miembros del personal | `GET /staff-members?propertyId=1`, `GET /staff-members/{id}`, `POST /staff-members`, `PUT /staff-members/{id}`, `DELETE /staff-members/{id}` |
+| `/access-events` | Eventos de acceso | `GET /access-events?propertyId=1`, `GET /access-events/{id}`, `POST /access-events`, `PUT /access-events/{id}`, `DELETE /access-events/{id}` |
+
+Respuesta de ejemplo de `GET /bookings?propertyId=1&_sort=code&_order=desc&_limit=1`
+(extracto):
+
+```json
+[
+  {
+    "id": 16,
+    "propertyId": 1,
+    "code": "BKG-1070",
+    "status": "confirmed",
+    "guestName": "Isabel Mendoza",
+    "checkInDate": "2026-10-25",
+    "checkOutDate": "2026-10-29"
+  }
+]
+```
+
+<img src="assets/chapter-5/sprint-2-demo-api-local.png" alt="API de datos de demostración ejecutándose en local con sus 13 recursos" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 5.18. API de datos de demostración en local con json-server y sus 13 recursos.*
+
+**Servicio externo.** La aplicación consume un único endpoint de Nager.Date:
+
+| Método | Endpoint | Uso en Hostera |
+| --- | --- | --- |
+| `GET` | `https://date.nager.at/api/v3/PublicHolidays/{year}/PE` | Obtiene los feriados del Perú de cada año visible en la disponibilidad de habitaciones y conserva solo los nacionales. |
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
