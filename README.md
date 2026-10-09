@@ -103,6 +103,37 @@ fue una actividad compartida.
 
 ## TB1
 
+Durante TB1 el informe se trabajó en ramas `feature/*` que se integraron en `develop` con
+merges `--no-ff`, mensajes Conventional Commits y una release por entrega. Desde el 18 de
+septiembre de 2026 los cinco integrantes registraron commits en el repositorio del
+informe. La siguiente tabla resume qué secciones trabajó cada uno.
+
+| Integrante | Aportes al informe en TB1 |
+| --- | --- |
+| Darnell Cuba (`darnell1910`) | Traslado del informe al repositorio de Team Coworkers con la nueva conformación del equipo; entrevista a Domínguez en el primer segmento, enlace de la grabación de Roy Ríos y su traslado al segundo segmento, análisis del primer segmento y evidencia de colaboración de AV1. |
+| Juan Diego Flores (`YopoFlores`) | Guías tecnológicas del enunciado, convenciones de nomenclatura alineadas con Angular y Spring Boot, y diagramas de diseño del producto. |
+| Jorge Mateo Leon (`mateool10`) | Guía de servicios con Spring Boot, datos del curso, flujos y mock-ups de la aplicación, y registro de hitos en el changelog. |
+| Jose Gabriel Rudas (`josegabriel1604`) | Arquitectura de servicios con Spring Boot, prácticas de Angular y TypeScript, evidencia de implementación y colaboración, y guía del repositorio y del PDF. |
+| José Santana (`JhosBY2005`) | Referencias de Java, Spring Boot, Angular y TypeScript, workspace de Structurizr y portada; y en la versión 0.7.0, las correcciones de TB1 de los capítulos I a V, el Sprint 2 y las secciones de entrega. |
+
+El número de commits del informe no mide todo el aporte de TB1. En el mismo periodo se
+construyó la Frontend Web Application, donde Jorge Mateo Leon realizó el port a Angular,
+como muestra la sección 5.2.2.8.
+
+El analítico de contribuidores de GitHub solo cuenta la rama `main` y muestra el total
+histórico. Por eso el gráfico se construyó a partir del historial de todas las ramas
+desde el 18 de septiembre, sin commits de merge.
+
+<div style="page-break-before: always;"></div>
+
+<img src="assets/project-report-collaboration-insights/tb1-commits-by-member.svg" alt="Commits por integrante en el repositorio del informe durante TB1" style="width:85%; height:auto; display:block; margin:0 auto;"/>
+
+*Evidencia 3. Commits por integrante en el repositorio del Project Report durante TB1.*
+
+<img src="assets/project-report-collaboration-insights/tb1-github-contributors.png" alt="Analítico de contribuidores del repositorio del Project Report en GitHub" style="width:85%; height:auto; display:block; margin:0 auto;"/>
+
+*Evidencia 4. Analítico de contribuidores del repositorio del Project Report en GitHub.*
+
 ## AV2
 
 ## TB2
