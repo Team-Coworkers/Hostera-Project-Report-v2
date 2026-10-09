@@ -3735,16 +3735,18 @@ archivos del entorno local se excluirán del control de versiones.
 ### 5.1.2. Source Code Management
 
 GitHub es la plataforma de gestión del código fuente requerida para los repositorios
-de producto. Cada producto tendrá un repositorio dedicado para que su implementación,
-pruebas y evidencias de despliegue sean trazables. El repositorio del informe se
-mantiene por separado como fuente de documentación y no se considera uno de los
-repositorios de producto exigidos por el enunciado del proyecto:
+de producto. Todos los repositorios pertenecen a la organización pública
+[Team-Coworkers](https://github.com/Team-Coworkers), y cada producto tiene un
+repositorio dedicado para que su implementación, pruebas y evidencias de despliegue
+sean trazables. El repositorio del informe se mantiene por separado como fuente de
+documentación:
 
-| Producto | URL del repositorio | Estado actual |
+| Producto | URL del repositorio | Estado al cierre de TB1 |
 | --- | --- | --- |
-| Landing Page | [Repositorio de Landing Page](https://github.com/Team-Coworkers/landing-page-main) | Repositorio registrado para la implementación de la Landing Page. |
-| RESTful Web Services | Por registrar | El repositorio deberá incluir pruebas unitarias y pruebas de integración/aceptación, según lo requerido por el enunciado del proyecto. |
-| Frontend Web Applications | Por registrar | La URL se añadirá cuando se cree el repositorio de implementación. |
+| Landing Page | https://github.com/Team-Coworkers/landing-page-main | Versión `v0.5.0` publicada en GitHub Pages. |
+| Frontend Web Applications | https://github.com/Team-Coworkers/hostera-frontend | Versión `v0.4.0` publicada en GitHub Pages, con 28 pruebas unitarias en Jasmine y Karma. |
+| RESTful Web Services | Por registrar en AV2 | El repositorio incluirá el proyecto Spring Boot y sus pruebas unitarias (JUnit) y de integración y aceptación, según lo requerido por el enunciado del proyecto. |
+| Informe del proyecto | https://github.com/Team-Coworkers/Hostera-Project-Report-v2 | Archivo principal `README.md`; las versiones del informe se registran en el Control de versiones. |
 
 El equipo aplica las siguientes ramas de Git Flow:
 
@@ -3765,8 +3767,18 @@ rama de trabajo y su historial de commits antes de ejecutar el merge correspondi
 El equipo no realizará commits directos en `main` o `develop` para el trabajo normal
 de funcionalidades.
 
+Los mensajes de commit siguen [Conventional Commits 1.0.0](https://www.conventionalcommits.org/):
+`<tipo>(<alcance>): <descripción>`, con los tipos `feat`, `fix`, `docs`, `style`,
+`refactor`, `test`, `build`, `ci` y `chore`, la descripción en inglés y en modo
+imperativo, y un cuerpo que explica el motivo del cambio cuando no es evidente. Por
+ejemplo: `feat(iam): add the sign-in and sign-up views` o
+`docs(interviews): record the six video interviews by segment`. Los merges usan
+`merge(develop): <descripción>` y `merge(main): release <versión>`.
+
 Los releases utilizan [Semantic Versioning 2.0.0](https://semver.org/):
-`MAJOR.MINOR.PATCH`. El primer componente mayor permanece en `0` mientras el
+`MAJOR.MINOR.PATCH`. Cada release se integra en `main` con `--no-ff`, se etiqueta con
+un tag anotado `v<MAJOR>.<MINOR>.<PATCH>` y se vuelve a integrar en `develop`; su
+detalle queda en el `CHANGELOG.md` del repositorio, con el formato Keep a Changelog. El primer componente mayor permanece en `0` mientras el
 producto se encuentre en desarrollo inicial; durante esta fase, los cambios
 incompatibles incrementan el componente minor, y las funcionalidades compatibles o
 las correcciones se registran de acuerdo con la política de releases del proyecto.
