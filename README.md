@@ -4369,6 +4369,453 @@ la mayoría de las ramas reúne commits de más de un integrante. Cada
 contribución queda respaldada por los commits detallados en la evidencia de
 desarrollo del Sprint Review.
 
+### 5.2.2. Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+El Sprint 2 se planificó para construir y desplegar la primera versión de la Frontend
+Web Application de Hostera en Angular y publicar una nueva versión de la Landing Page.
+El alcance reúne las user stories de las epics `EP002` a `EP006`: el panorama operativo,
+las reservas, las habitaciones, el inventario y el control de accesos, más el registro y
+el inicio de sesión en su versión de demostración. Los RESTful Web Services corresponden
+a AV2, así que la aplicación trabaja sobre la API de datos de demostración.
+
+| Campo | Resumen |
+| --- | --- |
+| Sprint # | Sprint 2 |
+| Sprint Planning Background | Planificación de la primera versión de la Frontend Web Application en Angular, organizada por bounded context, y de las versiones `v0.4.0` y `v0.5.0` de la Landing Page. |
+| Date | Por confirmar |
+| Time | Por confirmar |
+| Location | Por confirmar |
+| Prepared By | Santana Luna, José Antonio (`JhosBY2005`) |
+| Attendees (to planning meeting) | Por confirmar |
+| Sprint 1 Review Summary | El Sprint 1 cerró con la Landing Page publicada en GitHub Pages y las ocho user stories de `EP001` implementadas (42 story points). Después de AV1, el equipo revisó los artefactos con la rúbrica del curso y corrigió en el informe el Lean UX, las entrevistas, el Impact Mapping, el orden del Product Backlog, el modelo C4 y los diagramas de clases y de base de datos. |
+| Sprint 1 Retrospective Summary | Funcionó trabajar con una rama por historia integrada con Git Flow y repartir las historias entre los cinco integrantes. Como oportunidad de mejora, el historial muestra que el código de la Landing Page se integró en una sola jornada, el 19 de septiembre, en lugar de avanzar de forma continua durante el sprint. |
+| Sprint 2 Goal | Nuestro enfoque está en que el responsable de operaciones de un hotel independiente o de una cadena pequeña pueda entrar desde la Landing Page con el plan de su segmento y llevar en una sola aplicación web publicada las reservas, las habitaciones, el inventario y las credenciales de acceso de la propiedad con la que trabaja. Creemos que esto le permite dejar de reconstruir el estado de su hotel a partir de registros separados. Esto se confirmará cuando, en la aplicación publicada, una persona pueda pasar del plan elegido en la Landing Page al panorama de su propiedad y desde allí registrar una reserva, hacer el check-in con la emisión de las tarjetas del huésped y ajustar las existencias del almacén. |
+| Sprint 2 Goal Metric | El objetivo se considera cumplido cuando ese recorrido se completa en la aplicación desplegada en GitHub Pages con los datos de demostración. Como condición de entrega, las 23 user stories del sprint deben estar implementadas y las pruebas unitarias deben pasar en el workflow de integración. |
+| Sprint 2 Velocity | 117 Story Points comprometidos para el sprint. |
+| Sum of Story Points | 117 Story Points. |
+
+La velocity pasó de 42 a 117 story points porque el Sprint 2 abarca la aplicación
+web completa, organizada en seis áreas que se trabajaron en ramas paralelas, una por
+bounded context. Los datos de la reunión de planificación (fecha, hora, lugar y
+asistentes) quedan por confirmar por el equipo.
+
+Las user stories incluidas en el Sprint 2 son las siguientes. Los story points
+corresponden a la estimación registrada en el Product Backlog.
+
+| User Story ID | User Story | Bounded Context | Story Points | Estado al cierre del sprint |
+| --- | --- | --- | :---: | --- |
+| US011 | Monitor operations across properties | Overview | 8 | Implementada |
+| US033 | Navigate between operational areas | Shared | 3 | Implementada |
+| US012 | Find and review bookings | Bookings | 3 | Implementada |
+| US013 | Create a booking | Bookings | 8 | Implementada |
+| US014 | Review and update a booking | Bookings | 5 | Implementada |
+| US015 | Manage the booking lifecycle | Bookings | 5 | Implementada |
+| US016 | Record a booking payment | Bookings | 3 | Implementada |
+| US017 | Complete guest check-in | Bookings | 8 | Implementada |
+| US018 | Complete guest check-out | Bookings | 5 | Implementada |
+| US019 | Review room availability for a selected date | Rooms | 5 | Implementada |
+| US020 | Create a room | Rooms | 3 | Implementada |
+| US021 | Maintain room information and operational status | Rooms | 5 | Implementada |
+| US022 | Manage room types | Rooms | 5 | Implementada |
+| US023 | Manage rate plans and daily rates | Rooms | 5 | Implementada |
+| US024 | Monitor property inventory | Inventory | 5 | Implementada |
+| US025 | Manage inventory item records | Inventory | 5 | Implementada |
+| US026 | Adjust inventory stock | Inventory | 5 | Implementada |
+| US027 | Manage storage locations | Inventory | 5 | Implementada |
+| US028 | Review and manage RFID credentials | Access Control | 5 | Implementada |
+| US029 | Encode or replace an RFID key card | Access Control | 8 | Implementada |
+| US030 | Review RFID access events | Access Control | 5 | Implementada |
+| US009 | Register a hotel operation | IAM | 5 | Implementada en versión de demostración |
+| US010 | Sign in to Hostera | IAM | 3 | Implementada en versión de demostración |
+| **Total** | **23 user stories** | **Seis bounded contexts** | **117** | **23/23 implementadas** |
+
+Al cierre del sprint, en la aplicación publicada se puede recorrer el flujo que define el
+objetivo: desde la Landing Page se abre el registro con el plan del segmento, y desde el
+panorama de la propiedad se llega al registro de una reserva, al check-in con la emisión
+de las tarjetas del huésped y al ajuste de existencias del almacén. El registro y el
+inicio de sesión funcionan sobre los datos de demostración y guardarán las cuentas cuando
+existan los endpoints de IAM de la RESTful API. La evidencia está en la sección 5.2.2.5.
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+En el Sprint 2 cada aspecto corresponde a un área de trabajo del sprint. La matriz se
+obtuvo del historial de commits de los repositorios `hostera-frontend`,
+`landing-page-main` y del informe: el líder de cada aspecto es quien concentra sus
+commits, y un colaborador es quien también hizo commits en él.
+
+En la matriz Leadership-and-Collaboration (LACX), `L` representa al líder del aspecto,
+`C` a un colaborador y `N/A` indica que el integrante no participó en ese aspecto.
+
+| Team Member | GitHub Username | Angular Port (six contexts) | Port Documentation | IAM, i18n and Footer | External Service | Deployment and Demo API | Unit Tests and CI | Landing Page v0.4.0 and v0.5.0 | Report Migration |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Cuba Vega, Darnell Yadir | `darnell1910` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | L |
+| Flores Rios, Juan Diego | `YopoFlores` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | C |
+| Leon Naupari, Jorge Mateo | `mateool10` | L | C | N/A | N/A | N/A | N/A | N/A | C |
+| Rudas Chavarria, Jose Gabriel | `josegabriel1604` | N/A | L | N/A | N/A | N/A | N/A | N/A | C |
+| Santana Luna, José Antonio | `JhosBY2005` | C | C | L | L | L | L | L | C |
+
+Jorge Mateo Leon lideró el port de la aplicación a Angular en los seis bounded contexts,
+que es el aspecto con más commits del sprint. Jose Gabriel Rudas lideró la documentación
+del port. José Santana lideró el despliegue, la API de demostración, las vistas de IAM,
+la internacionalización, el servicio externo, las pruebas y las nuevas versiones de la
+Landing Page. Darnell Cuba lideró la migración del informe al repositorio de Team
+Coworkers, en la que colaboraron los demás integrantes. Darnell Cuba y Juan Diego Flores
+no registran commits en el código de la aplicación ni de la Landing Page durante este
+sprint, lo que se analiza en la sección 5.2.2.8.
+
+#### 5.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog 2 descompone las user stories en el trabajo implementado en cada
+bounded context de la aplicación, y agrega las tareas técnicas y las de la Landing Page
+del sprint. El responsable de cada tarea es el integrante que hizo los commits de los
+componentes que la implementan, según el historial de `hostera-frontend` y de
+`landing-page-main`. La estimación en horas de cada tarea de una historia se obtuvo de
+sus story points, a razón de dos horas por punto.
+
+<table>
+  <thead>
+    <tr>
+      <th>Sprint #</th>
+      <td colspan="7">Sprint 2</td>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>Story Id</th>
+      <th>Story Title</th>
+      <th>Task Id</th>
+      <th>Task Title</th>
+      <th>Task Description</th>
+      <th>Estimation (Hours)</th>
+      <th>Assigned To</th>
+      <th>Status<br>(To-do / In-Process / To-Review / Done)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>US011</td><td>Monitor operations across properties</td><td>T011.1</td><td>Build the operational overview</td><td>Panorama de la propiedad activa con ingresos, ocupación, llegadas del día, estado de las habitaciones y comparación entre propiedades.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US033</td><td>Navigate between operational areas</td><td>T033.1</td><td>Build the application shell</td><td>Layout con navegación lateral, selector de propiedad y rutas entre las áreas operativas.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US012</td><td>Find and review bookings</td><td>T012.1</td><td>Build the booking list and filters</td><td>Listado de reservas con búsqueda por huésped o código y filtros por periodo y estado.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US013</td><td>Create a booking</td><td>T013.1</td><td>Build the booking form</td><td>Registro, duplicado y edición de reservas con validación de disponibilidad, capacidad y plan tarifario.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US014</td><td>Review and update a booking</td><td>T014.1</td><td>Build the booking detail</td><td>Detalle de la reserva con sus acciones de estado y edición antes de la llegada.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US015</td><td>Manage the booking lifecycle</td><td>T015.1</td><td>Implement the booking lifecycle</td><td>Confirmación, cancelación con motivo, no-show y restauración de una reserva.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US016</td><td>Record a booking payment</td><td>T016.1</td><td>Record booking payments</td><td>Formulario de pago y resumen del saldo pendiente de cada reserva.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US017</td><td>Complete guest check-in</td><td>T017.1</td><td>Implement the guided check-in</td><td>Check-in guiado con verificación del documento y emisión de las tarjetas del huésped.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US018</td><td>Complete guest check-out</td><td>T018.1</td><td>Implement the check-out review</td><td>Check-out con cierre del saldo, condición de la habitación y vencimiento de las tarjetas.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US019</td><td>Review room availability for a selected date</td><td>T019.1</td><td>Build the weekly availability view</td><td>Disponibilidad semanal de las habitaciones desde una fecha, con filtros por tipo y estado.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US020</td><td>Create a room</td><td>T020.1</td><td>Build the room form</td><td>Registro de habitaciones a partir de su tipo y número.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US021</td><td>Maintain room information and operational status</td><td>T021.1</td><td>Build the room detail</td><td>Detalle de la habitación con su calendario mensual y periodos de estado.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US022</td><td>Manage room types</td><td>T022.1</td><td>Manage room types</td><td>Listado y formulario de tipos de habitación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US023</td><td>Manage rate plans and daily rates</td><td>T023.1</td><td>Manage rate plans and daily rates</td><td>Vista de tarifas con planes tarifarios y tarifas diarias por tipo de habitación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US024</td><td>Monitor property inventory</td><td>T024.1</td><td>Build the inventory item list</td><td>Listado de artículos con su condición de stock y existencias por ubicación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US025</td><td>Manage inventory item records</td><td>T025.1</td><td>Manage inventory items</td><td>Formulario y detalle de artículos con su historial de movimientos.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US026</td><td>Adjust inventory stock</td><td>T026.1</td><td>Record stock adjustments</td><td>Entradas, salidas y transferencias de stock entre ubicaciones.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US027</td><td>Manage storage locations</td><td>T027.1</td><td>Manage storage locations</td><td>Listado, detalle y formulario de ubicaciones de almacén.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US028</td><td>Review and manage RFID credentials</td><td>T028.1</td><td>Review and revoke credentials</td><td>Listado y detalle de credenciales con su vigencia, revocación y reemplazo.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US029</td><td>Encode or replace an RFID key card</td><td>T029.1</td><td>Encode and replace key cards</td><td>Emisión de credenciales de personal con el codificador RFID simulado.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US030</td><td>Review RFID access events</td><td>T030.1</td><td>Review access events</td><td>Listado de eventos de acceso concedidos y denegados por habitación y persona.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US009</td><td>Register a hotel operation</td><td>T009.1</td><td>Build the sign-up view with the plans</td><td>Registro con el plan elegido desde la Landing Page, estimado mensual y validación; sin persistencia hasta AV2.</td><td>10</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US010</td><td>Sign in to Hostera</td><td>T010.1</td><td>Build the sign-in view</td><td>Inicio de sesión que abre el espacio de trabajo con los datos de demostración; la autenticación llega con la API.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT01</td><td>Set up the Angular workspace</td><td>Angular CLI 19, Angular Material 3 con el tema de Hostera, ngx-translate y la estructura por bounded context.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT02</td><td>Document the Angular port</td><td>ADR del port y guía de los componentes, servicios y stores en `docs/`.</td><td>4</td><td>Jose Gabriel Rudas</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT03</td><td>Deploy the web application on GitHub Pages</td><td>Workflow `deploy-pages.yml`, base href `/hostera-frontend/` y `404.html` para los enlaces profundos.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT04</td><td>Serve the demonstration data in the browser</td><td>Interceptor que responde con `server/data` en GitHub Pages y Blueprint `render.yaml` como alternativa.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT05</td><td>Add the footer, metadata and es-419 locale</td><td>Footer con términos y condiciones, metadatos SEO y código de idioma `es-419`.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT06</td><td>Integrate the Nager.Date public holidays API</td><td>Servicio externo de terceros: feriados del Perú en la disponibilidad de habitaciones.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>Technical</td><td>Technical tasks</td><td>TT07</td><td>Add unit tests and their workflow</td><td>28 pruebas en Jasmine y Karma y el workflow `test.yml`.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US006</td><td>Landing Page update</td><td>TL01</td><td>Publish the plans and the sales page (landing v0.4.0)</td><td>Precios de Starter y Professional con calculadora, página `sales.html`, enlace Sign in y metadatos.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US003, US004</td><td>Landing Page update</td><td>TL02</td><td>Open each segment's view in the web application (landing v0.5.0)</td><td>Los CTA de cada segmento abren `/sign-up?plan=starter` o `/sign-up?plan=professional`.</td><td>3</td><td>José Santana</td><td>Done</td></tr>
+  </tbody>
+</table>
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+La siguiente tabla reúne los commits del Sprint 2 en los repositorios de la Frontend Web
+Application y de la Landing Page, sin contar los commits de merge. Se obtuvo del
+historial de cada repositorio con `git log --all --no-merges --since=2026-09-20`, y la
+rama indicada es la rama `feature/*` o `release/*` en la que se creó el commit. En
+total se registraron 75 commits en `hostera-frontend` y 8 en
+`landing-page-main`.
+
+El primer commit de `hostera-frontend` importa como punto de partida la aplicación que el
+equipo ya había construido en otro framework, y los siguientes la reescriben en Angular
+por bounded context; por eso tres mensajes mencionan la tecnología anterior.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `main` | [`08e4809`](https://github.com/Team-Coworkers/hostera-frontend/commit/08e4809c715d6271ff08c85b0a9d669129511086) | chore: import Hostera App Web source for the Open Source course | Import the delivered App Web material so the team can port it to Angular and TypeScript for 1ASI0729, update the participant list and add the sections that are still missing. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `develop` | [`138d73f`](https://github.com/Team-Coworkers/hostera-frontend/commit/138d73f94ce0e437093391f5720a13a20a017f45) | docs(porting): add Angular and TypeScript porting guide for the team | Document what carries over unchanged (the DDD bounded-context layering, the domain models, the json-server backend and the i18n catalogs), the Vue to Angular equivalences, what… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`add660b`](https://github.com/Team-Coworkers/hostera-frontend/commit/add660bc5b41370d073d24a1a9a149d866c0dafe) | chore(setup): replace the Vite and Vue tooling with the Angular 19 CLI | - Angular 19 standalone application with Angular Material, the CDK,   ngx-translate, Chart.js and PrimeFlex as dependencies - angular.json with lazy chunks, locales served as… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`5009f42`](https://github.com/Team-Coworkers/hostera-frontend/commit/5009f42835486bc93beda9d97ec0677da2ee285e) | feat(setup): add the Hostera theme on Angular Material 3 | - Material 3 theme generated from the Hostera palette - Hostera design tokens and the CSS variables PrimeFlex reads, so the   layout utilities keep working - outlined form… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`86ee076`](https://github.com/Team-Coworkers/hostera-frontend/commit/86ee076c5ab1f1c216cf71364635b6a9ee774154) | feat(shared): add BaseApiService and BaseEndpoint over HttpClient | - BaseEndpoint<T> with getAll, getById, create, update and delete - BaseApiService with the API URL and endpoint factory - typed environments replace the VITE_* variables | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`704d068`](https://github.com/Team-Coworkers/hostera-frontend/commit/704d068db92897d92c6e86b483e2bcb656b8a951) | feat(shared): load the original locale files with ngx-translate | - LocaleLoader reads src/locales unchanged under the same namespaces - VueI18nMessageParser for named arguments, literals and plurals - I18nService with the active language as… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`d7c546a`](https://github.com/Team-Coworkers/hostera-frontend/commit/d7c546a7e92d30038f5c7d52e9aa606d017254fc) | feat(shared): add the application layout with sidenav and language switcher | - Material sidenav that collapses to an icon rail and becomes an overlay   on small screens - brand logo, language switcher and sidebar toggle - page titles as "Hostera -… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`28e4110`](https://github.com/Team-Coworkers/hostera-frontend/commit/28e4110cc9f924239447993ea5c01df14ee3b6dc) | feat(rooms): port the domain model to TypeScript | - typed Property, RoomType, Room, StatusPeriod, RoomAssignment, RatePlan   and DailyRate entities with their rules unchanged - SetRoomStatusCommand, SetDailyRatesCommand and… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`bc2975a`](https://github.com/Team-Coworkers/hostera-frontend/commit/bc2975a2bd976a6046cbaf6e70d49b63b9450e79) | feat(rooms): add RoomsApiService and assemblers | - RoomsApiService on BaseApiService with property-scoped queries - assemblers over HttpResponse, including the room assignments derived   from bookings | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`08d3680`](https://github.com/Team-Coworkers/hostera-frontend/commit/08d368077b7df1929ce29faa499b54e8d8f69f72) | feat(rooms): port RoomsStore with signals | Rooms owns the selected property that every other context follows. The store keeps the Pinia actions and exposes its state as signals. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`614a9cc`](https://github.com/Team-Coworkers/hostera-frontend/commit/614a9cc5b9297db35b228ef455edf32f83091f4a) | feat(rooms): add the rooms layout, day status tag and week navigator | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`7d604c8`](https://github.com/Team-Coworkers/hostera-frontend/commit/7d604c8af12fdf7807badc55e0f90f54d3452b60) | feat(rooms): add room, room status and booking-controlled side sheets | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`e7d5177`](https://github.com/Team-Coworkers/hostera-frontend/commit/e7d517777c002daa4ebe29468b43b1b9d53ff4b4) | feat(rooms): port the weekly room availability view | - availability grid with status counts and filters - one-day room list on small screens - lazy-loaded rooms routes | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`3ec6b99`](https://github.com/Team-Coworkers/hostera-frontend/commit/3ec6b99a5b5fffefb41d30b99640e38dff516d00) | feat(shared): add the context layout with the property selector | - header with the sidebar toggle, back link, title, property selector   and the view's actions - no-properties, connection error with retry and loading states - inline message… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`41dd609`](https://github.com/Team-Coworkers/hostera-frontend/commit/41dd60952d597b3225167b12a0863555356371c1) | feat(rooms): port the room detail with its month calendar | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/setup-angular` | [`bd326c4`](https://github.com/Team-Coworkers/hostera-frontend/commit/bd326c4fa68820ba006b7d9e80cf6283123dd818) | feat(shared): add tags, drawers, dialogs and table helpers | - status tag, drawer header, confirmation dialog and toasts - drawer and dialog configuration with a close guard while saving - signal-based table data source, numeric id route… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`799579f`](https://github.com/Team-Coworkers/hostera-frontend/commit/799579f0154de321223ab8f5342a0fecab953b83) | feat(access-control): port the domain model to TypeScript | - typed Credential, StaffMember and AccessEvent entities - issue, revoke and guest key card commands and AccessControlError | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`980c5f3`](https://github.com/Team-Coworkers/hostera-frontend/commit/980c5f3c7ed7702ed9c1e883afb2c33da4b6b9a2) | feat(access-control): add the API service, assemblers and RFID encoder | - AccessControlApiService on BaseApiService - credential, staff member and access event assemblers - simulated front desk RFID encoder as an injectable service | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`8654a9e`](https://github.com/Team-Coworkers/hostera-frontend/commit/8654a9e8723564b231f795b088d294096b6b5cd9) | feat(access-control): port AccessControlStore with signals | Bookings issues and ends guest key cards through this store, so it comes before the bookings views. It follows the property selected in Rooms. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`c4708a6`](https://github.com/Team-Coworkers/hostera-frontend/commit/c4708a61525d0b92faabde8411b7acee91d9ef30) | feat(access-control): add the layout, credential status tag and RFID encoder panel | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`7f1b186`](https://github.com/Team-Coworkers/hostera-frontend/commit/7f1b186969b0a6cbf65187cd59f702d19ea7274b) | feat(access-control): port the credential list and staff credential form | - status counts, search, status and holder filters - lazy-loaded access control routes | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`c0b7db5`](https://github.com/Team-Coworkers/hostera-frontend/commit/c0b7db5ca4113b6b6c47043c1105a376e259d006) | feat(rooms): port the room types list and form | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`196aaa6`](https://github.com/Team-Coworkers/hostera-frontend/commit/196aaa66a20a5908b31ad405aa8480189c2ce5de) | feat(access-control): port the credential detail with revoke and replace | - access period, recent events and revocation details - revoke dialog, replace side sheet and access event side sheet | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-rooms` | [`3c17bc8`](https://github.com/Team-Coworkers/hostera-frontend/commit/3c17bc831a60288231f008d02bbe6fbb942f96c3) | feat(rooms): port the rates view with rate plan and daily rate forms | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-access-control` | [`5dc43e4`](https://github.com/Team-Coworkers/hostera-frontend/commit/5dc43e45885623056bb00f4ebf4bd03588e341d6) | feat(access-control): port the access events list | Events by day with result and access point filters, opened from a credential with its card ID as search. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`31f59e1`](https://github.com/Team-Coworkers/hostera-frontend/commit/31f59e19111b755eb6daaad29d25c8a414467d77) | feat(bookings): port the domain model to TypeScript | - typed Booking and Payment entities with their lifecycle rules - cancel, check-in and check-out commands and BookingsError | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`f6ba374`](https://github.com/Team-Coworkers/hostera-frontend/commit/f6ba37464e4f3478e3e70109b962aafb9c0256e5) | feat(bookings): add BookingsApiService and assemblers | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`510ee4f`](https://github.com/Team-Coworkers/hostera-frontend/commit/510ee4f0445da1f7c40c0081631067d38ac7b1c2) | feat(bookings): port BookingsStore with signals | It follows the property selected in Rooms, prices stays with the Rooms rates, and issues and ends key cards through Access Control. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`9b780af`](https://github.com/Team-Coworkers/hostera-frontend/commit/9b780af0b0ab9ebb75b96ec614659f7b7640e225) | feat(bookings): add the bookings layout and status tags | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`84af280`](https://github.com/Team-Coworkers/hostera-frontend/commit/84af2801007d9c893877fb1fcfe0feebdf78499a) | feat(bookings): port the booking list | - search, period and status filters - sortable and paginated Material table, and a list on small screens - lazy-loaded bookings routes | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`5014350`](https://github.com/Team-Coworkers/hostera-frontend/commit/5014350776010ee93715d948a722bb75f0cbfc41) | feat(bookings): add the payment form and payment summary | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`34b3821`](https://github.com/Team-Coworkers/hostera-frontend/commit/34b3821378eff79ec44b3c15433b65a4634bcdfd) | feat(bookings): port the booking detail with status actions | - status panel with confirm, cancel, no-show and restore - key cards and payment summary | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`bef8ff0`](https://github.com/Team-Coworkers/hostera-frontend/commit/bef8ff007920751d633a58e4088753fcb2b15de3) | feat(bookings): port the booking form to create, duplicate and edit bookings | Room availability, rate plan filtering and the estimated total. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`eb53c24`](https://github.com/Team-Coworkers/hostera-frontend/commit/eb53c24a9cbff21782e91425ba99d49179feba7f) | feat(bookings): port the guided check-in | Material stepper with identity verification, payment review and RFID key card encoding. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-bookings` | [`defb89a`](https://github.com/Team-Coworkers/hostera-frontend/commit/defb89a60962ece6aa0c154214fe0ebec7c12e4b) | feat(bookings): port the check-out review | Room condition, balance, and the changes to the booking, room and key cards. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`d6a90f1`](https://github.com/Team-Coworkers/hostera-frontend/commit/d6a90f12fe569cfc79f9c1a8fc774f9672702d57) | feat(inventory): port the domain model to TypeScript | - typed InventoryItem, StorageLocation, StockAdjustment and Property - AdjustStockCommand and InventoryError | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`d1fb7d3`](https://github.com/Team-Coworkers/hostera-frontend/commit/d1fb7d31a73c59ca1736e42ced15dcf509a81248) | feat(inventory): add InventoryApiService and assemblers | Items are assembled with their movement history. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`774b0db`](https://github.com/Team-Coworkers/hostera-frontend/commit/774b0db64cce9a6bd521c3633ce35a314ebd9964) | feat(inventory): port InventoryStore with signals | Inventory keeps its own property selection, as in the Vue version. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`8cd6180`](https://github.com/Team-Coworkers/hostera-frontend/commit/8cd61806abd4cb4753bf487d93292d61a329731d) | feat(inventory): add the inventory layout, avatars and stock condition tag | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`45fa432`](https://github.com/Team-Coworkers/hostera-frontend/commit/45fa43294c1aa968c0470ba92f1ca4d09ca95301) | feat(inventory): add the inventory item and stock adjustment forms | Stock adjustments cover in, out and transfers between locations. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`7472824`](https://github.com/Team-Coworkers/hostera-frontend/commit/747282429bcb499ac8827c22a12dd87a1527867c) | feat(inventory): port the inventory item list | - condition, location and category filters - lazy-loaded inventory routes | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`f0d52a8`](https://github.com/Team-Coworkers/hostera-frontend/commit/f0d52a83fdeddc5cc3d1f1c5bcb33c6273f8a2ef) | feat(inventory): port the inventory item detail with its movement history | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`624ffdb`](https://github.com/Team-Coworkers/hostera-frontend/commit/624ffdbdad777fa4af4db621cde108e2b7f0ea09) | feat(inventory): port the storage location list and form | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-inventory` | [`16663f2`](https://github.com/Team-Coworkers/hostera-frontend/commit/16663f26040b6fa15d1750e87650987157b51dd6) | feat(inventory): port the storage location detail | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`991f884`](https://github.com/Team-Coworkers/hostera-frontend/commit/991f884991678228d40ccf5e5317f6fdb4bd3fd0) | feat(overview): port the domain model to TypeScript | DailyPerformance and PropertyOverview with their summary rules. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`1bf030f`](https://github.com/Team-Coworkers/hostera-frontend/commit/1bf030f8aca45686453ec01879b75989eda85580) | feat(overview): add OverviewApiService and PropertyOverviewAssembler | The portfolio reads every property's rooms, bookings and status periods. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`6a4ed23`](https://github.com/Team-Coworkers/hostera-frontend/commit/6a4ed23d3edd639e48d39422ea9cfa27747837f5) | feat(overview): port OverviewStore with signals | It reads the Rooms and Bookings stores and refreshes the property overviews when properties or bookings change. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`cbb54e7`](https://github.com/Team-Coworkers/hostera-frontend/commit/cbb54e72f759b59fb61667b880108f4589b2fa69) | feat(overview): add the overview panel and the Chart.js canvas | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`091b144`](https://github.com/Team-Coworkers/hostera-frontend/commit/091b144473ded16d6f9fadad467c8a6126e84cd4) | feat(overview): add the revenue and occupancy and room status charts | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`11cbd92`](https://github.com/Team-Coworkers/hostera-frontend/commit/11cbd92b4446a9fecef162d9be70fb741a97fccf) | feat(overview): add the property overview and today's arrivals cards | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`35d324f`](https://github.com/Team-Coworkers/hostera-frontend/commit/35d324fdf6ef2ef3d136ba356adf3d6b3a7864dc) | feat(overview): add the booking search with the Ctrl/⌘K shortcut | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/context-overview` | [`2c8f45c`](https://github.com/Team-Coworkers/hostera-frontend/commit/2c8f45c8ba323903364706c89163dc7d2811b8b7) | feat(overview): port the overview view as the start page | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/docs-angular` | [`ead063e`](https://github.com/Team-Coworkers/hostera-frontend/commit/ead063e5b8f2645f7d91f67682eb9530e25238a7) | docs: describe the Angular stack in the README | Tech stack, prerequisites, scripts, project structure, layers, environment and deployment for Angular 19. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/docs-angular` | [`c8551b6`](https://github.com/Team-Coworkers/hostera-frontend/commit/c8551b694e64d67ab8e42bcfb3b93098b6dd057f) | docs: add the 0.2.0 changelog entry for the Angular port | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/docs-adrs` | [`8197647`](https://github.com/Team-Coworkers/hostera-frontend/commit/8197647ccd50e950955f07c6c0a57c19a1fbdd02) | docs: record the Angular port in ADR-014 to ADR-018 | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/docs-adrs` | [`6df6447`](https://github.com/Team-Coworkers/hostera-frontend/commit/6df6447fa77f79d493b3527d9cbf7ab8fa81c533) | docs: update the class diagram to the Angular classes | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/docs-adrs` | [`1bb4018`](https://github.com/Team-Coworkers/hostera-frontend/commit/1bb4018b0c9df4a425fc3bcc538c275aa305c762) | docs: rename the user story traceability to the Angular classes | — | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/github-pages-deployment` | [`505e16c`](https://github.com/Team-Coworkers/hostera-frontend/commit/505e16c073ac391462e70be2386a6bd8042e405c) | chore: remove the Firebase Hosting configuration inherited from the Vue version | The App Web course published the Vue SPA on its own Firebase project. The Angular SPA of Team Coworkers is published on GitHub Pages, so the Firebase project file, the hosting… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/github-pages-deployment` | [`9441bef`](https://github.com/Team-Coworkers/hostera-frontend/commit/9441bef3718d15d0db70048965a5e3a5131a93a8) | ci(pages): deploy the SPA to GitHub Pages from main | Build with the /hostera-frontend/ base path on every push to main, copy index.html to 404.html so the Angular router resolves deep links after a reload, and publish… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/github-pages-deployment` | [`29f131b`](https://github.com/Team-Coworkers/hostera-frontend/commit/29f131b9b1d7cbdb28e108459a3d2260e00e7dec) | fix(api): point production to the Team Coworkers mock API | The production URL was the hostera-api.onrender.com example from the Render guide, which belongs to an unrelated service and answered every request with 404. Point it to… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/github-pages-deployment` | [`a34a6c8`](https://github.com/Team-Coworkers/hostera-frontend/commit/a34a6c8a3a9cc53542cb696720058d808e75316c) | docs: describe the GitHub Pages and Render deployment | Replace the Firebase Hosting instructions with the GitHub Pages workflow and the Render Blueprint, and state that the production API URL is the only value to change when the… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/github-pages-deployment` | [`7fd2c47`](https://github.com/Team-Coworkers/hostera-frontend/commit/7fd2c4774a62ca3c8aca5a9410c794cf86583353) | docs(changelog): record the 0.3.0 deployment changes | List the GitHub Pages deployment, the Render Blueprint, the corrected production API URL and the removal of the Firebase configuration. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/demo-api-in-browser` | [`e5575c9`](https://github.com/Team-Coworkers/hostera-frontend/commit/e5575c9b7eb8f212d5b6e92c8416f3c4d6c249e8) | feat(api): serve the demonstration data in the browser on GitHub Pages | The deployed SPA had no data because the mock API on Render does not exist yet. demo-api.interceptor.ts answers the requests to hosteraApiUrl from the server/data fixtures,… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/seo-meta-tags` | [`1486638`](https://github.com/Team-Coworkers/hostera-frontend/commit/148663873ccecb3cad797b801210907d0755f5b4) | feat(seo): add the description, keywords and author meta tags | The report's section 4.2.3 documents the web application's meta tags, but index.html only had the title. Adds description, keywords and author, noindex for the authenticated… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/locale-es-419` | [`bd63c5b`](https://github.com/Team-Coworkers/hostera-frontend/commit/bd63c5b0bf352c92d9e6ecd1854976f908db3845) | feat(i18n): use the es-419 code for Latin American Spanish | The project statement asks for en_US and es_419. The Spanish messages move to src/locales/es-419, the language switcher keeps the short ES label, and switching languages… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/app-footer-terms` | [`ea87627`](https://github.com/Team-Coworkers/hostera-frontend/commit/ea876271dffad82682a13d711940c6501fb0b37b) | feat(shared): add the site footer with the terms and conditions link | The project statement requires the terms and conditions to be linked from the footer of the applications. The footer sits below every workspace and links to the terms page and… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/iam-sign-in-and-plans` | [`3ff9ff1`](https://github.com/Team-Coworkers/hostera-frontend/commit/3ff9ff1cffe6ec6f8d4ba79c1fb5956951b8d9b7) | feat(iam): add the subscription plan and account registration model | SubscriptionPlan holds the self-service plans of the landing page: Starter at S/39 per property for one hotel with up to 10 rooms, and Professional at S/8 per room for chains… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/iam-sign-in-and-plans` | [`95019b3`](https://github.com/Team-Coworkers/hostera-frontend/commit/95019b3129afd4d4b7d61fa655226b8237d5e42d) | feat(iam): add the sign-in and sign-up views | Sign-in opens the workspace from the landing page's Sign in link. Sign-up reads the plan from the plan query parameter, estimates the monthly price as the landing page… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/iam-sign-in-and-plans` | [`b7e15d3`](https://github.com/Team-Coworkers/hostera-frontend/commit/b7e15d3ad4c154d4c2f137a9765f586bf5caebcd) | feat(iam): route the public views outside the workspace shell | The workspace routes become children of the application shell, so /sign-in and /sign-up render on their own page with the footer, and each landing page call-to-action can open… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/public-holidays-service` | [`448a84d`](https://github.com/Team-Coworkers/hostera-frontend/commit/448a84d87eecacde13e3d6acc1d28d9ba22ae0b0) | feat(rooms): read public holidays from the Nager.Date API | Adds the solution's third-party service, as the project statement asks. PublicHolidaysApiService calls Nager.Date, a free public holidays API without keys,… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/public-holidays-service` | [`8052450`](https://github.com/Team-Coworkers/hostera-frontend/commit/80524503bf725e4dc30c36755910d8eea01654da) | feat(rooms): flag public holidays in the availability view | The weekly grid marks the days that are public holidays in Peru, with the holiday name in the active language, and lists them above the grid, since holidays change hotel… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/unit-tests` | [`c55a59b`](https://github.com/Team-Coworkers/hostera-frontend/commit/c55a59b68f528a7e894c5526d61a4eb76874fc02) | test(domain): cover the plans, registration, bookings and inventory | Adds the first unit tests of the SPA: plan pricing and scope, account registration rules, booking codes, nights, overlaps, payment status and check-in window, and the inventory… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/unit-tests` | [`0123d30`](https://github.com/Team-Coworkers/hostera-frontend/commit/0123d30bb96e81cd69bc9a2e17eed2e4b89074bc) | test(infrastructure): cover the demonstration API and the holidays assembler | Checks that the in-browser demonstration API filters, sorts, limits and writes like JSON Server, answers 404 for missing records and lets other requests through, and that only… | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `feature/unit-tests` | [`d5d9e98`](https://github.com/Team-Coworkers/hostera-frontend/commit/d5d9e98647693d7015101219b176b17bff3c705e) | ci(test): run the unit tests on every push and pull request | Runs the Karma suite in headless Chrome for main and develop, and documents the test command in the README. | 2026-10-08 |
+| [hostera-frontend](https://github.com/Team-Coworkers/hostera-frontend) | `release/0.4.0` | [`de72020`](https://github.com/Team-Coworkers/hostera-frontend/commit/de7202086ad7e422ba6bc52dc4d53014dc6ce94f) | chore(release): prepare 0.4.0 | — | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/landing-tb1-sales-pricing` | [`b577ee4`](https://github.com/Team-Coworkers/landing-page-main/commit/b577ee44615155a6badc2a6caca3386a257f73a8) | feat(sales): add the English and Spanish sales contact page | Give hotel groups a dedicated page to reach the sales team, with name, organization and message fields and the same header, language switch and footer as the rest of the site. | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/landing-tb1-sales-pricing` | [`aa13b9f`](https://github.com/Team-Coworkers/landing-page-main/commit/aa13b9fe90823a1924f8065b15f68e81667cb348) | feat(pricing): present the Starter and Professional plans with prices | Show Starter at S/39 per property per month and Professional at S/8 per room per month, estimate the monthly Professional cost from the number of rooms, and rename the shared… | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/landing-tb1-sales-pricing` | [`f407e55`](https://github.com/Team-Coworkers/landing-page-main/commit/f407e554566004352365ad3fc0bd1759931bab6c) | feat(landing): connect the pages to the web application and add metadata | Add the sign-in link to the headers and the mobile menu, point the plan buttons and the closing action to the Team Coworkers web application, declare Spanish as es_419, and add… | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/landing-tb1-sales-pricing` | [`5823119`](https://github.com/Team-Coworkers/landing-page-main/commit/5823119eb692d8724a016bd94ab663d69e5194b1) | docs: describe the current plans in the README and user stories | Align the README and the landing-page user stories with the Starter and Professional pricing, the sales contact page and the sign-in link, keeping the Team Coworkers roster and… | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/landing-tb1-sales-pricing` | [`b8dccd6`](https://github.com/Team-Coworkers/landing-page-main/commit/b8dccd6bc800a89232dc2c0dbcf9a0197d649f97) | docs(changelog): record the unreleased landing changes | List the sales page, the sign-in link, the plan pricing and the new metadata under Unreleased until the release is published together with the web application. | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/segment-cta-app-views` | [`68c3af1`](https://github.com/Team-Coworkers/landing-page-main/commit/68c3af1ea5b8f634dee07014a778d5ebfc6757aa) | chore(release): prepare 0.4.0 | Date the 0.4.0 changelog entry and align the package version with the release. | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `release/0.5.0` | [`d9cf58f`](https://github.com/Team-Coworkers/landing-page-main/commit/d9cf58f01abccdde60b16a41afe3baef96697171) | chore(release): prepare 0.5.0 | — | 2026-10-08 |
+| [landing-page-main](https://github.com/Team-Coworkers/landing-page-main) | `feature/segment-cta-app-views` | [`5061ae1`](https://github.com/Team-Coworkers/landing-page-main/commit/5061ae145c966242f7cd858ab04ac4266902cb35) | feat(landing): open each segment's view in the web application | The project statement asks each segment's call-to-action to open the corresponding view of the web application. The independent-hotel path, the Starter plan and the closing… | 2026-10-08 |
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 2 la Frontend Web Application está publicada en
+https://team-coworkers.github.io/hostera-frontend/ y la Landing Page en
+https://team-coworkers.github.io/landing-page-main/. Las capturas se tomaron de los
+sitios publicados el 8 de octubre de 2026, con los datos de demostración de dos
+propiedades.
+
+**Landing Page v0.5.0.** La página presenta los planes con sus precios y la calculadora
+del plan Professional, y cada camino por segmento abre su vista en la aplicación.
+
+<img src="assets/chapter-5/sprint-2-landing-pricing.png" alt="Planes Starter, Professional y Enterprise de la Landing Page con la calculadora" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.8. Planes de la Landing Page v0.5.0 con el estimado del plan Professional.*
+
+<img src="assets/chapter-5/sprint-2-landing-sales.png" alt="Página de contacto comercial de la Landing Page" style="display:block; width:65%; height:auto; margin:0 auto;"/>
+
+*Figura 5.9. Página de contacto comercial para grupos hoteleros.*
+
+**Registro con plan e inicio de sesión.** El CTA del segmento de cadenas pequeñas abre
+el registro con el plan Professional seleccionado y su estimado mensual; el enlace
+`Sign in` abre el inicio de sesión. Ambas vistas incluyen el footer con el enlace a los
+términos y condiciones.
+
+<img src="assets/chapter-5/sprint-2-web-app-sign-up.png" alt="Vista de registro con el plan Professional seleccionado" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.10. Registro con el plan Professional abierto desde la Landing Page.*
+
+<img src="assets/chapter-5/sprint-2-web-app-sign-in.png" alt="Vista de inicio de sesión de Hostera" style="display:block; width:65%; height:auto; margin:0 auto;"/>
+
+*Figura 5.11. Inicio de sesión de la aplicación.*
+
+**Panorama operativo.** Muestra los ingresos y la ocupación de la propiedad activa, el
+resumen de las propiedades, las llegadas del día y el estado de las habitaciones.
+
+<img src="assets/chapter-5/sprint-2-web-app-overview.png" alt="Panorama operativo de la propiedad activa" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.12. Panorama operativo de la propiedad activa.*
+
+**Reservas.** Lista las reservas de la propiedad con su estadía, habitación, estado y
+estado de pago, con búsqueda y filtros.
+
+<img src="assets/chapter-5/sprint-2-web-app-bookings.png" alt="Listado de reservas con su estado y pago" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.13. Listado de reservas de la propiedad.*
+
+**Habitaciones.** La disponibilidad semanal marca los feriados obtenidos de Nager.Date;
+el 8 de octubre aparece el feriado del Combate de Angamos.
+
+<img src="assets/chapter-5/sprint-2-web-app-rooms.png" alt="Disponibilidad semanal de habitaciones con el feriado marcado" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.14. Disponibilidad semanal con el feriado del 8 de octubre obtenido de Nager.Date.*
+
+**Inventario y control de accesos.**
+
+<img src="assets/chapter-5/sprint-2-web-app-inventory.png" alt="Listado de artículos de inventario con su condición de stock" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.15. Artículos de inventario con su condición de stock.*
+
+<img src="assets/chapter-5/sprint-2-web-app-access-control.png" alt="Listado de credenciales RFID con su vigencia y estado" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.16. Credenciales RFID de huéspedes y personal.*
+
+**Diseño responsive.** En un navegador móvil la navegación lateral se oculta y las tablas
+pasan a listas.
+
+<img src="assets/chapter-5/sprint-2-web-app-mobile.png" alt="Listado de reservas en un navegador móvil" style="display:block; width:30%; height:auto; margin:0 auto;"/>
+
+*Figura 5.17. Listado de reservas en un navegador móvil.*
+
+**Video de navegación.** El video que recorre la aplicación publicada debe grabarse y
+subirse a Microsoft Stream por el equipo; su enlace se agregará en esta sección y en el
+Anexo A cuando esté disponible.
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+En este sprint la aplicación consume la API de datos de demostración, que reproduce los
+recursos que expondrá la RESTful API de Spring Boot. Se ejecuta en local con json-server
+en `http://localhost:3000` (`npm run server:start`), como admite el enunciado para los
+sprints previos al despliegue de los Web Services, y en la aplicación publicada responde
+dentro del navegador con los mismos datos y reglas. La documentación con OpenAPI y
+Swagger se publicará con los Web Services en AV2.
+
+La API expone 13 recursos, todos con las operaciones CRUD de json-server. Las consultas
+de colección admiten filtros por cualquier campo, como `propertyId=1`, y los parámetros
+`_sort`, `_order` y `_limit`; por ejemplo, la aplicación obtiene el último código de
+reserva de una propiedad con `GET /bookings?propertyId=1&_sort=code&_order=desc&_limit=1`.
+
+| Recurso | Contenido | Operaciones |
+| --- | --- | --- |
+| `/properties` | Propiedades de la organización | `GET /properties?propertyId=1`, `GET /properties/{id}`, `POST /properties`, `PUT /properties/{id}`, `DELETE /properties/{id}` |
+| `/room-types` | Tipos de habitación | `GET /room-types?propertyId=1`, `GET /room-types/{id}`, `POST /room-types`, `PUT /room-types/{id}`, `DELETE /room-types/{id}` |
+| `/rooms` | Habitaciones | `GET /rooms?propertyId=1`, `GET /rooms/{id}`, `POST /rooms`, `PUT /rooms/{id}`, `DELETE /rooms/{id}` |
+| `/status-periods` | Periodos de estado de las habitaciones | `GET /status-periods?propertyId=1`, `GET /status-periods/{id}`, `POST /status-periods`, `PUT /status-periods/{id}`, `DELETE /status-periods/{id}` |
+| `/rate-plans` | Planes tarifarios | `GET /rate-plans?propertyId=1`, `GET /rate-plans/{id}`, `POST /rate-plans`, `PUT /rate-plans/{id}`, `DELETE /rate-plans/{id}` |
+| `/daily-rates` | Tarifas diarias por tipo de habitación | `GET /daily-rates?propertyId=1`, `GET /daily-rates/{id}`, `POST /daily-rates`, `PUT /daily-rates/{id}`, `DELETE /daily-rates/{id}` |
+| `/bookings` | Reservas | `GET /bookings?propertyId=1`, `GET /bookings/{id}`, `POST /bookings`, `PUT /bookings/{id}`, `DELETE /bookings/{id}` |
+| `/payments` | Pagos de las reservas | `GET /payments?propertyId=1`, `GET /payments/{id}`, `POST /payments`, `PUT /payments/{id}`, `DELETE /payments/{id}` |
+| `/inventory-items` | Artículos de inventario | `GET /inventory-items?propertyId=1`, `GET /inventory-items/{id}`, `POST /inventory-items`, `PUT /inventory-items/{id}`, `DELETE /inventory-items/{id}` |
+| `/storage-locations` | Ubicaciones de almacén | `GET /storage-locations?propertyId=1`, `GET /storage-locations/{id}`, `POST /storage-locations`, `PUT /storage-locations/{id}`, `DELETE /storage-locations/{id}` |
+| `/credentials` | Credenciales RFID | `GET /credentials?propertyId=1`, `GET /credentials/{id}`, `POST /credentials`, `PUT /credentials/{id}`, `DELETE /credentials/{id}` |
+| `/staff-members` | Miembros del personal | `GET /staff-members?propertyId=1`, `GET /staff-members/{id}`, `POST /staff-members`, `PUT /staff-members/{id}`, `DELETE /staff-members/{id}` |
+| `/access-events` | Eventos de acceso | `GET /access-events?propertyId=1`, `GET /access-events/{id}`, `POST /access-events`, `PUT /access-events/{id}`, `DELETE /access-events/{id}` |
+
+Respuesta de ejemplo de `GET /bookings?propertyId=1&_sort=code&_order=desc&_limit=1`
+(extracto):
+
+```json
+[
+  {
+    "id": 16,
+    "propertyId": 1,
+    "code": "BKG-1070",
+    "status": "confirmed",
+    "guestName": "Isabel Mendoza",
+    "checkInDate": "2026-10-25",
+    "checkOutDate": "2026-10-29"
+  }
+]
+```
+
+<img src="assets/chapter-5/sprint-2-demo-api-local.png" alt="API de datos de demostración ejecutándose en local con sus 13 recursos" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 5.18. API de datos de demostración en local con json-server y sus 13 recursos.*
+
+**Servicio externo.** La aplicación consume un único endpoint de Nager.Date:
+
+| Método | Endpoint | Uso en Hostera |
+| --- | --- | --- |
+| `GET` | `https://date.nager.at/api/v3/PublicHolidays/{year}/PE` | Obtiene los feriados del Perú de cada año visible en la disponibilidad de habitaciones y conserva solo los nacionales. |
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+En el Sprint 2 se desplegaron dos productos, con la configuración descrita en la sección
+5.1.4:
+
+| Producto | Release | Evidencia de despliegue | URL pública |
+| --- | --- | --- | --- |
+| Frontend Web Application | `v0.4.0` (también `v0.2.0` con el port a Angular y `v0.3.0` con el primer despliegue) | Workflow `Deploy to GitHub Pages`, ejecución `37876465598` sobre el commit `38dbd31` de `main`, con resultado exitoso; ejecución anterior `37870903860` para `v0.3.0`. | https://team-coworkers.github.io/hostera-frontend/ |
+| Pruebas de la Frontend Web Application | `v0.4.0` | Workflow `Unit tests`, ejecuciones `37876465600` en `main` y `37876464628` en `develop`, con las 28 pruebas aprobadas. | https://github.com/Team-Coworkers/hostera-frontend/actions |
+| Landing Page | `v0.5.0` (y `v0.4.0`) | GitHub Pages construyó la rama `main` en los commits `60fece4` (`v0.4.0`) y `adbb190` (`v0.5.0`). | https://team-coworkers.github.io/landing-page-main/ |
+
+Cada release se integró en `main` desde una rama `release/*`, se etiquetó con un tag
+anotado y se publicó como GitHub Release con las notas de su `CHANGELOG.md`.
+
+<img src="assets/chapter-5/sprint-2-github-actions.png" alt="Ejecuciones de los workflows de despliegue y pruebas en GitHub Actions" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.19. Ejecuciones de los workflows de despliegue y de pruebas del frontend.*
+
+<img src="assets/chapter-5/sprint-2-frontend-releases.png" alt="Releases del repositorio hostera-frontend en GitHub" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.20. Releases de la Frontend Web Application en GitHub.*
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Los analíticos de colaboración se tomaron de los repositorios de la Frontend Web
+Application y de la Landing Page. El gráfico se construyó con el historial de todas las
+ramas desde el 20 de septiembre de 2026, sin commits de merge, porque el analítico de
+contribuidores de GitHub solo cuenta la rama `main`.
+
+<img src="assets/chapter-5/sprint-2-commits-by-member.svg" alt="Commits por integrante en el frontend y la Landing Page durante el Sprint 2" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.21. Commits por integrante durante el Sprint 2.*
+
+| Integrante | `hostera-frontend` | `landing-page-main` | Aporte principal en el sprint |
+| --- | :---: | :---: | --- |
+| Leon Naupari, Jorge Mateo (`mateool10`) | 52 | 0 | Port de la aplicación a Angular en los seis bounded contexts. |
+| Santana Luna, José Antonio (`JhosBY2005`) | 20 | 8 | Despliegue, API de demostración, IAM, i18n, servicio externo, pruebas y Landing Page `v0.4.0` y `v0.5.0`. |
+| Rudas Chavarria, Jose Gabriel (`josegabriel1604`) | 3 | 0 | Documentación del port. |
+| Cuba Vega, Darnell Yadir (`darnell1910`) | 0 | 0 | Migración del informe (sección Project Report Collaboration Insights). |
+| Flores Rios, Juan Diego (`YopoFlores`) | 0 | 0 | Organización de los archivos del informe. |
+
+El sprint concentró el código en dos integrantes. El enunciado del proyecto exige que
+todos los integrantes colaboren en la implementación, las pruebas y el despliegue de la
+aplicación y de la Landing Page, por lo que el Sprint 3 debe asignar a Darnell Cuba y a
+Juan Diego Flores tareas de código con commits propios, como los endpoints de un bounded
+context de la RESTful API y sus pruebas.
+
+<img src="assets/chapter-5/sprint-2-frontend-contributors.png" alt="Analítico de contribuidores del repositorio hostera-frontend en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.22. Contribuidores de `hostera-frontend` en GitHub (rama `main`).*
+
+<img src="assets/chapter-5/sprint-2-landing-contributors.png" alt="Analítico de contribuidores del repositorio landing-page-main en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.23. Contribuidores de `landing-page-main` en GitHub (rama `main`).*
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
