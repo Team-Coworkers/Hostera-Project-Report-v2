@@ -1779,8 +1779,8 @@ El mapa de impacto fue consolidado en la herramienta UXPressia, ilustrando la je
 ## 3.3. Product Backlog
 
 El Product Backlog es una lista priorizada y evolutiva de los requisitos del producto
-digital de Hostera. Reúne las User Stories y, conforme avance el proyecto, podrá
-incorporar Technical Stories, tareas y otros elementos necesarios para desarrollar,
+digital de Hostera. Reúne las User Stories y las Technical Stories, y conforme avance el proyecto podrá
+incorporar tareas y otros elementos necesarios para desarrollar,
 validar y desplegar la solución. La priorización se establece según el valor para el
 negocio, las necesidades de los User Personas, las dependencias y los riesgos del
 producto. Los Story Points representan una estimación relativa del esfuerzo, la
@@ -1799,62 +1799,66 @@ del producto digital. Los puntos expresan complejidad relativa.
 
 <div style="page-break-before: always;"></div>
 
-El estado actual del Product Backlog se presenta en la tabla siguiente. Incluye el
-conjunto de User Stories priorizadas para el producto y sirve como referencia para
-organizar el trabajo de las etapas posteriores.
+Las primeras ocho posiciones se mantienen para las historias de la Landing Page,
+que deben considerarse desde el primer Sprint. A continuación se priorizan las
+experiencias y flujos operativos de la Web Application por su valor visible para los
+usuarios. Las historias de registro e inicio de sesión se ubican después de esas
+capacidades. Las Technical Stories del RESTful API, correspondientes al trabajo
+backend, se agrupan al final; las relacionadas con identidad, autenticación y
+autorización ocupan las últimas posiciones.
 
 | # Orden | User Story ID | Título | Descripción | Story Points |
 | :---: | :---: | :--- | :--- | :---: |
-| 1 | US001 | Understand the hotel-operations proposition | As a visitor, I want to understand what Hostera offers for hotel operations, so that I can decide whether the Landing Page is relevant to my hotel. | 5 |
-| 2 | US003 | Find the independent-hotel path | As a visitor from the independent-hotel segment, I want to identify the Hostera pathway for one property with up to 10 rooms, so that I can confirm that it fits my operation and continue to the appropriate entry point. | 3 |
-| 3 | US004 | Find the small-chain path | As a small-chain hotel operations manager, I want a path for coordinating 2 to 5 locations, so that I can identify the plan and next step intended for a multi-property operation. | 3 |
-| 4 | US006 | Compare plans and choose a next step | As a visitor, I want to compare the plans and see clear next actions, including the open Hotel group / Enterprise commercial option, so that I can choose the path that matches my operating scale. | 5 |
+| 1 | US001 | Understand the hotel-operations proposition | As a visitor, I want to understand what Hostera offers for hotel operations, so that I can decide whether Hostera is relevant to my hotel. | 5 |
+| 2 | US003 | Find the independent-hotel path | As a visitor from the independent-hotel segment, I want to identify the Hostera option for one property with up to 10 rooms, so that I can confirm that it fits my operation and continue with the corresponding plan. | 3 |
+| 3 | US004 | Find the small-chain path | As a small-chain hotel operations manager, I want an option for coordinating 2 to 5 locations, so that I can identify the plan and estimated cost intended for a multi-property operation. | 3 |
+| 4 | US006 | Compare plans and choose a next step | As a visitor, I want to compare the plans and understand the available next steps, including the open Hotel group / Enterprise commercial option, so that I can choose the path that matches my operating scale. | 5 |
 | 5 | US005 | Understand the product benefits and operating flow | As a visitor, I want to understand the benefits and the high-level operating flow described by Hostera, so that I can relate the proposition to hotel work. | 5 |
-| 6 | US002 | Navigate the Landing Page sections and footer | As a visitor, I want clearly labeled navigation, so that I can find the Landing Page content and understand the available next steps. | 5 |
-| 7 | US008 | Use the English and Spanish Landing Page variants | As a visitor, I want to choose English or Spanish, so that I can read the Landing Page in the language I understand best. | 8 |
-| 8 | US007 | Explore product, team, and support content | As a visitor, I want product, team, and support information in the Landing Page, so that I can learn more before choosing a plan. | 8 |
-| 9 | US009 | Register a hotel operation | As an independent hotel administrator or small-chain operations manager, I want to create an account with an initial property so that I can begin configuring my hotel operation in Hostera. | 5 |
-| 10 | US010 | Sign in to Hostera | As an authorized hotel operator, I want to sign in with my work account so that I can access the properties and operational information assigned to me. | 3 |
-| 11 | US011 | Monitor operations across assigned properties | As a hotel administrator or operations manager, I want to monitor current operational information and change the active property so that I can identify conditions that require attention in the appropriate hotel. | 5 |
-| 12 | US033 | Navigate between operational areas | As an authorized hotel operator, I want to navigate between the operational areas assigned to me so that I can perform different hotel-management tasks without losing the active property context. | 3 |
-| 13 | US012 | Find and review reservations | As a front-desk operator or hotel administrator, I want to find reservations by guest, stay period, room, and status so that I can review the correct booking before taking an operational action. | 3 |
-| 14 | US013 | Create a reservation | As a front-desk operator, I want to create a reservation for a guest and an available room so that the requested stay is recorded with its applicable rate. | 5 |
-| 15 | US014 | Review and update a reservation | As a front-desk operator, I want to review and update reservation information so that changes requested before arrival remain consistent with room availability and rates. | 5 |
-| 16 | US015 | Manage the reservation lifecycle | As a front-desk operator, I want to confirm, cancel, or mark a reservation as a no-show so that its status reflects what happened before the guest's stay begins. | 5 |
-| 17 | US016 | Record a reservation payment | As a front-desk operator, I want to record a payment received for a reservation so that the amount paid and remaining balance are accurate. | 3 |
-| 18 | US017 | Complete guest check-in | As a front-desk operator, I want to complete guest check-in so that identity, payment, room assignment, and room access are verified before the stay begins. | 8 |
-| 19 | US018 | Complete guest check-out | As a front-desk operator, I want to complete guest check-out so that the stay closes, the balance is resolved, and the room and credential return to their next operational states. | 5 |
-| 20 | US019 | Review room availability for a selected date | As a front-desk operator or hotel administrator, I want to review room availability from a selected date so that I can plan assignments and operational work. | 5 |
-| 21 | US020 | Create a room | As a hotel administrator, I want to create a room within a property so that it can participate in availability planning and reservation assignment. | 3 |
-| 22 | US021 | Maintain room information and operational status | As a hotel administrator or authorized staff member, I want to review and update a room's information and controllable status so that its operational condition remains accurate. | 5 |
-| 23 | US022 | Manage room types | As a hotel administrator, I want to manage room types so that rooms share consistent capacity, bed configuration, and base-rate information. | 5 |
-| 24 | US023 | Manage rate plans and daily rates | As a hotel administrator or operations manager, I want to define rate plans and daily room-type prices so that reservation totals reflect the applicable commercial conditions. | 5 |
-| 25 | US024 | Monitor property inventory | As a hotel administrator or inventory operator, I want to monitor item quantities and stock conditions by storage location so that I can identify supplies that require attention. | 5 |
-| 26 | US025 | Manage inventory item records | As an inventory operator, I want to create and update inventory items so that each tracked supply has consistent identification, classification, storage, and threshold information. | 5 |
-| 27 | US026 | Adjust inventory stock | As an inventory operator, I want to record stock entering or leaving a storage location so that on-hand quantities and their audit history remain accurate. | 5 |
-| 28 | US027 | Manage storage locations | As a hotel administrator or inventory operator, I want to manage storage locations and their assigned items so that stock remains associated with the correct physical area and responsible team. | 5 |
-| 29 | US028 | Review and manage RFID credentials | As a hotel administrator or authorized front-desk operator, I want to review and manage RFID credentials so that room and operational access remains valid only for the intended person and period. | 5 |
-| 30 | US029 | Encode or replace an RFID key card | As an authorized front-desk operator, I want to encode or replace an RFID key card so that a guest or staff member receives the access authorized for their role or stay. | 8 |
-| 31 | US030 | Review RFID access events | As a hotel administrator or security-authorized operator, I want to review granted and denied RFID access events so that I can investigate activity at rooms and access points. | 5 |
-| 32 | US031 | Find and review an operational report | As a hotel administrator or operations manager, I want to find and review operational reports by property and period so that I can evaluate hotel performance and activity. | 5 |
-| 33 | US032 | Export an operational report | As a hotel administrator or operations manager, I want to export the currently scoped report so that I can share or archive the operational results. | 3 |
-| 34 | TS001 | Register an account through the API | As a developer, I want to register an administrator and initial property through the API so that client applications can initialize an authorized hotel operation. | 5 |
-| 35 | TS002 | Authenticate an operator through the API | As a developer, I want to authenticate an operator and refresh an authorized session through the API so that clients can access protected hotel resources securely. | 5 |
-| 36 | TS003 | Enforce property-scoped authorization | As a developer, I want protected API resources to enforce property-scoped authorization so that one hotel operation cannot access another property's data. | 8 |
-| 37 | TS004 | Retrieve the operational dashboard through the API | As a developer, I want to retrieve a property-scoped operational overview through the API so that clients can present current hotel conditions. | 5 |
-| 38 | TS005 | Query reservations through the API | As a developer, I want to query property reservations with supported criteria so that clients can retrieve the required subset predictably. | 3 |
-| 39 | TS006 | Create and update reservations through the API | As a developer, I want to create and update reservations through the API so that clients can maintain valid guest stays without conflicting room assignments. | 5 |
-| 40 | TS007 | Transition reservation status through the API | As a developer, I want to execute explicit reservation-status transitions through the API so that clients cannot bypass lifecycle rules. | 5 |
-| 41 | TS008 | Record payments through the API | As a developer, I want to record payments against reservations through the API so that clients can maintain paid amounts and balances without duplicating records. | 5 |
+| 6 | US002 | Find information about Hostera | As a visitor, I want to request information about the topic I am interested in, so that I can learn about Hostera and understand the available next steps. | 5 |
+| 7 | US008 | Consult Hostera information in English or Spanish | As a visitor, I want to choose English or Spanish, so that I can understand Hostera information in the language I understand best. | 8 |
+| 8 | US007 | Explore product, team, and support content | As a visitor, I want product, team, and support information about Hostera, so that I can learn more before choosing a plan. | 8 |
+| 9 | US011 | Monitor operations across properties | As a hotel administrator or operations manager, I want to monitor room revenue, occupancy, arrivals, and room conditions across properties and change the active property so that I can identify operational conditions that require attention. | 8 |
+| 10 | US033 | Navigate between operational areas | As an authorized hotel operator, I want to work across the operational overview, bookings, rooms, inventory, and access control so that I can perform hotel-management tasks without losing the active property context. | 3 |
+| 11 | US012 | Find and review bookings | As a front-desk operator or hotel administrator, I want to find bookings by guest name or booking code, stay period, and status so that I can review the correct booking before taking an operational action. | 3 |
+| 12 | US019 | Review room availability for a selected date | As a front-desk operator or hotel administrator, I want to review daily room availability from a chosen date and find rooms by number, room type, or status so that I can plan assignments and operational work. | 5 |
+| 13 | US013 | Create a booking | As a front-desk operator, I want to create a booking for a guest and an available room, including from a cancelled or no-show booking, so that the requested stay is recorded with its applicable rate. | 8 |
+| 14 | US014 | Review and update a booking | As a front-desk operator, I want to review booking details and update pending or confirmed bookings so that guest and stay changes remain consistent with room availability and applicable rates. | 5 |
+| 15 | US015 | Manage the booking lifecycle | As a front-desk operator, I want to confirm, cancel, restore, or mark a booking as a no-show so that its status and room assignment reflect the pre-arrival outcome. | 5 |
+| 16 | US016 | Record a booking payment | As a front-desk operator, I want to record a payment received for a pending, confirmed, or checked-in booking so that the amount paid and remaining balance are accurate. | 3 |
+| 17 | US017 | Complete guest check-in | As a front-desk operator, I want to verify the guest identity, record any arrival payments, and encode room access when completing check-in for a confirmed booking so that the guest can begin the stay with a verified identity and valid key cards. | 8 |
+| 18 | US018 | Complete guest check-out | As a front-desk operator, I want to complete check-out for a checked-in booking with a settled balance and record the room condition so that the stay closes, key cards end, and unused nights become available. | 5 |
+| 19 | US020 | Create a room | As a hotel administrator, I want to create a room within a property so that it can participate in availability planning and booking assignment. | 3 |
+| 20 | US021 | Maintain room information and operational status | As a hotel administrator or authorized staff member, I want to review and update room information and operational status for a period so that room conditions remain accurate without overriding booking-controlled days. | 5 |
+| 21 | US022 | Manage room types | As a hotel administrator, I want to manage room types with unique names, valid capacities, bed configurations, and positive base rates so that rooms share consistent accommodation information and room types in use remain protected. | 5 |
+| 22 | US023 | Manage rate plans and daily rates | As a hotel administrator or operations manager, I want to define rate plans and daily room-type prices so that booking totals reflect the applicable commercial conditions. | 5 |
+| 23 | US024 | Monitor property inventory | As a hotel administrator or inventory operator, I want to monitor item quantities and stock conditions by storage location so that I can identify supplies that require attention. | 5 |
+| 24 | US025 | Manage inventory item records | As an inventory operator, I want to create and update inventory items while preserving their units after stock movements so that tracked supplies and their movement history remain consistent. | 5 |
+| 25 | US027 | Manage storage locations | As a hotel administrator or inventory operator, I want to manage storage locations while preserving existing codes and locations with assigned items so that stock remains associated with the correct physical area and responsible team. | 5 |
+| 26 | US026 | Adjust inventory stock | As an inventory operator, I want to record stock entering, leaving, or transferring between storage locations so that on-hand quantities and their audit history remain accurate. | 5 |
+| 27 | US031 | Find and review an operational report | As a hotel administrator or operations manager, I want to find and review operational reports by property and period so that I can evaluate hotel performance and activity. | 5 |
+| 28 | US032 | Export an operational report | As a hotel administrator or operations manager, I want to export the currently scoped report so that I can share or archive the operational results. | 3 |
+| 29 | US028 | Review and manage RFID credentials | As a hotel administrator or authorized front-desk operator, I want to find RFID credentials by card, person, room, status, or holder type and review or revoke them with a recorded reason so that access remains valid only for the intended person and period. | 5 |
+| 30 | US029 | Encode or replace an RFID key card | As an authorized front-desk operator, I want to encode RFID key cards with valid access periods or replace them with the same end of validity, limiting each staff member to one usable credential, so that guests and staff receive access appropriate to their role or stay. | 8 |
+| 31 | US030 | Review RFID access events | As a hotel administrator or security-authorized operator, I want to find granted and denied RFID access events by date, result, access point, person, or card so that I can investigate activity at rooms and access points. | 5 |
+| 32 | US009 | Register a hotel operation | As an independent hotel administrator or small-chain operations manager, I want to create an account with an initial property so that I can begin configuring my hotel operation in Hostera. | 5 |
+| 33 | US010 | Sign in to Hostera | As an authorized hotel operator, I want to sign in with my work account so that I can access the properties and operational information assigned to me. | 3 |
+| 34 | TS017 | Return standardized API errors | As a developer, I want the API to return consistent validation and domain-error responses so that client applications can handle failures predictably. | 5 |
+| 35 | TS004 | Retrieve the operational dashboard through the API | As a developer, I want to retrieve a property-scoped operational overview through the API so that clients can present current hotel conditions. | 5 |
+| 36 | TS005 | Query bookings through the API | As a developer, I want to query property bookings with supported criteria so that clients can retrieve the required subset predictably. | 3 |
+| 37 | TS010 | Retrieve room availability through the API | As a developer, I want to retrieve room availability from a selected date through the API so that clients can plan assignments using consistent daily statuses. | 5 |
+| 38 | TS011 | Manage rooms, room types, and rates through the API | As a developer, I want to manage rooms, room types, rate plans, and daily prices through the API so that clients can maintain consistent accommodation and pricing configuration. | 8 |
+| 39 | TS006 | Create and update bookings through the API | As a developer, I want to create and update bookings through the API so that clients can maintain valid guest stays without conflicting room assignments. | 5 |
+| 40 | TS007 | Transition booking status through the API | As a developer, I want to execute explicit booking-status transitions through the API so that clients cannot bypass lifecycle rules. | 5 |
+| 41 | TS008 | Record payments through the API | As a developer, I want to record payments against bookings through the API so that clients can maintain paid amounts and balances without duplicating records. | 5 |
 | 42 | TS009 | Complete check-in and check-out through the API | As a developer, I want to complete check-in and check-out through explicit API operations so that stay, room, payment, and credential states change consistently. | 8 |
-| 43 | TS010 | Retrieve room availability through the API | As a developer, I want to retrieve room availability from a selected date through the API so that clients can plan assignments using consistent daily statuses. | 5 |
-| 44 | TS011 | Manage rooms, room types, and rates through the API | As a developer, I want to manage rooms, room types, rate plans, and daily prices through the API so that clients can maintain consistent accommodation and pricing configuration. | 8 |
-| 45 | TS012 | Manage inventory and stock adjustments through the API | As a developer, I want to manage inventory records and append stock adjustments through the API so that clients can maintain auditable quantities. | 5 |
-| 46 | TS013 | Manage storage locations through the API | As a developer, I want to manage property storage locations through the API so that inventory items and movements remain associated with valid operational areas. | 3 |
-| 47 | TS014 | Manage RFID credentials through the API | As a developer, I want to encode, retrieve, replace, and revoke RFID credentials through the API so that clients and compatible encoders maintain controlled access. | 8 |
-| 48 | TS015 | Record and query RFID access events through the API | As a developer, I want to record and query RFID access events through the API so that authorized clients can investigate granted and denied access attempts. | 5 |
-| 49 | TS016 | Retrieve and export operational reports through the API | As a developer, I want to retrieve and export property-scoped operational reports through the API so that clients can analyze and share consistent results. | 5 |
-| 50 | TS017 | Return standardized API errors | As a developer, I want the API to return consistent validation and domain-error responses so that client applications can handle failures predictably. | 5 |
+| 43 | TS012 | Manage inventory and stock adjustments through the API | As a developer, I want to manage inventory records and append stock adjustments through the API so that clients can maintain auditable quantities. | 5 |
+| 44 | TS013 | Manage storage locations through the API | As a developer, I want to manage property storage locations through the API so that inventory items and movements remain associated with valid operational areas. | 3 |
+| 45 | TS016 | Retrieve and export operational reports through the API | As a developer, I want to retrieve and export property-scoped operational reports through the API so that clients can analyze and share consistent results. | 5 |
+| 46 | TS014 | Manage RFID credentials through the API | As a developer, I want to encode, retrieve, replace, and revoke RFID credentials through the API so that clients and compatible encoders maintain controlled access. | 8 |
+| 47 | TS015 | Record and query RFID access events through the API | As a developer, I want to record and query RFID access events through the API so that authorized clients can investigate granted and denied access attempts. | 5 |
+| 48 | TS001 | Register an account through the API | As a developer, I want to register an administrator and initial property through the API so that client applications can initialize an authorized hotel operation. | 5 |
+| 49 | TS002 | Authenticate an operator through the API | As a developer, I want to authenticate an operator and refresh an authorized session through the API so that clients can access protected hotel resources securely. | 5 |
+| 50 | TS003 | Enforce property-scoped authorization | As a developer, I want protected API resources to enforce property-scoped authorization so that one hotel operation cannot access another property's data. | 8 |
 
 La siguiente captura muestra el listado general de issues del proyecto Hostera en
 YouTrack. En él se visualiza el estado del Product Backlog y los campos utilizados
@@ -1864,7 +1868,7 @@ para su seguimiento, priorización y estimación.
 
 *Figura 3.2. Listado general del Product Backlog de Hostera en YouTrack.*
 
-El Product Backlog puede consultarse en el [proyecto Hostera en YouTrack](https://santanapromaster.youtrack.cloud/issues?q=project:%20HOS).
+El Product Backlog puede consultarse en el tablero de YouTrack del proyecto (https://santanapromaster.youtrack.cloud/issues?q=project:%20HOS).
 
 # Capítulo IV: Product Design
 
