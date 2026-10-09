@@ -2062,6 +2062,15 @@ según la jerarquía de la tarea y no únicamente por preferencia estética.
 | Cards | Radio de `12px`; la variante outlined es la opción predeterminada. | Agrupación de información relacionada sin convertir toda la interfaz en tarjetas. |
 | List items | Altura base de `72px` para elementos de dos líneas. | Presentación de registros con título, información secundaria y acción o estado final. |
 
+En la Frontend Web Application estos componentes se implementan con Angular Material,
+la biblioteca oficial de componentes de Material Design para Angular: los botones con
+`mat-flat-button`, `mat-stroked-button` y `mat-button`; los campos con `mat-form-field`
+en su variante outlined; las tablas con `mat-table` y `mat-paginator`; la navegación
+con `mat-sidenav`; los filtros y el selector de idioma con `mat-button-toggle-group`; y
+los formularios laterales y las confirmaciones con `MatDialog` y `MatSnackBar`. Los
+tokens de Hostera se aplican sobre el tema de Angular Material, de modo que la
+aplicación y la Landing Page comparten colores, tipografía y forma.
+
 <img src="assets/chapter-4/web-components-m3.png" alt="Catálogo de componentes web M3 de Hostera" style="width:100%; height:auto;"/>
 
 *Figura 4.3. Catálogo de componentes web aislados del Design System de Hostera en Paper.*
@@ -2287,7 +2296,11 @@ misma terminología del producto, pero evitan presentarlo como contenido indexab
 
 | Vista principal | Title | Description | Keywords | Author | Robots |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Hostera web application | `Hostera Dashboard — Hotel operations` | `Administrative workspace to monitor reservations, room availability, inventory, and RFID access for one or more hotel properties.` | `Hostera dashboard, hotel operations, reservations, inventory, RFID access` | `Team Coworkers` | `noindex, nofollow` |
+| Hostera web application | `Hostera - <vista>`, por ejemplo `Hostera - Bookings` | `Hostera web application: manage bookings, room availability, warehouse inventory and RFID room access for every property from one workspace.` | `Hostera, hotel operations, hotel management, bookings, room availability, inventory, RFID access control` | `Team Coworkers` | `noindex` |
+
+El título de la aplicación se compone en cada navegación: `HosteraTitleStrategy`
+antepone `Hostera` al título de la ruta activa. Los demás metadatos están en
+`src/index.html` del repositorio `hostera-frontend`, junto con `theme-color`.
 
 #### Implementación mínima
 
@@ -2308,11 +2321,20 @@ los valores operativos definidos anteriormente.
 <meta name="author" content="Team Coworkers">
 ```
 
-En la aplicación web, el valor de `robots` se añade junto con los metadatos
-anteriores:
+En la aplicación web, el valor de `robots` se añade junto con sus propios
+metadatos:
 
 ```html
-<meta name="robots" content="noindex, nofollow">
+<meta
+  name="description"
+  content="Hostera web application: manage bookings, room availability, warehouse inventory and RFID room access for every property from one workspace."
+/>
+<meta
+  name="keywords"
+  content="Hostera, hotel operations, hotel management, bookings, room availability, inventory, RFID access control"
+/>
+<meta name="author" content="Team Coworkers" />
+<meta name="robots" content="noindex" />
 ```
 
 Los metadatos se mantienen alineados con el contenido visible, la estructura de
