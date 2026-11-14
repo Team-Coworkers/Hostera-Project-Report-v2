@@ -5503,9 +5503,93 @@ asignarles tareas de código con commits propios.
 
 ### 5.3.1. Diseño de Entrevistas
 
-<!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
+Las entrevistas de validación comprueban si los representantes de los dos segmentos
+objetivo entienden la propuesta de la Landing Page y pueden completar, sin ayuda, las
+tareas principales de la Frontend Web Application conectada a la RESTful API. A diferencia
+de las entrevistas de needfinding de la sección 2.2, aquí el participante usa los productos
+publicados mientras piensa en voz alta, y el equipo observa dónde duda, se equivoca o pide
+ayuda. Los problemas observados se evalúan después con las heurísticas de la sección 5.3.3.
 
-*Sección en elaboración para AV2.*
+#### Enfoque de la sesión
+
+Cada sesión es individual, dura entre 10 y 15 minutos y se realiza por videollamada con
+pantalla compartida. Solo se graba con la autorización explícita del participante, que
+también decide si su nombre, su imagen y sus opiniones pueden aparecer en el informe y en
+el video About-the-Product. El entrevistador lee cada tarea, no indica dónde hacer clic y
+solo interviene cuando el participante declara que no puede continuar; en ese caso la tarea
+se registra como no completada.
+
+| Momento | Duración | Contenido |
+| --- | --- | --- |
+| Introducción y consentimiento | 1 a 2 minutos | Propósito académico, autorización de la grabación y aclaración de que se evalúa el producto y no a la persona. |
+| Landing Page | 3 a 4 minutos | Primera impresión y tareas sobre la propuesta de valor, los planes y el call to action de su segmento. |
+| Frontend Web Application | 6 a 8 minutos | Tareas de los user flows de su segmento, con datos reales de la RESTful API. |
+| Cierre | 1 a 2 minutos | Preguntas de valoración general y permiso para citar su opinión. |
+
+Los productos que se validan son la Landing Page publicada en
+<https://team-coworkers.github.io/landing-page-main/> y la Frontend Web Application
+publicada en <https://team-coworkers.github.io/hostera-frontend/>, que lee la RESTful API
+desplegada en Render.
+
+#### Elementos de la Landing Page que se validan
+
+| Elemento | Segmento 1: hoteles independientes | Segmento 2: pequeñas cadenas hoteleras |
+| --- | --- | --- |
+| Propuesta de valor | Explica con sus palabras qué hace Hostera después de leer la sección principal. | Explica con sus palabras qué hace Hostera después de leer la sección principal. |
+| Planes y precios | Ubica el plan Starter, su precio y su límite de una sede. | Ubica el plan Professional y estima el precio mensual para el número de habitaciones de su cadena. |
+| Call to action | Encuentra y usa el call to action de su segmento, que abre el registro con el plan Starter. | Encuentra y usa el call to action de su segmento, que abre el registro con el plan Professional. |
+| Confianza y contacto | Ubica los datos de contacto y los términos y condiciones. | Ubica los datos de contacto y los términos y condiciones. |
+
+#### User flows de la Frontend Web Application que se validan
+
+Las tareas de cada segmento salen de sus user stories y siguen el recorrido de una estadía,
+que es el caso que la aplicación resuelve de punta a punta.
+
+| N.º | Tarea del segmento 1 (administrador o propietario de un hotel independiente) | Bounded context |
+| :---: | --- | --- |
+| 1 | Crear su cuenta con el plan Starter e iniciar sesión. | IAM |
+| 2 | Decir, con el resumen del día, cuántas habitaciones están ocupadas y cuántas llegadas hay. | Overview |
+| 3 | Registrar una reserva para un huésped y registrar su pago. | Bookings |
+| 4 | Registrar la llegada del huésped y entregarle una tarjeta de acceso para su habitación. | Bookings y Access Control |
+| 5 | Registrar la salida del huésped y comprobar que su tarjeta quedó revocada y que la habitación quedó pendiente de limpieza. | Bookings, Access Control y Rooms |
+| 6 | Registrar la salida de diez toallas del almacén y revisar el stock que queda. | Inventory |
+
+| N.º | Tarea del segmento 2 (gerente o responsable de operaciones de una cadena pequeña) | Bounded context |
+| :---: | --- | --- |
+| 1 | Iniciar sesión y cambiar de una sede a otra. | IAM y Overview |
+| 2 | Comparar la ocupación del día entre dos sedes. | Overview |
+| 3 | Revisar la disponibilidad de la semana y bloquear una habitación por mantenimiento, con su motivo. | Rooms |
+| 4 | Cambiar la tarifa de un tipo de habitación para una fecha. | Rooms |
+| 5 | Transferir stock de un artículo entre dos ubicaciones de almacenamiento de una sede. | Inventory |
+| 6 | Revisar los accesos registrados de una habitación e identificar uno denegado. | Access Control |
+
+Quedan fuera de la validación la lectura física de tarjetas RFID, porque la aplicación
+registra las credenciales sin un codificador conectado, y los cobros en línea, que no son
+parte del alcance del producto.
+
+#### Preguntas de la sesión
+
+Las preguntas son abiertas y no sugieren la respuesta. Las principales se hacen a todos los
+participantes; las complementarias, solo cuando la respuesta necesita más detalle.
+
+| Momento | Preguntas principales | Preguntas complementarias |
+| --- | --- | --- |
+| Landing Page | ¿Qué entiende que ofrece Hostera? ¿Para quién cree que es? ¿Qué plan elegiría para su operación y por qué? | ¿Qué información le falta para decidirse? ¿Qué parte le generó dudas? |
+| Durante cada tarea | ¿Qué espera que ocurra al hacer esto? ¿Qué está buscando en esta pantalla? | ¿Qué esperaba encontrar aquí? ¿Cómo lo hace hoy en su hotel? |
+| Después de cada tarea | Del 1 al 5, ¿qué tan fácil fue completar la tarea? ¿Qué cambiaría? | ¿Qué término o dato no quedó claro? |
+| Cierre | ¿Qué fue lo más útil y qué fue lo más confuso? ¿Usaría Hostera en su operación? ¿Qué tendría que pasar para que la adopte? | ¿A quién de su equipo se la mostraría? ¿Nos autoriza a citar su opinión en el informe y en el video? |
+
+En cada tarea se registra si el participante la completó sin ayuda, con ayuda o no la
+completó, los errores y dudas observados y su valoración de facilidad. Cada problema se
+clasifica en la sección 5.3.3 con la escala de severidad del 1 al 4 y con la heurística de
+usabilidad, de inclusive design o de information architecture que incumple, según el
+formato de evaluación que indica el Project Statement; las heurísticas de usabilidad son
+las de Nielsen (1994).
+
+Para el segmento 1, la sesión con un hotel independiente de una sola sede incluye además el
+bloque de contexto y de operación actual del protocolo de la sección 2.2.1, porque en el
+needfinding ese segmento reunió dos entrevistas y el mínimo es tres. Esa entrevista se
+registra también en las secciones 2.2.2 y 2.2.3.
 
 
 
@@ -5679,19 +5763,29 @@ Mozilla Developer Network. (s.f.). _JavaScript modules_. Recuperado el 16 de sep
 
 Nager.Date. (s.f.). _Worldwide public holiday API_. Recuperado el 8 de octubre de 2026, de https://date.nager.at/
 
+Nielsen, J. (1994, 24 de abril). _10 usability heuristics for user interface design_. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+
 Oracle. (s.f.). _Code conventions for the Java programming language: Naming conventions_. Recuperado el 16 de septiembre de 2026, de https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
 
 Oracle Hospitality. (s.f.). _What is a hotel PMS (property management system)?_ Recuperado el 5 de septiembre de 2026, de https://www.oracle.com/ca-en/hospitality/what-is-hotel-pms/
 
+PostgreSQL Global Development Group. (s.f.). _PostgreSQL documentation_. Recuperado el 14 de noviembre de 2026, de https://www.postgresql.org/docs/
+
 Preston-Werner, T. (s.f.). _Semantic Versioning 2.0.0_. Recuperado el 16 de septiembre de 2026, de https://semver.org/
 
 Progressa Lean. (2021, 13 de mayo). _5W+2H: Técnica de análisis de problemas_. https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/
+
+Render. (s.f.). _Render docs_. Recuperado el 14 de noviembre de 2026, de https://render.com/docs
 
 SpecFlow. (s.f.). _Gherkin conventions for readable specifications_. Recuperado el 8 de octubre de 2026, de https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
 
 Spring. (s.f.-a). _Spring Boot features_. Recuperado el 8 de octubre de 2026, de https://docs.spring.io/spring-boot/reference/features/index.html
 
 Spring. (s.f.-b). _Spring Boot reference documentation_. Recuperado el 16 de septiembre de 2026, de https://docs.spring.io/spring-boot/reference/
+
+Spring. (s.f.-c). _Spring Data JPA reference documentation_. Recuperado el 14 de noviembre de 2026, de https://docs.spring.io/spring-data/jpa/reference/
+
+springdoc. (s.f.). _springdoc-openapi_. Recuperado el 14 de noviembre de 2026, de https://springdoc.org/
 
 STR. (s.f.). _How to calculate RevPAR_. Recuperado el 5 de septiembre de 2026, de https://str.com/sites/default/files/The-Ultimate-Guide-to-Hotel-Benchmarking.pdf
 
