@@ -5441,9 +5441,35 @@ el equipo debe migrarla a un plan con persistencia o recrearla.
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+Los analíticos de colaboración del Sprint 3 se tomaron de los repositorios de la RESTful
+API, de la Frontend Web Application y de la Landing Page. Igual que en el Sprint 2, el
+gráfico se construyó con el historial de todas las ramas desde el 13 de noviembre de 2026,
+sin commits de merge, porque el analítico de contribuidores de GitHub solo cuenta la rama
+`main`.
 
-*Sección en elaboración para AV2.*
+<img src="assets/chapter-5/sprint-3-commits-by-member.svg" alt="Commits por integrante en la RESTful API, el frontend y la Landing Page durante el Sprint 3" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Commits por integrante durante el Sprint 3.*
+
+| Integrante | `hostera-platform` | `hostera-frontend` | `landing-page-main` | Aporte principal en el sprint |
+| --- | :---: | :---: | :---: | --- |
+| Cuba Vega, Darnell Yadir (`darnell1910`) | 18 | 0 | 7 | Bookings, Payments y Access Control en la RESTful API, con sus pruebas; Landing Page `v0.6.0`. |
+| Santana Luna, José Antonio (`JhosBY2005`) | 16 | 4 | 0 | Proyecto base, kernel compartido, IAM y Organizations; despliegue en Render, workflow de pruebas y releases; registro e inicio de sesión en el frontend. |
+| Flores Rios, Juan Diego (`YopoFlores`) | 11 | 4 | 0 | Rooms e Inventory en la RESTful API, con sus pruebas; conexión del frontend a la API desplegada. |
+| Leon Naupari, Jorge Mateo (`mateool10`) | 0 | 0 | 0 | Entrevista de validación (sección 5.3). |
+| Rudas Chavarria, Jose Gabriel (`josegabriel1604`) | 0 | 0 | 0 | Entrevista de validación (sección 5.3). |
+
+El Sprint 3 corrigió la concentración de commits que se observó en el Sprint 2 (sección
+5.2.2.8). Darnell Cuba y Juan Diego Flores, que no tenían commits de código en ese sprint,
+lideraron dos bounded contexts cada uno en la RESTful API con sus pruebas. Sus commits
+pasaron el workflow `Tests` de GitHub Actions y llegaron a `main` en las releases `v0.2.0`,
+`v0.3.0`, `v0.3.1` y `v0.3.2`. Jorge Mateo Leon y Jose Gabriel Rudas no registran commits en
+el sprint, porque su aporte fueron las entrevistas de validación. En TB2 el equipo debe
+asignarles tareas de código con commits propios.
+
+<img src="assets/chapter-5/sprint-3-platform-contributors.png" alt="Analítico de contribuidores del repositorio hostera-platform en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Contribuidores de `hostera-platform` en GitHub (rama `main`).*
 
 
 
