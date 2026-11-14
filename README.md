@@ -961,9 +961,32 @@ análisis SWOT de Hostera y de los tres competidores seleccionados.
 </table>
 
 La tabla muestra que los tres competidores cubren la gestión de reservas y
-habitaciones, y que también ofrecen funciones de inventario en distinto nivel. La
-oportunidad preliminar de Hostera está en tratar el control de accesos RFID como parte
-del mismo contexto operativo.
+habitaciones, y que también ofrecen funciones de inventario en distinto nivel.
+
+**Matriz de capacidades, limitaciones, costo y beneficio verificable.**
+
+La siguiente matriz compara a Hostera con las tres soluciones en cuatro criterios. La
+información de los competidores es la de su oferta pública citada en la sección 2.1; la de
+Hostera corresponde a lo que se puede comprobar en la RESTful API publicada (`v0.3.1`) y en
+la Landing Page. La última fila indica cómo se puede verificar el beneficio que cada
+solución declara.
+
+| Criterio | Hostera | Nexus PMS (HotelClick, s.f.) | OkFac (Montalvo Soluciones Tecnológicas S.A.C., s.f.) | SysHotel (SysHotel, s.f.) |
+| --- | --- | --- | --- | --- |
+| Capacidades | Reservas con pagos, habitaciones con tipos y tarifas, inventario por almacén y credenciales de acceso de huéspedes y personal, en una API con cinco bounded contexts conectados entre sí. | Reservas, check-in y check-out, channel manager con Booking.com, Airbnb, Expedia y Agoda, facturación SUNAT, POS e inventario con alertas de stock mínimo. | Calendario de reservas, estado de habitaciones, housekeeping, OTAs y facturación SUNAT; inventario y compras en el plan Pro; reportes y multi-sucursal en el plan Enterprise. | PMS y ERP con reservas, housekeeping, channel manager, facturación SUNAT e inventario multi-almacén con kardex. |
+| Limitaciones | No factura con SUNAT, no se conecta con agencias en línea ni con un POS; el codificador RFID de la aplicación es simulado y el producto aún no se ha medido con clientes. | El precio no se publica y la contratación es anual; no documenta control de accesos. | El inventario y la operación multi-sucursal dependen de los planes superiores; no documenta control de accesos. | Las integraciones con cerraduras y control de acceso se cotizan aparte y no especifican RFID. |
+| Costo publicado | S/ 39 por propiedad al mes (Starter, hasta 10 habitaciones) y S/ 8 por habitación al mes (Professional, de 2 a 5 sedes). | No publicado; pago anual tras una demostración. | S/ 140, S/ 210 y S/ 350 al mes, con implementación incluida. | Desde S/ 100 al mes; integraciones cotizadas según alcance. |
+| Beneficio verificable | En la API publicada se comprueba que una reserva que se cruza con otra en la misma habitación se rechaza (`409`), que el check-in deja la habitación ocupada, que el check-out revoca las tarjetas del huésped y deja la habitación pendiente de limpieza, y que no se emite una tarjeta para una habitación bloqueada (`422`), sin pasos manuales entre módulos. Las pruebas automatizadas del repositorio cubren ese recorrido. | La sincronización con OTAs y la facturación SUNAT que declara el proveedor se pueden comprobar en su demostración. | Los precios por plan y la implementación incluida se pueden comprobar en su página de planes. | Los más de 150 hoteles activos en Perú que declara el proveedor no se pueden comprobar con la información pública; el inventario multi-almacén se puede ver en su demostración. |
+
+La matriz muestra que Hostera no compite por cantidad de funciones: los tres competidores
+ofrecen facturación SUNAT y conexión con agencias en línea, que Hostera no tiene. El control
+de accesos RFID, por sí solo, tampoco es una innovación, porque SysHotel ya cotiza
+integraciones con cerraduras y control de acceso. La diferencia que Hostera puede demostrar
+es que las reservas, el estado de las habitaciones y las credenciales de acceso reaccionan
+juntos ante cada paso de la estadía, de modo que una tarjeta no sigue abriendo una habitación
+después del check-out y una habitación no se vende ni se entrega mientras está ocupada o
+bloqueada. Esta ventaja se debe validar con hoteles independientes y pequeñas cadenas, con un
+precio de entrada menor que el de los planes publicados por OkFac y SysHotel.
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
@@ -4441,22 +4464,25 @@ a AV2, así que la aplicación trabaja sobre la API de datos de demostración.
 | --- | --- |
 | Sprint # | Sprint 2 |
 | Sprint Planning Background | Planificación de la primera versión de la Frontend Web Application en Angular, organizada por bounded context, y de las versiones `v0.4.0` y `v0.5.0` de la Landing Page. |
-| Date | Por confirmar |
-| Time | Por confirmar |
-| Location | Por confirmar |
+| Date | 03/10/2026 |
+| Time | No se registró |
+| Location | Reunión virtual |
 | Prepared By | Santana Luna, José Antonio (`JhosBY2005`) |
-| Attendees (to planning meeting) | Por confirmar |
+| Attendees (to planning meeting) | Cuba Vega, Darnell Yadir (`darnell1910`); Flores Rios, Juan Diego (`YopoFlores`); Leon Naupari, Jorge Mateo (`mateool10`); Rudas Chavarria, Jose Gabriel (`josegabriel1604`); Santana Luna, José Antonio (`JhosBY2005`). |
 | Sprint 1 Review Summary | El Sprint 1 cerró con la Landing Page publicada en GitHub Pages y las ocho user stories de `EP001` implementadas (42 story points). Después de AV1, el equipo revisó los artefactos con la rúbrica del curso y corrigió en el informe el Lean UX, las entrevistas, el Impact Mapping, el orden del Product Backlog, el modelo C4 y los diagramas de clases y de base de datos. |
 | Sprint 1 Retrospective Summary | Funcionó trabajar con una rama por historia integrada con Git Flow y repartir las historias entre los cinco integrantes. Como oportunidad de mejora, el historial muestra que el código de la Landing Page se integró en una sola jornada, el 19 de septiembre, en lugar de avanzar de forma continua durante el sprint. |
 | Sprint 2 Goal | Nuestro enfoque está en que el responsable de operaciones de un hotel independiente o de una cadena pequeña pueda entrar desde la Landing Page con el plan de su segmento y llevar en una sola aplicación web publicada las reservas, las habitaciones, el inventario y las credenciales de acceso de la propiedad con la que trabaja. Creemos que esto le permite dejar de reconstruir el estado de su hotel a partir de registros separados. Esto se confirmará cuando, en la aplicación publicada, una persona pueda pasar del plan elegido en la Landing Page al panorama de su propiedad y desde allí registrar una reserva, hacer el check-in con la emisión de las tarjetas del huésped y ajustar las existencias del almacén. |
 | Sprint 2 Goal Metric | El objetivo se considera cumplido cuando ese recorrido se completa en la aplicación desplegada en GitHub Pages con los datos de demostración. Como condición de entrega, las 23 user stories del sprint deben estar implementadas y las pruebas unitarias deben pasar en el workflow de integración. |
-| Sprint 2 Velocity | 117 Story Points comprometidos para el sprint. |
-| Sum of Story Points | 117 Story Points. |
+| Sprint 2 Velocity | 117 story points terminados: las 23 user stories comprometidas se implementaron. |
+| Sum of Story Points | 117 story points comprometidos. |
 
-La velocity pasó de 42 a 117 story points porque el Sprint 2 abarca la aplicación
-web completa, organizada en seis áreas que se trabajaron en ramas paralelas, una por
-bounded context. Los datos de la reunión de planificación (fecha, hora, lugar y
-asistentes) quedan por confirmar por el equipo.
+En el Sprint 2 se comprometieron 117 story points y se terminaron 117, por lo que la
+velocity del sprint es de 117 story points, frente a los 42 del Sprint 1. El aumento se
+debe a que el Sprint 2 abarca la aplicación web completa, organizada en seis áreas que se
+trabajaron en ramas paralelas, una por bounded context. La fecha, la modalidad y los
+asistentes de la reunión de planificación se tomaron del keynote de TB1: fue una reunión
+virtual el 03/10/2026 con los cinco integrantes. La hora no quedó registrada, por lo que el
+informe no la consigna.
 
 Las user stories incluidas en el Sprint 2 son las siguientes. Los story points
 corresponden a la estimación registrada en el Product Backlog.
@@ -4529,7 +4555,9 @@ bounded context de la aplicación, y agrega las tareas técnicas y las de la Lan
 del sprint. El responsable de cada tarea es el integrante que hizo los commits de los
 componentes que la implementan, según el historial de `hostera-frontend` y de
 `landing-page-main`. La estimación en horas de cada tarea de una historia se obtuvo de
-sus story points, a razón de dos horas por punto.
+sus story points, a razón de dos horas por punto. Las tareas que superaban las ocho horas
+se dividieron en subtareas de cuatro a ocho horas, sin cambiar las horas de cada historia ni
+su responsable; el total del sprint se mantiene en 287 horas.
 
 <table>
   <thead>
@@ -4553,28 +4581,46 @@ sus story points, a razón de dos horas por punto.
     </tr>
   </thead>
   <tbody>
-    <tr><td>US011</td><td>Monitor operations across properties</td><td>T011.1</td><td>Build the operational overview</td><td>Panorama de la propiedad activa con ingresos, ocupación, llegadas del día, estado de las habitaciones y comparación entre propiedades.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US011</td><td>Monitor operations across properties</td><td>T011.1</td><td>Build the revenue and occupancy panel</td><td>Panel de ingresos y ocupación del periodo de la propiedad activa, con su gráfico.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US011</td><td>Monitor operations across properties</td><td>T011.2</td><td>Build the arrivals, room status and property cards</td><td>Tarjetas de llegadas del día, estado de las habitaciones y comparación entre propiedades.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
     <tr><td>US033</td><td>Navigate between operational areas</td><td>T033.1</td><td>Build the application shell</td><td>Layout con navegación lateral, selector de propiedad y rutas entre las áreas operativas.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
     <tr><td>US012</td><td>Find and review bookings</td><td>T012.1</td><td>Build the booking list and filters</td><td>Listado de reservas con búsqueda por huésped o código y filtros por periodo y estado.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US013</td><td>Create a booking</td><td>T013.1</td><td>Build the booking form</td><td>Registro, duplicado y edición de reservas con validación de disponibilidad, capacidad y plan tarifario.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US014</td><td>Review and update a booking</td><td>T014.1</td><td>Build the booking detail</td><td>Detalle de la reserva con sus acciones de estado y edición antes de la llegada.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US015</td><td>Manage the booking lifecycle</td><td>T015.1</td><td>Implement the booking lifecycle</td><td>Confirmación, cancelación con motivo, no-show y restauración de una reserva.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US013</td><td>Create a booking</td><td>T013.1</td><td>Build the booking form</td><td>Formulario de registro con el huésped, las fechas, el tipo de habitación y el plan tarifario.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US013</td><td>Create a booking</td><td>T013.2</td><td>Validate and quote the booking</td><td>Validación de disponibilidad, capacidad y plan tarifario, cálculo del total, duplicado y edición de la reserva.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US014</td><td>Review and update a booking</td><td>T014.1</td><td>Build the booking detail view</td><td>Detalle de la reserva con sus datos, pagos y acciones de estado.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US014</td><td>Review and update a booking</td><td>T014.2</td><td>Edit a booking before arrival</td><td>Edición de la reserva antes de la llegada del huésped.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US015</td><td>Manage the booking lifecycle</td><td>T015.1</td><td>Confirm and cancel a booking</td><td>Confirmación de la reserva y cancelación con su motivo.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US015</td><td>Manage the booking lifecycle</td><td>T015.2</td><td>Mark a no-show and restore a booking</td><td>Registro del no-show y restauración de una reserva.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
     <tr><td>US016</td><td>Record a booking payment</td><td>T016.1</td><td>Record booking payments</td><td>Formulario de pago y resumen del saldo pendiente de cada reserva.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US017</td><td>Complete guest check-in</td><td>T017.1</td><td>Implement the guided check-in</td><td>Check-in guiado con verificación del documento y emisión de las tarjetas del huésped.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US018</td><td>Complete guest check-out</td><td>T018.1</td><td>Implement the check-out review</td><td>Check-out con cierre del saldo, condición de la habitación y vencimiento de las tarjetas.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US019</td><td>Review room availability for a selected date</td><td>T019.1</td><td>Build the weekly availability view</td><td>Disponibilidad semanal de las habitaciones desde una fecha, con filtros por tipo y estado.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US017</td><td>Complete guest check-in</td><td>T017.1</td><td>Build the guided check-in steps</td><td>Pasos del check-in guiado con la verificación del documento del huésped.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US017</td><td>Complete guest check-in</td><td>T017.2</td><td>Issue the guest key cards at check-in</td><td>Emisión de las tarjetas del huésped al completar el check-in.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US018</td><td>Complete guest check-out</td><td>T018.1</td><td>Close the balance at check-out</td><td>Revisión y cierre del saldo pendiente de la reserva.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US018</td><td>Complete guest check-out</td><td>T018.2</td><td>Record the room condition and end the key cards</td><td>Registro de la condición de la habitación y vencimiento de las tarjetas del huésped.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US019</td><td>Review room availability for a selected date</td><td>T019.1</td><td>Build the weekly availability grid</td><td>Disponibilidad semanal de las habitaciones desde una fecha.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US019</td><td>Review room availability for a selected date</td><td>T019.2</td><td>Filter availability by room type and status</td><td>Filtros de la disponibilidad por tipo y estado de habitación.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
     <tr><td>US020</td><td>Create a room</td><td>T020.1</td><td>Build the room form</td><td>Registro de habitaciones a partir de su tipo y número.</td><td>6</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US021</td><td>Maintain room information and operational status</td><td>T021.1</td><td>Build the room detail</td><td>Detalle de la habitación con su calendario mensual y periodos de estado.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US022</td><td>Manage room types</td><td>T022.1</td><td>Manage room types</td><td>Listado y formulario de tipos de habitación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US023</td><td>Manage rate plans and daily rates</td><td>T023.1</td><td>Manage rate plans and daily rates</td><td>Vista de tarifas con planes tarifarios y tarifas diarias por tipo de habitación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US024</td><td>Monitor property inventory</td><td>T024.1</td><td>Build the inventory item list</td><td>Listado de artículos con su condición de stock y existencias por ubicación.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US025</td><td>Manage inventory item records</td><td>T025.1</td><td>Manage inventory items</td><td>Formulario y detalle de artículos con su historial de movimientos.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US026</td><td>Adjust inventory stock</td><td>T026.1</td><td>Record stock adjustments</td><td>Entradas, salidas y transferencias de stock entre ubicaciones.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US027</td><td>Manage storage locations</td><td>T027.1</td><td>Manage storage locations</td><td>Listado, detalle y formulario de ubicaciones de almacén.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US028</td><td>Review and manage RFID credentials</td><td>T028.1</td><td>Review and revoke credentials</td><td>Listado y detalle de credenciales con su vigencia, revocación y reemplazo.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US029</td><td>Encode or replace an RFID key card</td><td>T029.1</td><td>Encode and replace key cards</td><td>Emisión de credenciales de personal con el codificador RFID simulado.</td><td>16</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US030</td><td>Review RFID access events</td><td>T030.1</td><td>Review access events</td><td>Listado de eventos de acceso concedidos y denegados por habitación y persona.</td><td>10</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
-    <tr><td>US009</td><td>Register a hotel operation</td><td>T009.1</td><td>Build the sign-up view with the plans</td><td>Registro con el plan elegido desde la Landing Page, estimado mensual y validación; sin persistencia hasta AV2.</td><td>10</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US021</td><td>Maintain room information and operational status</td><td>T021.1</td><td>Build the room detail with its monthly calendar</td><td>Detalle de la habitación con su calendario mensual.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US021</td><td>Maintain room information and operational status</td><td>T021.2</td><td>Manage the room status periods</td><td>Registro y edición de los periodos de estado de la habitación.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US022</td><td>Manage room types</td><td>T022.1</td><td>Build the room type list</td><td>Listado de tipos de habitación.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US022</td><td>Manage room types</td><td>T022.2</td><td>Build the room type form</td><td>Formulario de alta y edición de tipos de habitación.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US023</td><td>Manage rate plans and daily rates</td><td>T023.1</td><td>Manage rate plans</td><td>Vista y formulario de planes tarifarios.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US023</td><td>Manage rate plans and daily rates</td><td>T023.2</td><td>Manage daily rates by room type</td><td>Tarifas diarias por tipo de habitación.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US024</td><td>Monitor property inventory</td><td>T024.1</td><td>Build the inventory item list</td><td>Listado de artículos con su condición de stock.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US024</td><td>Monitor property inventory</td><td>T024.2</td><td>Show the stock by storage location</td><td>Existencias de cada artículo por ubicación de almacén.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US025</td><td>Manage inventory item records</td><td>T025.1</td><td>Build the inventory item form</td><td>Formulario de alta y edición de artículos.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US025</td><td>Manage inventory item records</td><td>T025.2</td><td>Build the item detail with its movement history</td><td>Detalle del artículo con su historial de movimientos.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US026</td><td>Adjust inventory stock</td><td>T026.1</td><td>Record stock entries and exits</td><td>Registro de entradas y salidas de stock.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US026</td><td>Adjust inventory stock</td><td>T026.2</td><td>Transfer stock between locations</td><td>Transferencias de stock entre ubicaciones.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US027</td><td>Manage storage locations</td><td>T027.1</td><td>Build the storage location list and detail</td><td>Listado y detalle de ubicaciones de almacén.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US027</td><td>Manage storage locations</td><td>T027.2</td><td>Build the storage location form</td><td>Formulario de alta y edición de ubicaciones de almacén.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US028</td><td>Review and manage RFID credentials</td><td>T028.1</td><td>Build the credential list and detail</td><td>Listado y detalle de credenciales con su vigencia.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US028</td><td>Review and manage RFID credentials</td><td>T028.2</td><td>Revoke and replace a credential</td><td>Revocación y reemplazo de una credencial.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US029</td><td>Encode or replace an RFID key card</td><td>T029.1</td><td>Build the staff credential form</td><td>Formulario de emisión de credenciales de personal con su alcance y vigencia.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US029</td><td>Encode or replace an RFID key card</td><td>T029.2</td><td>Encode the card with the simulated RFID encoder</td><td>Codificación y reemplazo de la tarjeta con el codificador RFID simulado.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US030</td><td>Review RFID access events</td><td>T030.1</td><td>Build the access event list</td><td>Listado de eventos de acceso concedidos y denegados.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US030</td><td>Review RFID access events</td><td>T030.2</td><td>Filter access events by room and person</td><td>Filtros de los eventos de acceso por habitación y persona.</td><td>5</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
+    <tr><td>US009</td><td>Register a hotel operation</td><td>T009.1</td><td>Build the sign-up form with the chosen plan</td><td>Registro con el plan elegido desde la Landing Page; sin persistencia hasta AV2.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US009</td><td>Register a hotel operation</td><td>T009.2</td><td>Show the monthly estimate and validate the sign-up</td><td>Estimado mensual del plan y validación de los datos del registro.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
     <tr><td>US010</td><td>Sign in to Hostera</td><td>T010.1</td><td>Build the sign-in view</td><td>Inicio de sesión que abre el espacio de trabajo con los datos de demostración; la autenticación llega con la API.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
     <tr><td>Technical</td><td>Technical tasks</td><td>TT01</td><td>Set up the Angular workspace</td><td>Angular CLI 19, Angular Material 3 con el tema de Hostera, ngx-translate y la estructura por bounded context.</td><td>8</td><td>Jorge Mateo Leon</td><td>Done</td></tr>
     <tr><td>Technical</td><td>Technical tasks</td><td>TT02</td><td>Document the Angular port</td><td>ADR del port y guía de los componentes, servicios y stores en `docs/`.</td><td>4</td><td>Jose Gabriel Rudas</td><td>Done</td></tr>
@@ -4954,17 +5000,211 @@ cambie solo la dirección de la API.
 
 #### 5.2.3.3. Sprint Backlog 3
 
-<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+El Sprint Backlog 3 descompone las 13 historias del Sprint Planning 3 (sección 5.2.3.1) en
+tareas de cuatro a ocho horas, y agrega las tareas del sprint que no tienen una historia en el
+Product Backlog. Es la misma lista que el equipo cargó en el board de YouTrack, con los mismos
+identificadores, horas, responsables y estados. El responsable de cada tarea es el integrante
+que hizo los commits que la implementan, según el historial de `hostera-platform`,
+`hostera-frontend`, `landing-page-main` y el informe (sección 5.2.3.4), revisado el 14/11/2026
+a las 15:30. Las horas son una estimación.
 
-*Sección en elaboración para AV2.*
+<table>
+  <thead>
+    <tr>
+      <th>Sprint #</th>
+      <td colspan="7">Sprint 3</td>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>Story Id</th>
+      <th>Story Title</th>
+      <th>Task Id</th>
+      <th>Task Title</th>
+      <th>Task Description</th>
+      <th>Estimation (Hours)</th>
+      <th>Assigned To</th>
+      <th>Status<br>(To-do / In-Process / To-Review / Done)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.1</td><td>Configure the Spring Boot project</td><td>Maven project with Spring Boot 4, Java 25, PostgreSQL driver, dev/prod/test profiles and the multi-stage Dockerfile.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.2</td><td>Add the shared kernel and standard errors</td><td>Result, ApplicationError and Problem Details responses with messages in English and Spanish.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.3</td><td>Deploy the API and its database on Render</td><td>Render Web Service with Docker, Render Postgres, environment variables and the test workflow in GitHub Actions.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS001</td><td>Register an account through the API</td><td>TS001.1</td><td>Register users through the API</td><td>Sign-up at POST /api/v1/users with BCrypt hashing and the default role.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS001</td><td>Register an account through the API</td><td>TS001.2</td><td>Manage properties and staff members</td><td>Organizations context: /api/v1/properties and /api/v1/staff-members with filters, rules and seed.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS002</td><td>Authenticate an operator through the API</td><td>TS002.1</td><td>Issue JWT tokens on sign-in</td><td>Sign-in at POST /api/v1/tokens with a signed JWT.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS002</td><td>Authenticate an operator through the API</td><td>TS002.2</td><td>Authorize requests with the bearer token</td><td>Bearer authorization filter, 401 handling and CORS for the frontend origins.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US009</td><td>Register a hotel operation</td><td>US009.1</td><td>Create accounts from the sign-up view</td><td>Password field, POST /users and automatic sign-in from the frontend.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US010</td><td>Sign in to Hostera</td><td>US010.1</td><td>Sign in from the frontend</td><td>Sign-in view with the API, session store and bearer interceptor.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US010</td><td>Sign in to Hostera</td><td>US010.2</td><td>Protect the workspace</td><td>Guard to the sign-in view, sign-out action and session end on 401.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS005</td><td>Query bookings through the API</td><td>TS005.1</td><td>Query bookings and payments</td><td>GET /api/v1/bookings and /payments with equality filters and the demo seed.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.1</td><td>Model the booking aggregate</td><td>Booking with stay period, guest, status and lifecycle rules.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.2</td><td>Reject overlapping bookings</td><td>409 when another active booking holds the same room for overlapping nights.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.3</td><td>Update the room status on check-in and check-out</td><td>Uses RoomsContextFacade: occupied on check-in, needs cleaning on check-out, no check-in at blocked rooms.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS008</td><td>Record payments through the API</td><td>TS008.1</td><td>Record booking payments</td><td>POST, PUT and DELETE /api/v1/payments with a positive amount and a payment method.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.1</td><td>Issue key-card credentials</td><td>Credentials only for the room of a checked-in booking, with validity and scope.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.2</td><td>Revoke key cards when a booking closes</td><td>Check-out or cancellation revokes the booking's key cards.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.3</td><td>Reject key cards for blocked rooms</td><td>422 when the room is blocked or out of service.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS015</td><td>Record and query RFID access events through the API</td><td>TS015.1</td><td>Record and evaluate access events</td><td>Access attempts with an inactive credential or at another room are denied with their reason.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS015</td><td>Record and query RFID access events through the API</td><td>TS015.2</td><td>Seed credentials and access events</td><td>Demo credentials and access events with the frontend identifiers.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.1</td><td>Model rooms and room types</td><td>Unique room numbers, capacity rules and valid room status transitions.</td><td>8</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.2</td><td>Manage rate plans and daily rates</td><td>Rate plans per room type and daily prices with their rules.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.3</td><td>Manage status periods and the rooms facade</td><td>Blocked and out-of-service periods and RoomsContextFacade for other contexts.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.4</td><td>Seed the rooms context</td><td>Room types, rooms, rate plans, 307 daily rates and status periods.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.1</td><td>Manage inventory items and stock</td><td>Items with stocks per location and adjustments, never negative.</td><td>8</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.2</td><td>Seed the inventory context</td><td>Demo inventory items and storage locations.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS013</td><td>Manage storage locations through the API</td><td>TS013.1</td><td>Manage storage locations</td><td>Storage locations with unique codes per property.</td><td>5</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.1</td><td>Connect the frontend to the RESTful API</td><td>Production environment with the Render API, housekeeping status of rooms and release v0.6.0.</td><td>6</td><td>Juan Diego Flores</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.2</td><td>Publish Landing Page v0.6.0</td><td>Product and team videos, contact and social links, product screenshots and responsive fixes.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.3</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Juan Diego Flores</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.4</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Jorge Mateo Leon</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.5</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Jose Gabriel Rudas</td><td>In Progress</td></tr>
+  </tbody>
+</table>
+
+Las 13 historias comprometidas (65 story points) tienen todas sus tareas en Done, y sus tareas
+suman 154 horas. Las tareas del sprint sin historia suman 26 horas; al
+momento de la revisión siguen en curso `S3.1`, `S3.3`, `S3.4`, `S3.5`: la conexión de la Frontend Web Application con
+la RESTful API y su release, y las entrevistas de validación. En total, el sprint reparte
+180 horas: 57 de José Santana, 64 de Darnell Cuba, 51 de Juan Diego Flores, 4 de Jorge Mateo Leon y 4 de Jose Gabriel Rudas.
 
 
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+La siguiente tabla reúne los commits del Sprint 3, del 13 al 14 de noviembre de 2026, en
+los repositorios de la RESTful API, la Frontend Web Application, la Landing Page y el
+informe. La tabla se obtuvo del historial de cada repositorio con
+`git log --all --since="2026-11-13"`, sin escribir ningún commit a mano. La rama de cada
+commit es la rama en cuya línea principal se registró: `main` y `develop` para los merges y
+las releases, y la rama `feature/*`, `fix/*` o `release/*` en la que se escribió para los
+demás.
 
-*Sección en elaboración para AV2.*
+En total son 115 commits: 62 en `hostera-platform`,
+10 en `hostera-frontend`, 13 en
+`landing-page-main` y 30 en el informe hasta el momento de
+generar la tabla.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| --- | --- | --- | --- | --- | --- |
+| `hostera-platform` | `main` | `ca6cc99` | chore: initialize repository | Adds the README, the MIT license and the ignore rules for Maven and IDE files. | 14/11/2026 11:55 |
+| `hostera-platform` | `feature/project-setup` | `e368520` | build: add the Spring Boot 4 Maven project | Adds the Maven build with Spring Boot 4.1, Java 25, Spring Data JPA, validation, security, jjwt, springdoc-openapi, Lombok, Pluralize and the PostgreSQL driver; the dev, prod and test profiles; the i18n bundles; the environment template and the multi-stage Dockerfile. | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/project-setup` | `075e27b` | feat(shared): add the shared kernel | Adds the Result and ApplicationError types, Problem Details error responses with localized messages, the OpenAPI configuration, the locale resolver, the snake_case pluralized naming strategy, auditing, domain event publishing and virtual threads, with their unit tests. | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/project-setup` | `3f53324` | feat(iam): add sign-up and sign-in with JWT | Adds the IAM bounded context: users and roles, sign-up at POST /api/v1/users, sign-in at POST /api/v1/tokens with a JWT bearer token, BCrypt hashing, the bearer authorization filter, CORS for the frontend origins and role seeding, with unit tests for the tokens controller and the user repository. | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/project-setup` | `133f376` | docs: describe the platform and how to run it | Documents the stack, the bounded contexts and their resources, local execution, tests, deployment variables and the Git workflow, and starts the changelog. | 14/11/2026 12:10 |
+| `hostera-platform` | `develop` | `bf8eed8` | merge(develop): add the project setup | — | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/organizations` | `30e6e3c` | feat(organizations): add the property and staff member aggregates | Property protects its organization, name, city and ISO 4217 currency; StaffMember protects its property, name and role. Includes the domain repositories and unit tests for the invariants. | 14/11/2026 12:16 |
+| `hostera-platform` | `feature/organizations` | `9379323` | feat(organizations): add the property and staff commands and queries | Create, update and delete commands with duplicate-name and missing-property checks, list queries filtered by organizationId and propertyId, a rule that keeps properties with staff from being deleted, and the demonstration seed of the frontend data. | 14/11/2026 12:16 |
+| `hostera-platform` | `feature/organizations` | `bf46f39` | feat(organizations): persist properties and staff members with JPA | Adds the persistence entities, Spring Data repositories, assemblers and repository adapters. | 14/11/2026 12:16 |
+| `hostera-platform` | `feature/organizations` | `1233787` | feat(organizations): expose the properties and staff-members endpoints | Adds GET, POST, PUT and DELETE on /api/v1/properties and /api/v1/staff-members with the camelCase fields of the frontend, OpenAPI annotations and an ACL facade for the other bounded contexts. | 14/11/2026 12:16 |
+| `hostera-platform` | `develop` | `b901d97` | merge(develop): add the organizations bounded context | — | 14/11/2026 12:19 |
+| `hostera-platform` | `release/0.1.0` | `b2b7ca9` | chore(release): prepare 0.1.0 | — | 14/11/2026 12:19 |
+| `hostera-platform` | `develop` | `a0bdd10` | merge(develop): back-merge release 0.1.0 | — | 14/11/2026 12:19 |
+| `hostera-platform` | `main` | `71565ad` | merge(main): release 0.1.0 | — | 14/11/2026 12:19 |
+| `hostera-platform` | `feature/ci-tests` | `d8cf556` | ci: run the tests on every push | Adds a GitHub Actions workflow that runs mvn test with Temurin 25 on main, develop, feature and release branches. | 14/11/2026 12:32 |
+| `hostera-platform` | `develop` | `ba53285` | merge(develop): run the tests in GitHub Actions | — | 14/11/2026 12:32 |
+| `hostera-platform` | `feature/bookings` | `7397845` | feat(bookings): add the booking and payment domain model | Booking keeps a stay of at least one night, one or more guests, a valid<br>status and a non-negative total, and tells when two active bookings hold<br>the same room for overlapping nights. Closing an active booking raises<br>BookingClosedEvent. Payment requires an amount greater than zero. | 14/11/2026 12:54 |
+| `hostera-platform` | `feature/bookings` | `315e426` | feat(bookings): add the booking and payment application services | Command services check that the property exists, reject a booking that<br>takes a room already held by another active booking for overlapping<br>nights, and require payments to point to a booking of the same property.<br>Query services filter by equality and support the _sort, _order and<br>_limit parameters the frontend uses to find the latest booking code. | 14/11/2026 12:56 |
+| `hostera-platform` | `feature/bookings` | `adf49ce` | feat(bookings): persist bookings and payments with spring data jpa | Persistence entities extend AuditableAbstractPersistenceEntity. The<br>moment a booking was made is stored as booked_at so it does not clash<br>with the inherited created_at audit column. Repository adapters publish<br>the domain events of each saved aggregate. | 14/11/2026 12:58 |
+| `hostera-platform` | `feature/bookings` | `c02f1ff` | feat(bookings): expose bookings and payments through the rest api | — | 14/11/2026 13:01 |
+| `hostera-platform` | `feature/bookings` | `0b6330f` | fix(bookings): keep the booking creation date as a calendar date | — | 14/11/2026 13:02 |
+| `hostera-platform` | `feature/bookings` | `acde0d0` | feat(bookings): seed the demo bookings and payments of the frontend | — | 14/11/2026 13:03 |
+| `hostera-platform` | `feature/bookings` | `817e584` | test(bookings): cover the booking rules, the rest api and the seed | — | 14/11/2026 13:05 |
+| `hostera-platform` | `develop` | `018c0fe` | merge(develop): integrate the bookings and payments context | — | 14/11/2026 13:06 |
+| `hostera-platform` | `feature/access-control` | `0f23011` | feat(bookings): let other contexts check whether a guest is in house | — | 14/11/2026 13:09 |
+| `hostera-platform` | `feature/access-control` | `789971e` | feat(access-control): model credentials and access events | — | 14/11/2026 13:09 |
+| `hostera-platform` | `feature/access-control` | `9d236f9` | feat(access-control): issue, revoke and evaluate credentials | — | 14/11/2026 13:11 |
+| `hostera-platform` | `feature/access-control` | `7f3ee0e` | feat(access-control): persist credentials and access events with jpa | — | 14/11/2026 13:12 |
+| `hostera-platform` | `feature/access-control` | `2ea2314` | feat(access-control): expose credentials and access events through the rest api | — | 14/11/2026 13:12 |
+| `hostera-platform` | `feature/access-control` | `86de8a2` | feat(access-control): seed the demo credentials and access events of the frontend | — | 14/11/2026 13:13 |
+| `hostera-platform` | `feature/access-control` | `271d8c5` | test(access-control): cover issuing, revocation, access evaluation and the seed | — | 14/11/2026 13:15 |
+| `hostera-platform` | `develop` | `f2a7c8e` | merge(develop): integrate the access control context | — | 14/11/2026 13:15 |
+| `hostera-platform` | `release/0.2.0` | `e8bfb03` | chore(release): prepare 0.2.0 | — | 14/11/2026 13:27 |
+| `hostera-platform` | `main` | `a7be90b` | merge(main): release 0.2.0 | — | 14/11/2026 13:27 |
+| `hostera-platform` | `develop` | `318e803` | merge(develop): back-merge release 0.2.0 | — | 14/11/2026 13:27 |
+| `hostera-platform` | `feature/rooms` | `e1d6693` | feat(rooms): add the room, room type, rate plan, daily rate and status period aggregates | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `b745949` | feat(rooms): add the rooms commands, queries and demonstration seed | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `53c0cf3` | feat(rooms): persist the rooms context with JPA | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `89ceb97` | feat(rooms): expose the rooms endpoints and the context facade | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `0ed7106` | test(rooms): cover the room rules and the rooms controller | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `3df070c` | feat(inventory): add the inventory item and storage location aggregates | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `0f13828` | feat(inventory): add the inventory commands, queries and demonstration seed | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `128c32b` | feat(inventory): persist the inventory context with JPA | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `94d2e3d` | feat(inventory): expose the inventory-items and storage-locations endpoints | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `75973f1` | test(inventory): cover the stock rules and the inventory controllers | — | 14/11/2026 13:30 |
+| `hostera-platform` | `develop` | `1b2130f` | merge(develop): add the rooms bounded context | — | 14/11/2026 13:32 |
+| `hostera-platform` | `develop` | `69a494a` | merge(develop): add the inventory bounded context | — | 14/11/2026 13:32 |
+| `hostera-platform` | `release/0.3.0` | `393291f` | chore(release): prepare 0.3.0 | — | 14/11/2026 13:41 |
+| `hostera-platform` | `main` | `14dfae4` | merge(main): release 0.3.0 | — | 14/11/2026 13:41 |
+| `hostera-platform` | `develop` | `c9350a5` | merge(develop): back-merge release 0.3.0 | — | 14/11/2026 13:41 |
+| `hostera-platform` | `feature/room-status-integration` | `0349303` | feat(bookings): publish the check-in and the room of a closed booking | — | 14/11/2026 13:48 |
+| `hostera-platform` | `feature/room-status-integration` | `48fe1ca` | feat(bookings): keep the room status in step with the check-in and check-out | — | 14/11/2026 13:48 |
+| `hostera-platform` | `feature/room-status-integration` | `9731268` | feat(access-control): check blocked rooms through the rooms context | — | 14/11/2026 13:48 |
+| `hostera-platform` | `feature/room-status-integration` | `a940bc0` | test(bookings): cover the room status changes and the blocked room checks | — | 14/11/2026 13:50 |
+| `hostera-platform` | `develop` | `c99fa51` | merge(develop): connect bookings and access control with the rooms context | — | 14/11/2026 13:50 |
+| `hostera-platform` | `feature/organizations-openapi-wording` | `06c5230` | docs(organizations): fix the wording of the OpenAPI operations | Uses the correct plural and lowercase nouns in the summaries and descriptions of the properties and staff-members endpoints. | 14/11/2026 14:14 |
+| `hostera-platform` | `develop` | `868a730` | merge(develop): fix the OpenAPI wording of organizations | — | 14/11/2026 14:14 |
+| `hostera-platform` | `release/0.3.1` | `e39ed7b` | chore(release): prepare 0.3.1 | — | 14/11/2026 14:18 |
+| `hostera-platform` | `main` | `54bfcdc` | merge(main): release 0.3.1 | — | 14/11/2026 14:18 |
+| `hostera-platform` | `develop` | `a0edca8` | merge(develop): back-merge release 0.3.1 | — | 14/11/2026 14:18 |
+| `hostera-platform` | `fix/inventory-api-docs` | `8f00f93` | fix(inventory): correct the article in the api documentation | — | 14/11/2026 14:47 |
+| `hostera-platform` | `develop` | `0fb7425` | merge(develop): correct the inventory api documentation | — | 14/11/2026 14:47 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `8a1cad1` | feat(iam): add the session, bearer token interceptor and workspace guard | Adds the client of POST /users and POST /tokens, a session store kept in localStorage, an interceptor that sends the JWT only to the Hostera API and returns to sign-in on 401, and a guard that keeps the workspace behind sign-in when authenticationEnabled is true. The flag stays false until the frontend points to the RESTful API. | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `1c08a7e` | feat(iam): sign in with the RESTful API | The sign-in view calls POST /tokens, starts the session and shows an error for wrong credentials; the demonstration notice only appears while authentication is disabled. | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `019a6d9` | feat(iam): create accounts with the RESTful API | The sign-up view asks for a password of at least 8 characters, registers the user at POST /users and signs in right away. | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `23cda7b` | feat(shared): show the signed-in user and a sign-out action | The sidebar shows the username of the session instead of the demonstration operator and adds a sign-out action. | 14/11/2026 12:25 |
+| `hostera-frontend` | `develop` | `50fb26a` | merge(develop): sign in and sign up with the RESTful API | — | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/platform-api-integration` | `b716aad` | feat(shared): read the hostera platform restful api | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `feature/platform-api-integration` | `b49ef19` | feat(rooms): show the housekeeping status of a room | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `feature/platform-api-integration` | `e5ba746` | test(rooms): cover the housekeeping status of a room | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `feature/platform-api-integration` | `e81b419` | docs: describe the restful api integration in the changelog | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `develop` | `5675391` | merge(develop): read the hostera platform restful api | — | 14/11/2026 13:57 |
+| `landing-page-main` | `feature/product-and-team-videos` | `7c112b8` | feat(videos): add the about the product and about the team video section | — | 14/11/2026 14:49 |
+| `landing-page-main` | `feature/product-and-team-videos` | `2db8d6a` | docs(readme): explain where to set the video ids | — | 14/11/2026 14:49 |
+| `landing-page-main` | `develop` | `7fda44d` | merge(develop): add the product and team videos section | — | 14/11/2026 14:49 |
+| `landing-page-main` | `feature/product-screenshots` | `295d689` | chore(assets): add screens of the published web application | — | 14/11/2026 14:50 |
+| `landing-page-main` | `develop` | `ed56e23` | merge(develop): show real screens of the web application | — | 14/11/2026 14:50 |
+| `landing-page-main` | `feature/product-screenshots` | `e5db6fc` | feat(product): show real screens of the web application with its call to action | — | 14/11/2026 14:50 |
+| `landing-page-main` | `develop` | `cb6fc6b` | merge(develop): add the contact options and social links | — | 14/11/2026 14:51 |
+| `landing-page-main` | `feature/contact-and-social` | `68accc9` | feat(footer): show the contact options and the team github in every footer | — | 14/11/2026 14:51 |
+| `landing-page-main` | `develop` | `1e6f9c6` | merge(develop): improve the mobile navigation | — | 14/11/2026 14:53 |
+| `landing-page-main` | `feature/responsive-fixes` | `039bf9b` | fix(nav): announce the menu state and close it when the layout turns desktop | — | 14/11/2026 14:53 |
+| `landing-page-main` | `release/0.6.0` | `0e00276` | chore(release): prepare 0.6.0 | — | 14/11/2026 14:54 |
+| `landing-page-main` | `main` | `85d61ef` | merge(main): release 0.6.0 | — | 14/11/2026 14:54 |
+| `landing-page-main` | `develop` | `6619132` | merge(develop): back-merge release 0.6.0 | — | 14/11/2026 14:54 |
+| `Hostera-Project-Report-v2` | `feature/av2-report-skeleton` | `a09fa2d` | docs(report): restore README.md as the main report file | The project statement requires README.md to be the main report file. The repository guide stays in docs/repository-guide.md and scripts/build-pdf.sh already reads README.md. | 14/11/2026 11:52 |
+| `Hostera-Project-Report-v2` | `feature/av2-report-skeleton` | `1d77685` | docs(report): add the AV2 section skeleton | Adds empty headings for Sprint 3 (5.2.3.1 to 5.2.3.8), Validation Interviews (5.3.1 to 5.3.3) and Video About-the-Product (5.4), their table of contents entries and the AV2 collaboration insights placeholder, each with its owner, so the team can write their sections in parallel. | 14/11/2026 11:52 |
+| `Hostera-Project-Report-v2` | `develop` | `3808882` | merge(develop): add the AV2 section skeleton | — | 14/11/2026 11:52 |
+| `Hostera-Project-Report-v2` | `feature/av2-planning-and-deployment` | `050c2ba` | docs(sprint-3): add the Sprint 3 planning | Adds the Sprint Planning 3 table with the meeting data, the Sprint 2 review and retrospective, the goal and its metric, the velocity separated from the committed story points, and the 13 committed stories with their owners. | 14/11/2026 12:38 |
+| `Hostera-Project-Report-v2` | `feature/av2-planning-and-deployment` | `ee4f1b4` | docs(sprint-3): add the deployment evidence of the RESTful API | Documents the Render web service and PostgreSQL database, the deployment steps and environment variables, the verification of the published API and the test workflow, with the Swagger UI screenshot. | 14/11/2026 12:38 |
+| `Hostera-Project-Report-v2` | `develop` | `537ed3f` | merge(develop): add the Sprint 3 planning and deployment evidence | — | 14/11/2026 12:38 |
+| `Hostera-Project-Report-v2` | `feature/av2-ddd-aggregates` | `d215339` | docs(design): add the aggregates, value objects and invariants of IAM and Organizations | Adds to section 4.7.1 the aggregate roots, entities, value objects, invariants and transactional boundaries of the implemented contexts, and explains why properties and staff moved from IAM to the Organizations context. | 14/11/2026 12:39 |
+| `Hostera-Project-Report-v2` | `develop` | `55f50ab` | merge(develop): add the AV2 student outcome of José Santana | — | 14/11/2026 12:39 |
+| `Hostera-Project-Report-v2` | `feature/av2-student-outcome` | `9c8f305` | docs(outcome): add the AV2 student outcome of José Santana | Adds the AV2 actions and conclusions of José Santana for both criteria of the student outcome. | 14/11/2026 12:39 |
+| `Hostera-Project-Report-v2` | `feature/av2-traceability-matrix` | `1d9aabf` | docs(annexes): add the traceability matrix | Adds Annex C, which connects each interview finding with its user persona, business goal, epic, user and technical stories, sprint and evidence section, and lists the technical stories left for the next sprint. | 14/11/2026 12:41 |
+| `Hostera-Project-Report-v2` | `develop` | `04bdc82` | merge(develop): add the traceability matrix | — | 14/11/2026 12:41 |
+| `Hostera-Project-Report-v2` | `develop` | `fffa03a` | merge(develop): remove the empty TB2 placeholders | — | 14/11/2026 12:42 |
+| `Hostera-Project-Report-v2` | `feature/av2-form-review` | `bf9d37e` | docs(report): remove the empty TB2 placeholders | The AV1 review observed empty future sections; the TB2 entries of the collaboration insights and the student outcome are added when TB2 is delivered. | 14/11/2026 12:42 |
+| `Hostera-Project-Report-v2` | `develop` | `5f1a65e` | merge(develop): fit the traceability matrix to the page | — | 14/11/2026 12:49 |
+| `Hostera-Project-Report-v2` | `feature/av2-traceability-layout` | `59b9a53` | docs(annexes): fit the traceability matrix to the page width | Groups the user and technical stories in one column and the sprint with its evidence sections in another, so the table no longer overflows the A4 page. | 14/11/2026 12:49 |
+| `Hostera-Project-Report-v2` | `feature/av2-annex-a` | `e253e94` | docs(annexes): state where the TB1 exposition video was delivered | Replaces the pending-link note of Annex A with the place where the TB1 video was delivered. | 14/11/2026 13:15 |
+| `Hostera-Project-Report-v2` | `develop` | `39ac560` | merge(develop): update the TB1 entry of Annex A | — | 14/11/2026 13:15 |
+| `Hostera-Project-Report-v2` | `feature/av2-annex-a-tb1-link` | `8513ab5` | docs(annexes): add the Microsoft Stream link of the TB1 exposition | — | 14/11/2026 13:41 |
+| `Hostera-Project-Report-v2` | `develop` | `6497539` | merge(develop): add the TB1 exposition link | — | 14/11/2026 13:41 |
+| `Hostera-Project-Report-v2` | `feature/av2-stack-alignment` | `d6d67b7` | docs(architecture): align the C4 model with the implemented stack | The RESTful API was implemented with Java 25, Spring Boot 4 and PostgreSQL 17, so the container and component diagrams and the Structurizr workspace now show that stack instead of Java 21, Spring Boot 3 and MySQL 8. | 14/11/2026 14:16 |
+| `Hostera-Project-Report-v2` | `feature/av2-stack-alignment` | `a099fb7` | docs(report): update the stack, repositories and deployment of the RESTful API | Replaces the texts written before Sprint 3: Java 25, Spring Boot 4 and PostgreSQL 17 in the architecture, database and tooling sections, the hostera-platform repository and its Render deployment in section 5.1, Swagger UI instead of the planned Postman collections, the API links in Annex B and the November cover date. | 14/11/2026 14:18 |
+| `Hostera-Project-Report-v2` | `develop` | `8526eb6` | merge(develop): align the report with the implemented stack | — | 14/11/2026 14:18 |
+| `Hostera-Project-Report-v2` | `feature/av2-ddd-aggregates` | `958b153` | Merge branch 'develop' into feature/av2-ddd-aggregates | — | 14/11/2026 14:19 |
+| `Hostera-Project-Report-v2` | `feature/av2-ddd-aggregates` | `2d830dd` | docs(design): add the aggregates and invariants of Bookings, Access Control, Rooms and Inventory | Completes the table of section 4.7.1 with the aggregate roots, value objects, invariants and transactional boundaries implemented in the other four bounded contexts, including the room status changes of check-in and check-out and the key-card rules. | 14/11/2026 14:20 |
+| `Hostera-Project-Report-v2` | `develop` | `9ff4557` | merge(develop): add the aggregates, value objects and invariants per bounded context | — | 14/11/2026 14:20 |
+| `Hostera-Project-Report-v2` | `feature/av2-validation-and-execution` | `e638979` | docs(validation): design the validation interviews and add the av2 references | — | 14/11/2026 14:46 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `6b4ca49` | docs(sprint-2): split the sprint backlog 2 tasks longer than eight hours | — | 14/11/2026 15:01 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `1312ff8` | docs(sprint-2): separate committed and completed points in the sprint planning 2 | — | 14/11/2026 15:01 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `bb74dec` | docs(sprint-3): add the sprint backlog 3 with real assignees | — | 14/11/2026 15:01 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `d28a3fe` | docs(sprint-3): document the restful api endpoints and swagger evidence | — | 14/11/2026 15:01 |
 
 
 
@@ -4978,9 +5218,168 @@ cambie solo la dirección de la API.
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+En el Sprint 3 se documentaron con OpenAPI todos los endpoints de la RESTful API de Hostera.
+La documentación se genera con springdoc-openapi a partir de las anotaciones `@Tag`,
+`@Operation`, `@Parameter`, `@ApiResponse` y `@Schema` de cada controlador y recurso, y se
+publica con Swagger UI junto a la API desplegada en Render:
 
-*Sección en elaboración para AV2.*
+- Swagger UI: https://hostera-platform-api.onrender.com/swagger-ui/index.html
+- Documento OpenAPI en JSON: https://hostera-platform-api.onrender.com/v3/api-docs
+
+La API publicada (`v0.3.1`) expone 13 recursos de negocio en cinco bounded contexts
+(Organizations, Bookings, Access Control, Rooms e Inventory) y los recursos `users`,
+`tokens` y `roles` de IAM. Las rutas siguen el contrato que ya consumía la Frontend Web
+Application con su API de demostración: los mismos nombres de recurso, los mismos campos y
+los mismos filtros por query, como `GET /api/v1/bookings?propertyId=1&_sort=code&_order=desc&_limit=1`
+o `GET /api/v1/credentials?bookingId=3`. Así, para pasar de los datos de demostración a la
+API real, la aplicación solo cambia la dirección base. Todas las rutas, salvo el registro
+(`POST /api/v1/users`) y el inicio de sesión (`POST /api/v1/tokens`), exigen el token JWT en la
+cabecera `Authorization: Bearer <token>`. Los errores se devuelven como Problem Details: `400`
+para datos inválidos, `404` para un recurso inexistente, `409` cuando la habitación ya está
+reservada en noches que se cruzan y `422` cuando se incumple una regla de negocio, como emitir
+una tarjeta para una habitación bloqueada.
+
+La tabla de endpoints se obtuvo del documento OpenAPI publicado en Render.
+
+| Verbo | Ruta | Parámetros | Respuesta exitosa | Requiere token |
+| --- | --- | --- | --- | :---: |
+| GET | `/api/v1/users` | — | 200 · `UserResponse` | Sí |
+| POST | `/api/v1/users` | cuerpo `SignUpRequest` | 201 · `UserResponse` | No |
+| GET | `/api/v1/users/{userId}` | `userId` (ruta) | 200 · `UserResponse` | Sí |
+| POST | `/api/v1/tokens` | cuerpo `SignInRequest` | 200 · `AuthenticatedUserResponse` | No |
+| GET | `/api/v1/roles` | — | 200 · `RoleResponse` | Sí |
+| GET | `/api/v1/properties` | `organizationId` (query) | 200 · arreglo de `Property` | Sí |
+| POST | `/api/v1/properties` | cuerpo `SavePropertyRequest` | 201 | Sí |
+| GET | `/api/v1/properties/{propertyId}` | `propertyId` (ruta) | 200 · `Property` | Sí |
+| PUT | `/api/v1/properties/{propertyId}` | `propertyId` (ruta), cuerpo `SavePropertyRequest` | 200 | Sí |
+| DELETE | `/api/v1/properties/{propertyId}` | `propertyId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/staff-members` | `propertyId` (query) | 200 · arreglo de `StaffMember` | Sí |
+| POST | `/api/v1/staff-members` | cuerpo `SaveStaffMemberRequest` | 201 | Sí |
+| GET | `/api/v1/staff-members/{staffMemberId}` | `staffMemberId` (ruta) | 200 · `StaffMember` | Sí |
+| PUT | `/api/v1/staff-members/{staffMemberId}` | `staffMemberId` (ruta), cuerpo `SaveStaffMemberRequest` | 200 | Sí |
+| DELETE | `/api/v1/staff-members/{staffMemberId}` | `staffMemberId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/bookings` | `propertyId` (query), `status` (query), `roomId` (query), `_sort` (query), `_order` (query), `_limit` (query) | 200 · arreglo de `Booking` | Sí |
+| POST | `/api/v1/bookings` | cuerpo `SaveBookingRequest` | 201 | Sí |
+| GET | `/api/v1/bookings/{bookingId}` | `bookingId` (ruta) | 200 · `Booking` | Sí |
+| PUT | `/api/v1/bookings/{bookingId}` | `bookingId` (ruta), cuerpo `SaveBookingRequest` | 200 | Sí |
+| DELETE | `/api/v1/bookings/{bookingId}` | `bookingId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/payments` | `propertyId` (query), `bookingId` (query) | 200 · arreglo de `Payment` | Sí |
+| POST | `/api/v1/payments` | cuerpo `SavePaymentRequest` | 201 | Sí |
+| GET | `/api/v1/payments/{paymentId}` | `paymentId` (ruta) | 200 · `Payment` | Sí |
+| PUT | `/api/v1/payments/{paymentId}` | `paymentId` (ruta), cuerpo `SavePaymentRequest` | 200 | Sí |
+| DELETE | `/api/v1/payments/{paymentId}` | `paymentId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/credentials` | `propertyId` (query), `roomId` (query), `bookingId` (query) | 200 · arreglo de `Credential` | Sí |
+| POST | `/api/v1/credentials` | cuerpo `SaveCredentialRequest` | 201 | Sí |
+| GET | `/api/v1/credentials/{credentialId}` | `credentialId` (ruta) | 200 · `Credential` | Sí |
+| PUT | `/api/v1/credentials/{credentialId}` | `credentialId` (ruta), cuerpo `SaveCredentialRequest` | 200 | Sí |
+| DELETE | `/api/v1/credentials/{credentialId}` | `credentialId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/access-events` | `propertyId` (query), `roomId` (query), `bookingId` (query), `credentialId` (query) | 200 · arreglo de `AccessEvent` | Sí |
+| POST | `/api/v1/access-events` | cuerpo `SaveAccessEventRequest` | 201 | Sí |
+| GET | `/api/v1/access-events/{accessEventId}` | `accessEventId` (ruta) | 200 · `AccessEvent` | Sí |
+| PUT | `/api/v1/access-events/{accessEventId}` | `accessEventId` (ruta), cuerpo `SaveAccessEventRequest` | 200 | Sí |
+| DELETE | `/api/v1/access-events/{accessEventId}` | `accessEventId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/rooms` | `propertyId` (query), `roomTypeId` (query), `status` (query) | 200 · arreglo de `Room` | Sí |
+| POST | `/api/v1/rooms` | cuerpo `SaveRoomRequest` | 201 | Sí |
+| GET | `/api/v1/rooms/{roomId}` | `roomId` (ruta) | 200 · `Room` | Sí |
+| PUT | `/api/v1/rooms/{roomId}` | `roomId` (ruta), cuerpo `SaveRoomRequest` | 200 | Sí |
+| DELETE | `/api/v1/rooms/{roomId}` | `roomId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/room-types` | `propertyId` (query), `status` (query) | 200 · arreglo de `RoomType` | Sí |
+| POST | `/api/v1/room-types` | cuerpo `SaveRoomTypeRequest` | 201 | Sí |
+| GET | `/api/v1/room-types/{roomTypeId}` | `roomTypeId` (ruta) | 200 · `RoomType` | Sí |
+| PUT | `/api/v1/room-types/{roomTypeId}` | `roomTypeId` (ruta), cuerpo `SaveRoomTypeRequest` | 200 | Sí |
+| DELETE | `/api/v1/room-types/{roomTypeId}` | `roomTypeId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/rate-plans` | `propertyId` (query), `status` (query) | 200 · arreglo de `RatePlan` | Sí |
+| POST | `/api/v1/rate-plans` | cuerpo `SaveRatePlanRequest` | 201 | Sí |
+| GET | `/api/v1/rate-plans/{ratePlanId}` | `ratePlanId` (ruta) | 200 · `RatePlan` | Sí |
+| PUT | `/api/v1/rate-plans/{ratePlanId}` | `ratePlanId` (ruta), cuerpo `SaveRatePlanRequest` | 200 | Sí |
+| DELETE | `/api/v1/rate-plans/{ratePlanId}` | `ratePlanId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/daily-rates` | `propertyId` (query), `ratePlanId` (query), `roomTypeId` (query), `date` (query) | 200 · arreglo de `DailyRate` | Sí |
+| POST | `/api/v1/daily-rates` | cuerpo `SaveDailyRateRequest` | 201 | Sí |
+| GET | `/api/v1/daily-rates/{dailyRateId}` | `dailyRateId` (ruta) | 200 · `DailyRate` | Sí |
+| PUT | `/api/v1/daily-rates/{dailyRateId}` | `dailyRateId` (ruta), cuerpo `SaveDailyRateRequest` | 200 | Sí |
+| DELETE | `/api/v1/daily-rates/{dailyRateId}` | `dailyRateId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/status-periods` | `propertyId` (query), `roomId` (query), `status` (query) | 200 · arreglo de `StatusPeriod` | Sí |
+| POST | `/api/v1/status-periods` | cuerpo `SaveStatusPeriodRequest` | 201 | Sí |
+| GET | `/api/v1/status-periods/{statusPeriodId}` | `statusPeriodId` (ruta) | 200 · `StatusPeriod` | Sí |
+| PUT | `/api/v1/status-periods/{statusPeriodId}` | `statusPeriodId` (ruta), cuerpo `SaveStatusPeriodRequest` | 200 | Sí |
+| DELETE | `/api/v1/status-periods/{statusPeriodId}` | `statusPeriodId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/inventory-items` | `propertyId` (query), `category` (query) | 200 · arreglo de `InventoryItem` | Sí |
+| POST | `/api/v1/inventory-items` | cuerpo `SaveInventoryItemRequest` | 201 | Sí |
+| GET | `/api/v1/inventory-items/{inventoryItemId}` | `inventoryItemId` (ruta) | 200 · `InventoryItem` | Sí |
+| PUT | `/api/v1/inventory-items/{inventoryItemId}` | `inventoryItemId` (ruta), cuerpo `SaveInventoryItemRequest` | 200 | Sí |
+| DELETE | `/api/v1/inventory-items/{inventoryItemId}` | `inventoryItemId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/storage-locations` | `propertyId` (query), `type` (query) | 200 · arreglo de `StorageLocation` | Sí |
+| POST | `/api/v1/storage-locations` | cuerpo `SaveStorageLocationRequest` | 201 | Sí |
+| GET | `/api/v1/storage-locations/{storageLocationId}` | `storageLocationId` (ruta) | 200 · `StorageLocation` | Sí |
+| PUT | `/api/v1/storage-locations/{storageLocationId}` | `storageLocationId` (ruta), cuerpo `SaveStorageLocationRequest` | 200 | Sí |
+| DELETE | `/api/v1/storage-locations/{storageLocationId}` | `storageLocationId` (ruta) | 200 · `{ "message": ... }` | Sí |
+
+Los ejemplos de respuesta corresponden a los valores de ejemplo declarados en el esquema de
+cada recurso en la documentación OpenAPI. En los esquemas con muchos campos, como `Booking` y
+`Credential`, se muestran solo los primeros campos.
+
+| Recurso | Esquema | Ejemplo de respuesta |
+| --- | --- | --- |
+| `users` | `UserResponse` | `{"id": 1, "username": "maria.quispe@hostera.pe", "roles": ["ROLE_USER"]}` |
+| `tokens` | `AuthenticatedUserResponse` | `{"id": 1, "username": "john.doe", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}` |
+| `roles` | `RoleResponse` | `{"id": 1, "name": "ROLE_USER"}` |
+| `properties` | `Property` | `{"id": 1, "organizationId": 1, "name": "Cartagena 04", "city": "Cartagena", "currency": "PEN"}` |
+| `staff-members` | `StaffMember` | `{"id": 1, "propertyId": 1, "name": "Lucía Martín", "role": "Operations manager"}` |
+| `bookings` | `Booking` | `{"id": 1, "propertyId": 1, "code": "BKG-1048", "status": "confirmed", "guestName": "Adriana Torres", "guestEmail": "adriana.torres@example.com", "guestPhone": "+51 910 100 200", "preferredLanguage": "es", "checkInDate": "2026-10-07", "checkOutDate": "2026-10-09", "guests": 2, "roomTypeId": 1, ...}` |
+| `payments` | `Payment` | `{"id": 1, "propertyId": 1, "bookingId": 2, "amount": 255, "method": "card-terminal", "paidAt": "2026-10-05T16:30:00Z", "reference": "POS-470075", "recordedBy": "Demo operator"}` |
+| `credentials` | `Credential` | `{"id": 1, "propertyId": 1, "cardId": "8F2A", "type": "guest-key-card", "holderName": "Elena Ferrer", "staffMemberId": null, "bookingId": 3, "bookingCode": "BKG-1032", "roomId": 6, "scope": null, "validFrom": "2026-10-03T20:26:00Z", "validUntil": "2026-10-07T16:00:00Z", ...}` |
+| `access-events` | `AccessEvent` | `{"id": 1, "propertyId": 1, "occurredAt": "2026-10-05T03:40:00Z", "credentialId": 7, "cardId": "3B08", "holderName": "Emily Carter", "holderType": "guest", "accessPoint": "room-door", "roomId": 16, "result": "denied", "denialReason": "revoked"}` |
+| `rooms` | `Room` | `{"id": 1, "propertyId": 1, "number": "201", "roomTypeId": 1, "floor": 2, "status": "available"}` |
+| `room-types` | `RoomType` | `{"id": 1, "propertyId": 1, "name": "Standard", "capacity": 2, "bedConfiguration": "1 queen", "baseNightlyRate": 180, "status": "active"}` |
+| `rate-plans` | `RatePlan` | `{"id": 1, "propertyId": 1, "name": "Flexible", "roomTypeIds": [1, 2], "includedServices": "room-only", "refundable": true, "cancellationPolicy": "Free cancellation until 24 hours before arrival", "status": "active"}` |
+| `daily-rates` | `DailyRate` | `{"id": 1, "propertyId": 1, "ratePlanId": 1, "roomTypeId": 1, "date": "2026-10-01", "amount": 190}` |
+| `status-periods` | `StatusPeriod` | `{"id": 1, "propertyId": 1, "roomId": 12, "status": "blocked", "startDate": "2026-10-10", "endDate": "2026-10-11", "reason": "Held for a corporate group"}` |
+| `inventory-items` | `InventoryItem` | `{"id": 1, "propertyId": 1, "name": "Bath towels", "code": "LIN-BT-001", "category": "linen", "unit": "units", "primaryLocationId": 1, "lowStockThreshold": 30, "stocks": [], "adjustments": []}` |
+| `storage-locations` | `StorageLocation` | `{"id": 1, "propertyId": 1, "name": "Housekeeping", "code": "HK-01", "type": "warehouse", "area": "Ground floor", "responsibleTeam": "Housekeeping", "description": "Linen and guest supplies."}` |
+
+<img src="assets/chapter-5/sprint-3-swagger-bookings-access-control.png" alt="Swagger UI de la RESTful API de Hostera con las operaciones de Bookings y Access Events" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Operaciones de los recursos `bookings` y `access-events` en Swagger UI.*
+
+<img src="assets/chapter-5/sprint-3-swagger-get-bookings.png" alt="Detalle de GET /api/v1/bookings en Swagger UI con sus parámetros y el ejemplo de respuesta" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Detalle de `GET /api/v1/bookings` en Swagger UI, con los filtros que usa la Frontend Web Application y el ejemplo de respuesta.*
+
+Las siguientes capturas muestran la API probada desde Swagger UI con datos y con un token. Se
+tomaron el 14/11/2026 con la misma versión `v0.3.1` de la rama `main` ejecutada en local
+(`http://localhost:8090`), con la seguridad activada y una base de datos en memoria cargada con
+los mismos datos de demostración que la API publicada. Se usó la ejecución local para crear una
+cuenta de prueba y registrar una reserva sin modificar los datos de la API desplegada en Render.
+El recorrido fue: registro de la cuenta en `POST /api/v1/users`, inicio de sesión en
+`POST /api/v1/tokens`, autorización con el token en **Authorize** y ejecución de las operaciones.
+Sin el token, las mismas operaciones responden `401`.
+
+<img src="assets/chapter-5/sprint-3-swagger-authorize.png" alt="Ventana Authorize de Swagger UI con el esquema bearerAuth autorizado y el token oculto" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Autorización en Swagger UI con el token JWT obtenido en `POST /api/v1/tokens`; Swagger oculta su valor.*
+
+<img src="assets/chapter-5/sprint-3-swagger-get-bookings-authorized.png" alt="Respuesta 200 de GET /api/v1/bookings con propertyId=1 y status=checked-in en Swagger UI" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. `GET /api/v1/bookings?propertyId=1&status=checked-in` con el token: la API responde `200` con las reservas en curso de la propiedad.*
+
+<img src="assets/chapter-5/sprint-3-swagger-post-booking-conflict.png" alt="Respuesta 409 de POST /api/v1/bookings con el Problem Details BOOKING_CONFLICT en Swagger UI" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. `POST /api/v1/bookings` con una reserva para la habitación 12 en noches que se cruzan con la reserva `BKG-1048`: la API responde `409` con el Problem Details `BOOKING_CONFLICT`.*
+
+Los commits que agregaron o corrigieron la documentación OpenAPI en `hostera-platform` son
+los siguientes.
+
+| Commit Id | Autor | Commit Message | Documentación agregada | Committed on |
+| --- | --- | --- | --- | --- |
+| `075e27b` | `JhosBY2005` | feat(shared): add the shared kernel | Configuración de OpenAPI con el esquema de seguridad `bearerAuth`. | 14/11/2026 12:10 |
+| `3f53324` | `JhosBY2005` | feat(iam): add sign-up and sign-in with JWT | Operaciones de `users`, `tokens` y `roles`. | 14/11/2026 12:10 |
+| `1233787` | `JhosBY2005` | feat(organizations): expose the properties and staff-members endpoints | Operaciones de `properties` y `staff-members`. | 14/11/2026 12:16 |
+| `c02f1ff` | `darnell1910` | feat(bookings): expose bookings and payments through the rest api | Operaciones, parámetros, respuestas y esquemas de `bookings` y `payments`. | 14/11/2026 13:01 |
+| `2ea2314` | `darnell1910` | feat(access-control): expose credentials and access events through the rest api | Operaciones, parámetros, respuestas y esquemas de `credentials` y `access-events`. | 14/11/2026 13:12 |
+| `89ceb97` | `YopoFlores` | feat(rooms): expose the rooms endpoints and the context facade | Operaciones de `rooms`, `room-types`, `rate-plans`, `daily-rates` y `status-periods`. | 14/11/2026 13:30 |
+| `94d2e3d` | `YopoFlores` | feat(inventory): expose the inventory-items and storage-locations endpoints | Operaciones de `inventory-items` y `storage-locations`. | 14/11/2026 13:30 |
+| `06c5230` | `JhosBY2005` | docs(organizations): fix the wording of the OpenAPI operations | Corrección de la redacción de las operaciones de Organizations. | 14/11/2026 14:14 |
+| `8f00f93` | `YopoFlores` | fix(inventory): correct the article in the api documentation | Corrección de la redacción de la documentación de Inventory. | 14/11/2026 14:47 |
 
 
 
