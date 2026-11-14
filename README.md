@@ -276,6 +276,7 @@ desde el 18 de septiembre, sin commits de merge.
 - [Anexos](#anexos)
     - [Anexo A. Videos de exposiciones](#anexo-a-videos-de-exposiciones)
     - [Anexo B. Documentos y artefactos complementarios](#anexo-b-documentos-y-artefactos-complementarios)
+    - [Anexo C. Matriz de trazabilidad](#anexo-c-matriz-de-trazabilidad)
 
 <div style="page-break-before: always;"></div>
 
@@ -5218,3 +5219,30 @@ World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 
 - **Repositorio de la Frontend Web Application.** [hostera-frontend en GitHub](https://github.com/Team-Coworkers/hostera-frontend)
 - **Frontend Web Application desplegada.** [Abrir la aplicación](https://team-coworkers.github.io/hostera-frontend/)
 - **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
+
+<div style="page-break-before: always;"></div>
+
+## Anexo C. Matriz de trazabilidad
+
+La matriz conecta cada hallazgo de las entrevistas (sección 2.2) con el User Persona que lo
+representa (2.3.1), el Business Goal y el impacto del Impact Mapping (3.2), la epic y las
+historias del Product Backlog (3.1 y 3.3), el sprint en que se implementaron y la sección
+donde está su evidencia, que a su vez lista los commits de cada historia. Las entrevistas se
+identifican como en el registro: E1 y E2 corresponden al segmento de hoteles
+independientes, y E3 a E6 al segmento de cadenas pequeñas.
+
+| Hallazgo de las entrevistas | User Persona | Business Goal e impacto | Epic | User Stories | Technical Stories | Sprint | Evidencia |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Usan hojas de cálculo y registros en papel y buscan una herramienta que reúna la operación (E1, E2). | Steven Huarcaya, Anyeli Cárdenas | BG1 y BG2: el responsable contrata el plan de su segmento desde la web. | EP001 Landing Page Experience | US001 a US008 | — | Sprint 1 | 5.2.1.4 a 5.2.1.7 (`landing-page-main`) |
+| Consultan varias fuentes para consolidar la información del día (E1, E2); quieren comparar las sedes sin mezclar su información (E3, E5, E6) y supervisar a distancia (E3, E4). | Steven Huarcaya, Anyeli Cárdenas | BG1: el administrador centraliza la operación de su sede con una cuenta propia. | EP002 Account Access and Operational Overview | US009, US010, US011, US033 | TS001, TS002 | Sprint 2 (aplicación) y Sprint 3 (cuentas reales y API) | 5.2.2.4 a 5.2.2.7 y 5.2.3.4 a 5.2.3.7 (`hostera-frontend`, `hostera-platform`) |
+| Piden reunir las reservas y las habitaciones en un solo panel (E1, E2). | Steven Huarcaya | BG3: el equipo confirma en Hostera los check-ins de cada día. | EP003 Booking and Stay Management | US012 a US018 | TS005, TS006, TS008 | Sprint 2 (aplicación) y Sprint 3 (API) | 5.2.2.4 a 5.2.2.7 y 5.2.3.4 a 5.2.3.7 |
+| Piden reunir las habitaciones con el resto de la operación (E1, E2). | Steven Huarcaya, Anyeli Cárdenas | No figura de forma explícita en el Impact Mapping; sostiene el check-in de BG3. | EP004 Room, Room Type, and Rate Management | US019 a US023 | TS011 | Sprint 2 (aplicación) y Sprint 3 (API) | 5.2.2.4 a 5.2.2.7 y 5.2.3.4 a 5.2.3.7 |
+| Detectan tarde los faltantes del almacén (E1); quieren transferir inventario entre sedes (E3). | Steven Huarcaya, Anyeli Cárdenas | BG2: la gerente controla el inventario de las sedes con alertas de stock. | EP005 Inventory Management | US024 a US027 | TS012, TS013 | Sprint 2 (aplicación) y Sprint 3 (API) | 5.2.2.4 a 5.2.2.7 y 5.2.3.4 a 5.2.3.7 |
+| No saben quién accedió a una habitación y deben reponer tarjetas perdidas (E1); falta trazabilidad de los accesos entre sedes (E3). | Steven Huarcaya, Anyeli Cárdenas | BG3: el equipo emite en Hostera todas las llaves de las habitaciones. | EP006 RFID Access Control | US028 a US030 | TS014, TS015 | Sprint 2 (aplicación) y Sprint 3 (API) | 5.2.2.4 a 5.2.2.7 y 5.2.3.4 a 5.2.3.7 |
+| Consolidan a mano la información de las sedes y deciden con datos desactualizados (E3). | Anyeli Cárdenas | BG2: la gerente obtiene reportes independientes por sede. | EP007 Operational Reporting | US031, US032 | TS016 | Pendiente (Sprint 4) | — |
+| Necesidad técnica de los clientes de la API, no proviene de las entrevistas. | — | Sostiene la integración de todos los anteriores. | EP008 API Reliability and Integration | — | TS017 | Sprint 3 | 5.2.3.6 |
+
+Las historias `TS003` (autorización por propiedad), `TS004` (panel operativo en la API),
+`TS007` (transiciones de estado de la reserva), `TS009` (check-in y check-out en la API) y
+`TS010` (disponibilidad en la API) no forman parte del compromiso del Sprint 3 y quedan en el
+Product Backlog para el siguiente sprint.
