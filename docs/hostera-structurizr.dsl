@@ -1,6 +1,6 @@
 /*
  * Hostera - C4 model (TB1): system context, containers and components.
- * Angular web application, one Spring Boot RESTful API organised by bounded context, and MySQL.
+ * Angular web application, one Spring Boot RESTful API organised by bounded context, and PostgreSQL.
  * The web application components follow the bounded contexts of the hostera-frontend repository.
  */
 workspace "Hostera" "C4 model of Hostera, the hotel operations platform designed by Team Coworkers." {
@@ -32,7 +32,7 @@ workspace "Hostera" "C4 model of Hostera, the hotel operations platform designed
                 shared = component "Shared Infrastructure" "BaseApiService and BaseEndpoint build every endpoint from the configured API URL." "Angular HttpClient"
             }
             demoapi = container "Demo API" "Serves demonstration data with the same resources while the RESTful API is built." "Node.js and json-server"
-            api = container "RESTful API" "Provides the hotel operations functionality through a JSON/HTTPS API organised by bounded context, documented with OpenAPI." "Java 21 and Spring Boot 3" {
+            api = container "RESTful API" "Provides the hotel operations functionality through a JSON/HTTPS API organised by bounded context, documented with OpenAPI." "Java 25 and Spring Boot 4" {
                 group "IAM" {
                     iamController = component "Authentication Controller" "Endpoints to register an account with its plan, sign in and invite staff members." "Spring REST Controller (interfaces layer)"
                     iamCommands = component "Account Command Service" "Registers organizations and users, signs users in and issues their tokens." "Spring Service (application layer)"
@@ -79,7 +79,7 @@ workspace "Hostera" "C4 model of Hostera, the hotel operations platform designed
                     accessAdapter = component "RFID Encoder Adapter" "Writes credentials through the front desk encoder." "Spring Component (infrastructure, ACL)"
                 }
             }
-            db = container "Database" "Stores accounts, properties, bookings, payments, rooms, rates, inventory, credentials and access events." "MySQL 8" {
+            db = container "Database" "Stores accounts, properties, bookings, payments, rooms, rates, inventory, credentials and access events." "PostgreSQL 17" {
                 tags "Database"
             }
         }
