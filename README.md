@@ -5108,6 +5108,14 @@ a las 15:30. Las horas son una estimación.
   </tbody>
 </table>
 
+El board del Sprint 3 en YouTrack contiene las mismas 45 tarjetas: las 13 historias del Sprint
+Planning 3 y sus 32 tareas (`HOS-79` a `HOS-110`), cada una con su responsable, sus horas, su
+estado y su historia padre.
+
+<img src="assets/chapter-5/sprint-3-youtrack-board.png" alt="Board del Sprint 3 de Hostera en YouTrack con las entrevistas de validación en curso y las historias terminadas en Hecho" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Board «Sprint 3 — RESTful API» (13 al 14 de noviembre) en YouTrack, con las entrevistas de validación `S3.3` a `S3.5` en curso y las historias terminadas en Hecho.*
+
 Las 13 historias comprometidas (65 story points) tienen todas sus tareas en Done, y sus tareas
 suman 154 horas. Las tareas del sprint sin historia suman 26 horas; al
 momento de la revisión siguen en curso `S3.3`, `S3.4`, `S3.5`, las entrevistas de validación; `S3.1`, la conexión de
