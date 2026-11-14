@@ -5415,16 +5415,17 @@ se publicaron nuevas versiones de la Frontend Web Application y de la Landing Pa
 
 | Producto | Release | Plataforma y evidencia de despliegue | URL pública |
 | --- | --- | --- | --- |
-| RESTful API (`hostera-platform`) | `v0.1.0` | Render, Web Service con runtime Docker y plan gratuito en la región Oregon. Render construye la imagen con el `Dockerfile` multietapa del repositorio desde la rama `main` y la ejecuta con el perfil `prod`. El despliegue del commit `71565ad` terminó con el estado *Deploy succeeded* el 14/11/2026. | https://hostera-platform-api.onrender.com/swagger-ui/index.html |
+| RESTful API (`hostera-platform`) | `v0.3.2` | Render, Web Service con runtime Docker y plan gratuito en la región Oregon. Render construye la imagen con el `Dockerfile` multietapa del repositorio desde la rama `main` y la ejecuta con el perfil `prod`. En el sprint se desplegaron las releases `v0.1.0` a `v0.3.2`; el despliegue de la vigente, del commit `34c74d6`, terminó con el estado *Deploy succeeded* el 14/11/2026. | https://hostera-platform-api.onrender.com/swagger-ui/index.html |
 | Base de datos | PostgreSQL 17 | Render Postgres, plan gratuito en la misma región, conectado a la API por la red interna de Render. Hibernate crea el esquema en el primer arranque y la API carga los datos de demostración de la Frontend Web Application solo si la base está vacía. | Sin acceso público |
-| Pruebas de la RESTful API | `v0.1.0` | Workflow `Tests` de GitHub Actions, que ejecuta `mvn test` con Temurin 25 en cada push a `main`, `develop`, `feature/*` y `release/*`. | https://github.com/Team-Coworkers/hostera-platform/actions |
-
+| Pruebas de la RESTful API | `v0.3.2` | Workflow `Tests` de GitHub Actions, que ejecuta `mvn test` con Temurin 25 en cada push a `main`, `develop`, `feature/*` y `release/*`. | https://github.com/Team-Coworkers/hostera-platform/actions |
+| Landing Page (`landing-page-main`) | `v0.6.0` | GitHub Pages desde la rama `main`. La compilación del commit `85d61ef` (release `v0.6.0`) terminó con el estado *built* el 14/11/2026. | https://team-coworkers.github.io/landing-page-main/ |
+<!-- AV2 · Frontend Web Application v0.6.0: agregar la fila cuando Juan Diego publique la release. -->
 **Pasos del despliegue de la API.**
 
 1. Se creó la base de datos `hostera-platform-db` en Render Postgres (versión 17, región Oregon).
 2. Se creó el Web Service `hostera-platform-api` desde el repositorio `Team-Coworkers/hostera-platform`, rama `main`, con runtime Docker y despliegue automático en cada commit de `main`.
 3. Se definieron las variables de entorno que lee el perfil `prod`: `SPRING_PROFILES_ACTIVE`, `DATABASE_URL` (host interno de la base), `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `JWT_SECRET` y `CORS_ALLOWED_ORIGINS`. Las credenciales solo existen en Render; el repositorio contiene únicamente `.env.example` con valores de ejemplo.
-4. Se publicó la release `v0.1.0` en `main` con su tag anotado, lo que disparó el despliegue.
+4. Se publicó la release `v0.1.0` en `main` con su tag anotado, lo que disparó el despliegue. Las releases `v0.2.0` a `v0.3.2`, con los contextos de Darnell Cuba y de Juan Diego Flores, se desplegaron en el mismo servicio al llegar a `main`.
 5. Se verificó el servicio publicado: `/v3/api-docs` y Swagger UI responden `200`, una petición a `/api/v1/properties` sin token responde `401`, el registro en `POST /api/v1/users` responde `201` y el inicio de sesión en `POST /api/v1/tokens` devuelve un JWT con el que la misma petición responde `200` con las propiedades de demostración.
 
 El plan gratuito de Render suspende el servicio después de un periodo sin tráfico, así que
@@ -5434,7 +5435,7 @@ el equipo debe migrarla a un plan con persistencia o recrearla.
 
 <img src="assets/chapter-5/sprint-3-swagger-ui-render.jpg" alt="Swagger UI de la RESTful API de Hostera publicada en Render" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-*Figura 5.26. Swagger UI de la RESTful API `v0.1.0` publicada en Render.*
+*Figura 5.X. Swagger UI de la RESTful API `v0.3.2` publicada en Render.*
 
 
 
