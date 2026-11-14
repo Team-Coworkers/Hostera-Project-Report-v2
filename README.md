@@ -136,9 +136,27 @@ desde el 18 de septiembre, sin commits de merge.
 
 ## AV2
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+Durante AV2 el informe se trabajó en ramas `feature/av2-*` que se integraron en `develop`
+con merges `--no-ff` y mensajes Conventional Commits, y se publicó en `main` con la release
+de la versión 0.8.0. El trabajo de AV2 empezó con el Sprint Planning 3 del 13 de noviembre de
+2026. La siguiente tabla resume qué secciones trabajó cada integrante.
 
-*Sección en elaboración para AV2.*
+| Integrante | Aportes al informe en AV2 |
+| --- | --- |
+| Darnell Cuba (`darnell1910`) | Correcciones del Sprint 2 (tareas del Sprint Backlog 2 entre 4 y 8 horas, puntos comprometidos y completados, y datos del Sprint Planning 2), comparación con tres competidores por capacidad, costo y beneficio verificable, y Sprint Backlog 3 alineado con YouTrack. También aportó la evidencia de desarrollo del Sprint 3 y la documentación de servicios con pruebas en Swagger UI. |
+| Juan Diego Flores (`YopoFlores`) | Diseño de las entrevistas de validación y referencias de AV2. |
+| Jorge Mateo Leon (`mateool10`) | Sin commits en el informe durante AV2; realizó una entrevista de validación. |
+| Jose Gabriel Rudas (`josegabriel1604`) | Sin commits en el informe durante AV2; realizó una entrevista de validación. |
+| José Santana (`JhosBY2005`) | Estructura de AV2 y `README.md` como archivo principal, Sprint Planning 3, aspect leaders, evidencia de despliegue y analíticos del Sprint 3. También trabajó los agregados e invariantes de los seis bounded contexts, la alineación del modelo C4 y de las tablas de tecnología con la API implementada, la matriz de trazabilidad, los anexos, el Student Outcome, estos Collaboration Insights y el Registro de Versiones. |
+
+Igual que en TB1, el gráfico se construyó a partir del historial de todas las ramas del
+repositorio del informe desde el 13 de noviembre de 2026, sin commits de merge.
+
+<div style="page-break-before: always;"></div>
+
+<img src="assets/project-report-collaboration-insights/av2-commits-by-member.svg" alt="Commits por integrante en el repositorio del informe durante AV2" style="width:85%; height:auto; display:block; margin:0 auto;"/>
+
+*Evidencia 5. Commits por integrante en el repositorio del Project Report durante AV2.*
 
 <div style="page-break-before: always;"></div>
 
@@ -4992,9 +5010,34 @@ cambie solo la dirección de la API.
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+En el Sprint 3 cada aspecto corresponde a un bounded context de la RESTful API o a un
+producto del sprint. La matriz se obtuvo del historial de commits de `hostera-platform`,
+`hostera-frontend`, `landing-page-main` y del informe. Para las entrevistas de validación,
+que no generan commits, se tomó de las tareas del Sprint Backlog 3. El líder de cada aspecto
+es quien concentra sus commits o tiene asignada su tarea principal, y un colaborador es quien
+también hizo commits o tareas en él.
 
-*Sección en elaboración para AV2.*
+En la matriz Leadership-and-Collaboration (LACX), `L` representa al líder del aspecto,
+`C` a un colaborador y `N/A` indica que el integrante no participó en ese aspecto.
+
+| Team Member | GitHub Username | Platform Setup and Deployment | IAM and Organizations | Bookings and Payments | Access Control | Rooms and Inventory | Frontend Integration | Landing Page v0.6.0 | Validation Interviews | Project Report |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Cuba Vega, Darnell Yadir | `darnell1910` | N/A | N/A | L | L | N/A | N/A | L | N/A | C |
+| Flores Rios, Juan Diego | `YopoFlores` | N/A | N/A | N/A | N/A | L | L | N/A | L | C |
+| Leon Naupari, Jorge Mateo | `mateool10` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | C | N/A |
+| Rudas Chavarria, Jose Gabriel | `josegabriel1604` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | C | N/A |
+| Santana Luna, José Antonio | `JhosBY2005` | L | L | N/A | N/A | N/A | C | N/A | N/A | L |
+
+La RESTful API se repartió por bounded context. José Santana creó el proyecto base, el
+kernel compartido y los contextos IAM y Organizations, y desplegó la API en Render. Darnell
+Cuba lideró Bookings y Access Control, incluida la integración que cambia el estado de la
+habitación en el check-in y el check-out. Juan Diego Flores lideró Rooms e Inventory, con la
+fachada que usan los demás contextos. Los archivos de los commits confirman que cada
+integrante modificó solo los paquetes de su propio contexto. En la Frontend Web Application,
+José Santana conectó el registro y el inicio de sesión, y Juan Diego Flores conectó el resto
+de la aplicación a la API desplegada. Darnell Cuba publicó la Landing Page `v0.6.0`. Jorge
+Mateo Leon y Jose Gabriel Rudas colaboraron en las entrevistas de validación que lideró Juan
+Diego Flores y no registran commits en este sprint.
 
 
 
@@ -5390,16 +5433,17 @@ se publicaron nuevas versiones de la Frontend Web Application y de la Landing Pa
 
 | Producto | Release | Plataforma y evidencia de despliegue | URL pública |
 | --- | --- | --- | --- |
-| RESTful API (`hostera-platform`) | `v0.1.0` | Render, Web Service con runtime Docker y plan gratuito en la región Oregon. Render construye la imagen con el `Dockerfile` multietapa del repositorio desde la rama `main` y la ejecuta con el perfil `prod`. El despliegue del commit `71565ad` terminó con el estado *Deploy succeeded* el 14/11/2026. | https://hostera-platform-api.onrender.com/swagger-ui/index.html |
+| RESTful API (`hostera-platform`) | `v0.3.2` | Render, Web Service con runtime Docker y plan gratuito en la región Oregon. Render construye la imagen con el `Dockerfile` multietapa del repositorio desde la rama `main` y la ejecuta con el perfil `prod`. En el sprint se desplegaron las releases `v0.1.0` a `v0.3.2`; el despliegue de la vigente, del commit `34c74d6`, terminó con el estado *Deploy succeeded* el 14/11/2026. | https://hostera-platform-api.onrender.com/swagger-ui/index.html |
 | Base de datos | PostgreSQL 17 | Render Postgres, plan gratuito en la misma región, conectado a la API por la red interna de Render. Hibernate crea el esquema en el primer arranque y la API carga los datos de demostración de la Frontend Web Application solo si la base está vacía. | Sin acceso público |
-| Pruebas de la RESTful API | `v0.1.0` | Workflow `Tests` de GitHub Actions, que ejecuta `mvn test` con Temurin 25 en cada push a `main`, `develop`, `feature/*` y `release/*`. | https://github.com/Team-Coworkers/hostera-platform/actions |
-
+| Pruebas de la RESTful API | `v0.3.2` | Workflow `Tests` de GitHub Actions, que ejecuta `mvn test` con Temurin 25 en cada push a `main`, `develop`, `feature/*` y `release/*`. | https://github.com/Team-Coworkers/hostera-platform/actions |
+| Landing Page (`landing-page-main`) | `v0.6.0` | GitHub Pages desde la rama `main`. La compilación del commit `85d61ef` (release `v0.6.0`) terminó con el estado *built* el 14/11/2026. | https://team-coworkers.github.io/landing-page-main/ |
+<!-- AV2 · Frontend Web Application v0.6.0: agregar la fila cuando Juan Diego publique la release. -->
 **Pasos del despliegue de la API.**
 
 1. Se creó la base de datos `hostera-platform-db` en Render Postgres (versión 17, región Oregon).
 2. Se creó el Web Service `hostera-platform-api` desde el repositorio `Team-Coworkers/hostera-platform`, rama `main`, con runtime Docker y despliegue automático en cada commit de `main`.
 3. Se definieron las variables de entorno que lee el perfil `prod`: `SPRING_PROFILES_ACTIVE`, `DATABASE_URL` (host interno de la base), `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `JWT_SECRET` y `CORS_ALLOWED_ORIGINS`. Las credenciales solo existen en Render; el repositorio contiene únicamente `.env.example` con valores de ejemplo.
-4. Se publicó la release `v0.1.0` en `main` con su tag anotado, lo que disparó el despliegue.
+4. Se publicó la release `v0.1.0` en `main` con su tag anotado, lo que disparó el despliegue. Las releases `v0.2.0` a `v0.3.2`, con los contextos de Darnell Cuba y de Juan Diego Flores, se desplegaron en el mismo servicio al llegar a `main`.
 5. Se verificó el servicio publicado: `/v3/api-docs` y Swagger UI responden `200`, una petición a `/api/v1/properties` sin token responde `401`, el registro en `POST /api/v1/users` responde `201` y el inicio de sesión en `POST /api/v1/tokens` devuelve un JWT con el que la misma petición responde `200` con las propiedades de demostración.
 
 El plan gratuito de Render suspende el servicio después de un periodo sin tráfico, así que
@@ -5409,15 +5453,41 @@ el equipo debe migrarla a un plan con persistencia o recrearla.
 
 <img src="assets/chapter-5/sprint-3-swagger-ui-render.jpg" alt="Swagger UI de la RESTful API de Hostera publicada en Render" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
-*Figura 5.26. Swagger UI de la RESTful API `v0.1.0` publicada en Render.*
+*Figura 5.X. Swagger UI de la RESTful API `v0.3.2` publicada en Render.*
 
 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+Los analíticos de colaboración del Sprint 3 se tomaron de los repositorios de la RESTful
+API, de la Frontend Web Application y de la Landing Page. Igual que en el Sprint 2, el
+gráfico se construyó con el historial de todas las ramas desde el 13 de noviembre de 2026,
+sin commits de merge, porque el analítico de contribuidores de GitHub solo cuenta la rama
+`main`.
 
-*Sección en elaboración para AV2.*
+<img src="assets/chapter-5/sprint-3-commits-by-member.svg" alt="Commits por integrante en la RESTful API, el frontend y la Landing Page durante el Sprint 3" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Commits por integrante durante el Sprint 3.*
+
+| Integrante | `hostera-platform` | `hostera-frontend` | `landing-page-main` | Aporte principal en el sprint |
+| --- | :---: | :---: | :---: | --- |
+| Cuba Vega, Darnell Yadir (`darnell1910`) | 18 | 0 | 7 | Bookings, Payments y Access Control en la RESTful API, con sus pruebas; Landing Page `v0.6.0`. |
+| Santana Luna, José Antonio (`JhosBY2005`) | 16 | 4 | 0 | Proyecto base, kernel compartido, IAM y Organizations; despliegue en Render, workflow de pruebas y releases; registro e inicio de sesión en el frontend. |
+| Flores Rios, Juan Diego (`YopoFlores`) | 11 | 4 | 0 | Rooms e Inventory en la RESTful API, con sus pruebas; conexión del frontend a la API desplegada. |
+| Leon Naupari, Jorge Mateo (`mateool10`) | 0 | 0 | 0 | Entrevista de validación (sección 5.3). |
+| Rudas Chavarria, Jose Gabriel (`josegabriel1604`) | 0 | 0 | 0 | Entrevista de validación (sección 5.3). |
+
+El Sprint 3 corrigió la concentración de commits que se observó en el Sprint 2 (sección
+5.2.2.8). Darnell Cuba y Juan Diego Flores, que no tenían commits de código en ese sprint,
+lideraron dos bounded contexts cada uno en la RESTful API con sus pruebas. Sus commits
+pasaron el workflow `Tests` de GitHub Actions y llegaron a `main` en las releases `v0.2.0`,
+`v0.3.0`, `v0.3.1` y `v0.3.2`. Jorge Mateo Leon y Jose Gabriel Rudas no registran commits en
+el sprint, porque su aporte fueron las entrevistas de validación. En TB2 el equipo debe
+asignarles tareas de código con commits propios.
+
+<img src="assets/chapter-5/sprint-3-platform-contributors.png" alt="Analítico de contribuidores del repositorio hostera-platform en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Contribuidores de `hostera-platform` en GitHub (rama `main`).*
 
 
 
