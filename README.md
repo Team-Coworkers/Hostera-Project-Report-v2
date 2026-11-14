@@ -5203,7 +5203,7 @@ World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 
 ## Anexo A. Videos de exposiciones
 
 - **AV1 – Sprint Review – Semana 4.** Exposición del informe y revisión del Sprint 1. [Enlace al video de exposición](https://1drv.ms/f/c/8d4ae682dbad6a14/IgCXbQYBxh5ZQLSHCeblDgTkAbiAPQvF9cBxkcFff5XFl_A?e=BxNv39).
-- **TB1 – Stage Review – Semana 7.** Exposición del informe y revisión del Sprint 2. El video se entregó en el aula virtual junto con los archivos de TB1.
+- **TB1 – Stage Review – Semana 7.** Exposición del informe y revisión del Sprint 2. [Enlace al video de exposición en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQCf_A-bmHVzQLgC1gFw_3ZtASawXnM9W0O59ElEluO2WR8?e=IeJaVi).
 
 <div style="page-break-before: always;"></div>
 
