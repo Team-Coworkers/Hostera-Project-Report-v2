@@ -3660,6 +3660,30 @@ corresponde al adaptador del codificador RFID del modelo C4.
 
 *Figura 4.98. Aplicación del contexto Access Control.*
 
+**Agregados, objetos de valor e invariantes.** La siguiente tabla resume, para cada
+bounded context implementado en los RESTful Web Services del Sprint 3, cuál es la raíz de
+cada agregado, qué conceptos se modelan como objetos de valor, qué reglas protege el
+agregado y cuál es su límite transaccional. Cada fila corresponde al código del
+repositorio `hostera-platform`: las invariantes se validan en el constructor o en los
+métodos del agregado, y las que dependen de otros registros, como la unicidad, las
+verifica el servicio de comandos antes de guardar.
+
+Al implementar la API, la gestión de propiedades y de su personal se separó de IAM en el
+contexto Organizations. El registro comercial del hotel (la propiedad y su organización) y
+su personal cambian por motivos distintos que las cuentas y los permisos con los que se
+inicia sesión, como recomendó la revisión de TB1. IAM conserva los usuarios, los roles y la
+emisión de tokens.
+
+| Bounded context | Aggregate Root | Entidades | Value Objects | Invariantes que protege | Límite transaccional |
+| --- | --- | --- | --- | --- | --- |
+| IAM | `User` | `Role` | `Roles` (enumeración `ROLE_USER`, `ROLE_ADMIN`, `ROLE_MANAGER`) | El nombre de usuario y la contraseña no pueden estar vacíos; la contraseña se guarda solo como hash BCrypt; el nombre de usuario es único; el registro público asigna solo `ROLE_USER` y no acepta roles en la solicitud. | Un usuario con sus roles se guarda en una sola transacción. |
+| Organizations | `Property` | — | `CurrencyCode` (código ISO 4217 de tres letras) | Pertenece a una organización; su nombre y su ciudad no están vacíos; cobra en una moneda válida; su nombre no se repite dentro de la organización; no se elimina mientras tenga personal asignado. | Una propiedad por transacción; el personal se modifica en su propio agregado. |
+| Organizations | `StaffMember` | — | — | Pertenece a una propiedad existente; su nombre y su rol no están vacíos. | Un miembro del personal por transacción; la propiedad se consulta por identificador mediante `OrganizationsContextFacade`. |
+
+Los demás contextos se consultan entre sí solo por identificador y a través de una fachada
+de anticorrupción, como `OrganizationsContextFacade`, de modo que ningún agregado modifica
+directamente los datos de otro contexto.
+
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
