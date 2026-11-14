@@ -9,7 +9,7 @@
 <text x="650.0" y="110.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">overview, bookings, rooms, inventory and</text>
 <text x="650.0" y="125.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">access control features.</text>
 <rect x="30" y="220" width="1260" height="610" rx="10" fill="none" stroke="#666" stroke-width="1.6" stroke-dasharray="8,5"/>
-<text x="44.0" y="816.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#444" text-anchor="start">RESTful API [Container: Java 21 and Spring Boot 3] - Overview bounded context</text>
+<text x="44.0" y="816.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#444" text-anchor="start">RESTful API [Container: Java 25 and Spring Boot 4] - Overview bounded context</text>
 <rect x="500" y="260" width="300" height="150" rx="8" fill="#85BBF0" stroke="#5D82A8"/>
 <text x="650.0" y="284.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#000000" text-anchor="middle">Overview Controller</text>
 <text x="650.0" y="299.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#000000" text-anchor="middle">[Component: Spring REST Controller (interfaces</text>
@@ -35,7 +35,7 @@
 <path d="M500,902 L500,1008 A150.0,12 0 0 0 800,1008 L800,902 A150.0,12 0 0 0 500,902 Z" fill="#438DD5" stroke="#2E6295"/>
 <ellipse cx="650.0" cy="902" rx="150.0" ry="12" fill="none" stroke="#2E6295"/>
 <text x="650.0" y="926.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Database</text>
-<text x="650.0" y="941.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: MySQL 8]</text>
+<text x="650.0" y="941.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#FFFFFF" text-anchor="middle">[Container: PostgreSQL 17]</text>
 <text x="650.0" y="962.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">Stores accounts, properties, bookings,</text>
 <text x="650.0" y="977.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">payments, rooms, rates, inventory,</text>
 <text x="650.0" y="992.0" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#FFFFFF" text-anchor="middle">credentials and access events.</text>

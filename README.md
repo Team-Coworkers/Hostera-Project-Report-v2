@@ -38,7 +38,7 @@
 </table>
 
 <div class="cover-period">Período 202620</div>
-<div class="cover-date">Octubre 2026</div>
+<div class="cover-date">Noviembre 2026</div>
 
 </div>
 <div class="version-history">
@@ -3461,9 +3461,10 @@ Hostera se compone de cinco contenedores, cada uno desplegable de forma independ
 - **Demo API** (Node.js y json-server): sirve los datos de demostración con los mismos
   recursos que expondrá la RESTful API mientras esta se construye. En GitHub Pages, la
   aplicación lee esos mismos datos dentro del navegador (sección 5.1.4).
-- **RESTful API** (Java 21 y Spring Boot 3): expone la funcionalidad de Hostera
-  organizada por bounded context y documentada con OpenAPI. Se implementa en AV2.
-- **Database** (MySQL 8): almacena las cuentas, propiedades, reservas, pagos,
+- **RESTful API** (Java 25 y Spring Boot 4): expone la funcionalidad de Hostera
+  organizada por bounded context y documentada con OpenAPI. Se implementó en el Sprint 3
+  y se publica en Render.
+- **Database** (PostgreSQL 17): almacena las cuentas, propiedades, reservas, pagos,
   habitaciones, tarifas, inventario, credenciales y eventos de acceso. Cada bounded
   context es dueño de sus tablas (sección 4.8).
 
@@ -3504,7 +3505,7 @@ Cada bounded context de la RESTful API sigue las mismas capas. En la capa de int
 un controlador REST de Spring expone los endpoints; en la capa de aplicación, los
 servicios separan comandos y consultas; en la capa de dominio, los agregados aplican las
 reglas de negocio; y en la capa de infraestructura, los repositorios de Spring Data JPA
-persisten la información en MySQL. Los contextos que dependen de un sistema externo o de
+persisten la información en PostgreSQL. Los contextos que dependen de un sistema externo o de
 otro contexto lo hacen a través de un adaptador que actúa como capa anticorrupción
 (ACL). Los nombres de los componentes coinciden con las clases de la sección 4.7.
 
@@ -3663,7 +3664,7 @@ corresponde al adaptador del codificador RFID del modelo C4.
 
 ### 4.8.1. Database Diagrams
 
-La base de datos de Hostera se implementa en MySQL 8 y se accede desde la RESTful API
+La base de datos de Hostera se implementa en PostgreSQL 17 y se accede desde la RESTful API
 con Spring Data JPA. Cada bounded context es dueño de sus tablas y solo las modifica a
 través de sus propios repositorios. Dentro de un contexto, las relaciones se declaran
 con claves foráneas; entre contextos, una tabla guarda el identificador del registro del
@@ -3780,10 +3781,11 @@ Services, que se implementan en el Sprint 3.
 | Prettier | Da formato uniforme al código TypeScript, HTML y CSS del frontend. | [prettier.io](https://prettier.io/) | `npm run format:check` verifica el formato antes de cada commit. |
 | Jasmine y Karma | Ejecutan las pruebas unitarias de la Frontend Web Application. | [angular.dev/guide/testing](https://angular.dev/guide/testing) | Cada archivo `.spec.ts` está junto a la clase que prueba; el workflow `test.yml` las ejecuta en cada push. |
 | json-server | Expone la API de datos de demostración mientras los RESTful Web Services no están implementados. | [github.com/typicode/json-server](https://github.com/typicode/json-server) | Los datos se versionan como un archivo JSON por recurso en `server/data/`; `server/build-db.js` los reúne en `server/db.json`, que no se versiona. |
-| IntelliJ IDEA (AV2) | Edita y depura los RESTful Web Services en Java y Spring Boot. | Instalación local desde [jetbrains.com/idea](https://www.jetbrains.com/idea/). | La configuración del proyecto se toma del `pom.xml`; la carpeta `.idea/` no se versiona. |
-| OpenJDK 21 y Maven (AV2) | Compilan, prueban y empaquetan los RESTful Web Services. | [openjdk.org](https://openjdk.org/) y [maven.apache.org](https://maven.apache.org/) | La versión de Java y las dependencias de Spring Boot se fijan en el `pom.xml`; se usa el Maven Wrapper del proyecto. |
-| MySQL 8 (AV2) | Provee la base de datos relacional de la solución. | [dev.mysql.com/doc](https://dev.mysql.com/doc/) | El esquema se genera desde las entidades JPA; las credenciales se leen desde variables de entorno. |
-| Postman (AV2) | Verifica manualmente los endpoints de los RESTful Web Services. | [postman.com](https://www.postman.com/) | Las colecciones se exportan al repositorio de Web Services para que cualquier integrante reproduzca las pruebas. |
+| IntelliJ IDEA | Edita y depura los RESTful Web Services en Java y Spring Boot. | Instalación local desde [jetbrains.com/idea](https://www.jetbrains.com/idea/). | La configuración del proyecto se toma del `pom.xml`; la carpeta `.idea/` no se versiona. |
+| Eclipse Temurin 25 (OpenJDK) y Maven | Compilan, prueban y empaquetan los RESTful Web Services. | [adoptium.net](https://adoptium.net/) y [maven.apache.org](https://maven.apache.org/) | La versión de Java y las dependencias de Spring Boot se fijan en el `pom.xml`; el workflow `tests.yml` ejecuta `mvn test` con Temurin 25 en cada push. |
+| PostgreSQL 17 | Provee la base de datos relacional de la solución. | [postgresql.org/docs](https://www.postgresql.org/docs/) | El esquema se genera desde las entidades JPA; las credenciales se leen desde variables de entorno. Las pruebas usan H2 en memoria en modo PostgreSQL. |
+| Docker | Construye la imagen de los RESTful Web Services y levanta PostgreSQL en local. | [docs.docker.com](https://docs.docker.com/) | El `Dockerfile` multietapa compila con Maven y ejecuta el JAR con el perfil `prod`; Render construye la misma imagen. |
+| Swagger UI (springdoc-openapi) | Documenta y prueba manualmente los endpoints de los RESTful Web Services. | [springdoc.org](https://springdoc.org/) | Se genera desde las anotaciones de los controladores y se publica junto con la API en `/swagger-ui/index.html`. |
 
 **Software Deployment y Software Documentation**
 
@@ -3825,7 +3827,7 @@ documentación:
 | --- | --- | --- |
 | Landing Page | https://github.com/Team-Coworkers/landing-page-main | Versión `v0.5.0` publicada en GitHub Pages. |
 | Frontend Web Applications | https://github.com/Team-Coworkers/hostera-frontend | Versión `v0.4.0` publicada en GitHub Pages, con 28 pruebas unitarias en Jasmine y Karma. |
-| RESTful Web Services | Por registrar en AV2 | El repositorio incluirá el proyecto Spring Boot y sus pruebas unitarias (JUnit) y de integración y aceptación, según lo requerido por el enunciado del proyecto. |
+| RESTful Web Services | https://github.com/Team-Coworkers/hostera-platform | Proyecto Spring Boot con un paquete por bounded context y pruebas unitarias y de controlador con JUnit y Mockito, ejecutadas por GitHub Actions en cada push. |
 | Informe del proyecto | https://github.com/Team-Coworkers/Hostera-Project-Report-v2 | Archivo principal `README.md`; las versiones del informe se registran en el Control de versiones. |
 
 El equipo aplica las siguientes ramas de Git Flow:
@@ -4041,7 +4043,7 @@ de despliegue de cada producto:
 | Landing Page | GitHub Pages | Rama `main` y carpeta `/ (root)` de `landing-page-main` | No requiere build: el sitio se sirve como HTML, CSS y JavaScript estáticos. | Automática al integrar un release en `main`. | https://team-coworkers.github.io/landing-page-main/ |
 | Frontend Web Application | GitHub Pages | Rama `main` de `hostera-frontend` | `npm run build:pages`, que compila con `--base-href /hostera-frontend/`. | Workflow `deploy-pages.yml` de GitHub Actions, en cada push a `main`. | https://team-coworkers.github.io/hostera-frontend/ |
 | API de datos de demostración | Navegador del usuario (GitHub Pages) y, como alternativa, Render | `server/data/*.json` de `hostera-frontend` | El build copia los archivos a `demo-data/`. | Se publica junto con la aplicación; el Blueprint `render.yaml` permite publicarla en Render. | Dentro de la aplicación publicada |
-| RESTful Web Services | Se elegirá en el Sprint 3 (AV2). | Repositorio de Web Services, que se creará en el Sprint 3. | `./mvnw package`, que genera el JAR de Spring Boot. | Se fijará junto con el proveedor elegido. | Se publicará en AV2. |
+| RESTful Web Services | Render (Web Service con runtime Docker) y Render Postgres | Rama `main` de `hostera-platform` | `Dockerfile` multietapa: `mvn clean package` y una imagen de ejecución con el JRE. | Automática en cada push a `main` (una release). | https://hostera-platform-api.onrender.com/swagger-ui/index.html |
 
 **Frontend Web Application.** El workflow `.github/workflows/deploy-pages.yml` instala
 las dependencias con `npm ci`, ejecuta `npm run build:pages` y publica `dist/browser/`
@@ -4742,7 +4744,7 @@ recursos que expondrá la RESTful API de Spring Boot. Se ejecuta en local con js
 en `http://localhost:3000` (`npm run server:start`), como admite el enunciado para los
 sprints previos al despliegue de los Web Services, y en la aplicación publicada responde
 dentro del navegador con los mismos datos y reglas. La documentación con OpenAPI y
-Swagger se publicará con los Web Services en AV2.
+Swagger se publicó con los Web Services en el Sprint 3 (sección 5.2.3.6).
 
 La API expone 13 recursos, todos con las operaciones CRUD de json-server. Las consultas
 de colección admiten filtros por cualquier campo, como `propertyId=1`, y los parámetros
@@ -5064,7 +5066,7 @@ usuario en lugar de la interfaz.
 ### Diseño del producto
 
 El modelo C4 se rehízo con la notación de c4model.com: una aplicación Angular, una sola
-RESTful API en Spring Boot organizada por bounded context, una base de datos MySQL y tres
+RESTful API en Spring Boot organizada por bounded context, una base de datos PostgreSQL y tres
 sistemas externos con nombre. Los diagramas de clases siguen las convenciones de Java y
 coinciden con el dominio del frontend, y la base de datos tiene un diagrama por bounded
 context. Ese diseño todavía no se ha probado con usuarios.
@@ -5214,6 +5216,8 @@ World Wide Web Consortium. (2024). _Web Content Accessibility Guidelines (WCAG) 
 - **Repositorio del informe.** [Hostera Project Report en GitHub](https://github.com/Team-Coworkers/Hostera-Project-Report-v2)
 - **Repositorio de la Landing Page.** [Landing Page de Hostera en GitHub](https://github.com/Team-Coworkers/landing-page-main)
 - **Landing Page desplegada.** [Abrir Landing Page](https://team-coworkers.github.io/landing-page-main/)
+- **Repositorio de los RESTful Web Services.** [hostera-platform en GitHub](https://github.com/Team-Coworkers/hostera-platform)
+- **RESTful Web Services desplegados.** [Documentación en Swagger UI](https://hostera-platform-api.onrender.com/swagger-ui/index.html)
 - **Repositorio de la Frontend Web Application.** [hostera-frontend en GitHub](https://github.com/Team-Coworkers/hostera-frontend)
 - **Frontend Web Application desplegada.** [Abrir la aplicación](https://team-coworkers.github.io/hostera-frontend/)
 - **Board de seguimiento.** [Hostera en YouTrack](https://santanapromaster.youtrack.cloud/agiles/204-1/218-3)
