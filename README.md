@@ -961,9 +961,32 @@ análisis SWOT de Hostera y de los tres competidores seleccionados.
 </table>
 
 La tabla muestra que los tres competidores cubren la gestión de reservas y
-habitaciones, y que también ofrecen funciones de inventario en distinto nivel. La
-oportunidad preliminar de Hostera está en tratar el control de accesos RFID como parte
-del mismo contexto operativo.
+habitaciones, y que también ofrecen funciones de inventario en distinto nivel.
+
+**Matriz de capacidades, limitaciones, costo y beneficio verificable.**
+
+La siguiente matriz compara a Hostera con las tres soluciones en cuatro criterios. La
+información de los competidores es la de su oferta pública citada en la sección 2.1; la de
+Hostera corresponde a lo que se puede comprobar en la RESTful API publicada (`v0.3.1`) y en
+la Landing Page. La última fila indica cómo se puede verificar el beneficio que cada
+solución declara.
+
+| Criterio | Hostera | Nexus PMS (HotelClick, s.f.) | OkFac (Montalvo Soluciones Tecnológicas S.A.C., s.f.) | SysHotel (SysHotel, s.f.) |
+| --- | --- | --- | --- | --- |
+| Capacidades | Reservas con pagos, habitaciones con tipos y tarifas, inventario por almacén y credenciales de acceso de huéspedes y personal, en una API con cinco bounded contexts conectados entre sí. | Reservas, check-in y check-out, channel manager con Booking.com, Airbnb, Expedia y Agoda, facturación SUNAT, POS e inventario con alertas de stock mínimo. | Calendario de reservas, estado de habitaciones, housekeeping, OTAs y facturación SUNAT; inventario y compras en el plan Pro; reportes y multi-sucursal en el plan Enterprise. | PMS y ERP con reservas, housekeeping, channel manager, facturación SUNAT e inventario multi-almacén con kardex. |
+| Limitaciones | No factura con SUNAT, no se conecta con agencias en línea ni con un POS; el codificador RFID de la aplicación es simulado y el producto aún no se ha medido con clientes. | El precio no se publica y la contratación es anual; no documenta control de accesos. | El inventario y la operación multi-sucursal dependen de los planes superiores; no documenta control de accesos. | Las integraciones con cerraduras y control de acceso se cotizan aparte y no especifican RFID. |
+| Costo publicado | S/ 39 por propiedad al mes (Starter, hasta 10 habitaciones) y S/ 8 por habitación al mes (Professional, de 2 a 5 sedes). | No publicado; pago anual tras una demostración. | S/ 140, S/ 210 y S/ 350 al mes, con implementación incluida. | Desde S/ 100 al mes; integraciones cotizadas según alcance. |
+| Beneficio verificable | En la API publicada se comprueba que una reserva que se cruza con otra en la misma habitación se rechaza (`409`), que el check-in deja la habitación ocupada, que el check-out revoca las tarjetas del huésped y deja la habitación pendiente de limpieza, y que no se emite una tarjeta para una habitación bloqueada (`422`), sin pasos manuales entre módulos. Las pruebas automatizadas del repositorio cubren ese recorrido. | La sincronización con OTAs y la facturación SUNAT que declara el proveedor se pueden comprobar en su demostración. | Los precios por plan y la implementación incluida se pueden comprobar en su página de planes. | Los más de 150 hoteles activos en Perú que declara el proveedor no se pueden comprobar con la información pública; el inventario multi-almacén se puede ver en su demostración. |
+
+La matriz muestra que Hostera no compite por cantidad de funciones: los tres competidores
+ofrecen facturación SUNAT y conexión con agencias en línea, que Hostera no tiene. El control
+de accesos RFID, por sí solo, tampoco es una innovación, porque SysHotel ya cotiza
+integraciones con cerraduras y control de acceso. La diferencia que Hostera puede demostrar
+es que las reservas, el estado de las habitaciones y las credenciales de acceso reaccionan
+juntos ante cada paso de la estadía, de modo que una tarjeta no sigue abriendo una habitación
+después del check-out y una habitación no se vende ni se entrega mientras está ocupada o
+bloqueada. Esta ventaja se debe validar con hoteles independientes y pequeñas cadenas, con un
+precio de entrada menor que el de los planes publicados por OkFac y SysHotel.
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
