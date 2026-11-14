@@ -4441,22 +4441,25 @@ a AV2, así que la aplicación trabaja sobre la API de datos de demostración.
 | --- | --- |
 | Sprint # | Sprint 2 |
 | Sprint Planning Background | Planificación de la primera versión de la Frontend Web Application en Angular, organizada por bounded context, y de las versiones `v0.4.0` y `v0.5.0` de la Landing Page. |
-| Date | Por confirmar |
-| Time | Por confirmar |
-| Location | Por confirmar |
+| Date | No se registró |
+| Time | No se registró |
+| Location | No se registró |
 | Prepared By | Santana Luna, José Antonio (`JhosBY2005`) |
-| Attendees (to planning meeting) | Por confirmar |
+| Attendees (to planning meeting) | No se registró |
 | Sprint 1 Review Summary | El Sprint 1 cerró con la Landing Page publicada en GitHub Pages y las ocho user stories de `EP001` implementadas (42 story points). Después de AV1, el equipo revisó los artefactos con la rúbrica del curso y corrigió en el informe el Lean UX, las entrevistas, el Impact Mapping, el orden del Product Backlog, el modelo C4 y los diagramas de clases y de base de datos. |
 | Sprint 1 Retrospective Summary | Funcionó trabajar con una rama por historia integrada con Git Flow y repartir las historias entre los cinco integrantes. Como oportunidad de mejora, el historial muestra que el código de la Landing Page se integró en una sola jornada, el 19 de septiembre, en lugar de avanzar de forma continua durante el sprint. |
 | Sprint 2 Goal | Nuestro enfoque está en que el responsable de operaciones de un hotel independiente o de una cadena pequeña pueda entrar desde la Landing Page con el plan de su segmento y llevar en una sola aplicación web publicada las reservas, las habitaciones, el inventario y las credenciales de acceso de la propiedad con la que trabaja. Creemos que esto le permite dejar de reconstruir el estado de su hotel a partir de registros separados. Esto se confirmará cuando, en la aplicación publicada, una persona pueda pasar del plan elegido en la Landing Page al panorama de su propiedad y desde allí registrar una reserva, hacer el check-in con la emisión de las tarjetas del huésped y ajustar las existencias del almacén. |
 | Sprint 2 Goal Metric | El objetivo se considera cumplido cuando ese recorrido se completa en la aplicación desplegada en GitHub Pages con los datos de demostración. Como condición de entrega, las 23 user stories del sprint deben estar implementadas y las pruebas unitarias deben pasar en el workflow de integración. |
-| Sprint 2 Velocity | 117 Story Points comprometidos para el sprint. |
-| Sum of Story Points | 117 Story Points. |
+| Sprint 2 Velocity | 117 story points terminados: las 23 user stories comprometidas se implementaron. |
+| Sum of Story Points | 117 story points comprometidos. |
 
-La velocity pasó de 42 a 117 story points porque el Sprint 2 abarca la aplicación
-web completa, organizada en seis áreas que se trabajaron en ramas paralelas, una por
-bounded context. Los datos de la reunión de planificación (fecha, hora, lugar y
-asistentes) quedan por confirmar por el equipo.
+En el Sprint 2 se comprometieron 117 story points y se terminaron 117, por lo que la
+velocity del sprint es de 117 story points, frente a los 42 del Sprint 1. El aumento se
+debe a que el Sprint 2 abarca la aplicación web completa, organizada en seis áreas que se
+trabajaron en ramas paralelas, una por bounded context. La fecha, la hora, el lugar y los
+asistentes de la reunión de planificación no se registraron en su momento, ni en un acta ni
+en el calendario del equipo, y no se pueden reconstruir con certeza, por lo que el informe
+no los consigna.
 
 Las user stories incluidas en el Sprint 2 son las siguientes. Los story points
 corresponden a la estimación registrada en el Product Backlog.
