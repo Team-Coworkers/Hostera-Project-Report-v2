@@ -3660,6 +3660,38 @@ corresponde al adaptador del codificador RFID del modelo C4.
 
 *Figura 4.98. Aplicación del contexto Access Control.*
 
+**Agregados, objetos de valor e invariantes.** La siguiente tabla resume, para cada
+uno de los seis bounded contexts implementados en los RESTful Web Services del Sprint 3, cuál es la raíz de
+cada agregado, qué conceptos se modelan como objetos de valor, qué reglas protege el
+agregado y cuál es su límite transaccional. Cada fila corresponde al código del
+repositorio `hostera-platform`: las invariantes se validan en el constructor o en los
+métodos del agregado, y las que dependen de otros registros, como la unicidad, las
+verifica el servicio de comandos antes de guardar.
+
+Al implementar la API, la gestión de propiedades y de su personal se separó de IAM en el
+contexto Organizations. El registro comercial del hotel (la propiedad y su organización) y
+su personal cambian por motivos distintos que las cuentas y los permisos con los que se
+inicia sesión, como recomendó la revisión de TB1. IAM conserva los usuarios, los roles y la
+emisión de tokens.
+
+| Bounded context | Aggregate Root | Entidades | Value Objects | Invariantes que protege | Límite transaccional |
+| --- | --- | --- | --- | --- | --- |
+| IAM | `User` | `Role` | `Roles` (enumeración `ROLE_USER`, `ROLE_ADMIN`, `ROLE_MANAGER`) | El nombre de usuario y la contraseña no pueden estar vacíos; la contraseña se guarda solo como hash BCrypt; el nombre de usuario es único; el registro público asigna solo `ROLE_USER` y no acepta roles en la solicitud. | Un usuario con sus roles se guarda en una sola transacción. |
+| Organizations | `Property` | — | `CurrencyCode` (código ISO 4217 de tres letras) | Pertenece a una organización; su nombre y su ciudad no están vacíos; cobra en una moneda válida; su nombre no se repite dentro de la organización; no se elimina mientras tenga personal asignado. | Una propiedad por transacción; el personal se modifica en su propio agregado. |
+| Organizations | `StaffMember` | — | — | Pertenece a una propiedad existente; su nombre y su rol no están vacíos. | Un miembro del personal por transacción; la propiedad se consulta por identificador mediante `OrganizationsContextFacade`. |
+| Bookings | `Booking` | — | `StayPeriod`, `Guest`, `BookingStatus`, `BookingLifecycle` | Pertenece a una propiedad; tiene código, huésped y al menos un huésped en la estadía; la salida es posterior a la llegada; el total no es negativo; dos reservas activas no ocupan la misma habitación en noches que se cruzan (409). Al hacer check-in marca la habitación como ocupada y al hacer check-out la deja pendiente de limpieza mediante `RoomsContextFacade`; no admite check-in en una habitación bloqueada. | Una reserva por transacción; al cerrarse publica un evento que Access Control usa para revocar sus tarjetas. |
+| Bookings | `Payment` | — | `PaymentMethod` | Referencia una reserva por identificador; el monto es mayor que cero y tiene un método de pago. | Un pago por transacción. |
+| Access Control | `Credential` | — | `CredentialType`, `CredentialStatus`, `Revocation`, `RevocationReason`, `StaffScope`, `HolderType` | El fin de la vigencia es posterior al inicio; una tarjeta de huésped necesita su reserva y su habitación, y solo se emite para la habitación de una reserva con check-in y nunca para una habitación bloqueada (422); una credencial de personal necesita su miembro del personal y su alcance; el check-out o la cancelación de la reserva la revocan. | Una credencial por transacción; la reserva y la habitación se consultan por identificador mediante `BookingsContextFacade` y `RoomsContextFacade`. |
+| Access Control | `AccessEvent` | — | `AccessPoint`, `AccessResult`, `AccessDecision`, `DenialReason` | Un intento en una puerta de habitación indica la habitación; un intento denegado indica su motivo, como una credencial revocada, perdida, vencida o de otra habitación. | Un evento por transacción; los eventos no se modifican después de registrarse. |
+| Rooms | `Room` | — | `RoomStatus`, `OperationalStatus` | El número es único en la propiedad y pertenece a un tipo de habitación existente de la misma propiedad; solo admite transiciones válidas de estado: una habitación ocupada solo pasa a pendiente de limpieza, y una pendiente de limpieza solo pasa a lista o bloqueada; una habitación ocupada no se elimina. | Una habitación por transacción; otros contextos la consultan y cambian su estado solo mediante `RoomsContextFacade`. |
+| Rooms | `RoomType`, `RatePlan`, `DailyRate`, `StatusPeriod` | — | `NightlyRate`, `DateRange`, `IncludedServices`, `ActivationStatus` | La capacidad está en el rango permitido y la tarifa base existe; el nombre del tipo y del plan no se repite en la propiedad; un plan reembolsable tiene política de cancelación y no repite tipos de habitación; un periodo de estado termina en o después de su inicio y tiene motivo; un tipo con habitaciones o un plan con tarifas no se elimina. | Cada uno en su propia transacción y referenciado por identificador. |
+| Inventory | `InventoryItem` | `StockAdjustment` | `Stock`, `StockOperation`, `StockCondition`, `InventoryUnit` | El código es único en la propiedad; tiene una existencia por almacén y ninguna es negativa; un ítem contado en unidades usa cantidades enteras; los ajustes registrados no se eliminan. | Un ítem con sus existencias y ajustes se guarda en una sola transacción. |
+| Inventory | `StorageLocation` | — | `StorageLocationType` | El código es único en la propiedad; tiene nombre, tipo, área y equipo responsable. | Un almacén por transacción. |
+
+Los demás contextos se consultan entre sí solo por identificador y a través de una fachada
+de anticorrupción, como `OrganizationsContextFacade`, de modo que ningún agregado modifica
+directamente los datos de otro contexto.
+
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
