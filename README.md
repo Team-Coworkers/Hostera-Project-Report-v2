@@ -136,6 +136,10 @@ desde el 18 de septiembre, sin commits de merge.
 
 ## AV2
 
+<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+
+*Sección en elaboración para AV2.*
+
 ## TB2
 
 <div style="page-break-before: always;"></div>
@@ -242,6 +246,20 @@ desde el 18 de septiembre, sin commits de merge.
         - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
         - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
         - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
+    - [5.2.3. Sprint 3](#523-sprint-3)
+        - [5.2.3.1. Sprint Planning 3](#5231-sprint-planning-3)
+        - [5.2.3.2. Aspect Leaders and Collaborators](#5232-aspect-leaders-and-collaborators)
+        - [5.2.3.3. Sprint Backlog 3](#5233-sprint-backlog-3)
+        - [5.2.3.4. Development Evidence for Sprint Review](#5234-development-evidence-for-sprint-review)
+        - [5.2.3.5. Execution Evidence for Sprint Review](#5235-execution-evidence-for-sprint-review)
+        - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
+        - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
+        - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
+- [5.3. Validation Interviews](#53-validation-interviews)
+    - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
+    - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
+    - [5.3.3. Evaluaciones según heurísticas](#533-evaluaciones-según-heurísticas)
+- [5.4. Video About-the-Product](#54-video-about-the-product)
 
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
@@ -4829,6 +4847,108 @@ context de la RESTful API y sus pruebas.
 <img src="assets/chapter-5/sprint-2-landing-contributors.png" alt="Analítico de contribuidores del repositorio landing-page-main en GitHub" style="display:block; width:75%; height:auto; margin:0 auto;"/>
 
 *Figura 5.25. Contribuidores de `landing-page-main` en GitHub (rama `main`).*
+
+### 5.2.3. Sprint 3
+
+#### 5.2.3.1. Sprint Planning 3
+
+<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.3. Sprint Backlog 3
+
+<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+<!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+## 5.3. Validation Interviews
+
+### 5.3.1. Diseño de Entrevistas
+
+<!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+### 5.3.2. Registro de Entrevistas
+
+<!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+### 5.3.3. Evaluaciones según heurísticas
+
+<!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+## 5.4. Video About-the-Product
+
+<!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
+
+*Sección en elaboración para AV2.*
+
+
+
+<div style="page-break-before: always;"></div>
 
 # Conclusiones
 
