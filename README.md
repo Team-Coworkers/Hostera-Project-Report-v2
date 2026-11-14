@@ -5100,7 +5100,7 @@ a las 15:30. Las horas son una estimación.
     <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.1</td><td>Manage inventory items and stock</td><td>Items with stocks per location and adjustments, never negative.</td><td>8</td><td>Juan Diego Flores</td><td>Done</td></tr>
     <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.2</td><td>Seed the inventory context</td><td>Demo inventory items and storage locations.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
     <tr><td>TS013</td><td>Manage storage locations through the API</td><td>TS013.1</td><td>Manage storage locations</td><td>Storage locations with unique codes per property.</td><td>5</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.1</td><td>Connect the frontend to the RESTful API</td><td>Production environment with the Render API, housekeeping status of rooms and release v0.6.0.</td><td>6</td><td>Juan Diego Flores</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.1</td><td>Connect the frontend to the RESTful API</td><td>Production environment with the Render API, housekeeping status of rooms and release v0.6.0.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
     <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.2</td><td>Publish Landing Page v0.6.0</td><td>Product and team videos, contact and social links, product screenshots and responsive fixes.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
     <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.3</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Juan Diego Flores</td><td>In Progress</td></tr>
     <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.4</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Jorge Mateo Leon</td><td>In Progress</td></tr>
@@ -5110,8 +5110,8 @@ a las 15:30. Las horas son una estimación.
 
 Las 13 historias comprometidas (65 story points) tienen todas sus tareas en Done, y sus tareas
 suman 154 horas. Las tareas del sprint sin historia suman 26 horas; al
-momento de la revisión siguen en curso `S3.1`, `S3.3`, `S3.4`, `S3.5`: la conexión de la Frontend Web Application con
-la RESTful API y su release, y las entrevistas de validación. En total, el sprint reparte
+momento de la revisión siguen en curso `S3.3`, `S3.4`, `S3.5`, las entrevistas de validación; `S3.1`, la conexión de
+la Frontend Web Application con la RESTful API, terminó con la release `v0.6.0` del frontend. En total, el sprint reparte
 180 horas: 57 de José Santana, 64 de Darnell Cuba, 51 de Juan Diego Flores, 4 de Jorge Mateo Leon y 4 de Jose Gabriel Rudas.
 
 
