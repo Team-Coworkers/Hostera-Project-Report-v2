@@ -5060,9 +5060,136 @@ asignadas porque no registran commits en el sprint.
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+La siguiente tabla reúne los commits del Sprint 3, del 13 al 14 de noviembre de 2026, en
+los repositorios de la RESTful API, la Frontend Web Application, la Landing Page y el
+informe. La tabla se obtuvo del historial de cada repositorio con
+`git log --all --since="2026-11-13"`, sin escribir ningún commit a mano. La rama de cada
+commit es la rama en cuya línea principal se registró: `main` y `develop` para los merges y
+las releases, y la rama `feature/*`, `fix/*` o `release/*` en la que se escribió para los
+demás.
 
-*Sección en elaboración para AV2.*
+En total son 115 commits: 62 en `hostera-platform`,
+10 en `hostera-frontend`, 13 en
+`landing-page-main` y 30 en el informe hasta el momento de
+generar la tabla.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| --- | --- | --- | --- | --- | --- |
+| `hostera-platform` | `main` | `ca6cc99` | chore: initialize repository | Adds the README, the MIT license and the ignore rules for Maven and IDE files. | 14/11/2026 11:55 |
+| `hostera-platform` | `feature/project-setup` | `e368520` | build: add the Spring Boot 4 Maven project | Adds the Maven build with Spring Boot 4.1, Java 25, Spring Data JPA, validation, security, jjwt, springdoc-openapi, Lombok, Pluralize and the PostgreSQL driver; the dev, prod and test profiles; the i18n bundles; the environment template and the multi-stage Dockerfile. | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/project-setup` | `075e27b` | feat(shared): add the shared kernel | Adds the Result and ApplicationError types, Problem Details error responses with localized messages, the OpenAPI configuration, the locale resolver, the snake_case pluralized naming strategy, auditing, domain event publishing and virtual threads, with their unit tests. | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/project-setup` | `3f53324` | feat(iam): add sign-up and sign-in with JWT | Adds the IAM bounded context: users and roles, sign-up at POST /api/v1/users, sign-in at POST /api/v1/tokens with a JWT bearer token, BCrypt hashing, the bearer authorization filter, CORS for the frontend origins and role seeding, with unit tests for the tokens controller and the user repository. | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/project-setup` | `133f376` | docs: describe the platform and how to run it | Documents the stack, the bounded contexts and their resources, local execution, tests, deployment variables and the Git workflow, and starts the changelog. | 14/11/2026 12:10 |
+| `hostera-platform` | `develop` | `bf8eed8` | merge(develop): add the project setup | — | 14/11/2026 12:10 |
+| `hostera-platform` | `feature/organizations` | `30e6e3c` | feat(organizations): add the property and staff member aggregates | Property protects its organization, name, city and ISO 4217 currency; StaffMember protects its property, name and role. Includes the domain repositories and unit tests for the invariants. | 14/11/2026 12:16 |
+| `hostera-platform` | `feature/organizations` | `9379323` | feat(organizations): add the property and staff commands and queries | Create, update and delete commands with duplicate-name and missing-property checks, list queries filtered by organizationId and propertyId, a rule that keeps properties with staff from being deleted, and the demonstration seed of the frontend data. | 14/11/2026 12:16 |
+| `hostera-platform` | `feature/organizations` | `bf46f39` | feat(organizations): persist properties and staff members with JPA | Adds the persistence entities, Spring Data repositories, assemblers and repository adapters. | 14/11/2026 12:16 |
+| `hostera-platform` | `feature/organizations` | `1233787` | feat(organizations): expose the properties and staff-members endpoints | Adds GET, POST, PUT and DELETE on /api/v1/properties and /api/v1/staff-members with the camelCase fields of the frontend, OpenAPI annotations and an ACL facade for the other bounded contexts. | 14/11/2026 12:16 |
+| `hostera-platform` | `develop` | `b901d97` | merge(develop): add the organizations bounded context | — | 14/11/2026 12:19 |
+| `hostera-platform` | `release/0.1.0` | `b2b7ca9` | chore(release): prepare 0.1.0 | — | 14/11/2026 12:19 |
+| `hostera-platform` | `develop` | `a0bdd10` | merge(develop): back-merge release 0.1.0 | — | 14/11/2026 12:19 |
+| `hostera-platform` | `main` | `71565ad` | merge(main): release 0.1.0 | — | 14/11/2026 12:19 |
+| `hostera-platform` | `feature/ci-tests` | `d8cf556` | ci: run the tests on every push | Adds a GitHub Actions workflow that runs mvn test with Temurin 25 on main, develop, feature and release branches. | 14/11/2026 12:32 |
+| `hostera-platform` | `develop` | `ba53285` | merge(develop): run the tests in GitHub Actions | — | 14/11/2026 12:32 |
+| `hostera-platform` | `feature/bookings` | `7397845` | feat(bookings): add the booking and payment domain model | Booking keeps a stay of at least one night, one or more guests, a valid<br>status and a non-negative total, and tells when two active bookings hold<br>the same room for overlapping nights. Closing an active booking raises<br>BookingClosedEvent. Payment requires an amount greater than zero. | 14/11/2026 12:54 |
+| `hostera-platform` | `feature/bookings` | `315e426` | feat(bookings): add the booking and payment application services | Command services check that the property exists, reject a booking that<br>takes a room already held by another active booking for overlapping<br>nights, and require payments to point to a booking of the same property.<br>Query services filter by equality and support the _sort, _order and<br>_limit parameters the frontend uses to find the latest booking code. | 14/11/2026 12:56 |
+| `hostera-platform` | `feature/bookings` | `adf49ce` | feat(bookings): persist bookings and payments with spring data jpa | Persistence entities extend AuditableAbstractPersistenceEntity. The<br>moment a booking was made is stored as booked_at so it does not clash<br>with the inherited created_at audit column. Repository adapters publish<br>the domain events of each saved aggregate. | 14/11/2026 12:58 |
+| `hostera-platform` | `feature/bookings` | `c02f1ff` | feat(bookings): expose bookings and payments through the rest api | — | 14/11/2026 13:01 |
+| `hostera-platform` | `feature/bookings` | `0b6330f` | fix(bookings): keep the booking creation date as a calendar date | — | 14/11/2026 13:02 |
+| `hostera-platform` | `feature/bookings` | `acde0d0` | feat(bookings): seed the demo bookings and payments of the frontend | — | 14/11/2026 13:03 |
+| `hostera-platform` | `feature/bookings` | `817e584` | test(bookings): cover the booking rules, the rest api and the seed | — | 14/11/2026 13:05 |
+| `hostera-platform` | `develop` | `018c0fe` | merge(develop): integrate the bookings and payments context | — | 14/11/2026 13:06 |
+| `hostera-platform` | `feature/access-control` | `0f23011` | feat(bookings): let other contexts check whether a guest is in house | — | 14/11/2026 13:09 |
+| `hostera-platform` | `feature/access-control` | `789971e` | feat(access-control): model credentials and access events | — | 14/11/2026 13:09 |
+| `hostera-platform` | `feature/access-control` | `9d236f9` | feat(access-control): issue, revoke and evaluate credentials | — | 14/11/2026 13:11 |
+| `hostera-platform` | `feature/access-control` | `7f3ee0e` | feat(access-control): persist credentials and access events with jpa | — | 14/11/2026 13:12 |
+| `hostera-platform` | `feature/access-control` | `2ea2314` | feat(access-control): expose credentials and access events through the rest api | — | 14/11/2026 13:12 |
+| `hostera-platform` | `feature/access-control` | `86de8a2` | feat(access-control): seed the demo credentials and access events of the frontend | — | 14/11/2026 13:13 |
+| `hostera-platform` | `feature/access-control` | `271d8c5` | test(access-control): cover issuing, revocation, access evaluation and the seed | — | 14/11/2026 13:15 |
+| `hostera-platform` | `develop` | `f2a7c8e` | merge(develop): integrate the access control context | — | 14/11/2026 13:15 |
+| `hostera-platform` | `release/0.2.0` | `e8bfb03` | chore(release): prepare 0.2.0 | — | 14/11/2026 13:27 |
+| `hostera-platform` | `main` | `a7be90b` | merge(main): release 0.2.0 | — | 14/11/2026 13:27 |
+| `hostera-platform` | `develop` | `318e803` | merge(develop): back-merge release 0.2.0 | — | 14/11/2026 13:27 |
+| `hostera-platform` | `feature/rooms` | `e1d6693` | feat(rooms): add the room, room type, rate plan, daily rate and status period aggregates | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `b745949` | feat(rooms): add the rooms commands, queries and demonstration seed | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `53c0cf3` | feat(rooms): persist the rooms context with JPA | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `89ceb97` | feat(rooms): expose the rooms endpoints and the context facade | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/rooms` | `0ed7106` | test(rooms): cover the room rules and the rooms controller | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `3df070c` | feat(inventory): add the inventory item and storage location aggregates | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `0f13828` | feat(inventory): add the inventory commands, queries and demonstration seed | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `128c32b` | feat(inventory): persist the inventory context with JPA | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `94d2e3d` | feat(inventory): expose the inventory-items and storage-locations endpoints | — | 14/11/2026 13:30 |
+| `hostera-platform` | `feature/inventory` | `75973f1` | test(inventory): cover the stock rules and the inventory controllers | — | 14/11/2026 13:30 |
+| `hostera-platform` | `develop` | `1b2130f` | merge(develop): add the rooms bounded context | — | 14/11/2026 13:32 |
+| `hostera-platform` | `develop` | `69a494a` | merge(develop): add the inventory bounded context | — | 14/11/2026 13:32 |
+| `hostera-platform` | `release/0.3.0` | `393291f` | chore(release): prepare 0.3.0 | — | 14/11/2026 13:41 |
+| `hostera-platform` | `main` | `14dfae4` | merge(main): release 0.3.0 | — | 14/11/2026 13:41 |
+| `hostera-platform` | `develop` | `c9350a5` | merge(develop): back-merge release 0.3.0 | — | 14/11/2026 13:41 |
+| `hostera-platform` | `feature/room-status-integration` | `0349303` | feat(bookings): publish the check-in and the room of a closed booking | — | 14/11/2026 13:48 |
+| `hostera-platform` | `feature/room-status-integration` | `48fe1ca` | feat(bookings): keep the room status in step with the check-in and check-out | — | 14/11/2026 13:48 |
+| `hostera-platform` | `feature/room-status-integration` | `9731268` | feat(access-control): check blocked rooms through the rooms context | — | 14/11/2026 13:48 |
+| `hostera-platform` | `feature/room-status-integration` | `a940bc0` | test(bookings): cover the room status changes and the blocked room checks | — | 14/11/2026 13:50 |
+| `hostera-platform` | `develop` | `c99fa51` | merge(develop): connect bookings and access control with the rooms context | — | 14/11/2026 13:50 |
+| `hostera-platform` | `feature/organizations-openapi-wording` | `06c5230` | docs(organizations): fix the wording of the OpenAPI operations | Uses the correct plural and lowercase nouns in the summaries and descriptions of the properties and staff-members endpoints. | 14/11/2026 14:14 |
+| `hostera-platform` | `develop` | `868a730` | merge(develop): fix the OpenAPI wording of organizations | — | 14/11/2026 14:14 |
+| `hostera-platform` | `release/0.3.1` | `e39ed7b` | chore(release): prepare 0.3.1 | — | 14/11/2026 14:18 |
+| `hostera-platform` | `main` | `54bfcdc` | merge(main): release 0.3.1 | — | 14/11/2026 14:18 |
+| `hostera-platform` | `develop` | `a0edca8` | merge(develop): back-merge release 0.3.1 | — | 14/11/2026 14:18 |
+| `hostera-platform` | `fix/inventory-api-docs` | `8f00f93` | fix(inventory): correct the article in the api documentation | — | 14/11/2026 14:47 |
+| `hostera-platform` | `develop` | `0fb7425` | merge(develop): correct the inventory api documentation | — | 14/11/2026 14:47 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `8a1cad1` | feat(iam): add the session, bearer token interceptor and workspace guard | Adds the client of POST /users and POST /tokens, a session store kept in localStorage, an interceptor that sends the JWT only to the Hostera API and returns to sign-in on 401, and a guard that keeps the workspace behind sign-in when authenticationEnabled is true. The flag stays false until the frontend points to the RESTful API. | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `1c08a7e` | feat(iam): sign in with the RESTful API | The sign-in view calls POST /tokens, starts the session and shows an error for wrong credentials; the demonstration notice only appears while authentication is disabled. | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `019a6d9` | feat(iam): create accounts with the RESTful API | The sign-up view asks for a password of at least 8 characters, registers the user at POST /users and signs in right away. | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/iam-platform-sign-in` | `23cda7b` | feat(shared): show the signed-in user and a sign-out action | The sidebar shows the username of the session instead of the demonstration operator and adds a sign-out action. | 14/11/2026 12:25 |
+| `hostera-frontend` | `develop` | `50fb26a` | merge(develop): sign in and sign up with the RESTful API | — | 14/11/2026 12:25 |
+| `hostera-frontend` | `feature/platform-api-integration` | `b716aad` | feat(shared): read the hostera platform restful api | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `feature/platform-api-integration` | `b49ef19` | feat(rooms): show the housekeeping status of a room | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `feature/platform-api-integration` | `e5ba746` | test(rooms): cover the housekeeping status of a room | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `feature/platform-api-integration` | `e81b419` | docs: describe the restful api integration in the changelog | — | 14/11/2026 13:52 |
+| `hostera-frontend` | `develop` | `5675391` | merge(develop): read the hostera platform restful api | — | 14/11/2026 13:57 |
+| `landing-page-main` | `feature/product-and-team-videos` | `7c112b8` | feat(videos): add the about the product and about the team video section | — | 14/11/2026 14:49 |
+| `landing-page-main` | `feature/product-and-team-videos` | `2db8d6a` | docs(readme): explain where to set the video ids | — | 14/11/2026 14:49 |
+| `landing-page-main` | `develop` | `7fda44d` | merge(develop): add the product and team videos section | — | 14/11/2026 14:49 |
+| `landing-page-main` | `feature/product-screenshots` | `295d689` | chore(assets): add screens of the published web application | — | 14/11/2026 14:50 |
+| `landing-page-main` | `develop` | `ed56e23` | merge(develop): show real screens of the web application | — | 14/11/2026 14:50 |
+| `landing-page-main` | `feature/product-screenshots` | `e5db6fc` | feat(product): show real screens of the web application with its call to action | — | 14/11/2026 14:50 |
+| `landing-page-main` | `develop` | `cb6fc6b` | merge(develop): add the contact options and social links | — | 14/11/2026 14:51 |
+| `landing-page-main` | `feature/contact-and-social` | `68accc9` | feat(footer): show the contact options and the team github in every footer | — | 14/11/2026 14:51 |
+| `landing-page-main` | `develop` | `1e6f9c6` | merge(develop): improve the mobile navigation | — | 14/11/2026 14:53 |
+| `landing-page-main` | `feature/responsive-fixes` | `039bf9b` | fix(nav): announce the menu state and close it when the layout turns desktop | — | 14/11/2026 14:53 |
+| `landing-page-main` | `release/0.6.0` | `0e00276` | chore(release): prepare 0.6.0 | — | 14/11/2026 14:54 |
+| `landing-page-main` | `main` | `85d61ef` | merge(main): release 0.6.0 | — | 14/11/2026 14:54 |
+| `landing-page-main` | `develop` | `6619132` | merge(develop): back-merge release 0.6.0 | — | 14/11/2026 14:54 |
+| `Hostera-Project-Report-v2` | `feature/av2-report-skeleton` | `a09fa2d` | docs(report): restore README.md as the main report file | The project statement requires README.md to be the main report file. The repository guide stays in docs/repository-guide.md and scripts/build-pdf.sh already reads README.md. | 14/11/2026 11:52 |
+| `Hostera-Project-Report-v2` | `feature/av2-report-skeleton` | `1d77685` | docs(report): add the AV2 section skeleton | Adds empty headings for Sprint 3 (5.2.3.1 to 5.2.3.8), Validation Interviews (5.3.1 to 5.3.3) and Video About-the-Product (5.4), their table of contents entries and the AV2 collaboration insights placeholder, each with its owner, so the team can write their sections in parallel. | 14/11/2026 11:52 |
+| `Hostera-Project-Report-v2` | `develop` | `3808882` | merge(develop): add the AV2 section skeleton | — | 14/11/2026 11:52 |
+| `Hostera-Project-Report-v2` | `feature/av2-planning-and-deployment` | `050c2ba` | docs(sprint-3): add the Sprint 3 planning | Adds the Sprint Planning 3 table with the meeting data, the Sprint 2 review and retrospective, the goal and its metric, the velocity separated from the committed story points, and the 13 committed stories with their owners. | 14/11/2026 12:38 |
+| `Hostera-Project-Report-v2` | `feature/av2-planning-and-deployment` | `ee4f1b4` | docs(sprint-3): add the deployment evidence of the RESTful API | Documents the Render web service and PostgreSQL database, the deployment steps and environment variables, the verification of the published API and the test workflow, with the Swagger UI screenshot. | 14/11/2026 12:38 |
+| `Hostera-Project-Report-v2` | `develop` | `537ed3f` | merge(develop): add the Sprint 3 planning and deployment evidence | — | 14/11/2026 12:38 |
+| `Hostera-Project-Report-v2` | `feature/av2-ddd-aggregates` | `d215339` | docs(design): add the aggregates, value objects and invariants of IAM and Organizations | Adds to section 4.7.1 the aggregate roots, entities, value objects, invariants and transactional boundaries of the implemented contexts, and explains why properties and staff moved from IAM to the Organizations context. | 14/11/2026 12:39 |
+| `Hostera-Project-Report-v2` | `develop` | `55f50ab` | merge(develop): add the AV2 student outcome of José Santana | — | 14/11/2026 12:39 |
+| `Hostera-Project-Report-v2` | `feature/av2-student-outcome` | `9c8f305` | docs(outcome): add the AV2 student outcome of José Santana | Adds the AV2 actions and conclusions of José Santana for both criteria of the student outcome. | 14/11/2026 12:39 |
+| `Hostera-Project-Report-v2` | `feature/av2-traceability-matrix` | `1d9aabf` | docs(annexes): add the traceability matrix | Adds Annex C, which connects each interview finding with its user persona, business goal, epic, user and technical stories, sprint and evidence section, and lists the technical stories left for the next sprint. | 14/11/2026 12:41 |
+| `Hostera-Project-Report-v2` | `develop` | `04bdc82` | merge(develop): add the traceability matrix | — | 14/11/2026 12:41 |
+| `Hostera-Project-Report-v2` | `develop` | `fffa03a` | merge(develop): remove the empty TB2 placeholders | — | 14/11/2026 12:42 |
+| `Hostera-Project-Report-v2` | `feature/av2-form-review` | `bf9d37e` | docs(report): remove the empty TB2 placeholders | The AV1 review observed empty future sections; the TB2 entries of the collaboration insights and the student outcome are added when TB2 is delivered. | 14/11/2026 12:42 |
+| `Hostera-Project-Report-v2` | `develop` | `5f1a65e` | merge(develop): fit the traceability matrix to the page | — | 14/11/2026 12:49 |
+| `Hostera-Project-Report-v2` | `feature/av2-traceability-layout` | `59b9a53` | docs(annexes): fit the traceability matrix to the page width | Groups the user and technical stories in one column and the sprint with its evidence sections in another, so the table no longer overflows the A4 page. | 14/11/2026 12:49 |
+| `Hostera-Project-Report-v2` | `feature/av2-annex-a` | `e253e94` | docs(annexes): state where the TB1 exposition video was delivered | Replaces the pending-link note of Annex A with the place where the TB1 video was delivered. | 14/11/2026 13:15 |
+| `Hostera-Project-Report-v2` | `develop` | `39ac560` | merge(develop): update the TB1 entry of Annex A | — | 14/11/2026 13:15 |
+| `Hostera-Project-Report-v2` | `feature/av2-annex-a-tb1-link` | `8513ab5` | docs(annexes): add the Microsoft Stream link of the TB1 exposition | — | 14/11/2026 13:41 |
+| `Hostera-Project-Report-v2` | `develop` | `6497539` | merge(develop): add the TB1 exposition link | — | 14/11/2026 13:41 |
+| `Hostera-Project-Report-v2` | `feature/av2-stack-alignment` | `d6d67b7` | docs(architecture): align the C4 model with the implemented stack | The RESTful API was implemented with Java 25, Spring Boot 4 and PostgreSQL 17, so the container and component diagrams and the Structurizr workspace now show that stack instead of Java 21, Spring Boot 3 and MySQL 8. | 14/11/2026 14:16 |
+| `Hostera-Project-Report-v2` | `feature/av2-stack-alignment` | `a099fb7` | docs(report): update the stack, repositories and deployment of the RESTful API | Replaces the texts written before Sprint 3: Java 25, Spring Boot 4 and PostgreSQL 17 in the architecture, database and tooling sections, the hostera-platform repository and its Render deployment in section 5.1, Swagger UI instead of the planned Postman collections, the API links in Annex B and the November cover date. | 14/11/2026 14:18 |
+| `Hostera-Project-Report-v2` | `develop` | `8526eb6` | merge(develop): align the report with the implemented stack | — | 14/11/2026 14:18 |
+| `Hostera-Project-Report-v2` | `feature/av2-ddd-aggregates` | `958b153` | Merge branch 'develop' into feature/av2-ddd-aggregates | — | 14/11/2026 14:19 |
+| `Hostera-Project-Report-v2` | `feature/av2-ddd-aggregates` | `2d830dd` | docs(design): add the aggregates and invariants of Bookings, Access Control, Rooms and Inventory | Completes the table of section 4.7.1 with the aggregate roots, value objects, invariants and transactional boundaries implemented in the other four bounded contexts, including the room status changes of check-in and check-out and the key-card rules. | 14/11/2026 14:20 |
+| `Hostera-Project-Report-v2` | `develop` | `9ff4557` | merge(develop): add the aggregates, value objects and invariants per bounded context | — | 14/11/2026 14:20 |
+| `Hostera-Project-Report-v2` | `feature/av2-validation-and-execution` | `e638979` | docs(validation): design the validation interviews and add the av2 references | — | 14/11/2026 14:46 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `6b4ca49` | docs(sprint-2): split the sprint backlog 2 tasks longer than eight hours | — | 14/11/2026 15:01 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `1312ff8` | docs(sprint-2): separate committed and completed points in the sprint planning 2 | — | 14/11/2026 15:01 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `bb74dec` | docs(sprint-3): add the sprint backlog 3 with real assignees | — | 14/11/2026 15:01 |
+| `Hostera-Project-Report-v2` | `feature/av2-backlog-and-evidence` | `d28a3fe` | docs(sprint-3): document the restful api endpoints and swagger evidence | — | 14/11/2026 15:01 |
 
 
 
