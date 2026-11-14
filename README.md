@@ -5437,7 +5437,7 @@ se publicaron nuevas versiones de la Frontend Web Application y de la Landing Pa
 | Base de datos | PostgreSQL 17 | Render Postgres, plan gratuito en la misma región, conectado a la API por la red interna de Render. Hibernate crea el esquema en el primer arranque y la API carga los datos de demostración de la Frontend Web Application solo si la base está vacía. | Sin acceso público |
 | Pruebas de la RESTful API | `v0.3.2` | Workflow `Tests` de GitHub Actions, que ejecuta `mvn test` con Temurin 25 en cada push a `main`, `develop`, `feature/*` y `release/*`. | https://github.com/Team-Coworkers/hostera-platform/actions |
 | Landing Page (`landing-page-main`) | `v0.6.0` | GitHub Pages desde la rama `main`. La compilación del commit `85d61ef` (release `v0.6.0`) terminó con el estado *built* el 14/11/2026. | https://team-coworkers.github.io/landing-page-main/ |
-<!-- AV2 · Frontend Web Application v0.6.0: agregar la fila cuando Juan Diego publique la release. -->
+| Frontend Web Application (`hostera-frontend`) | `v0.6.0` | GitHub Pages con el workflow `Deploy to GitHub Pages` (ejecución `43643715898`, commit `304f41c`), que terminó con éxito el 14/11/2026. La compilación de producción lee la RESTful API publicada en Render e inicia sesión con su JWT; la API acepta el origen `https://team-coworkers.github.io` en su configuración de CORS. El workflow `Unit tests` (ejecución `43643715919`) pasó las 35 pruebas en `main`. | https://team-coworkers.github.io/hostera-frontend/ |
 **Pasos del despliegue de la API.**
 
 1. Se creó la base de datos `hostera-platform-db` en Render Postgres (versión 17, región Oregon).
