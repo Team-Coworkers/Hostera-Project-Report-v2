@@ -5076,9 +5076,147 @@ asignadas porque no registran commits en el sprint.
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-<!-- AV2 · Responsable: Darnell Cuba (darnell1910) -->
+En el Sprint 3 se documentaron con OpenAPI todos los endpoints de la RESTful API de Hostera.
+La documentación se genera con springdoc-openapi a partir de las anotaciones `@Tag`,
+`@Operation`, `@Parameter`, `@ApiResponse` y `@Schema` de cada controlador y recurso, y se
+publica con Swagger UI junto a la API desplegada en Render:
 
-*Sección en elaboración para AV2.*
+- Swagger UI: https://hostera-platform-api.onrender.com/swagger-ui/index.html
+- Documento OpenAPI en JSON: https://hostera-platform-api.onrender.com/v3/api-docs
+
+La API publicada (`v0.3.1`) expone 13 recursos de negocio en cinco bounded contexts
+(Organizations, Bookings, Access Control, Rooms e Inventory) y los recursos `users`,
+`tokens` y `roles` de IAM. Las rutas siguen el contrato que ya consumía la Frontend Web
+Application con su API de demostración: los mismos nombres de recurso, los mismos campos y
+los mismos filtros por query, como `GET /api/v1/bookings?propertyId=1&_sort=code&_order=desc&_limit=1`
+o `GET /api/v1/credentials?bookingId=3`. Así, para pasar de los datos de demostración a la
+API real, la aplicación solo cambia la dirección base. Todas las rutas, salvo el registro
+(`POST /api/v1/users`) y el inicio de sesión (`POST /api/v1/tokens`), exigen el token JWT en la
+cabecera `Authorization: Bearer <token>`. Los errores se devuelven como Problem Details: `400`
+para datos inválidos, `404` para un recurso inexistente, `409` cuando la habitación ya está
+reservada en noches que se cruzan y `422` cuando se incumple una regla de negocio, como emitir
+una tarjeta para una habitación bloqueada.
+
+La tabla de endpoints se obtuvo del documento OpenAPI publicado en Render.
+
+| Verbo | Ruta | Parámetros | Respuesta exitosa | Requiere token |
+| --- | --- | --- | --- | :---: |
+| GET | `/api/v1/users` | — | 200 · `UserResponse` | Sí |
+| POST | `/api/v1/users` | cuerpo `SignUpRequest` | 201 · `UserResponse` | No |
+| GET | `/api/v1/users/{userId}` | `userId` (ruta) | 200 · `UserResponse` | Sí |
+| POST | `/api/v1/tokens` | cuerpo `SignInRequest` | 200 · `AuthenticatedUserResponse` | No |
+| GET | `/api/v1/roles` | — | 200 · `RoleResponse` | Sí |
+| GET | `/api/v1/properties` | `organizationId` (query) | 200 · arreglo de `Property` | Sí |
+| POST | `/api/v1/properties` | cuerpo `SavePropertyRequest` | 201 | Sí |
+| GET | `/api/v1/properties/{propertyId}` | `propertyId` (ruta) | 200 · `Property` | Sí |
+| PUT | `/api/v1/properties/{propertyId}` | `propertyId` (ruta), cuerpo `SavePropertyRequest` | 200 | Sí |
+| DELETE | `/api/v1/properties/{propertyId}` | `propertyId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/staff-members` | `propertyId` (query) | 200 · arreglo de `StaffMember` | Sí |
+| POST | `/api/v1/staff-members` | cuerpo `SaveStaffMemberRequest` | 201 | Sí |
+| GET | `/api/v1/staff-members/{staffMemberId}` | `staffMemberId` (ruta) | 200 · `StaffMember` | Sí |
+| PUT | `/api/v1/staff-members/{staffMemberId}` | `staffMemberId` (ruta), cuerpo `SaveStaffMemberRequest` | 200 | Sí |
+| DELETE | `/api/v1/staff-members/{staffMemberId}` | `staffMemberId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/bookings` | `propertyId` (query), `status` (query), `roomId` (query), `_sort` (query), `_order` (query), `_limit` (query) | 200 · arreglo de `Booking` | Sí |
+| POST | `/api/v1/bookings` | cuerpo `SaveBookingRequest` | 201 | Sí |
+| GET | `/api/v1/bookings/{bookingId}` | `bookingId` (ruta) | 200 · `Booking` | Sí |
+| PUT | `/api/v1/bookings/{bookingId}` | `bookingId` (ruta), cuerpo `SaveBookingRequest` | 200 | Sí |
+| DELETE | `/api/v1/bookings/{bookingId}` | `bookingId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/payments` | `propertyId` (query), `bookingId` (query) | 200 · arreglo de `Payment` | Sí |
+| POST | `/api/v1/payments` | cuerpo `SavePaymentRequest` | 201 | Sí |
+| GET | `/api/v1/payments/{paymentId}` | `paymentId` (ruta) | 200 · `Payment` | Sí |
+| PUT | `/api/v1/payments/{paymentId}` | `paymentId` (ruta), cuerpo `SavePaymentRequest` | 200 | Sí |
+| DELETE | `/api/v1/payments/{paymentId}` | `paymentId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/credentials` | `propertyId` (query), `roomId` (query), `bookingId` (query) | 200 · arreglo de `Credential` | Sí |
+| POST | `/api/v1/credentials` | cuerpo `SaveCredentialRequest` | 201 | Sí |
+| GET | `/api/v1/credentials/{credentialId}` | `credentialId` (ruta) | 200 · `Credential` | Sí |
+| PUT | `/api/v1/credentials/{credentialId}` | `credentialId` (ruta), cuerpo `SaveCredentialRequest` | 200 | Sí |
+| DELETE | `/api/v1/credentials/{credentialId}` | `credentialId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/access-events` | `propertyId` (query), `roomId` (query), `bookingId` (query), `credentialId` (query) | 200 · arreglo de `AccessEvent` | Sí |
+| POST | `/api/v1/access-events` | cuerpo `SaveAccessEventRequest` | 201 | Sí |
+| GET | `/api/v1/access-events/{accessEventId}` | `accessEventId` (ruta) | 200 · `AccessEvent` | Sí |
+| PUT | `/api/v1/access-events/{accessEventId}` | `accessEventId` (ruta), cuerpo `SaveAccessEventRequest` | 200 | Sí |
+| DELETE | `/api/v1/access-events/{accessEventId}` | `accessEventId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/rooms` | `propertyId` (query), `roomTypeId` (query), `status` (query) | 200 · arreglo de `Room` | Sí |
+| POST | `/api/v1/rooms` | cuerpo `SaveRoomRequest` | 201 | Sí |
+| GET | `/api/v1/rooms/{roomId}` | `roomId` (ruta) | 200 · `Room` | Sí |
+| PUT | `/api/v1/rooms/{roomId}` | `roomId` (ruta), cuerpo `SaveRoomRequest` | 200 | Sí |
+| DELETE | `/api/v1/rooms/{roomId}` | `roomId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/room-types` | `propertyId` (query), `status` (query) | 200 · arreglo de `RoomType` | Sí |
+| POST | `/api/v1/room-types` | cuerpo `SaveRoomTypeRequest` | 201 | Sí |
+| GET | `/api/v1/room-types/{roomTypeId}` | `roomTypeId` (ruta) | 200 · `RoomType` | Sí |
+| PUT | `/api/v1/room-types/{roomTypeId}` | `roomTypeId` (ruta), cuerpo `SaveRoomTypeRequest` | 200 | Sí |
+| DELETE | `/api/v1/room-types/{roomTypeId}` | `roomTypeId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/rate-plans` | `propertyId` (query), `status` (query) | 200 · arreglo de `RatePlan` | Sí |
+| POST | `/api/v1/rate-plans` | cuerpo `SaveRatePlanRequest` | 201 | Sí |
+| GET | `/api/v1/rate-plans/{ratePlanId}` | `ratePlanId` (ruta) | 200 · `RatePlan` | Sí |
+| PUT | `/api/v1/rate-plans/{ratePlanId}` | `ratePlanId` (ruta), cuerpo `SaveRatePlanRequest` | 200 | Sí |
+| DELETE | `/api/v1/rate-plans/{ratePlanId}` | `ratePlanId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/daily-rates` | `propertyId` (query), `ratePlanId` (query), `roomTypeId` (query), `date` (query) | 200 · arreglo de `DailyRate` | Sí |
+| POST | `/api/v1/daily-rates` | cuerpo `SaveDailyRateRequest` | 201 | Sí |
+| GET | `/api/v1/daily-rates/{dailyRateId}` | `dailyRateId` (ruta) | 200 · `DailyRate` | Sí |
+| PUT | `/api/v1/daily-rates/{dailyRateId}` | `dailyRateId` (ruta), cuerpo `SaveDailyRateRequest` | 200 | Sí |
+| DELETE | `/api/v1/daily-rates/{dailyRateId}` | `dailyRateId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/status-periods` | `propertyId` (query), `roomId` (query), `status` (query) | 200 · arreglo de `StatusPeriod` | Sí |
+| POST | `/api/v1/status-periods` | cuerpo `SaveStatusPeriodRequest` | 201 | Sí |
+| GET | `/api/v1/status-periods/{statusPeriodId}` | `statusPeriodId` (ruta) | 200 · `StatusPeriod` | Sí |
+| PUT | `/api/v1/status-periods/{statusPeriodId}` | `statusPeriodId` (ruta), cuerpo `SaveStatusPeriodRequest` | 200 | Sí |
+| DELETE | `/api/v1/status-periods/{statusPeriodId}` | `statusPeriodId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/inventory-items` | `propertyId` (query), `category` (query) | 200 · arreglo de `InventoryItem` | Sí |
+| POST | `/api/v1/inventory-items` | cuerpo `SaveInventoryItemRequest` | 201 | Sí |
+| GET | `/api/v1/inventory-items/{inventoryItemId}` | `inventoryItemId` (ruta) | 200 · `InventoryItem` | Sí |
+| PUT | `/api/v1/inventory-items/{inventoryItemId}` | `inventoryItemId` (ruta), cuerpo `SaveInventoryItemRequest` | 200 | Sí |
+| DELETE | `/api/v1/inventory-items/{inventoryItemId}` | `inventoryItemId` (ruta) | 200 · `{ "message": ... }` | Sí |
+| GET | `/api/v1/storage-locations` | `propertyId` (query), `type` (query) | 200 · arreglo de `StorageLocation` | Sí |
+| POST | `/api/v1/storage-locations` | cuerpo `SaveStorageLocationRequest` | 201 | Sí |
+| GET | `/api/v1/storage-locations/{storageLocationId}` | `storageLocationId` (ruta) | 200 · `StorageLocation` | Sí |
+| PUT | `/api/v1/storage-locations/{storageLocationId}` | `storageLocationId` (ruta), cuerpo `SaveStorageLocationRequest` | 200 | Sí |
+| DELETE | `/api/v1/storage-locations/{storageLocationId}` | `storageLocationId` (ruta) | 200 · `{ "message": ... }` | Sí |
+
+Los ejemplos de respuesta corresponden a los valores de ejemplo declarados en el esquema de
+cada recurso en la documentación OpenAPI. En los esquemas con muchos campos, como `Booking` y
+`Credential`, se muestran solo los primeros campos.
+
+| Recurso | Esquema | Ejemplo de respuesta |
+| --- | --- | --- |
+| `users` | `UserResponse` | `{"id": 1, "username": "maria.quispe@hostera.pe", "roles": ["ROLE_USER"]}` |
+| `tokens` | `AuthenticatedUserResponse` | `{"id": 1, "username": "john.doe", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}` |
+| `roles` | `RoleResponse` | `{"id": 1, "name": "ROLE_USER"}` |
+| `properties` | `Property` | `{"id": 1, "organizationId": 1, "name": "Cartagena 04", "city": "Cartagena", "currency": "PEN"}` |
+| `staff-members` | `StaffMember` | `{"id": 1, "propertyId": 1, "name": "Lucía Martín", "role": "Operations manager"}` |
+| `bookings` | `Booking` | `{"id": 1, "propertyId": 1, "code": "BKG-1048", "status": "confirmed", "guestName": "Adriana Torres", "guestEmail": "adriana.torres@example.com", "guestPhone": "+51 910 100 200", "preferredLanguage": "es", "checkInDate": "2026-10-07", "checkOutDate": "2026-10-09", "guests": 2, "roomTypeId": 1, ...}` |
+| `payments` | `Payment` | `{"id": 1, "propertyId": 1, "bookingId": 2, "amount": 255, "method": "card-terminal", "paidAt": "2026-10-05T16:30:00Z", "reference": "POS-470075", "recordedBy": "Demo operator"}` |
+| `credentials` | `Credential` | `{"id": 1, "propertyId": 1, "cardId": "8F2A", "type": "guest-key-card", "holderName": "Elena Ferrer", "staffMemberId": null, "bookingId": 3, "bookingCode": "BKG-1032", "roomId": 6, "scope": null, "validFrom": "2026-10-03T20:26:00Z", "validUntil": "2026-10-07T16:00:00Z", ...}` |
+| `access-events` | `AccessEvent` | `{"id": 1, "propertyId": 1, "occurredAt": "2026-10-05T03:40:00Z", "credentialId": 7, "cardId": "3B08", "holderName": "Emily Carter", "holderType": "guest", "accessPoint": "room-door", "roomId": 16, "result": "denied", "denialReason": "revoked"}` |
+| `rooms` | `Room` | `{"id": 1, "propertyId": 1, "number": "201", "roomTypeId": 1, "floor": 2, "status": "available"}` |
+| `room-types` | `RoomType` | `{"id": 1, "propertyId": 1, "name": "Standard", "capacity": 2, "bedConfiguration": "1 queen", "baseNightlyRate": 180, "status": "active"}` |
+| `rate-plans` | `RatePlan` | `{"id": 1, "propertyId": 1, "name": "Flexible", "roomTypeIds": [1, 2], "includedServices": "room-only", "refundable": true, "cancellationPolicy": "Free cancellation until 24 hours before arrival", "status": "active"}` |
+| `daily-rates` | `DailyRate` | `{"id": 1, "propertyId": 1, "ratePlanId": 1, "roomTypeId": 1, "date": "2026-10-01", "amount": 190}` |
+| `status-periods` | `StatusPeriod` | `{"id": 1, "propertyId": 1, "roomId": 12, "status": "blocked", "startDate": "2026-10-10", "endDate": "2026-10-11", "reason": "Held for a corporate group"}` |
+| `inventory-items` | `InventoryItem` | `{"id": 1, "propertyId": 1, "name": "Bath towels", "code": "LIN-BT-001", "category": "linen", "unit": "units", "primaryLocationId": 1, "lowStockThreshold": 30, "stocks": [], "adjustments": []}` |
+| `storage-locations` | `StorageLocation` | `{"id": 1, "propertyId": 1, "name": "Housekeeping", "code": "HK-01", "type": "warehouse", "area": "Ground floor", "responsibleTeam": "Housekeeping", "description": "Linen and guest supplies."}` |
+
+<img src="assets/chapter-5/sprint-3-swagger-bookings-access-control.png" alt="Swagger UI de la RESTful API de Hostera con las operaciones de Bookings y Access Events" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Operaciones de los recursos `bookings` y `access-events` en Swagger UI.*
+
+<img src="assets/chapter-5/sprint-3-swagger-get-bookings.png" alt="Detalle de GET /api/v1/bookings en Swagger UI con sus parámetros y el ejemplo de respuesta" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Detalle de `GET /api/v1/bookings` en Swagger UI, con los filtros que usa la Frontend Web Application y el ejemplo de respuesta.*
+
+Los commits que agregaron o corrigieron la documentación OpenAPI en `hostera-platform` son
+los siguientes.
+
+| Commit Id | Autor | Commit Message | Documentación agregada | Committed on |
+| --- | --- | --- | --- | --- |
+| `075e27b` | `JhosBY2005` | feat(shared): add the shared kernel | Configuración de OpenAPI con el esquema de seguridad `bearerAuth`. | 14/11/2026 12:10 |
+| `3f53324` | `JhosBY2005` | feat(iam): add sign-up and sign-in with JWT | Operaciones de `users`, `tokens` y `roles`. | 14/11/2026 12:10 |
+| `1233787` | `JhosBY2005` | feat(organizations): expose the properties and staff-members endpoints | Operaciones de `properties` y `staff-members`. | 14/11/2026 12:16 |
+| `c02f1ff` | `darnell1910` | feat(bookings): expose bookings and payments through the rest api | Operaciones, parámetros, respuestas y esquemas de `bookings` y `payments`. | 14/11/2026 13:01 |
+| `2ea2314` | `darnell1910` | feat(access-control): expose credentials and access events through the rest api | Operaciones, parámetros, respuestas y esquemas de `credentials` y `access-events`. | 14/11/2026 13:12 |
+| `89ceb97` | `YopoFlores` | feat(rooms): expose the rooms endpoints and the context facade | Operaciones de `rooms`, `room-types`, `rate-plans`, `daily-rates` y `status-periods`. | 14/11/2026 13:30 |
+| `94d2e3d` | `YopoFlores` | feat(inventory): expose the inventory-items and storage-locations endpoints | Operaciones de `inventory-items` y `storage-locations`. | 14/11/2026 13:30 |
+| `06c5230` | `JhosBY2005` | docs(organizations): fix the wording of the OpenAPI operations | Corrección de la redacción de las operaciones de Organizations. | 14/11/2026 14:14 |
+| `8f00f93` | `YopoFlores` | fix(inventory): correct the article in the api documentation | Corrección de la redacción de la documentación de Inventory. | 14/11/2026 14:47 |
 
 
 
