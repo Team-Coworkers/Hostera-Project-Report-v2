@@ -136,9 +136,27 @@ desde el 18 de septiembre, sin commits de merge.
 
 ## AV2
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+Durante AV2 el informe se trabajó en ramas `feature/av2-*` que se integraron en `develop`
+con merges `--no-ff` y mensajes Conventional Commits, y se publicó en `main` con la release
+de la versión 0.8.0. El trabajo de AV2 empezó con el Sprint Planning 3 del 13 de noviembre de
+2026. La siguiente tabla resume qué secciones trabajó cada integrante.
 
-*Sección en elaboración para AV2.*
+| Integrante | Aportes al informe en AV2 |
+| --- | --- |
+| Darnell Cuba (`darnell1910`) | Correcciones del Sprint 2 (tareas del Sprint Backlog 2 entre 4 y 8 horas, puntos comprometidos y completados, y datos del Sprint Planning 2), comparación con tres competidores por capacidad, costo y beneficio verificable, y Sprint Backlog 3 alineado con YouTrack. También aportó la evidencia de desarrollo del Sprint 3 y la documentación de servicios con pruebas en Swagger UI. |
+| Juan Diego Flores (`YopoFlores`) | Diseño de las entrevistas de validación y referencias de AV2. |
+| Jorge Mateo Leon (`mateool10`) | Sin commits en el informe durante AV2; realizó una entrevista de validación. |
+| Jose Gabriel Rudas (`josegabriel1604`) | Sin commits en el informe durante AV2; realizó una entrevista de validación. |
+| José Santana (`JhosBY2005`) | Estructura de AV2 y `README.md` como archivo principal, Sprint Planning 3, aspect leaders, evidencia de despliegue y analíticos del Sprint 3. También trabajó los agregados e invariantes de los seis bounded contexts, la alineación del modelo C4 y de las tablas de tecnología con la API implementada, la matriz de trazabilidad, los anexos, el Student Outcome, estos Collaboration Insights y el Registro de Versiones. |
+
+Igual que en TB1, el gráfico se construyó a partir del historial de todas las ramas del
+repositorio del informe desde el 13 de noviembre de 2026, sin commits de merge.
+
+<div style="page-break-before: always;"></div>
+
+<img src="assets/project-report-collaboration-insights/av2-commits-by-member.svg" alt="Commits por integrante en el repositorio del informe durante AV2" style="width:85%; height:auto; display:block; margin:0 auto;"/>
+
+*Evidencia 5. Commits por integrante en el repositorio del Project Report durante AV2.*
 
 <div style="page-break-before: always;"></div>
 
