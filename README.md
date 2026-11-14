@@ -4852,9 +4852,62 @@ context de la RESTful API y sus pruebas.
 
 #### 5.2.3.1. Sprint Planning 3
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+El Sprint 3 se planificó para publicar la primera versión de los RESTful Web Services de
+Hostera y conectar a ellos la Frontend Web Application, además de una nueva versión de la
+Landing Page. El alcance reúne las technical stories de la API (`TS001` a `TS017`) que
+cubren los bounded contexts implementados en la aplicación web, y vuelve a abrir `US009` y
+`US010`, que en el Sprint 2 quedaron en versión de demostración y en este sprint guardan las
+cuentas y emiten un token JWT real. El plan también incluye las correcciones que el
+profesor observó en los informes de AV1 y TB1.
 
-*Sección en elaboración para AV2.*
+| Campo | Resumen |
+| --- | --- |
+| Sprint # | Sprint 3 |
+| Sprint Planning Background | Planificación de la primera versión de la RESTful API de Hostera con Spring Boot, Spring Data JPA y PostgreSQL, su despliegue en Render, la conexión de la Frontend Web Application `v0.6.0` y la Landing Page `v0.6.0`, y la validación con usuarios. |
+| Date | 13/11/2026 |
+| Time | 14:00 |
+| Location | Reunión virtual en Google Meet |
+| Prepared By | Santana Luna, José Antonio (`JhosBY2005`) |
+| Attendees (to planning meeting) | Cuba Vega, Darnell Yadir (`darnell1910`); Flores Rios, Juan Diego (`YopoFlores`); Santana Luna, José Antonio (`JhosBY2005`). |
+| Sprint 2 Review Summary | El Sprint 2 cerró con la Frontend Web Application en Angular publicada en GitHub Pages y en Render, organizada en seis bounded contexts, con las 23 user stories comprometidas implementadas (117 story points) sobre una API de datos de demostración. En la revisión de TB1 el profesor observó que la demostración se concentró en las credenciales RFID y que no se mostró cómo trabajan juntos las reservas, las habitaciones, el inventario y los accesos. |
+| Sprint 2 Retrospective Summary | Funcionó separar el trabajo por bounded context en ramas paralelas y publicar cada versión con su release. Como oportunidad de mejora, el código de la aplicación quedó concentrado en pocos integrantes y varias tasks superaron las ocho horas. En el Sprint 3 cada integrante implementa un bounded context de la API con sus propios commits, y ninguna task supera las ocho horas. |
+| Sprint 3 Goal | Nuestro enfoque está en que el responsable de operaciones de un hotel independiente o de una cadena pequeña pueda crear su cuenta, iniciar sesión y trabajar en la aplicación publicada sobre datos que se guardan en un servidor. Creemos que esto le permite confiar en que las reservas, las habitaciones, el inventario y las credenciales que registra quedan disponibles para todo su equipo. Esto se confirmará cuando una persona cree una cuenta, inicie sesión y registre una reserva con su pago en la aplicación desplegada, y los datos sigan disponibles al volver a iniciar sesión. |
+| Sprint 3 Goal Metric | El objetivo se considera cumplido cuando ese recorrido se completa en la aplicación publicada contra la API desplegada en Render, la documentación de Swagger responde en línea con todos los endpoints y las pruebas automatizadas de la API pasan. |
+| Sprint 3 Velocity | 117 story points: la velocity del Sprint 2, medida con las 23 user stories que se terminaron. |
+| Sum of Story Points | 65 story points comprometidos para el Sprint 3. |
+
+En el Sprint 2 se comprometieron 117 story points y se terminaron 117, por lo que esa es la
+velocity del equipo hasta ahora. En el Sprint 3 se comprometen 65 story points porque el
+trabajo se reparte entre tres integrantes y porque la API se construye desde cero, con su
+configuración, su seguridad y su despliegue. Los puntos terminados se registran al cierre
+del sprint en la sección 5.2.3.3.
+
+Las historias incluidas en el Sprint 3 son las siguientes. Los story points corresponden a
+la estimación registrada en el Product Backlog.
+
+| Story ID | Título | Bounded Context | Story Points | Responsable |
+| --- | --- | --- | :---: | --- |
+| TS017 | Return standardized API errors | Shared | 5 | Santana Luna, José Antonio |
+| TS001 | Register an account through the API | IAM | 5 | Santana Luna, José Antonio |
+| TS002 | Authenticate an operator through the API | IAM | 5 | Santana Luna, José Antonio |
+| US009 | Register a hotel operation | IAM | 5 | Santana Luna, José Antonio |
+| US010 | Sign in to Hostera | IAM | 3 | Santana Luna, José Antonio |
+| TS005 | Query bookings through the API | Bookings | 3 | Cuba Vega, Darnell Yadir |
+| TS006 | Create and update bookings through the API | Bookings | 5 | Cuba Vega, Darnell Yadir |
+| TS008 | Record payments through the API | Bookings | 5 | Cuba Vega, Darnell Yadir |
+| TS014 | Manage RFID credentials through the API | Access Control | 8 | Cuba Vega, Darnell Yadir |
+| TS015 | Record and query RFID access events through the API | Access Control | 5 | Cuba Vega, Darnell Yadir |
+| TS011 | Manage rooms, room types, and rates through the API | Rooms | 8 | Flores Rios, Juan Diego |
+| TS012 | Manage inventory and stock adjustments through the API | Inventory | 5 | Flores Rios, Juan Diego |
+| TS013 | Manage storage locations through the API | Inventory | 3 | Flores Rios, Juan Diego |
+| **Total** | **13 historias** | **Cinco bounded contexts y Shared** | **65** | |
+
+La implementación sigue las convenciones del proyecto de referencia del curso: el registro
+usa `POST /api/v1/users` y el inicio de sesión `POST /api/v1/tokens`, en lugar de las rutas
+`/auth/register` y `/auth/sessions` que se escribieron en el Product Backlog antes de
+conocer ese proyecto. Las rutas de los demás recursos son las mismas que ya consume la
+Frontend Web Application, como `/api/v1/bookings?propertyId=1`, para que la aplicación
+cambie solo la dirección de la API.
 
 
 
@@ -4903,7 +4956,6 @@ context de la RESTful API y sus pruebas.
 <!-- AV2 · Responsable: José Santana (JhosBY2005) -->
 
 *Sección en elaboración para AV2.*
-
 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
