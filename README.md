@@ -4992,9 +4992,34 @@ cambie solo la dirección de la API.
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-<!-- AV2 · Responsable: José Santana (JhosBY2005) -->
+En el Sprint 3 cada aspecto corresponde a un bounded context de la RESTful API o a un
+producto del sprint. La matriz se obtuvo del historial de commits de `hostera-platform`,
+`hostera-frontend`, `landing-page-main` y del informe. Para las entrevistas de validación,
+que no generan commits, se tomó de las tareas del Sprint Backlog 3. El líder de cada aspecto
+es quien concentra sus commits o tiene asignada su tarea principal, y un colaborador es quien
+también hizo commits o tareas en él.
 
-*Sección en elaboración para AV2.*
+En la matriz Leadership-and-Collaboration (LACX), `L` representa al líder del aspecto,
+`C` a un colaborador y `N/A` indica que el integrante no participó en ese aspecto.
+
+| Team Member | GitHub Username | Platform Setup and Deployment | IAM and Organizations | Bookings and Payments | Access Control | Rooms and Inventory | Frontend Integration | Landing Page v0.6.0 | Validation Interviews | Project Report |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Cuba Vega, Darnell Yadir | `darnell1910` | N/A | N/A | L | L | N/A | N/A | L | N/A | C |
+| Flores Rios, Juan Diego | `YopoFlores` | N/A | N/A | N/A | N/A | L | L | N/A | L | C |
+| Leon Naupari, Jorge Mateo | `mateool10` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | C | N/A |
+| Rudas Chavarria, Jose Gabriel | `josegabriel1604` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | C | N/A |
+| Santana Luna, José Antonio | `JhosBY2005` | L | L | N/A | N/A | N/A | C | N/A | N/A | L |
+
+La RESTful API se repartió por bounded context. José Santana creó el proyecto base, el
+kernel compartido y los contextos IAM y Organizations, y desplegó la API en Render. Darnell
+Cuba lideró Bookings y Access Control, incluida la integración que cambia el estado de la
+habitación en el check-in y el check-out. Juan Diego Flores lideró Rooms e Inventory, con la
+fachada que usan los demás contextos. Los archivos de los commits confirman que cada
+integrante modificó solo los paquetes de su propio contexto. En la Frontend Web Application,
+José Santana conectó el registro y el inicio de sesión, y Juan Diego Flores conectó el resto
+de la aplicación a la API desplegada. Darnell Cuba publicó la Landing Page `v0.6.0`. Jorge
+Mateo Leon y Jose Gabriel Rudas colaboraron en las entrevistas de validación que lideró Juan
+Diego Flores y no registran commits en este sprint.
 
 
 
