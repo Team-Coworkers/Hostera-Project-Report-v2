@@ -5353,6 +5353,27 @@ cada recurso en la documentación OpenAPI. En los esquemas con muchos campos, co
 
 *Figura 5.X. Detalle de `GET /api/v1/bookings` en Swagger UI, con los filtros que usa la Frontend Web Application y el ejemplo de respuesta.*
 
+Las siguientes capturas muestran la API probada desde Swagger UI con datos y con un token. Se
+tomaron el 14/11/2026 con la misma versión `v0.3.1` de la rama `main` ejecutada en local
+(`http://localhost:8090`), con la seguridad activada y una base de datos en memoria cargada con
+los mismos datos de demostración que la API publicada. Se usó la ejecución local para crear una
+cuenta de prueba y registrar una reserva sin modificar los datos de la API desplegada en Render.
+El recorrido fue: registro de la cuenta en `POST /api/v1/users`, inicio de sesión en
+`POST /api/v1/tokens`, autorización con el token en **Authorize** y ejecución de las operaciones.
+Sin el token, las mismas operaciones responden `401`.
+
+<img src="assets/chapter-5/sprint-3-swagger-authorize.png" alt="Ventana Authorize de Swagger UI con el esquema bearerAuth autorizado y el token oculto" style="display:block; width:60%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. Autorización en Swagger UI con el token JWT obtenido en `POST /api/v1/tokens`; Swagger oculta su valor.*
+
+<img src="assets/chapter-5/sprint-3-swagger-get-bookings-authorized.png" alt="Respuesta 200 de GET /api/v1/bookings con propertyId=1 y status=checked-in en Swagger UI" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. `GET /api/v1/bookings?propertyId=1&status=checked-in` con el token: la API responde `200` con las reservas en curso de la propiedad.*
+
+<img src="assets/chapter-5/sprint-3-swagger-post-booking-conflict.png" alt="Respuesta 409 de POST /api/v1/bookings con el Problem Details BOOKING_CONFLICT en Swagger UI" style="display:block; width:80%; height:auto; margin:0 auto;"/>
+
+*Figura 5.X. `POST /api/v1/bookings` con una reserva para la habitación 12 en noches que se cruzan con la reserva `BKG-1048`: la API responde `409` con el Problem Details `BOOKING_CONFLICT`.*
+
 Los commits que agregaron o corrigieron la documentación OpenAPI en `hostera-platform` son
 los siguientes.
 
