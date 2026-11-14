@@ -5001,12 +5001,12 @@ cambie solo la dirección de la API.
 #### 5.2.3.3. Sprint Backlog 3
 
 El Sprint Backlog 3 descompone las 13 historias del Sprint Planning 3 (sección 5.2.3.1) en
-tareas de cuatro a ocho horas, y agrega las tareas técnicas y las de la Landing Page del
-sprint. El responsable de cada tarea es el integrante que hizo los commits que la
-implementan, según el historial de `hostera-platform`, `hostera-frontend` y
-`landing-page-main` (sección 5.2.3.4). Las horas son una estimación: las tareas de cada
-historia suman dos horas por story point, como en el Sprint Backlog 2, y las tareas técnicas
-y de la Landing Page se estimaron por separado.
+tareas de cuatro a ocho horas, y agrega las tareas del sprint que no tienen una historia en el
+Product Backlog. Es la misma lista que el equipo cargó en el board de YouTrack, con los mismos
+identificadores, horas, responsables y estados. El responsable de cada tarea es el integrante
+que hizo los commits que la implementan, según el historial de `hostera-platform`,
+`hostera-frontend`, `landing-page-main` y el informe (sección 5.2.3.4), revisado el 14/11/2026
+a las 15:30. Las horas son una estimación.
 
 <table>
   <thead>
@@ -5030,54 +5030,46 @@ y de la Landing Page se estimaron por separado.
     </tr>
   </thead>
   <tbody>
-    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.1</td><td>Define the result and error types</td><td>Tipos <code>Result</code> y <code>ApplicationError</code> y su conversión a respuestas Problem Details con mensajes localizados en inglés y español.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.2</td><td>Handle validation and unexpected errors</td><td>Manejador global de errores de validación y errores inesperados, con sus pruebas unitarias.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>TS001</td><td>Register an account through the API</td><td>TS001.1</td><td>Model users and roles</td><td>Agregado de usuario, roles con su carga inicial y cifrado de contraseñas con BCrypt.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>TS001</td><td>Register an account through the API</td><td>TS001.2</td><td>Expose the sign-up endpoint</td><td>Registro en <code>POST /api/v1/users</code> y consulta de usuarios y roles.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>TS002</td><td>Authenticate an operator through the API</td><td>TS002.1</td><td>Issue the JWT at sign-in</td><td>Inicio de sesión en <code>POST /api/v1/tokens</code> que devuelve un token JWT.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>TS002</td><td>Authenticate an operator through the API</td><td>TS002.2</td><td>Protect the endpoints with the bearer token</td><td>Filtro de autorización con el token bearer y CORS para los orígenes del frontend, con pruebas del controlador de tokens.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>US009</td><td>Register a hotel operation</td><td>US009.1</td><td>Create accounts with the RESTful API</td><td>La vista de registro exige una contraseña de al menos 8 caracteres, crea el usuario en <code>POST /users</code> e inicia sesión.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>US009</td><td>Register a hotel operation</td><td>US009.2</td><td>Show the signed-in user and a sign-out action</td><td>La barra lateral muestra el usuario de la sesión y agrega la acción de cerrar sesión.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>US010</td><td>Sign in to Hostera</td><td>US010.1</td><td>Sign in with the RESTful API</td><td>Sesión con el token JWT, interceptor que envía el token solo a la API, guard del espacio de trabajo y error ante credenciales incorrectas.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>TS005</td><td>Query bookings through the API</td><td>TS005.1</td><td>Query bookings with the frontend filters</td><td><code>GET /api/v1/bookings</code> con <code>propertyId</code>, <code>status</code>, <code>roomId</code>, <code>_sort</code>, <code>_order</code> y <code>_limit</code>, y consulta por id.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.1</td><td>Model the booking aggregate and its rules</td><td>Periodo de estadía con salida posterior a la entrada, al menos un huésped y estados válidos.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.2</td><td>Reject overlapping bookings and expose the endpoints</td><td>Respuesta 409 cuando otra reserva activa ocupa la habitación en noches que se cruzan; <code>POST</code>, <code>PUT</code> y <code>DELETE</code>, y carga de las reservas de demostración.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS008</td><td>Record payments through the API</td><td>TS008.1</td><td>Model the payment and its rules</td><td>Monto mayor que cero, método de pago válido y reserva existente de la misma propiedad.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS008</td><td>Record payments through the API</td><td>TS008.2</td><td>Expose the payments endpoints</td><td>CRUD de <code>/api/v1/payments</code> con filtros <code>propertyId</code> y <code>bookingId</code>, carga de demostración y pruebas.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.1</td><td>Model credentials, states and scopes</td><td>Tarjetas de huésped y credenciales de personal con estados activo, programado, vencido, revocado y perdido.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.2</td><td>Issue key cards only for a checked-in guest</td><td>La tarjeta solo se emite para la habitación de una reserva con check-in y no para una habitación bloqueada (respuesta 422).</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.3</td><td>Revoke key cards when a booking closes</td><td>El check-out o la cancelación revoca las tarjetas de la reserva, y la revocación no se puede deshacer.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.4</td><td>Expose the credentials endpoints</td><td>CRUD de <code>/api/v1/credentials</code> con filtros, carga de demostración y pruebas.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS015</td><td>Record and query RFID access events through the API</td><td>TS015.1</td><td>Evaluate access attempts on the server</td><td>El resultado de cada intento lo decide la credencial: se registra como denegado si no está activa o si es de otra habitación.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS015</td><td>Record and query RFID access events through the API</td><td>TS015.2</td><td>Expose the access events endpoints</td><td>CRUD de <code>/api/v1/access-events</code> con filtros <code>propertyId</code>, <code>roomId</code> y <code>bookingId</code>, carga de demostración y pruebas.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.1</td><td>Model the rooms context</td><td>Agregados de habitación, tipo de habitación, plan tarifario, tarifa diaria y periodo de estado.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.2</td><td>Add the rooms commands, queries and seed</td><td>Servicios de aplicación del contexto y carga de los datos de demostración.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.3</td><td>Persist the rooms context</td><td>Entidades, repositorios y adaptadores JPA del contexto.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.4</td><td>Expose the rooms endpoints and the context facade</td><td>Endpoints del contexto, fachada para otros contextos y pruebas del controlador.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.1</td><td>Model inventory items and stock adjustments</td><td>Agregado de artículo con su stock y ajustes, servicios de aplicación y carga de demostración.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.2</td><td>Persist and expose the inventory items</td><td>Persistencia JPA y endpoints de <code>/api/v1/inventory-items</code>, con pruebas de las reglas de stock.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>TS013</td><td>Manage storage locations through the API</td><td>TS013.1</td><td>Model, persist and expose storage locations</td><td>Agregado de ubicación de almacén y endpoints de <code>/api/v1/storage-locations</code>.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT01</td><td>Set up the Spring Boot project</td><td>Proyecto Maven con Spring Boot 4 y Java 25, perfiles <code>dev</code>, <code>prod</code> y <code>test</code>, y <code>Dockerfile</code> multietapa.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT02</td><td>Add the organizations context</td><td>Propiedades y personal de cada propiedad, que los demás contextos validan.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT03</td><td>Run the tests in GitHub Actions</td><td>Workflow <code>Tests</code> que ejecuta <code>mvn test</code> en cada push.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT04</td><td>Deploy the API and its database on Render</td><td>Web Service con Docker y Render Postgres, con las variables de entorno del perfil <code>prod</code>.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT05</td><td>Keep the room status in step with the stay</td><td>El check-in deja la habitación ocupada, el check-out la deja pendiente de limpieza y no se hace check-in en una habitación bloqueada.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT06</td><td>Read the RESTful API from the frontend</td><td>La Frontend Web Application lee la RESTful API de Hostera publicada.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>Technical</td><td>Technical tasks</td><td>TT07</td><td>Show the housekeeping status of a room</td><td>Estado de limpieza de la habitación en la Frontend Web Application, con sus pruebas.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
-    <tr><td>Landing</td><td>Landing Page update</td><td>TL01</td><td>Add the product and team videos section</td><td>Sección con los videos About the Product y About the Team, con sus IDs en un solo archivo y oculta hasta tenerlos.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>Landing</td><td>Landing Page update</td><td>TL02</td><td>Show real screens of the web application</td><td>Cuatro pantallas de la aplicación publicada en la sección de producto, con su llamada a la acción.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>Landing</td><td>Landing Page update</td><td>TL03</td><td>Add the contact options and social links</td><td>Bloque de contacto y enlace al GitHub de Team Coworkers en el footer de cada página, en inglés y español.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>Landing</td><td>Landing Page update</td><td>TL04</td><td>Check the responsive layout and the mobile menu</td><td>Revisión en 360, 768 y 1280 px y mejoras del menú móvil.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
-    <tr><td>Landing</td><td>Landing Page update</td><td>TL05</td><td>Publish the landing release 0.6.0</td><td>Release <code>v0.6.0</code> con su CHANGELOG y verificación del despliegue en GitHub Pages.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.1</td><td>Configure the Spring Boot project</td><td>Maven project with Spring Boot 4, Java 25, PostgreSQL driver, dev/prod/test profiles and the multi-stage Dockerfile.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.2</td><td>Add the shared kernel and standard errors</td><td>Result, ApplicationError and Problem Details responses with messages in English and Spanish.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS017</td><td>Return standardized API errors</td><td>TS017.3</td><td>Deploy the API and its database on Render</td><td>Render Web Service with Docker, Render Postgres, environment variables and the test workflow in GitHub Actions.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS001</td><td>Register an account through the API</td><td>TS001.1</td><td>Register users through the API</td><td>Sign-up at POST /api/v1/users with BCrypt hashing and the default role.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS001</td><td>Register an account through the API</td><td>TS001.2</td><td>Manage properties and staff members</td><td>Organizations context: /api/v1/properties and /api/v1/staff-members with filters, rules and seed.</td><td>8</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS002</td><td>Authenticate an operator through the API</td><td>TS002.1</td><td>Issue JWT tokens on sign-in</td><td>Sign-in at POST /api/v1/tokens with a signed JWT.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS002</td><td>Authenticate an operator through the API</td><td>TS002.2</td><td>Authorize requests with the bearer token</td><td>Bearer authorization filter, 401 handling and CORS for the frontend origins.</td><td>5</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US009</td><td>Register a hotel operation</td><td>US009.1</td><td>Create accounts from the sign-up view</td><td>Password field, POST /users and automatic sign-in from the frontend.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US010</td><td>Sign in to Hostera</td><td>US010.1</td><td>Sign in from the frontend</td><td>Sign-in view with the API, session store and bearer interceptor.</td><td>6</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>US010</td><td>Sign in to Hostera</td><td>US010.2</td><td>Protect the workspace</td><td>Guard to the sign-in view, sign-out action and session end on 401.</td><td>4</td><td>José Santana</td><td>Done</td></tr>
+    <tr><td>TS005</td><td>Query bookings through the API</td><td>TS005.1</td><td>Query bookings and payments</td><td>GET /api/v1/bookings and /payments with equality filters and the demo seed.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.1</td><td>Model the booking aggregate</td><td>Booking with stay period, guest, status and lifecycle rules.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.2</td><td>Reject overlapping bookings</td><td>409 when another active booking holds the same room for overlapping nights.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS006</td><td>Create and update bookings through the API</td><td>TS006.3</td><td>Update the room status on check-in and check-out</td><td>Uses RoomsContextFacade: occupied on check-in, needs cleaning on check-out, no check-in at blocked rooms.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS008</td><td>Record payments through the API</td><td>TS008.1</td><td>Record booking payments</td><td>POST, PUT and DELETE /api/v1/payments with a positive amount and a payment method.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.1</td><td>Issue key-card credentials</td><td>Credentials only for the room of a checked-in booking, with validity and scope.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.2</td><td>Revoke key cards when a booking closes</td><td>Check-out or cancellation revokes the booking's key cards.</td><td>5</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS014</td><td>Manage RFID credentials through the API</td><td>TS014.3</td><td>Reject key cards for blocked rooms</td><td>422 when the room is blocked or out of service.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS015</td><td>Record and query RFID access events through the API</td><td>TS015.1</td><td>Record and evaluate access events</td><td>Access attempts with an inactive credential or at another room are denied with their reason.</td><td>6</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS015</td><td>Record and query RFID access events through the API</td><td>TS015.2</td><td>Seed credentials and access events</td><td>Demo credentials and access events with the frontend identifiers.</td><td>4</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.1</td><td>Model rooms and room types</td><td>Unique room numbers, capacity rules and valid room status transitions.</td><td>8</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.2</td><td>Manage rate plans and daily rates</td><td>Rate plans per room type and daily prices with their rules.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.3</td><td>Manage status periods and the rooms facade</td><td>Blocked and out-of-service periods and RoomsContextFacade for other contexts.</td><td>6</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS011</td><td>Manage rooms, room types, and rates through the API</td><td>TS011.4</td><td>Seed the rooms context</td><td>Room types, rooms, rate plans, 307 daily rates and status periods.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.1</td><td>Manage inventory items and stock</td><td>Items with stocks per location and adjustments, never negative.</td><td>8</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS012</td><td>Manage inventory and stock adjustments through the API</td><td>TS012.2</td><td>Seed the inventory context</td><td>Demo inventory items and storage locations.</td><td>4</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>TS013</td><td>Manage storage locations through the API</td><td>TS013.1</td><td>Manage storage locations</td><td>Storage locations with unique codes per property.</td><td>5</td><td>Juan Diego Flores</td><td>Done</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.1</td><td>Connect the frontend to the RESTful API</td><td>Production environment with the Render API, housekeeping status of rooms and release v0.6.0.</td><td>6</td><td>Juan Diego Flores</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.2</td><td>Publish Landing Page v0.6.0</td><td>Product and team videos, contact and social links, product screenshots and responsive fixes.</td><td>8</td><td>Darnell Cuba</td><td>Done</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.3</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Juan Diego Flores</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.4</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Jorge Mateo Leon</td><td>In Progress</td></tr>
+    <tr><td>—</td><td>Sprint task (no Product Backlog story)</td><td>S3.5</td><td>Validation interview</td><td>Validation session with a user of the target segments.</td><td>4</td><td>Jose Gabriel Rudas</td><td>In Progress</td></tr>
   </tbody>
 </table>
 
-Al cierre del sprint las 13 historias comprometidas están terminadas, por lo que el Sprint 3
-termina 65 de los 65 story points comprometidos. Las tareas de las historias suman
-130 horas y el sprint completo, con las tareas técnicas y las de la Landing Page,
-192 horas: 70 de José Santana, 80 de Darnell Cuba y
-42 de Juan Diego Flores. Jorge Mateo Leon y Jose Gabriel Rudas no tienen tareas
-asignadas porque no registran commits en el sprint.
+Las 13 historias comprometidas (65 story points) tienen todas sus tareas en Done, y sus tareas
+suman 154 horas. Las tareas del sprint sin historia suman 26 horas; al
+momento de la revisión siguen en curso `S3.1`, `S3.3`, `S3.4`, `S3.5`: la conexión de la Frontend Web Application con
+la RESTful API y su release, y las entrevistas de validación. En total, el sprint reparte
+180 horas: 57 de José Santana, 64 de Darnell Cuba, 51 de Juan Diego Flores, 4 de Jorge Mateo Leon y 4 de Jose Gabriel Rudas.
 
 
 
