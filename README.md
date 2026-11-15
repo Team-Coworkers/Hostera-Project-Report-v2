@@ -5602,6 +5602,15 @@ Las entrevistas de validación siguieron el diseño de la sección 5.3.1. En cad
 anotan los datos del participante, el segmento, la fecha, el enlace a la grabación y lo que
 se observó en la Landing Page y en la Frontend Web Application.
 
+Se registraron cuatro entrevistas de validación, dos por segmento:
+
+| N.º | Entrevistado | Segmento | Entrevistador | Grabación |
+| :---: | --- | --- | --- | --- |
+| 1 | Mathias Vivanco, supervisor de hotel | Segmento 1: hotel independiente | Juan Diego Flores | [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412124_upc_edu_pe/IQAL3p0iFUaNS72xg1s3EfbNAZnoeT7Wcgdt6oiHJT2aXSY) |
+| 2 | Rosa Mendoza | Segmento 1: hotel independiente | Jose Rudas Chavarria | [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410062_upc_edu_pe/IQAqkl0bpKOBS4iXO4oQl4uvATS0hC1jIM9LtYS8YqyqwSw) |
+| 3 | Odar Fernando Quispe Salazar | Segmento 2: cadena pequeña de 3 sedes y 68 habitaciones | Jorge Mateo Leon | [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412124_upc_edu_pe/IQDBmFyf0Up-Q7mNVZpMYJiDAdTAq6qEFUDX59cf11mYNS4) |
+| 4 | Gerson Alexis Ramírez Torres | Segmento 2: cadena pequeña de 2 sedes y 34 habitaciones | Jorge Mateo Leon | [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412124_upc_edu_pe/IQBsMb_hITBPTJuDtFXalefQAatEQhVrRVWf0LJ9ZRJ6C5g) |
+
 #### Entrevista de validación 1: Mathias Vivanco
 
 | Dato | Detalle |
@@ -5610,6 +5619,8 @@ se observó en la Landing Page y en la Frontend Web Application.
 | Cargo | Supervisor de hotel |
 | Entrevistador | Juan Diego Flores (`YopoFlores`) |
 | Fecha | 14/11/2026 |
+| Segmento | Segmento 1: hotel independiente |
+| Grabación | [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412124_upc_edu_pe/IQAL3p0iFUaNS72xg1s3EfbNAZnoeT7Wcgdt6oiHJT2aXSY) |
 | Autorización | Autorizó aparecer con su nombre, su imagen y su opinión en el informe y en el video About-the-Product. |
 
 **Resumen.** Al cierre de la sesión se le preguntó si usaría Hostera en su operación. Dijo
@@ -5659,6 +5670,8 @@ validación a Mathias Vivanco (sección 5.3.2) y los planes y precios de la Land
 | Recurso | Enlace |
 | --- | --- |
 | Video en YouTube | <https://youtu.be/dwmTRPz5aHo> |
+| Video en Microsoft Stream | [About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412124_upc_edu_pe/IQDIHbSMH_H6R6kp8mR1pL0DAfo9Gfu5f5aRJ268qa6ZR7o) |
+| Duración | 1 minuto y 24 segundos |
 | Landing Page, sección de videos | <https://team-coworkers.github.io/landing-page-main/#videos> |
 
 El video está incrustado en la sección de videos de la Landing Page desde la versión
