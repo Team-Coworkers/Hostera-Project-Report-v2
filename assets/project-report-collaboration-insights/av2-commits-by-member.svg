@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="340" viewBox="0 0 880 340">
+<rect width="880" height="340" fill="#FFFFFF"/>
+<text x="20" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#14523E">Commits por integrante en el repositorio del informe durante AV2 (sin merges)</text>
+<rect x="200" y="38" width="14" height="14" rx="2" fill="#14523E"/>
+<text x="220" y="50" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#4E6558">Informe del proyecto</text>
+<rect x="10" y="56" width="860" height="44" fill="#F4F7F5"/>
+<text x="188" y="83.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="end" fill="#1B2420">Darnell Cuba</text>
+<rect x="200" y="66" width="336.0" height="18" rx="3" fill="#14523E"/>
+<text x="544.0" y="80" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#1B2420">9</text>
+<text x="188" y="137.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="end" fill="#1B2420">Juan Diego Flores</text>
+<rect x="200" y="120" width="37.3" height="18" rx="3" fill="#14523E"/>
+<text x="245.3" y="134" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#1B2420">1</text>
+<rect x="10" y="164" width="860" height="44" fill="#F4F7F5"/>
+<text x="188" y="191.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="end" fill="#1B2420">Jorge Mateo Leon</text>
+<rect x="200" y="174" width="1.5" height="18" rx="3" fill="#14523E"/>
+<text x="209.5" y="188" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#1B2420">0</text>
+<text x="188" y="245.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="end" fill="#1B2420">Jose Gabriel Rudas</text>
+<rect x="200" y="228" width="1.5" height="18" rx="3" fill="#14523E"/>
+<text x="209.5" y="242" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#1B2420">0</text>
+<rect x="10" y="272" width="860" height="44" fill="#F4F7F5"/>
+<text x="188" y="299.0" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-anchor="end" fill="#1B2420">José Santana</text>
+<rect x="200" y="282" width="560.0" height="18" rx="3" fill="#14523E"/>
+<text x="768.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" text-anchor="start" fill="#1B2420">15</text>
+</svg>
