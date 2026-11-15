@@ -284,7 +284,7 @@ repositorio del informe desde el 13 de noviembre de 2026, sin commits de merge.
         - [Especificación de la solución](#especificación-de-la-solución)
         - [Diseño del producto](#diseño-del-producto)
         - [Implementación y despliegue](#implementación-y-despliegue)
-        - [Estado de las hipótesis al cierre de TB1](#estado-de-las-hipótesis-al-cierre-de-tb1)
+        - [Estado de las hipótesis al cierre de AV2](#estado-de-las-hipótesis-al-cierre-de-av2)
         - [Recomendaciones para el roadmap](#recomendaciones-para-el-roadmap)
     - [Video About-the-Team](#video-about-the-team)
 
@@ -5598,7 +5598,28 @@ registra también en las secciones 2.2.2 y 2.2.3.
 
 <!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
 
-*Sección en elaboración para AV2.*
+Las entrevistas de validación siguieron el diseño de la sección 5.3.1. En cada registro se
+anotan los datos del participante, el segmento, la fecha, el enlace a la grabación y lo que
+se observó en la Landing Page y en la Frontend Web Application.
+
+#### Entrevista de validación 1: Mathias Vivanco
+
+| Dato | Detalle |
+| --- | --- |
+| Entrevistado | Mathias Vivanco |
+| Cargo | Supervisor de hotel |
+| Entrevistador | Juan Diego Flores (`YopoFlores`) |
+| Fecha | 14/11/2026 |
+| Autorización | Autorizó aparecer con su nombre, su imagen y su opinión en el informe y en el video About-the-Product. |
+
+**Resumen.** Al cierre de la sesión se le preguntó si usaría Hostera en su operación. Dijo
+que sí, con una condición: poder usarla como una cuenta de empresa. Así la usaría en su
+hotel, porque en recepción no trabaja solo. Su respuesta apunta a una necesidad del producto:
+varios usuarios del mismo hotel deben trabajar sobre una misma cuenta, cada uno con su
+propio acceso. Hoy, en la Frontend Web Application, cada cuenta se crea por persona.
+
+> «Si se pudiera utilizar como una cuenta de empresa, lo utilizaría dentro de mi hotel, ya
+> que no soy la única persona dentro de recepción.» (Mathias Vivanco)
 
 
 
@@ -5606,7 +5627,21 @@ registra también en las secciones 2.2.2 y 2.2.3.
 
 <!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
 
-*Sección en elaboración para AV2.*
+Estos problemas se encontraron al recorrer los user flows de la sección 5.3.1 en la Frontend
+Web Application publicada y conectada a la RESTful API de Render, el 14/11/2026. Cada uno se
+clasifica con la escala de severidad del 1 (problema cosmético) al 4 (catástrofe de
+usabilidad) y con la heurística de Nielsen (1994) que incumple.
+
+| N.º | Problema | Heurística | Severidad | Estado |
+| :---: | --- | --- | :---: | --- |
+| 1 | Si la RESTful API de Render está dormida, al iniciar sesión la pantalla se queda cargando sin ningún mensaje, y el usuario no sabe si debe esperar o volver a intentarlo. | Visibilidad del estado del sistema | 3 | Pendiente |
+| 2 | Si el correo no tiene cuenta, el inicio de sesión no dice que primero hay que registrarse. El usuario creyó que la aplicación estaba fallando. | Ayudar a reconocer, diagnosticar y recuperarse de errores | 3 | Pendiente |
+| 3 | Al registrar una llegada o una salida, el estado de la habitación no cambiaba en la vista de habitaciones hasta recargar la página. | Visibilidad del estado del sistema | 2 | Corregido en la Frontend Web Application `v0.6.0`, que vuelve a pedir las habitaciones a la API. |
+| 4 | Cada cuenta se crea por persona, y no hay forma de que varios recepcionistas del mismo hotel compartan la cuenta de la empresa (entrevista 1 de la sección 5.3.2). | Flexibilidad y eficiencia de uso | 3 | Pendiente |
+
+Los problemas 1 y 2 se resuelven mostrando un indicador de espera con un mensaje mientras la
+API despierta, y un error que diga que la cuenta no existe con un enlace al registro. El
+problema 4 queda en el roadmap de las Conclusiones.
 
 
 
@@ -5614,7 +5649,20 @@ registra también en las secciones 2.2.2 y 2.2.3.
 
 <!-- AV2 · Responsable: Juan Diego Flores (YopoFlores) -->
 
-*Sección en elaboración para AV2.*
+El video About-the-Product presenta Hostera en 1 minuto y 24 segundos. Juan Diego Flores,
+Darnell Cuba y José Santana explican el problema y la propuesta para los dos segmentos.
+El video recorre las vistas de la Frontend Web Application publicada: el resumen de la
+propiedad, las reservas, la llegada y la salida del huésped, el control de accesos, la
+disponibilidad, el inventario y las propiedades. Incluye un fragmento de la entrevista de
+validación a Mathias Vivanco (sección 5.3.2) y los planes y precios de la Landing Page.
+
+| Recurso | Enlace |
+| --- | --- |
+| Video en YouTube | <https://youtu.be/dwmTRPz5aHo> |
+| Landing Page, sección de videos | <https://team-coworkers.github.io/landing-page-main/#videos> |
+
+El video está incrustado en la sección de videos de la Landing Page desde la versión
+`v0.6.2`, junto al video About-the-Team.
 
 
 
@@ -5624,7 +5672,7 @@ registra también en las secciones 2.2.2 y 2.2.3.
 
 ## Conclusiones y recomendaciones
 
-Esta sección recoge lo que dejó el proyecto desde su inicio hasta el cierre de TB1.
+Esta sección recoge lo que dejó el proyecto desde su inicio hasta el cierre de AV2.
 Se organiza por etapas del ciclo de vida del producto, desde la investigación con
 usuarios hasta el despliegue, e incluye lo que se corrigió en cada una.
 
@@ -5680,11 +5728,19 @@ Darnell Cuba y Juan Diego Flores no registran commits de código. El enunciado e
 todos participen en la implementación, las pruebas y el despliegue, de modo que el Sprint
 3 debe repartir los Web Services entre los cinco.
 
-### Estado de las hipótesis al cierre de TB1
+En el Sprint 3 la RESTful API se implementó con Java 25, Spring Boot 4 y PostgreSQL 17,
+organizada por bounded context y documentada con OpenAPI, y se publicó en Render como
+`hostera-platform` `v0.3.2`. Esta vez el código se repartió: José Santana, Darnell Cuba y
+Juan Diego Flores registran commits en la API. La Frontend Web Application `v0.6.0` dejó
+los datos de demostración y lee la API, y la Landing Page llegó a `v0.6.2` con los videos
+About-the-Team y About-the-Product.
+
+### Estado de las hipótesis al cierre de AV2
 
 Ninguno de los resultados de negocio puede medirse todavía, porque Hostera aún no tiene
-clientes. Por ahora solo hay evidencia del problema que cada hipótesis busca resolver, y
-viene de las entrevistas.
+clientes. La evidencia sigue viniendo de las entrevistas de needfinding. Desde AV2 se
+suma la de validación (sección 5.3.2): un supervisor de hotel usaría la aplicación si
+varios recepcionistas pudieran compartir la cuenta de la empresa.
 
 | Hipótesis | Evidencia disponible | Lo que falta medir |
 |---|---|---|
@@ -5701,17 +5757,17 @@ viene de las entrevistas.
 | Prioridad | Siguiente paso | Para qué |
 |---:|---|---|
 | 1 | Registrar la tercera entrevista del segmento 1 con el mismo protocolo. | Cumplir el mínimo del enunciado y revisar las conclusiones de ese segmento. |
-| 2 | Implementar la RESTful API en Spring Boot con Spring Data JPA y MySQL, documentada con OpenAPI y con pruebas unitarias e integración, repartida entre los cinco integrantes. | Reemplazar los datos de demostración por operaciones persistentes y que todos aporten código. |
+| 2 | Permitir varios usuarios por cuenta de empresa, con un acceso propio para cada recepcionista, y mostrar un mensaje claro cuando la API tarda en responder o la cuenta no existe. | Atender lo observado en la validación (secciones 5.3.2 y 5.3.3). |
 | 3 | Conectar el registro y el inicio de sesión a los endpoints de IAM (`TS001` a `TS003`). | Proteger la información de cada propiedad antes de exponerla. |
 | 4 | Completar los reportes operativos (`US031`, `US032`). | Probar la hipótesis 4 con responsables de cadenas pequeñas. |
 | 5 | Llevar la aplicación publicada a administradores de hotel y medir cuánto tardan en conocer el estado de su propiedad. | Probar la hipótesis 1, la de mayor riesgo. |
 | 6 | Mantener Git Flow, Conventional Commits, releases con notas y el workflow de pruebas. | Conservar la trazabilidad de cada cambio. |
 
-Al cierre de TB1, Hostera tiene una Landing Page y una aplicación web publicadas y un
-problema mejor entendido que al inicio del curso, pero ninguna de sus hipótesis se ha
-probado con el producto. La siguiente entrega debe poner la aplicación, ya conectada a su
-propia API, en manos de administradores de hotel y medir lo que hasta ahora solo se
-conoce por las entrevistas.
+Al cierre de AV2, Hostera tiene una Landing Page, una Frontend Web Application y una
+RESTful API con PostgreSQL publicadas y conectadas entre sí, y la validación ya probó la
+aplicación con usuarios. Las hipótesis de negocio siguen sin medirse. La siguiente entrega
+debe atender los problemas de la sección 5.3.3 y medir con administradores de hotel lo que
+hasta ahora solo se conoce por las entrevistas.
 
 ## Video About-the-Team
 
