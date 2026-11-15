@@ -5714,8 +5714,33 @@ conoce por las entrevistas.
 
 ## Video About-the-Team
 
-El video About-the-Team se presentará en AV2, junto con el video About-the-Product, como
-indica el enunciado del proyecto.
+El video About-the-Team resume el trabajo de Team Coworkers en el proyecto, desde el
+needfinding hasta la primera versión de la RESTful API. La primera parte es una
+retrospectiva con la voz en off de José Santana sobre escenas reales del proceso: las
+entrevistas, los artefactos de diseño, la Landing Page, la aplicación en Angular, la
+exposición de TB1, el board de YouTrack del Sprint 3, la API publicada en Swagger y los
+repositorios en GitHub. La segunda parte reúne el testimonio ante cámara de cada integrante
+sobre las actividades que realizó, los outcomes que logró y las competencias que desarrolló.
+
+<img src="assets/conclusions/about-the-team-video.jpg" alt="Cuadro del video About-the-Team de Team Coworkers con los cinco integrantes" style="display:block; width:75%; height:auto; margin:0 auto;"/>
+
+*Figura C.1. Cuadro del video About-the-Team.*
+
+| Dato | Valor |
+| --- | --- |
+| Duración | 9:34 |
+| Microsoft Stream | [Video About-the-Team en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410105_upc_edu_pe/IQCt89-Niw39Rrm2c28Pe-fhAX6z9j2hoqUibJsLyhKorX0?e=GufalK) |
+| YouTube | [youtu.be/BBDl29vUedM](https://youtu.be/BBDl29vUedM) (versión incrustada en la Landing Page) |
+
+| Inicio | Sección |
+| :---: | --- |
+| 0:00 | Retrospectiva con voz en off |
+| 4:30 | Testimonio de José Antonio Santana Luna |
+| 5:39 | Testimonio de Darnell Yadir Cuba Vega |
+| 6:54 | Testimonio de Juan Diego Flores Rios |
+| 7:50 | Testimonio de Jorge Mateo Leon Naupari |
+| 8:43 | Testimonio de Jose Gabriel Rudas Chavarria |
+| 9:25 | Cierre |
 
 # Bibliografía
 
